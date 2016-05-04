@@ -22,6 +22,6 @@ Der Problembereich lässt sich für diese Analysestufe in vier Punkte einteilen,
 4. Und viertens, natürlich wie diese Kollisionen durch vorrauschendes Umfahren von Objekten verhindert werden. Dies schließt sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein.
 ***Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. Für die unbeweglichen Objekte ist es notwendig, dass ihre Position von vornerein bekannt ist und sie unverändert bleiben***
 ## 2.1. Beschreibung des Problembereich
-![Modell des Problembereichs](/images/Problembereich.svg)
+<img src="/images/Problembereich.svg">
 ## 2.2. Glossar
 ## 2.3. Modell des Problembereichs
