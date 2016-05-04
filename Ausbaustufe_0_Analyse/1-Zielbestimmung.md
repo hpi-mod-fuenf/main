@@ -1,0 +1,9 @@
+Die Aufgabe des Projektteams ist es ein System zu entwickeln, das selbstfahrender Roboter in einer Stadt der Zukunft koordiniert. In dieser Stadt existieren keine Straßen mehr – umso komplexer wird der Prozess das Navigationsverhalten der Roboter mit den richtigen Parametern einzustellen und zu modellieren. Die Voraussetzungen und Spezifikation dafür zu erfassen ist Ziel dieser Analyse – die sich insbesondere mit dem Fahr- und dem Aufladevorgang der Roboter und ihren Manövrierfähigkeiten gegenüber Hindernissen auseinandersetzt.
+
+Im weiteren Verlauf des Projektes sollen die Roboter ebenfalls Krankentransporter und schließlich Bestandteil eines Taxiservicedienstes werden. Alle hier getroffenen Annahmen, Modellierungen und Implementierungen könnten damit im Rahmen der späteren Anwendungen revidiert werden.
+
+Als Ausgangspunkt stellt das Unternehmen eine unbegrenzte Anzahl von Robotern zur Verfügung, die mit Aktoren, Sensoren und einem Ortungsgerat ausgestattet sind, und im Wechselspiel mit einem Server agieren.
+
+Das Primärziel des Projektes ist es dabei ein möglichst effizientes Transportsystem zu entwickeln, um für alle Verkehrsbegebenheiten im Großraum einer Zukunftsstadt vorbereitet zu sein. Davon würde die Menschheit nachhaltig profitieren, indem Verkehrsunfällen, Staus und die zeitliche Inanspruchnahme des Fahrens auf ein Minimum reduziert werden. Allerdings wird das System zuerst vor einige Herausforderungen im Fahrvorgang gestellt, mit denen sich die folgenden Kapitel beschäftigen.
+
+ Bei erfolgreicher Lösung dieser Probleme, könnte langfristig ein einzelnes Unternehmen die gesamte Transportinfrastruktur einer Großstadt Übernehmen.  Das System soll von sich aus selbstständig und vollständig autonom agieren. Abgesehen davon Sicherheitsregeln einzuhalten, sollten damit keine Vorkenntnisse für die Fahrt mit den Robotern notwendig sein, um den Personennahvekehr für die breite Masse zu öffnen.
