@@ -17,7 +17,7 @@ Das ist unser Arbeits-Repo
 *KW*| Mo  | Di  | Mi  | Do  | Fr  | Sa  | So
 ---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 *17*|     |     |     |     |     |     | 1  
-*18*| 2   | **[3](protokolle/2016-05-03.md)**  | **[4](protokolle/2016-05-04.md)**   | 5   | 6   | **[✉ 7](# "12 Uhr: Deadline Texte und Abbildungen")** |  8   
+*18*| 2   | **[3](protokolle/2016-05-03.md)**  | **[4](protokolle/2016-05-04.md)**   | 5   | **[✉ 6](# "15 Uhr: Deadline Texte und Abbildungen")**   | 7 |  8   
 *19*| **[⚠ 9](# "Abgabe Ausbaustufe 0 Analysedokument")**  | 10  | 11  | 12  | 13  | 14  | 15 
 *20*| 16  | 17  | 18  | 19  | 20  | 21  | 22 
 *21*| 23  | 24  | 25  | 26  | 27  | 28  | 29
