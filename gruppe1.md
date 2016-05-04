@@ -10,7 +10,8 @@ Das Primärziel des Projektes ist es dabei ein möglichst effizientes Transports
  Bei erfolgreicher Lösung dieser Probleme, könnte langfristig ein einzelnes Unternehmen die gesamte Transportinfrastruktur einer Großstadt Übernehmen.  Das System soll von sich aus selbstständig und vollständig autonom agieren. Abgesehen davon Sicherheitsregeln einzuhalten, sollten damit keine Vorkenntnisse für die Fahrt mit den Robotern notwendig sein, um den Personennahvekehr für die breite Masse zu öffnen.
 # 2. Produkteinsatz
 Der Problembereich lässt sich für diese Analysestufe in vier Punkte einteilen, um eine Gesamtkoordination effizient zu gestalten:
-1. Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. ***Zur Vereinfachung wird das System im Folgenden mit der Annahme arbeiten, dass jeder Zielpunkt physisch erreichbar ist.*** Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.
+
+1. Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. ***Zur Vereinfachung wird das System im Folgenden mit der Annahme arbeiten, dass jeder Zielpunkt physisch erreichbar ist.*** Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.<br>
 <img src="/images/grafikZumProblembereich1.jpg" width="200">
 
 2. Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich vorrauschendes Fahren zu ermöglichen.
