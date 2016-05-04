@@ -4,7 +4,8 @@ Der Problembereich lässt sich für diese Analysestufe in vier Punkte einteilen,
 1. Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. ***Zur Vereinfachung wird das System im Folgenden mit der Annahme arbeiten, dass jeder Zielpunkt physisch erreichbar ist.*** Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.<br>
 <img src="/images/grafikZumProblembereich1.jpg" width="200">
 
-2. Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich vorrauschendes Fahren zu ermöglichen.
+2. Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich vorrauschendes Fahren zu ermöglichen.<br>
+<img src="/images/grafikZumProblembereich3.jpg" width="200">
 
 3. Im dritten Punkt geht es darum den Schaden von Kollisionen zu minimieren; wie diese erkannt und wie auf sie reagiert werden soll.<br>
 <img src="/images/grafikZumProblembereich2.jpg" width="200">
