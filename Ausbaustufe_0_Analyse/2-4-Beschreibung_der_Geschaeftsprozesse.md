@@ -1,6 +1,4 @@
-### Beschreibung zu Prozess-ID: Name des Geschäftsprozesses
-
-#### Beschreibung zu 1: choose Robot
+### Beschreibung zu 1: choose Robot
 
 |   |   |
 |---|---|
