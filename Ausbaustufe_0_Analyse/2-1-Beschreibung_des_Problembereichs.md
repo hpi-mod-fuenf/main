@@ -1,6 +1,5 @@
 # 2. Produkteinsatz
 ## 2.1. Beschreibung des Problembereich
-<img src="/images/Problembereich.svg">
 Der Problembereich lässt sich für diese Analysestufe in vier Punkte einteilen, um eine Gesamtkoordination effizient zu gestalten:
 
 1. Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.<br>
@@ -18,6 +17,6 @@ Daran anknüpfend wird mit folgenden Annahmen gearbeitet:
 2.	Roboter können autark vom Server agieren, damit ihre Ziele bestimmen und eine Ladestation anfahren.<br>
 3.	Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. Für die unbeweglichen Objekte ist es notwendig, dass ihre Position von vornerein bekannt ist und sie unverändert bleibt.<br>
 
-
+<img src="/images/Problembereich.svg">
 
 
