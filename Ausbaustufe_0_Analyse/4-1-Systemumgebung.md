@@ -1,0 +1,1 @@
+Im nachfolgenden Abschnitt werden die bekannten Komponenten des Systems und die  dazugehörigen Schnittstellen beschrieben. Grundsätzlich besteht das System aus mindestens einem *Robot*, hierfür geeigneten *Chargern* und einem zentralen *Server*.
