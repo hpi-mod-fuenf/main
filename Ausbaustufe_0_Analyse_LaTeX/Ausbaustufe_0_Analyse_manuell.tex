@@ -21,12 +21,12 @@
 \usepackage{subcaption}
 % Seitenränder
  \usepackage{geometry}
-       \geometry{a4paper, 
-             left=2.5cm, 
-             right=2.5cm, 
-             top=2.5cm, 
+       \geometry{a4paper,
+             left=2.5cm,
+             right=2.5cm,
+             top=2.5cm,
              bottom=2.5cm}
-           
+
 % Unterstützung für °-Zeichen
 \usepackage{textcomp}
 \usepackage{gensymb}
@@ -46,15 +46,15 @@
 
 
 \begin{document}
-	
+
 	\input{hpi-headers.tex}
-	
-	\newpage 
-	
+
+	\newpage
+
 	\title{Analysedokument\\ \small{(Veranstaltung Modellierung II, SoSe 2016)}}
 	\date{}
 	\author{}
-	
+
 	\maketitle
 	\begin{table}[H]
 		\centering
@@ -67,15 +67,15 @@
 		\end{tabular}
 	\end{table}
 
-	
-	
+
+
 	\newpage
-	
+
 	\begin{table}[H]
 		\centering
 		\begin{tabularx}{\textwidth}{@{}p{4cm}Xp{4cm}@{}}
 			\toprule
-			Verantwortlichkeit & Name, Vorname & Datum \\ 
+			Verantwortlichkeit & Name, Vorname & Datum \\
 			\midrule
 			Ansprechpartner    & Bischoff, Sebastian & 09.05.2016 \\
 			Bearbeitender      & Sauder, Jonathan & 09.05.2016 \\
@@ -90,13 +90,13 @@
 			\bottomrule
 		\end{tabularx}
 	\end{table}
-	
+
 	\vspace{2cm}
-	
+
 	\tableofcontents
-	
+
 	\newpage
-	
+
 	\section{Zielbestimmung}
 	Die Aufgabe des Projektteams ist es ein System zu entwickeln, das selbstfahrender Roboter in einer Stadt der Zukunft koordiniert. In dieser Stadt existieren keine Straßen mehr – umso komplexer wird der Prozess das Navigationsverhalten der Roboter mit den richtigen Parametern einzustellen und zu modellieren. Die Voraussetzungen und Spezifikation dafür zu erfassen ist Ziel dieser Analyse – die sich insbesondere mit dem Fahr- und dem Aufladevorgang der Roboter und ihren Manövrierfähigkeiten gegenüber Hindernissen auseinandersetzt.
 
@@ -104,12 +104,12 @@
 
 	Als Ausgangspunkt stellt das Unternehmen eine unbegrenzte Anzahl von Robotern zur Verfügung, die mit Aktoren, Sensoren und einem Ortungsgerat ausgestattet sind, und im Wechselspiel mit einem Server agieren.
 
-	Das Primärziel des Projektes ist es dabei ein möglichst effizientes Transportsystem zu entwickeln, um für alle Verkehrsbegebenheiten im Großraum einer Zukunftsstadt vorbereitet zu sein. Davon würde die Zielgruppe Mensch nachhaltig profitieren, indem Verkehrsunfällen, Staus und die zeitliche Inanspruchnahme des Fahrens auf ein Minimum reduziert werden. Allerdings wird das System zuerst vor einige Probleme im Fahrvorgang gestellt, mit denen sich die folgenden Kapitel beschäftigen – werden sie gelöst, könnte langfristig ein einzelnes Unternehmen die gesamte Transportinfrastruktur einer Großstadt Übernehmen. Das System wird von sich aus selbstständig und vollständig autonom agieren. Abgesehen davon Sicherheitsregeln einzuhalten, sollten damit keine Vorkenntnisse für die Fahrt mit den Robotern notwendig sein, um den Personennahvekehr für die breite Masse zu öffnen. 
-	
+	Das Primärziel des Projektes ist es dabei ein möglichst effizientes Transportsystem zu entwickeln, um für alle Verkehrsbegebenheiten im Großraum einer Zukunftsstadt vorbereitet zu sein. Davon würde die Zielgruppe Mensch nachhaltig profitieren, indem Verkehrsunfällen, Staus und die zeitliche Inanspruchnahme des Fahrens auf ein Minimum reduziert werden. Allerdings wird das System zuerst vor einige Probleme im Fahrvorgang gestellt, mit denen sich die folgenden Kapitel beschäftigen – werden sie gelöst, könnte langfristig ein einzelnes Unternehmen die gesamte Transportinfrastruktur einer Großstadt Übernehmen. Das System wird von sich aus selbstständig und vollständig autonom agieren. Abgesehen davon Sicherheitsregeln einzuhalten, sollten damit keine Vorkenntnisse für die Fahrt mit den Robotern notwendig sein, um den Personennahvekehr für die breite Masse zu öffnen.
+
 	\pagebreak
-	
+
 	\section{Produkteinsatz}
-	
+
 		\subsection{Beschreibung des Problembereichs}
 		Der Problembereich lässt sich für diese Analysestufe in drei Punkte einteilen, um eine Gesamtkoordination effizient zu gestalten:
 
@@ -130,7 +130,7 @@
 			Im dritten Punkt gilt es einen möglichst reibungs- und
 			unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich
 			vorrauschendes Fahren zu ermöglichen. Im Falle eines niedrigen
-			Batteriestands also unverzüglich an seiner individuellen Ladestation 
+			Batteriestands also unverzüglich an seiner individuellen Ladestation
 			(\emph{Charger}) anzudocken und aufzuladen, beziehungsweise längere
 			Fahrten nicht anzutreten, die den Batteriestand gefährden würden.
 		\end{enumerate}
@@ -158,7 +158,7 @@
 		\end{figure}
 
 		Abbildung \ref{fig:2-1-problembereiche} zeigt die drei o.g. Problembereiche in einer fotografischen Repräsentation.\\
-	
+
 
 		Daran anknüpfend wird mit folgenden Annahmen gearbeitet:
 
@@ -176,7 +176,7 @@
 			unbeweglichen Objekte ist es notwendig, dass ihre Position von
 			vornerein bekannt ist und sie unverändert bleibt.
 		\end{enumerate}
-		
+
 		\subsection{Glossar}
 
 		% \begin{description}
@@ -191,7 +191,7 @@
 			\centering
 			\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
 				\toprule
-				Begriff & Erklärung\\ 
+				Begriff & Erklärung\\
 				\midrule
 				Robot & Roboter, der sich im 2-Dimensionalen Raum bewegen
 				kann.\\
@@ -205,7 +205,7 @@
 			\end{tabularx}
 			\label{tab:2-2-glossar}
 		\end{table}
-		
+
 		\subsection{Modell des Problembereichs}
 		Abbildung \ref{fig:2-3-modell-problembereich} zeigt ein Klassendiagramm, welches das Modell des Problembereichs grafisch darstellt.
 		\begin{figure}[H]
@@ -214,9 +214,9 @@
 			\caption{Klassendiagramm des Problembereichs}
 			\label{fig:2-3-modell-problembereich}
 		\end{figure}
-		
+
 		\subsection{Beschreibung der Geschäftsprozesse}
-		
+
 			\subsubsection*{Beschreibung zu 1: Choose Robot}
 
 			\begin{table}[H]
@@ -269,7 +269,7 @@
 			\end{table}
 
 			Abbildung \ref{fig:2-4-drive-to-destination-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{2: Drive to Destination} darstellt.
-			
+
 			\begin{figure}[H]
 				\centering
 				%\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_chooseRobot.pdf}
@@ -286,15 +286,15 @@
 			\emph{Destination} liegt. Dann wird der \emph{Robot} nach Wahl des
 			besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur
 			\emph{Destination} Aufnehmen.
-			
+
 	\pagebreak
-	
+
 	\section{Produktfunktionen}
 	% \input{3-Produktfunktionen}
-	
+
 		\subsection{Use Cases}
 		% \input{3-1-Use_Cases}
-		
+
 		\subsection{Beschreibung zu Use Case \emph{1}: Drive to Destination}
 
 			\subsubsection*{Charakterisierende Informationen}
@@ -309,7 +309,7 @@
 				\textbf{Vorbedingung:} & Ein spezieller \emph{Robot} wurde vom Server ausgewählt und sein Akkustand ist hoch genug um den Auftrag auszuführen \\ \midrule
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} ist am Ziel angekommen und meldet dies dem \emph{Server} \\ \midrule
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \midrule
-				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine \emph{Destination} erhalten. \\ 
+				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine \emph{Destination} erhalten. \\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
@@ -325,7 +325,7 @@
 			ist auch zunächst eine Entwurfsentscheidung und noch nicht relevant. Auf
 			diesem Weg umfährt er dann das Hindernis und nimmt erneut die Fahrt auf
 			Luftlinie auf.
-			
+
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
 			\begin{table}[H]
@@ -339,7 +339,7 @@
 				\bottomrule
 				\end{tabularx}
 			\end{table}
-			
+
 			\subsubsection*{Szenarien für alternative Abläufe\\ (Misserfolg oder Umwege zum Erfolg)}
 
 			\begin{table}[H]
@@ -368,7 +368,7 @@
 				\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom Server erhalten \\ \midrule
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den Server \\ \midrule
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \midrule
-				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine Anfrage vom Server erhalten, seine Sensoren zu lesen und sie dem Server zu schicken \\ 
+				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine Anfrage vom Server erhalten, seine Sensoren zu lesen und sie dem Server zu schicken \\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
@@ -380,7 +380,7 @@
 			Use Case wird dann ausgefüht, wenn der \emph{Robot} eine Anfrage vom
 			Server erhält, seine Sensoren zu lesen, und endet damit, dass der Robot
 			die zusammengefassten Informationen an den Server schickt.
-			
+
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
 			\begin{table}[H]
@@ -410,13 +410,13 @@
 				\textbf{Umgebende Systemgrenze:} & Robot\\ \midrule
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der Robot muss sein vorgegebenes Ziel erreichen\\ \midrule
 				\textbf{Beteiligte Nutzer:} & Robot\\ \midrule
-				\textbf{Auslösendes Ereignis:} & Robot erreicht Ziel (Use-Case)\\ 
+				\textbf{Auslösendes Ereignis:} & Robot erreicht Ziel (Use-Case)\\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
 
 			Jedem Robot wird, laut Aufgabenstellung, eine feste Ladestation zugewiesen. Der Robot fährt vollständig autonom diese Ladestation an. Daher ist keine Kommunikation mit dem Server notwendig.
-			
+
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
 			\begin{table}[H]
@@ -448,11 +448,11 @@
 				\textbf{Vorbedingung:} & \emph{Server} hat eine neue \emph{Destination} bekommen\\ \midrule
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & dem ausgewählten \emph{Robot} wird die Task übertragen\\ \midrule
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} und \emph{Server}\\ \midrule
-				\textbf{Auslösendes Ereignis:} & \emph{Server} empfängt neue \emph{Destination}\\ 
+				\textbf{Auslösendes Ereignis:} & \emph{Server} empfängt neue \emph{Destination}\\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
-			
+
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
 			\begin{table}[H]
@@ -473,7 +473,7 @@
 		\subsection{Beschreibung zu Use Case \emph{5}: Assign Task}
 
 			\subsubsection*{Charakterisierende Informationen}
- 
+
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
@@ -484,11 +484,11 @@
 				\textbf{Vorbedingung:} & „choose Robot“ hat am Besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \midrule
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & ausgewähler \emph{Robot} steuert die \emph{Destination} an\\ \midrule
 				\textbf{Beteiligte Nutzer:} & \emph{Server} und \emph{Robot}\\ \midrule
-				\textbf{Auslösendes Ereignis:} & im Use-Case „choose Robot“ wurde passender \emph{Robot} ausgewählt\\ 
+				\textbf{Auslösendes Ereignis:} & im Use-Case „choose Robot“ wurde passender \emph{Robot} ausgewählt\\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
-			
+
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
 			\begin{table}[H]
@@ -502,18 +502,18 @@
 			\end{table}
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
-			
+
 	\pagebreak
-			
+
 	\section{Produktumgebung}
 	% \input{4-Produktumgebung}
-	
+
 		\subsection{Systemumgebung}
 		Im nachfolgenden Abschnitt werden die bekannten Komponenten des Systems
 		und die dazugehörigen Schnittstellen beschrieben. Grundsätzlich besteht
 		das System aus mindestens einem \emph{Robot}, hierfür geeigneten
 		\emph{Chargern} und einem zentralen \emph{Server}.
-		
+
 			\subsubsection{Hardwareumgebung}
 			\paragraph{Server}\label{server}
 
@@ -531,9 +531,8 @@
 
 			Mit der Kommunikationseinheit \emph{IServerMessageHandler} kann der
 			\emph{Server} Nachrichten direkt an einen \emph{Robot} senden. Der
-			Einfachheit wegen wird angenommen, die Komponente ist stets
-			empfangsbereit und die dahinterstehende Infrastruktur zur Übertragung
-			von Nachrichten stabil.
+			Einfachheit wegen wird angenommen, die dahinterstehende Infrastruktur zur Übertragung
+			von Nachrichten ist stets stabil.
 
 			\paragraph{Robot}\label{robot}
 
@@ -559,14 +558,14 @@
 			Als Antrieb nutzt das Transportvehikel einen omnidirektionalen Antrieb
 			mit 3 Motoren, über welchen es sich vorwärts, nach rechts, nach links
 			oder durch Drehen um die eigene Achse bewegen lässt. Der Antrieb
-			ermöglich eine Fahrt in verschiedenen Geschwindigkeiten, wobei eine
+			ermöglicht eine Fahrt in verschiedenen Geschwindigkeiten, wobei eine
 			nicht näher spezifizierte Grenze nicht überschritten werden kann.
 
 			\subparagraph{IBattery}\label{ibattery}
 
 			Jeder \emph{Robot} verfügt über einen Akkumulator, der zur
 			Energieversorgung dient. Eine ausreichende Ladung des Akkumulators ist
-			deshalb zum Betrieb des \emph{Robot} unbedingt erforderlich. Der
+			deshalb zum Betrieb des \emph{Robots} unbedingt erforderlich. Der
 			Akkumulator hat eine maximale Ladekapazität und kann über einen
 			\emph{Charger} geladen werden. Die genaue Beschaffenheit des
 			Akkumulators ist nicht bekannt.
@@ -589,7 +588,7 @@
 			\subparagraph{IBumper}\label{ibumper}
 
 			Bei einer Kollision des \emph{Robots} mit einem anderen Objekt wird
-			dieses Ereignis über die Sensorik eine Kollisionserkennung, worauf
+			dieses Ereignis über die Sensorik einer Kollisionserkennung festgestellt, worauf
 			weitere Schritte eingeleitet werden können.
 
 			\paragraph{Charger}\label{charger}
@@ -599,7 +598,7 @@
 			einem \emph{Robot} zugeordnet. Zum Laden muss ein \emph{Robot} seine
 			Ladestation anfahren, worauf die Ladung sofort beginnt. Jede Ladestation
 			verfügt über eine genaue Position.
-			
+
 			\subsubsection{Softwareumgebung}
 			\paragraph{Server}\label{server}
 
@@ -627,8 +626,7 @@
 			Auf der zentralen Recheneinheit des \emph{Robots}, dem
 			\emph{IRobotCore}, läuft eine JavaRuntimeEnvironment, in der sich die
 			gesamte Steuerung und die Verwendung der Komponenten und Schnittstellen
-			abspielt. Die einzelnen Komponenten mit ihren Methoden werden im
-			folgenden näher erläutert.
+			abspielt.
 
 			\subparagraph{IRSensorDistance}\label{irsensordistance}
 
@@ -705,5 +703,5 @@
 				\caption{Verteilungsdiagramm}
 				\label{fig:4-1-3-verteilungsdiagramm}
 			\end{figure}
-					
+
 \end{document}
