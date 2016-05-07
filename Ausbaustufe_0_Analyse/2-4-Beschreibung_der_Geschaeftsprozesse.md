@@ -15,11 +15,11 @@ Wie die Sensordaten und der Algorithmus zur Wahl des optimalen Roboters konkret 
 
 ### Beschreibung zu 2: Drive to Destination
 
-         |         
----------|---------
-**Auslösendes Ereignis:** | Ein *Robot* hat eine *Destination* erhalten.
-**Ergebnis:** | Der *Robot* ist unter Umfahrung von womöglichen *Obstacles* zur *Destination* gefahren.
-**Mitwirkende:** | Ein einzelner, autonomer *Robot*.
+|         |         |
+|---------|---------|
+|**Auslösendes Ereignis:** | Ein *Robot* hat eine *Destination* erhalten. |
+|**Ergebnis:** | Der *Robot* ist unter Umfahrung von womöglichen *Obstacles* zur *Destination* gefahren. |
+|**Mitwirkende:** | Ein einzelner, autonomer *Robot*. |
 
 ![Illustration von 2 durch Aktivitätendiagramm](../images/Iteration0_Analyse_2-4_driveToDestination.svg)
 
