@@ -4,11 +4,12 @@ Jedem Robot wird, laut Aufgabenstellung, eine feste Ladestation zugewiesen. Der 
 | asdfasdf                                    | asdfasdf                                                             |
 |---------------------------------------------|----------------------------------------------------------------------|
 | Übergeordneter elementarer Geschäftsprozess | Drive to destination                                                 |
-| Ziel des Use-Cases                          | Ziel ist es, dem Robot zu ermöglichen seine Ladestation anzufahren |
-| Umgebende Systemgrenze                      | Robot                                                                |
-| Nachbedingung bei erfolgreicher Ausführung  | Der Robot muss sein vorgegebenes Ziel erreichen                    |
-| Beteiligte Nutzer                           | Robot                                                                |
-| Auslösendes Ereignis                        | Robot erreicht Ziel (Use-Case)                                     |
+| Ziel des Use-Cases                          | Ziel ist es, dem *Robot* zu ermöglichen seine Ladestation anzufahren |
+| Umgebende Systemgrenze                      | *Robot*                                                              |
+| Vorbedingung                                | Der *Robot* erreicht sein vorgegebenes Ziel                          |
+| Nachbedingung bei erfolgreicher Ausführung  | Der *Robot* erreicht seine Ladestation                               |
+| Beteiligte Nutzer                           | *Robot*                                                                |
+| Auslösendes Ereignis                        | *Robot* erreicht Ziel (Use-Case)                                     |
 
 ### Szenario für den Standardablauf
 | Schritt |  Nutzer |           Beschreibung der Aktivität           |
