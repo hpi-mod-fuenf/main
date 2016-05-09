@@ -63,8 +63,8 @@
     ><ellipse rx="74.5" fill="none" ry="31" clip-path="url(#clipPath3)" cx="74.5" cy="31"
     /></g
     ><g font-size="11" transform="translate(241,223)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="50" xml:space="preserve" y="35" clip-path="url(#clipPath4)" stroke="none"
-      >UseCase</text
+    ><text x="36" xml:space="preserve" y="35" clip-path="url(#clipPath4)" stroke="none"
+      >Read Sensors</text
     ></g
     ><g font-size="11" transform="translate(2,124)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
     ><circle r="11.5" clip-path="url(#clipPath5)" cx="45.5" cy="11.5" stroke="none"
