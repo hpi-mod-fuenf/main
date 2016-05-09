@@ -287,6 +287,7 @@
 			besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur
 			\emph{Destination} Aufnehmen.
 
+
 	\pagebreak
 
 	\section{Produktfunktionen}
@@ -294,6 +295,23 @@
 
 		\subsection{Use Cases}
 		% \input{3-1-Use_Cases}
+		
+		\subsubsection{Übersicht über die Use Cases}
+		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_3-1_driveToDestination.svg}
+				\caption{Use Case Diagramm 1: Use Cases des Roboters}
+				\label{fig:3-1-robot-use-cases}
+			\end{figure}
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_3-1_DrivingSystem.svg}
+				\caption{Use Case Diagramm 1: Use Cases des Servers}
+				\label{fig:3-1-server-use-cases}
+			\end{figure}
+
 
 		\subsection{Beschreibung zu Use Case \emph{1}: Drive to Destination}
 
@@ -304,26 +322,26 @@
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\toprule
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \midrule
-				\textbf{Ziel des Use Cases:} & \emph{Robot} fährt ein Ziel an\\ \midrule
+				\textbf{Ziel des Use Cases:} & \emph{Robot} fährt eine \emph{Destination} an\\ \midrule
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \midrule
 				\textbf{Vorbedingung:} & Ein spezieller \emph{Robot} wurde vom Server ausgewählt und sein Akkustand ist hoch genug um den Auftrag auszuführen \\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} ist am Ziel angekommen und meldet dies dem \emph{Server} \\ \midrule
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} ist an der \emph{Destination} angekommen und meldet dies dem \emph{Server} \\ \midrule
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \midrule
 				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine \emph{Destination} erhalten. \\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
 
-			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} ein aktuelles
-			Ziel hat. In dieser Ausbaustufe betrachten wir lediglich das Anfahren
-			eines Ziels von einem Roboter. Der Roboter dreht sich zunächst in die
-			Richtung des Ziels und fährt so lange in Luftlinie, bis er entweder
+			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} eine aktuelle
+			\emph{Destination} hat. In dieser Ausbaustufe betrachten wir lediglich das Anfahren
+			einer \emph{Destination} von einem \emph{Robot}. Der \emph{Robot} dreht sich zunächst in die
+			Richtung der \emph{Destination} und fährt so lange in Luftlinie, bis er entweder
 			ankommt oder ein Hindernis erkennt. Ein konkreter Prozess zur Erkennung
 			eines Hindernisses ist eine Entwurfsentscheidung und wird daher noch
-			nicht berücksichtigt. Wenn der \emph{Robot} ein Hindernis erkennt, dann
+			nicht berücksichtigt. Wenn der \emph{Robot} ein \emph{Obstacle} erkennt, dann
 			sucht er einen guten Weg um das Hindernis herum. Wie er diesen Weg sucht
 			ist auch zunächst eine Entwurfsentscheidung und noch nicht relevant. Auf
-			diesem Weg umfährt er dann das Hindernis und nimmt erneut die Fahrt auf
+			diesem Weg umfährt er dann das \emph{Obstacle} und nimmt erneut die Fahrt auf
 			Luftlinie auf.
 
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
@@ -347,7 +365,7 @@
 				\begin{tabularx}{\textwidth}{@{}cp{6cm}X@{}}
 				\toprule
 				Schritt & Bedingung für Alternative & Beschreibung der Aktivität \\ \midrule
-				3 & \emph{Robot} erkennt ein Hindernis zwischen auf seinem Weg zum Ziel & \emph{Robot} sucht sich einen Umweg um das Hindernis, umfährt das Hindernis und nimmt schließlich Standardablauf wieder auf \\
+				3 & \emph{Robot} erkennt ein \emph{Obstacle} zwischen auf seinem Weg zum Ziel & \emph{Robot} sucht sich einen Umweg um das \emph{Obstacle}, umfährt das \emph{Obstacle} und nimmt schließlich Standardablauf wieder auf \\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
@@ -365,21 +383,21 @@
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot\\ \midrule
 				\textbf{Ziel des Use Cases:} & \emph{Robot} kann über seinen Akkustand und seine Position Auskunft geben\\ \midrule
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \midrule
-				\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom Server erhalten \\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den Server \\ \midrule
+				\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten \\ \midrule
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den \emph{Server} \\ \midrule
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \midrule
-				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine Anfrage vom Server erhalten, seine Sensoren zu lesen und sie dem Server zu schicken \\
+				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten, seine Sensoren zu lesen und sie dem \emph{Server} zu schicken \\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
 
-			Im Rahmen vom Geschäftsprozess \emph{Choose Robot} sammelt der Server
+			Im Rahmen vom Geschäftsprozess \emph{Choose Robot} sammelt der \emph{Server}
 			Informationen über jeden \emph{Robot}. Diese Informationen (z.B
-			Akkustand, aktuelle Position, ob der Roboter gerade ein Ziel verfolgt)
-			kann der Roboter von seinen Hardware-Schnittstellen anfordern. Dieses
+			Akkustand, aktuelle Position, ob der \emph{Robot} gerade ein Ziel verfolgt)
+			kann der \emph{Robot} von seinen Hardware-Schnittstellen anfordern. Dieses
 			Use Case wird dann ausgefüht, wenn der \emph{Robot} eine Anfrage vom
-			Server erhält, seine Sensoren zu lesen, und endet damit, dass der Robot
-			die zusammengefassten Informationen an den Server schickt.
+			Server erhält, seine Sensoren zu lesen, und endet damit, dass der \emph{Robot}
+			die zusammengefassten Informationen an den \emph{Server} schickt.
 
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
@@ -388,7 +406,7 @@
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
 				\toprule
 				Schritt & Nutzer & Beschreibung der Aktivität \\ \midrule
-				1 & Robot & \emph{Robot} erhält Anfrage vom Server \\
+				1 & Robot & \emph{Robot} erhält Anfrage vom \emph{Server} \\
 				2 & Robot & \emph{Robot} sammelt Informationen von seiner Hardwareschnittstelle und fasst sie zusammen \\
 				3 & Robot & \emph{Robot} schickt zusammengefasste Informationen an den Server \\
 				\bottomrule
