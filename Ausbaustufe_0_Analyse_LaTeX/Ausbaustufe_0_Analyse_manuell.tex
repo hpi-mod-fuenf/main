@@ -272,8 +272,8 @@
 
 			\begin{figure}[H]
 				\centering
-				%\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_chooseRobot.pdf}
-				\caption{Illustration von \emph{1: choose Robot} durch Aktivitätendiagramm}
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_driveToDestination}
+				\caption{Illustration von \emph{2: Drive to Destination} durch Aktivitätendiagramm}
 				\label{fig:2-4-drive-to-destination-aktivitaetendiagramm}
 			\end{figure}
 
@@ -300,18 +300,20 @@
 		
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_3-1_driveToDestinationUseCase.svg}
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_3-1_driveToDestinationUseCase.pdf}
 				\caption{Use Case Diagramm 1: Use Cases des Roboters}
 				\label{fig:3-1-robot-use-cases}
 			\end{figure}
 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_3-1_DrivingSystem.svg}
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_3-1_DrivingSystem.pdf}
 				\caption{Use Case Diagramm 1: Use Cases des Servers}
 				\label{fig:3-1-server-use-cases}
 			\end{figure}
 
+
+		\pagebreak
 
 		\subsection{Beschreibung zu Use Case \emph{1}: Drive to Destination}
 
@@ -371,6 +373,8 @@
 			\end{table}
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+		\pagebreak
 
 		\subsection{Beschreibung zu Use Case \emph{2}: Read Sensors}
 
@@ -414,8 +418,10 @@
 			\end{table}
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{3}: Read Sensors}
+		\subsection{Beschreibung zu Use Case \emph{3}: Charging}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -423,12 +429,13 @@
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to destination\\ \midrule
-				\textbf{Ziel des Use Cases:} & Ziel ist es, dem Robot zu ermöglichen seine Ladestation anzufahren\\ \midrule
-				\textbf{Umgebende Systemgrenze:} & Robot\\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der Robot muss sein vorgegebenes Ziel erreichen\\ \midrule
-				\textbf{Beteiligte Nutzer:} & Robot\\ \midrule
-				\textbf{Auslösendes Ereignis:} & Robot erreicht Ziel (Use-Case)\\
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \midrule
+				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ladestation anzufahren\\ \midrule
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot}\\ \midrule
+				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht sein vorgegebenes Ziel\\ \midrule
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} erreicht seine Ladestation\\ \midrule
+				\textbf{Beteiligte Nutzer:} & \emph{Robot}\\ \midrule
+				\textbf{Auslösendes Ereignis:} & \emph{Robot} erreicht \emph{Destination} (Use-Case)\\
 				\bottomrule
 				\end{tabularx}
 			\end{table}
@@ -451,6 +458,8 @@
 			\end{table}
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+		\pagebreak
 
 		\subsection{Beschreibung zu Use Case \emph{4}: Choose Robot}
 
@@ -460,7 +469,7 @@
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & \\ \midrule
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot \\ \midrule
 				\textbf{Ziel des Use Cases:} & passenden \emph{Robot} für die durch den \emph{Server} gesendete \emph{Destination} auswählen\\ \midrule
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot} und \emph{Server} \\ \midrule
 				\textbf{Vorbedingung:} & \emph{Server} hat eine neue \emph{Destination} bekommen\\ \midrule
@@ -487,6 +496,8 @@
 			\end{table}
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+		\pagebreak
 
 		\subsection{Beschreibung zu Use Case \emph{5}: Assign Task}
 
@@ -496,7 +507,7 @@
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & \\ \midrule
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot  \\ \midrule
 				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destination}) zuweisen\\ \midrule
 				\textbf{Umgebende Systemgrenze:} & \emph{Server} und \emph{Robot} \\ \midrule
 				\textbf{Vorbedingung:} & „choose Robot“ hat am Besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \midrule
