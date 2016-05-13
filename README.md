@@ -18,7 +18,7 @@ Das ist unser Arbeits-Repo
 ---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 *17*|     |     |     |     |     |     | 1  
 *18*| 2   | **[3](protokolle/2016-05-03.md)**  | **[4](protokolle/2016-05-04.md)**   | 5   | **[6](protokolle/2016-05-06.md)**   | 7 |  8   
-*19*| **[⚠ 9](# "Abgabe Ausbaustufe 0 Analysedokument")**  | 10  | **[⚠ 11](protokolle/2016-05-11_Feedback-Analyse_Besprechung-Entwurf.md "Abgabe Ausbaustufe 0 Reflexion zur Analyse")**  | 12  | 13  | 14  | 15 
+*19*| **[⚠ 9](# "Abgabe Ausbaustufe 0 Analysedokument")**  | 10  | **[⚠ 11](protokolle/2016-05-11_Feedback-Analyse_Besprechung-Entwurf.md "Abgabe Ausbaustufe 0 Reflexion zur Analyse")**  | **[12](protokolle/2016-05-12.md)**  | 13  | 14  | 15 
 *20*| 16  | 17  | 18  | 19  | 20  | 21  | 22 
 *21*| 23  | 24  | 25  | 26  | 27  | 28  | 29
 *22*| 30  | 31  |     |     |     |     |   
