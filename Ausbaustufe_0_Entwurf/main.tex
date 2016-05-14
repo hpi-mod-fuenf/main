@@ -1,0 +1,100 @@
+\documentclass[includeheaders]{scrartcl}
+
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{scrlayer-scrpage}
+ 
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{float}
+ \usepackage{geometry}
+       \geometry{a4paper, 
+             left=2.5cm, 
+             right=2.5cm, 
+             top=2.5cm, 
+             bottom=2.5cm}
+
+\setlength{\parindent}{10pt}
+%\setlength{\headheight}{78pt}
+\setkomafont{pageheadfoot}{\sffamily} 
+\sloppy
+
+\begin{document}
+\input{hpi-headers.tex}
+\setlength{\parindent}{0pt}
+
+% einfach diesen Teil entfernen, um nur noch eine Titelseite zu haben -->
+\title{Hinweise zum Bearbeiten des Entwurfsdokuments\\ \small{(Im Rahmen der Veranstaltung Modellierung II, SoSe 2016)}
+}
+\date{}
+\author{}
+\maketitle
+\textcolor{blue}{\itshape{\underline{Allgemeine Hinweise:}}}
+
+\textcolor{blue}{\itshape{Alles, was in dieser Schriftart gesetzt ist, dient nur zur Erläuterung und sollte im fertigen Dokument nicht mehr auftauchen.}}
+\\
+
+\textcolor{blue}{\itshape{Im Dokument können (und sollen) Diagramme und verschiedene Abbildungen verwendet werden. Diagramme und Abbildungen ohne erläuternden Text sind jedoch wertlos. Bitte achten Sie daher darauf, dass jede Abbildung im Text referenziert und auch erklärt wird. Das Verhältnis zwischen erläuternden Texten und  Abbildungen sollte möglichst ausgewogen sein, d.h. ein Dokument mit 40 Seiten darf maximal 20 Seiten Abbildungen enthalten. Dieses Dokument soll insgesamt maximal 40 Seiten umfassen.}}
+\\
+
+\textcolor{blue}{\itshape{\underline{Das Template soll vollständig bearbeitet werden}}}
+\\
+
+\textcolor{blue}{\itshape{\underline{Latex-Hinweis:}}}
+
+\textcolor{blue}{\itshape{Bilder werden folgendermaßen referenziert: In Abbildung \ref{KomponentendiagrammAbstrakt} steht ...}}
+
+\newpage
+% --> ende des zu entfernenden Teils
+
+\newpage 
+
+\title{Entwurfsdokument\\ \small{(Template zur Veranstaltung Modellierung II, SoSe 2016)}}
+\date{}
+\author{}
+
+\maketitle
+
+Projekt:	\textcolor{blue}{\itshape{Name des Projekts}}\\
+
+Auftraggeber:\textcolor{blue}{\itshape{Anschrift Auftraggeber}}\\
+
+Auftragnehmer:\textcolor{blue}{\itshape{Anschrift Auftragnehmer}}\\
+
+\newpage
+
+\begin{table}[h]
+	\center    
+    \begin{tabular}{l | l | l}
+    Verantwortlichkeit & Name, Vorname & Datum \\
+    \hline
+    Ansprechpartner    & ~             & ~     \\
+    Bearbeitender      & ~             & ~     \\
+    Bearbeitender      & ~             & ~     \\
+    Bearbeitender      & ~             & ~     \\
+    \end{tabular}
+\end{table}
+
+\newpage
+\input{1_abstrakte_architektur}
+\newpage
+\input{2_interaktion_der_komponenten}
+\newpage
+\input{3_komponentenschnittstellen}
+\newpage
+\input{4_konkrete_architektur}
+\newpage
+\input{5_komponenten}
+\newpage
+\input{6_paketstruktur}
+\newpage
+\input{7_paketdetails}
+\newpage
+\input{8_ablaeufe}
+\newpage
+\input{9_produkteinsatz}
+
+\end{document}
