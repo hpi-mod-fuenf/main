@@ -4,7 +4,19 @@
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textwidth]{img/Produkteinsatz.png}
+\includegraphics[width=0.75\textwidth]{../images/9_produkteinsatz.svg}
 \caption{\textcolor{blue}{Durch eigene Diagramme ersetzen}}
 \label{Produkteinsatz}
 \end{figure}
+
+In diesem Abschnitt wird der geplante Einsatz des Systems beschrieben, wobei insbesondere auf die Systemumgebung, in der das Produkt eingesetzt werden soll, und die Zuordnung der Software zu dieser eingegangen wird.
+
+Das Gesamtsystem besteht u.a. aus einem \emph{Server}, der mit mindestens einem \emph{Robot} verbunden ist, wobei zwischen \emph{Server} und \emph{Robot} über einen nicht näher spezifizierten IMessageHandler kommuniziert wird. \emph{Robots} können nicht mit anderen \emph{Robots} kommunizieren.
+
+Auf dem \emph{Server} und den \emph{Robots} läuft ein \emph{Java Runtime Environement}, das dem Ausführen der entsprechenden Software dient.
+
+\emph{Robot.jar} dient der Kapselung der verfügbaren Funktionen. Es werden auch die Interfaces zusammengefasst, die dem Ansprechen von \emph{IDrive}, \emph{INorthStar}, \emph{IDistanceSensor}, \emph{IBumper}, \emph{IBumperHandler} und \emph{IBattery} dienen.
+
+\emph{Server.jar} funktioniert analog zu \emph{Robot.jar} und stellt alle grundlegenden Funktionen zur Verfügung.
+
+Zusätzlich benötigte Funktionalitäten werden aus dem Common-Package importiert und sind sowohl bei \emph{Robots} als auch dem \emph{Server} verfügbar.
