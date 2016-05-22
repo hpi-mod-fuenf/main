@@ -32,7 +32,7 @@
 		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
 
 			%7.1.1.1 #collectSensorData():void
-			\subsubsubsection{Beschreibung der Methode \textit{collectSensorData}}
+			\paragraph{Beschreibung der Methode \textit{collectSensorData}}
 			Die Methode \textit{collectSensorData} wird von der Methode \textit{recieveMessage} 
 			aus der Klasse \textit{RobotCommunication} aufgerufen, wenn eine Neue \textit{Message} 
 			vom Server eingegangen ist, welche den \textit{Robot} dazu auffordert, Informationen 
@@ -55,7 +55,7 @@
 		die gerade ausgeführt wird, gibt Auskunft über die aktuelle Beschäftigung des \textit{Robots}.
 
 			%7.1.2.1 	#driveToDestination(destination: Destination, arrivalHandler: ArrivalHandler): void
-			\subsubsubsection{Beschreibung der Methode \textit{driveToDestination}}
+			\paragraph{Beschreibung der Methode \textit{driveToDestination}}
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.svg}
@@ -70,7 +70,7 @@
 			aufgerufen, bis das \textit{Obstacle} umfahren wurde.
 
 			%7.1.2.2    -driveAroundObstacle(destination: Destination): void
-			\subsubsubsection{Beschreibung der Methode \textit{driveAroundObstacle}}
+			\paragraph{Beschreibung der Methode \textit{driveAroundObstacle}}
 			\begin{figure}[H]
 			\centering
 			%TODO: Sequenzdiagramm
@@ -103,7 +103,7 @@
 		Das Task-System des Roboters verarbeitet alle Tasks, die es mit der Zuordnung vom RobotControlSystem übergeben bekommt. Dafür besitzt es eine Struktur, die die taskDistribution intern verwaltet und somit die Tasks und die jeweils zugeordneten Roboter kennt.
 		
 		%7.2.2.1	~assignTask(virtualRobot : VirtualRobot, destination : Destination): void
-			\subsubsubsection{Beschreibung der Methode \textit{assignTask}}
+			\paragraph{Beschreibung der Methode \textit{assignTask}}
 			Die Methode assignTask führt die Zuordnung und Abspeicherung der Roboter und Tasks bzw. Destinations durch.
 			
 	%7.2.2 RobotControlSystem
@@ -111,5 +111,5 @@
 		Das RobotControlSystem sorgt bei eingehenden Tasks dafür, dass ein passender Roboter ausgewählt wird. Diese Information übergibt es dann an das Task-System, dass für die endgültige Zuordnung zuständig ist.
 	
 			%7.2.1.1	~chooseRobot(destination: Destination): void
-			\subsubsubsection{Beschreibung der Methode \textit{chooseRobot}}
+			\paragraph{Beschreibung der Methode \textit{chooseRobot}}
 			Die Methode chooseRobot wählt für den aktuell eingegangenen Task einen Robot aus. Dazu fragt es die Sensorwerte der verschiedenen Roboter ab und wählt den am Besten geeigneten aus.
