@@ -94,18 +94,22 @@
 	\label{Paketdetails}
 	\end{figure}
 	Im folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{Server} 
-	und ihre zugehörigen wichtigen Methoden, sowie ihre Interaktion zwischeneinander. 
+	und ihre zugehörigen Methoden, sowie ihre Interaktion zwischeneinander. 
 
 
 	%7.2.1 TaskSystem
 	\subsubsection{Beschreibung der Klasse \textit{TaskSystem}}
 		%	-taskDistribution
+		Das Task-System des Roboters verarbeitet alle Tasks, die es mit der Zuordnung vom RobotControlSystem übergeben bekommt. Dafür besitzt es eine Struktur, die die taskDistribution intern verwaltet und somit die Tasks und die jeweils zugeordneten Roboter kennt.
 		
-			%7.2.1.1	~chooseRobot(destination: Destination): void
-			\subsubsubsection{Beschreibung der Methode \textit{chooseRobot}}
+		%7.2.2.1	~assignTask(robot : Robot, destination : Destination): void
+			\subsubsubsection{Beschreibung der Methode \textit{assignTask}}
+			Die Methode assignTask führt die Zuordnung und Abspeicherung der Roboter und Tasks bzw. Destinations durch.
 			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{RobotControlSystem}}
-		
-			%7.2.2.1	~assignTask(robot : Robot, destination : Destination): void
-			\subsubsubsection{Beschreibung der Methode \textit{assignTask}}
+		Das RobotControlSystem sorgt bei eingehenden Tasks dafür, dass ein passender Roboter ausgewählt wird. Diese Information übergibt es dann an das Task-System, dass für die endgültige Zuordnung zuständig ist.
+	
+			%7.2.1.1	~chooseRobot(destination: Destination): void
+			\subsubsubsection{Beschreibung der Methode \textit{chooseRobot}}
+			Die Methode chooseRobot wählt für den aktuell eingegangenen Task einen Robot aus. Dazu fragt es die Sensorwerte der verschiedenen Roboter ab und wählt den am Besten geeigneten aus.
