@@ -5,10 +5,12 @@
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{img/51}
-\caption{\textcolor{blue}{Server Software}}
+\caption{\emph{ServerSoftware}-Komponentendiagramm}
 \label{KomponentenStruktur1}
 \end{figure}
-Die Komponente \textit{ServerSoftware} umfasst 4 Klassen: \textit{TaskSystem}, \textit{Destination}, \textit{RobotControlSystem} und \textit{Virtual Robot}.
+Abbildung \ref{KomponentenStruktur1} zeigt ein Komponentendiagramm von \emph{ServerSoftware}. Diese Komponente umfasst 4 Klassen: \textit{TaskSystem}, \textit{Destination}, \textit{RobotControlSystem} und \textit{Virtual Robot}.
+
+
 Das \textit{TaskSystem} verwaltet die \textit{Tasks}, in der nullten Ausbaustufe fallen dabei allerdings noch nicht viele Aufgaben an, 
 da es keine Priorisierungen, unterschiedliche Arten von \textit{Tasks} oder dergleichen gibt. Die Klasse \textit{Destination} ist die Klasse 
 der Aufgaben, die vom \textit{TaskSystem} verwaltet werden. Das \textit{RobotControlSystem} verteilt die \textit{Tasks} auf die \textit{Robots}. 
@@ -20,10 +22,12 @@ es sich um eine Kapselung der Kommunikation mit den \textit{Robots}. Hier werden
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{img/52}
-\caption{\textcolor{blue}{Robot Software}}
+\caption{\emph{RobotSoftware}-Komponentendiagramm}
 \label{KomponentenStruktur2}
 \end{figure}
-Die Komponente \textit{RobotSoftware} enthält 3 Klassen: \textit{DrivingSystem}, \textit{RobotController} und \textit{Destination}. 
+In Abbildung \ref{KomponentenStruktur2} ist das Komponentendiagramm der Komponente \textit{RobotSoftware} dargestellt. Sie enthält 3 Klassen: \textit{DrivingSystem}, \textit{RobotController} und \textit{Destination}. 
+
+
 Das \textit{DrivingSystem} stellt eine Abstraktion der Hardware dar und wird dazu genutzt, Ziele anzufahren und Dabei, 
 falls nötig, Hindernisse zu umfahren. Dazu greift es auf die von der Hardware bereitgestellten \textit{Interfaces} zurück. 
 Um auf Kollisionen reagieren zu können, implementiert das \textit{DrivingSystem} die Schnittstelle \textit{IBumperHandler}
