@@ -1,6 +1,6 @@
 \section{Abläufe}
 
-Während in Kapitel 3 die Interaktion der Hauptkomponenten Server und der RobotUnit abgehandelt wurden, werden im Folgenden die Abläufe des UseCases genauer spezifiert und auch interne Komponentenabläufe beschrieben, im speziellen die Abläufe innerhalb der RobotUnit.
+Während in Kapitel 3 die Interaktion der Hauptkomponenten \emph{Server} und der \emph{RobotUnit} abgehandelt wurden, werden im Folgenden die Abläufe der Use Cases genauer spezifiziert und auch interne Komponentenabläufe beschrieben, im speziellen die Abläufe innerhalb der \emph{RobotUnit}.
 	
 	\textbf{Interaktion bei Ausführung von Usecase 1 – DriveToDestionation:}\\
 	Wie es schon der Name des Use Cases DriveToDestionation beschreibt, befindet sich die RobotUnit bei Ausführung diese Use Cases in einem Fahrvorgang, der vorher konkret mit der Zielposition und er Geschwindigkeit vom Server eingestellt wird. Es reagieren intern ihre Software mit der Sensor/Hardwarekomponenten, wenn ein Hindernis auftaucht und dieses mit Hilfe der durch die Sensoren gesammelten Informationen umfahren werden muss. Der unmittelbare Fahrvorgang hingegen wird über die IDrive Komponente gesteuert, die zurückmeldet wenn der Roboter das Ziel erreicht hat.
