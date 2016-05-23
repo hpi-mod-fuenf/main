@@ -1,4 +1,5 @@
 *.log
 *.aux
 *.synctex.gz
-main.pdf
+*.out
+Thumbs.db

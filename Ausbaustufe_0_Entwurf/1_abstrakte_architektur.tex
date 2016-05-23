@@ -1,12 +1,38 @@
 \section{Abstrakte Architektur}
-\textcolor{blue}{\textit{Dieser Abschnitt beschreibt im Wesentlichen eine grobe Zerlegung der zu entwickelnden Anwendung in (Teil-)Komponenten und deren Zusammenhänge. Die Struktur der einzelnen Komponenten (also die enthaltenen Klassen und deren Beziehungen) sowie deren Schnittstellen ist nicht Teil dieser Beschreibung. Die notwendigen Schnittstellen werden erst im Laufe dieses Dokumentes entwickelt.\\\\
-Die hier definierten Komponenten sind als logische Einheiten zu verstehen, die aus beliebig vielen Klassen bestehen können, die gemeinsam die Funktionalität der Komponente realisieren.\\\\
-Das folgende Komponentendiagramm führt (Teil-)Komponenten ein und beschreibt ihre Abhängigkeiten.
-}}
+In diesem Dokument soll ein System mit autonom agierenden Robotern (\emph{Robots}) entwickelt werden, welche von einem \emph{Server} zu bestimmten Zielen (\emph{Destinations}) in Form von Positionen (\emph{Positions}) geschickt werden. 
+
+Dieser Entwurf basiert auf der in der Analyse erarbeiteten Spezifikation des Systems. Abbildung \ref{KomponentendiagrammAbstrakt} zeigt das abstrakte Komponentendiagramm.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{img/KomponentendiagrammAbstrakt.png}
-\caption{\textcolor{blue}{Durch eigenes Komponentendiagramm ersetzen}}
+%\includegraphics[width=1\textwidth]{img/1}
+\caption{Abstraktes Komponentendiagramm}
 \label{KomponentendiagrammAbstrakt}
 \end{figure}
+
+Da eine Komponente mit dem Namen \emph{Robot} bereits vorhanden ist, nennen wir die \emph{Robot}-Hauptkomponente \emph{RobotUnit}. Dieser Name verdeutlicht, dass jeder physische Roboter im System durch diese Hauptkomponente repr\"{a}sentiert wird.
+
+
+In diesem Kapitel wird die im Rahmen der Analyse ermittelte Einteilung des Systems in Komponenten strukturiert dargestellt. Hierbei soll auch die Interaktion der Komponenten untereinander verdeutlicht werden.
+
+\subsection{Server}
+
+Der \emph{Server} verwaltet die \emph{Destinations} f\"{u}r die \emph{RobotUnits} und beh\"{a}lt einen st\"{a}ndigen \"{U}berblick \"{u}ber die Positionen der \emph{RobotUnits}. Er ist f\"{u}r die effiziente Allokation der Auftr\"{a}ge f\"{u}r die \emph{RobotUnits} zust\"{a}ndig.
+
+\subsubsection{ServerSoftware}
+
+Die Komponente \emph{ServerSoftware} ist die Verwaltungslogik des \emph{Servers}. Sie greift auf die serverseitigen Subsysteme zu und stellt die zentrale Anlaufstelle f\"{u}r alle \emph{RobotUnits} dar. 
+
+Bei einer Anfrage ermittelt sie die passende \emph{RobotUnit} und sendet ihr die Position des Ziels. 
+
+\subsection{RobotUnit}
+
+Die Komponente \emph{RobotUnit} sublimiert die \emph{RobotSoftware} und \emph{-Hardware} (Komponente \emph{Robot}) als eine Oberkomponente. Sie vereint alle Hard- und Softwareinterfaces dieser Komponenten und leitet die ein- und ausgehenden Nachrichten der \emph{RobotSoftware} an den \emph{Server} weiter. Sie dient somit als \"{u}bergeordnete Schnittstelle f\"{u}r die Kommunikation. 
+
+\subsubsection{RobotSoftware}
+
+Die \emph{RobotSoftware} steuert den \emph{Robot} an und verwertet seine Sensordaten. Dazu geh\"{o}rt unter anderem die Fahrlogik und die Verwaltung der \emph{Battery}, damit angenommene Aufträge auch komplett ausgef\"{u}hrt werden k\"{o}nnen und die \emph{RobotUnit} rechtzeitig die \emph{ChargingStation} erreicht. 
+
+\subsubsection{Robot}
+
+Die Komponente \emph{Robot} steht f\"{u}r alle hardwaretechnischen Spezifikationen des \emph{Robots}. Dazu geh\"{o}ren die Fahreinheit und die interne Sensorik so wie die \emph{Battery}.   

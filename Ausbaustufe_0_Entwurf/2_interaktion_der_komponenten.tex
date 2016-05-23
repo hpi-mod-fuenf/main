@@ -1,16 +1,14 @@
 \section{Interaktion der Komponenten}
-Auf Basis der Analyse Use Cases wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem der Interaktion zwischen dem Server und der RobotUnit., die Use Cases innerhalb der Komponenten werden in Kapitel 8 näher ausgeführt.\\
+Auf Basis der Use Cases aus dem Analysedokument wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Server} und der \emph{RobotUnit}. die Use Cases innerhalb der Komponenten werden in Kapitel 8 näher ausgeführt.\\
 
 
-\textbf{Interaktion bei Ausführung von\\
-4 : Coose Robot}\\
-Die Auswahl eines Robots läuft wie im Diagramm beschrieben folgendermaßen ab: Bei einer neueingehenden Destination sendet der Server mit getTaskRating(task) Anfragen an alle zur Verfügung stehenden RobotUnits(, im Diagramm sind Beispielhaft zwei angeführt, der Aufruf findet asynchron statt.) Die RobotUnit führt dann Read Sensor(Use Case 2) aus. Dabei sammelt er alle notwendigen Informationen von seinen Hardwareschnittstellen, wie Ladestand und Nähe zum Ziel, die der Server benötigt um den bestmöglichen Roboter auszuwählen. Er wartet auf das Zusammentragen der Daten, also das Abschließen des internen Loop-Prozesses bis er eine Nachricht mit den Informationen an den Server zurücksendet; erst dann kann der Server auf Grund der übermittelten Daten beurteilen, welcher Roboter am besten geeignet ist den Zielpunkt zu erreichen und entsendet ihn zu den Zielkoordinaten( Usecase 5 assign Task.) Bei dem darauffolgenden Use Cases DriveToDestionation ist der Server hingegen nicht beteiligt. Bei dem Use Case Charching kommt es ausschließlich zur Wechselwirkung mit der CharchingStation Komponente.
+\subsection*{Interaktion bei Ausführung von \emph{4: Choose Robot}}
 
-
+Die Auswahl eines \emph{Robots} läuft wie in Abbildung \ref{SequenzDiagrammInteraktion} beschrieben folgendermaßen ab: Bei einer neu eingehenden \emph{Destination} sendet der \emph{Server} mit \texttt{getTaskRating(task)} Anfragen an alle zur Verfügung stehenden \emph{RobotUnits} (im Diagramm sind beispielhaft zwei angeführt, der Aufruf findet asynchron statt). Die \emph{RobotUnit} führt dann \emph{Read Sensor} (Use Case 2) aus. Dabei sammelt sie alle notwendigen Informationen von ihren Hardwareschnittstellen, wie Ladestand und Nähe zum Ziel, die der \emph{Server} benötigt, um den bestmöglichen \emph{Robot} für das Ziel auszuwählen. Der \emph{Robot} wartet auf das Zusammentragen der Daten, also das Abschließen des internen Loop-Prozesses, bis er eine Nachricht mit den Informationen an den \emph{Server} zurücksendet; erst dann kann der \emph{Server} auf Grund der übermittelten Daten beurteilen, welcher \emph{Robot} am besten dazu geeignet ist, die \emph{Destination} zu erreichen und entsendet ihn zu den Zielkoordinaten (\emph{assign Task} – Use Case 5). Bei dem darauffolgenden Use Cases \emph{DriveToDestination} ist der \emph{Server} hingegen nicht beteiligt. Bei dem Use Case \emph{Charging} kommt es ausschließlich zur Wechselwirkung mit der \emph{ChargingStation}-Komponente.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{img/2-chooseRobot}
-	\caption{Coose Robot}
+	\includegraphics[width=0.9\textwidth]{img/2-chooseRobot}
+	\caption{\emph{ChooseRobot}-Sequenzdiagramm}
 	\label{SequenzDiagrammInteraktion}
 \end{figure}
