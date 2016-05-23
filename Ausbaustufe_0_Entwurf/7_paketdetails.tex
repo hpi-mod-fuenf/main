@@ -33,7 +33,7 @@
 
 			%7.1.1.1 #collectSensorData():void
 			\paragraph{Beschreibung der Methode \textit{collectSensorData}}
-			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
+			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Sensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
 			nach seiner Position und seinem Akkustand an, und gibt diese Informationen, zusammen mit Informationen über den Aktuellen Zustand des \textit{Robots} bzw. seine aktuelle \textit{Destination}, zurück and den \textit{Server}.
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
@@ -81,7 +81,7 @@
 			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen 
 			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für den \textit{Robot} ist.
 			
-			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Sequenzdiagramm.
+			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Sequenzdiagramm. Dabei ist \texttt{min_dist} eine vorher festgelegte Konstante, welche die Mindestdistanz, die der \textit{Robot} halten muss, wenn er an einem \textit{Obstacle} vorbeifährt, speichert.
 	
 \pagebreak
 	
