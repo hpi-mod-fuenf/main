@@ -8,23 +8,23 @@
 \contentsline {section}{\numberline {2}Interaktion der Komponenten}{6}{section.2}
 \contentsline {section}{\numberline {3}Komponentenschnittstellen}{7}{section.3}
 \contentsline {section}{\numberline {4}Konkrete Architektur}{8}{section.4}
-\contentsline {subsection}{\numberline {4.1}\textit {ServerSoftware}}{9}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}\textit {RobotSoftware}}{10}{subsection.4.2}
-\contentsline {section}{\numberline {5}Komponenten}{11}{section.5}
-\contentsline {subsection}{\numberline {5.1}Komponente \textit {ServerSoftware}}{11}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Komponente \textit {RobotSoftware}}{12}{subsection.5.2}
-\contentsline {section}{\numberline {6}Paketstruktur}{13}{section.6}
-\contentsline {section}{\numberline {7}Paketdetails}{14}{section.7}
-\contentsline {subsection}{\numberline {7.1}Paket \textit {Robot}}{14}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Beschreibung der Klasse \textit {RobotController}}{14}{subsubsection.7.1.1}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {collectSensorData}}{14}{section*.15}
-\contentsline {subsubsection}{\numberline {7.1.2}Beschreibung der Klasse \textit {DrivingSystem}}{15}{subsubsection.7.1.2}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveToDestination}}{15}{section*.16}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveAroundObstacle}}{16}{section*.18}
-\contentsline {subsection}{\numberline {7.2}Paket \textit {Server}}{17}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Beschreibung der Klasse \textit {TaskSystem}}{17}{subsubsection.7.2.1}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {assignTask}}{17}{section*.20}
-\contentsline {subsubsection}{\numberline {7.2.2}Beschreibung der Klasse \textit {RobotControlSystem}}{17}{subsubsection.7.2.2}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {chooseRobot}}{17}{section*.21}
-\contentsline {section}{\numberline {8}Abl\IeC {\"a}ufe}{18}{section.8}
-\contentsline {section}{\numberline {9}Produkteinsatz}{21}{section.9}
+\contentsline {subsection}{\numberline {4.1}\textit {ServerSoftware}}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}\textit {RobotSoftware}}{8}{subsection.4.2}
+\contentsline {section}{\numberline {5}Komponenten}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}Komponente \textit {ServerSoftware}}{9}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Komponente \textit {RobotSoftware}}{10}{subsection.5.2}
+\contentsline {section}{\numberline {6}Paketstruktur}{11}{section.6}
+\contentsline {section}{\numberline {7}Paketdetails}{12}{section.7}
+\contentsline {subsection}{\numberline {7.1}Paket \textit {Robot}}{12}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Beschreibung der Klasse \textit {RobotController}}{12}{subsubsection.7.1.1}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {collectSensorData}}{12}{section*.13}
+\contentsline {subsubsection}{\numberline {7.1.2}Beschreibung der Klasse \textit {DrivingSystem}}{13}{subsubsection.7.1.2}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveToDestination}}{13}{section*.14}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveAroundObstacle}}{14}{section*.16}
+\contentsline {subsection}{\numberline {7.2}Paket \textit {Server}}{15}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Beschreibung der Klasse \textit {TaskSystem}}{15}{subsubsection.7.2.1}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {assignTask}}{15}{section*.18}
+\contentsline {subsubsection}{\numberline {7.2.2}Beschreibung der Klasse \textit {RobotControlSystem}}{15}{subsubsection.7.2.2}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {chooseRobot}}{15}{section*.19}
+\contentsline {section}{\numberline {8}Abl\IeC {\"a}ufe}{16}{section.8}
+\contentsline {section}{\numberline {9}Produkteinsatz}{19}{section.9}
