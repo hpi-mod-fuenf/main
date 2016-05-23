@@ -32,14 +32,9 @@
 		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
 
 			%7.1.1.1 #collectSensorData():void
-			\paragraph{Beschreibung der Methode \texttt{collectSensorData}}
-			{\color{red}Die Methode \texttt{collectSensorData} wird von der Methode \textit{receiveMessag} 
-			aus der Klasse \textit{RobotCommunication} aufgerufen, wenn eine Neue \textit{Message} 
-			vom Server eingegangen ist, welche den \textit{Robot} dazu auffordert, Informationen 
-			über seinen Zustand zu senden. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
-			nach seiner Position und seinem Akkustand an, und verfasst eine neue \textit{Message} 
-			die diese Informationen, sowie seinen Aktuellen Zustand bzw. seine aktuelle \textit{Destination} enthalten.}
-
+			\paragraph{Beschreibung der Methode \textit{collectSensorData}}
+			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
+			nach seiner Position und seinem Akkustand an, und gibt diese Informationen, zusammen mit Informationen über den Aktuellen Zustand des \textit{Robots} bzw. seine aktuelle \textit{Destination}, zurück and den \textit{Server}.
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
 %		\begin{figure}[H]
@@ -59,7 +54,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.9\textwidth]{../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination}
-			\caption{Aktivitätsdiagramm von \texttt{driveToDestination}}
+			\caption{Aktivitätsdiagramm zu Metode \texttt{driveToDestination}}
 			\label{AktivitaetDriveToDestination}
 			\end{figure}
 
