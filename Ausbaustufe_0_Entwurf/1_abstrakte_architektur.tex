@@ -1,8 +1,7 @@
 \section{Abstrakte Architektur}
-\textcolor{blue}{\textit{Dieser Abschnitt beschreibt im Wesentlichen eine grobe Zerlegung der zu entwickelnden Anwendung in (Teil-)Komponenten und deren Zusammenhänge. Die Struktur der einzelnen Komponenten (also die enthaltenen Klassen und deren Beziehungen) sowie deren Schnittstellen ist nicht Teil dieser Beschreibung. Die notwendigen Schnittstellen werden erst im Laufe dieses Dokumentes entwickelt.\\\\
-Die hier definierten Komponenten sind als logische Einheiten zu verstehen, die aus beliebig vielen Klassen bestehen können, die gemeinsam die Funktionalität der Komponente realisieren.\\\\
-Das folgende Komponentendiagramm führt (Teil-)Komponenten ein und beschreibt ihre Abhängigkeiten.
-}}
+In diesem Dokument soll ein Transportsystem mit autonom agierenden Transportvehikeln entwickelt werden, welche Notfalltransporte f\"{u}r ein Krankenhaus erledigen. Die Vehikel werden zu einem vom Krankenhaus angegebenen Ort geschickt, um dort einen Patienten abzuholen und danach zur Klinik zu fahren. 
+
+Dieser Entwurf basiert auf der in der Analyse erarbeiteten Spezifikation des Systems.
 
 \begin{figure}[H]
 \centering
@@ -10,3 +9,29 @@ Das folgende Komponentendiagramm führt (Teil-)Komponenten ein und beschreibt ih
 \caption{\textcolor{blue}{Durch eigenes Komponentendiagramm ersetzen}}
 \label{KomponentendiagrammAbstrakt}
 \end{figure}
+
+Da eine Komponente mit dem Namen Robot bereits vorhanden ist, nennen wir die Robot-Hauptkomponente RobitUnit. Dieser Name verdeutlicht, dass jeder physische Roboter im System durch diese Hauptkomponente repr\"{a}sentiert wird.
+
+In diesem Kapitel wird die im Rahmen der Analyse ermittelte Einteilung des Systems in Komponenten strukturiert dargestellt. Hierbei soll auch die Interaktion der Komponenten untereinander verdeutlicht werden.
+
+\subsection{Server}
+
+Der Server verwaltet die Tasks f\"{u}r die RobotUnits und beh\"{a}lt einen st\"{a}ndigen \"{U}berblick \"{u}ber die Positionen der RobotUnits. Er ist f\"{u}r die effiziente Allokation der Auftr\"{a}ge f\"{u}r die RobotUnits zust\"{a}ndig.
+
+\subsubsection{ServerSoftware}
+
+Die Komponente ServerSoftware ist die Verwaltungslogik des Servers. Sie greift auf die servierseitigen Subsysteme zu und stellt die zentrale Anlaufstelle f\"{u}r alle RobotUnits dar. 
+
+Bei einer Anfrage ermittelt sie die passende RobotUnit und sendet die Position des Ziels. 
+
+\subsection{RobotUnit}
+
+Die Komponente RobotUnit sublimiert die RobotSoftware und Hardware (Komponente Robot) als eine Oberkomponente. Sie vereint alle Hard- und Softwareinterfaces dieser Komponenten und leitet die ein- und ausgehenden Nachrichten der RobotSoftware an den Server weiter. Sie dient somit als \"{u}bergeordnete Schnittstelle f\"{u}r die Kommunikation. 
+
+\subsubsection{RobotSoftware}
+
+Die RobotSoftware steuert den Robot an und verwertet seine Sensordaten. Dazu geh\"{o}rt unter anderem die Fahrlogik und die Verwaltung der Battery, damit angenommene Tasks auch komplett ausgef\"{u}hrt werden k\"{o}nnen und die RobotUnit rechtzeitig die ChargingStation erreicht. 
+
+\subsubsection{Robot}
+
+Die Komponente Robot steht f\"{u}r alle hardwaretechnischen Spezifikationen des Robots. Dazu geh\"{o}ren die Fahreinheit und die interne Sensorik so wie die Battery.   
