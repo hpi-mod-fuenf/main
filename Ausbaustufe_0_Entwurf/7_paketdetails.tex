@@ -5,7 +5,7 @@
 \subsection{Paket \textit{Robot}}
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../images/Paketdetails.png}
+%	\includegraphics[width=0.6\textwidth]{../images/Paketdetails.png}
 	\caption{\textcolor{blue}{HIER KOMMT DAS ROBOT - PAKETDIAGRMAM HIN}}
 	\label{Paketdetails}
 	\end{figure}
@@ -17,12 +17,13 @@
 	\subsubsection{Beschreibung der Klasse \textit{RobotController}}
 		\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-1_Klasse_RobotController.svg}
+		\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-1_Klasse_RobotController.png}
 		\caption{\textcolor{blue}{Durch eigene Diagramme ersetzen}}
 		\label{BeschreibungKlasse1}
 		\end{figure}
 		
 		%#destination : Destination
+		
 		Die Klasse \textit{RobotController} ist die Hauptklasse des \textit{Robots}, 
 		da sie den aktuellen Zustand des \textit{Robots} enthält.
 		So hat diese Klasse die Möglichkeit höchstens eine \textit{Destination} zu speichern. 
@@ -32,19 +33,21 @@
 		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
 
 			%7.1.1.1 #collectSensorData():void
-			\subsubsubsection{Beschreibung der Methode \textit{collectSensorData}}
+			\subsubsection{Beschreibung der Methode \textit{collectSensorData}}
 			Die Methode \textit{collectSensorData} wird von der Methode \textit{recieveMessage} 
 			aus der Klasse \textit{RobotCommunication} aufgerufen, wenn eine Neue \textit{Message} 
 			vom Server eingegangen ist, welche den \textit{Robot} dazu auffordert, Informationen 
 			über seinen Zustand zu senden. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
 			nach seiner Position und seinem Akkustand an, und verfasst eine neue \textit{Message} 
 			die diese Informationen, sowie seinen Aktuellen Zustand bzw. seine aktuelle \textit{Destination} enthalten.
+			
 
 	%7.1.2 DrivingSystem
+		
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
 		\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSystem.svg}
+		\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSystem.png}
 		\caption{\textcolor{blue}{Durch eigene Diagramme ersetzen}}
 		\label{BeschreibungKlasse1}
 		\end{figure}
@@ -55,10 +58,11 @@
 		die gerade ausgeführt wird, gibt Auskunft über die aktuelle Beschäftigung des \textit{Robots}.
 
 			%7.1.2.1 	#driveToDestination(destination: Destination, arrivalHandler: ArrivalHandler): void
-			\subsubsubsection{Beschreibung der Methode \textit{driveToDestination}}
+			
+			\subsubsection{Beschreibung der Methode \textit{driveToDestination}}
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.svg}
+			\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.png}
 			\caption{\textcolor{blue}{Durch eigene Diagramme ersetzen}}
 			\label{BeschreibungKlasse1}
 			\end{figure}
@@ -70,7 +74,7 @@
 			aufgerufen, bis das \textit{Obstacle} umfahren wurde.
 
 			%7.1.2.2    -driveAroundObstacle(destination: Destination): void
-			\subsubsubsection{Beschreibung der Methode \textit{driveAroundObstacle}}
+			\subsubsection{Beschreibung der Methode \textit{driveAroundObstacle}}
 			\begin{figure}[H]
 			\centering
 			%TODO: Sequenzdiagramm
@@ -96,10 +100,10 @@
 		%	-communicationID: int
 		
 			%7.1.3.1	#sendMessage(m: Mesasage): void
-			\subsubsubsection{Beschreibung der Methode \textit{sendMessage}}
+			\subsubsection{Beschreibung der Methode \textit{sendMessage}}
 	
 			%7.1.3.2	#receiveMessage(): void
-			\subsubsubsection{Beschreibung der Methode \textit{receiveMessage}}
+			\subsubsection{Beschreibung der Methode \textit{receiveMessage}}
 	
 
 	\begin{figure}[H]

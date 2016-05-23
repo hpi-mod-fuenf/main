@@ -1,0 +1,1093 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.9)  21 MAY 2016 06:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**6_paketstruktur.tex
+(./6_paketstruktur.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 9 languages loaded.
+! Undefined control sequence.
+l.1 \section
+            {Paketstruktur}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \section{P
+              aketstruktur}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no P in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+l.2 \textcolor
+              {blue}{\textit{Dieser Abschnitt beschreibt im Wesentlichen ein...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¤ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¤ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¤ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¶ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¤ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no œ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¼ in font cmti10!
+Missing character: There is no Ã in font cmti10!
+Missing character: There is no ¤ in font cmti10!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[]
+ []
+
+
+Overfull \hbox (28.12201pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Dieser
+ []
+
+
+Overfull \hbox (15.35542pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ab-
+ []
+
+
+Overfull \hbox (29.13313pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 schnitt
+ []
+
+
+Overfull \hbox (41.78297pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 beschreibt
+ []
+
+
+Overfull \hbox (11.24438pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 im
+ []
+
+
+Overfull \hbox (57.77739pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Wesentlichen
+ []
+
+
+Overfull \hbox (17.88876pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 eine
+ []
+
+
+Overfull \hbox (22.10535pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 grobe
+ []
+
+
+Overfull \hbox (18.52762pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Zer-
+ []
+
+
+Overfull \hbox (26.83313pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 legung
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 der
+ []
+
+
+Overfull \hbox (9.4555pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 zu
+ []
+
+
+Overfull \hbox (13.7999pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 en-
+ []
+
+
+Overfull \hbox (25.81091pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 twick-
+ []
+
+
+Overfull \hbox (10.73325pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 el-
+ []
+
+
+Overfull \hbox (20.95543pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 nden
+ []
+
+
+Overfull \hbox (16.37766pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 An-
+ []
+
+
+Overfull \hbox (20.4443pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 wen-
+ []
+
+
+Overfull \hbox (20.69987pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 dung
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (29.01645pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Pakete
+ []
+
+
+Overfull \hbox (16.09991pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 und
+ []
+
+
+Overfull \hbox (23.6387pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 deren
+ []
+
+
+Overfull \hbox (32.45535pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Zusam-
+ []
+
+
+Overfull \hbox (41.39973pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 menhnge.
+ []
+
+
+Overfull \hbox (24.41647pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Dabei
+ []
+
+
+Overfull \hbox (25.0443pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 sollen
+ []
+
+
+Overfull \hbox (32.45535pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Zusam-
+ []
+
+
+Overfull \hbox (38.33308pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 menhnge
+ []
+
+
+Overfull \hbox (16.09991pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 und
+ []
+
+
+Overfull \hbox (15.35542pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ab-
+ []
+
+
+Overfull \hbox (8.68883pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 h-
+ []
+
+
+Overfull \hbox (43.69968pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ngigkeiten
+ []
+
+
+Overfull \hbox (21.46654pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 zwis-
+ []
+
+
+Overfull \hbox (19.9332pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 chen
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 den
+ []
+
+
+Overfull \hbox (34.63864pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Paketen
+ []
+
+
+Overfull \hbox (48.68294pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 beschrieben
+ []
+
+
+Overfull \hbox (19.03874pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 wer-
+ []
+
+
+Overfull \hbox (18.39989pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 den. 
+ []
+
+
+Overfull \hbox (15.21655pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Die
+ []
+
+
+Overfull \hbox (16.99432pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 hier
+ []
+
+
+Overfull \hbox (46.38301pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 definierten
+ []
+
+
+Overfull \hbox (29.01645pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Pakete
+ []
+
+
+Overfull \hbox (17.8888pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 sind
+ []
+
+
+Overfull \hbox (11.24437pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 lo-
+ []
+
+
+Overfull \hbox (15.33322pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gis-
+ []
+
+
+Overfull \hbox (14.311pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 che
+ []
+
+
+Overfull \hbox (19.04988pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ein-
+ []
+
+
+Overfull \hbox (26.32204pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 heiten
+ []
+
+
+Overfull \hbox (18.52763pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 oder
+ []
+
+
+Overfull \hbox (34.2442pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gemein-
+ []
+
+
+Overfull \hbox (17.37769pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 sam
+ []
+
+
+Overfull \hbox (35.52196pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 genutzte
+ []
+
+
+Overfull \hbox (19.04988pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ein-
+ []
+
+
+Overfull \hbox (29.38869pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 heiten,
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 die
+ []
+
+
+Overfull \hbox (14.56659pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 aus
+ []
+
+
+Overfull \hbox (12.26654pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 be-
+ []
+
+
+Overfull \hbox (22.48872pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 liebig
+ []
+
+
+Overfull \hbox (15.84431pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 vie-
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 len
+ []
+
+
+Overfull \hbox (33.75536pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Klassen
+ []
+
+
+Overfull \hbox (24.27756pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 beste-
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 hen
+ []
+
+
+Overfull \hbox (13.7999pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 kn-
+ []
+
+
+Overfull \hbox (18.911pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 nen,
+ []
+
+
+Overfull \hbox (28.11092pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 welche
+ []
+
+
+Overfull \hbox (34.2442pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gemein-
+ []
+
+
+Overfull \hbox (17.37769pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 sam
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 die
+ []
+
+
+Overfull \hbox (24.9276pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Funk-
+ []
+
+
+Overfull \hbox (20.69986pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 tion-
+ []
+
+
+Overfull \hbox (17.37766pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 alitt
+ []
+
+
+Overfull \hbox (23.89427pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 durch
+ []
+
+
+Overfull \hbox (14.31104pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 das
+ []
+
+
+Overfull \hbox (24.41649pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Paket
+ []
+
+
+Overfull \hbox (30.41093pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 zusam-
+ []
+
+
+Overfull \hbox (21.97763pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 men-
+ []
+
+
+Overfull \hbox (29.64427pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 fassen.
+ []
+
+
+Overfull \hbox (15.21655pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Die
+ []
+
+
+Overfull \hbox (44.74414pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Aufteilung
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 von
+ []
+
+
+Overfull \hbox (33.75536pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Klassen
+ []
+
+
+Overfull \hbox (9.4555pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 zu
+ []
+
+
+Overfull \hbox (34.63864pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Paketen
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 muss
+ []
+
+
+Overfull \hbox (16.86656pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 sich
+ []
+
+
+Overfull \hbox (21.97762pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 dabei
+ []
+
+
+Overfull \hbox (21.72208pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 nicht
+ []
+
+
+Overfull \hbox (10.73328pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 an
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 den
+ []
+
+
+Overfull \hbox (25.17203pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 struk-
+ []
+
+
+Overfull \hbox (32.83864pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 turellen
+ []
+
+
+Overfull \hbox (28.2498pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Eigen-
+ []
+
+
+Overfull \hbox (35.52199pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 schaften
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 der
+ []
+
+
+Overfull \hbox (14.97209pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ar-
+ []
+
+
+Overfull \hbox (28.87755pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 chitek-
+ []
+
+
+Overfull \hbox (12.90546pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 tur
+ []
+
+
+Overfull \hbox (21.34988pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 (z.B.
+ []
+
+
+Overfull \hbox (24.5554pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Kom-
+ []
+
+
+Overfull \hbox (13.28879pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 po-
+ []
+
+
+Overfull \hbox (19.42209pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 nen-
+ []
+
+
+Overfull \hbox (17.63321pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ten)
+ []
+
+
+Overfull \hbox (15.9721pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ori-
+ []
+
+
+Overfull \hbox (13.7999pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 en-
+ []
+
+
+Overfull \hbox (27.98311pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 tieren.
+ []
+
+
+Overfull \hbox (39.76085pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Vielmehr
+ []
+
+
+Overfull \hbox (14.82214pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 soll
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 die
+ []
+
+
+Overfull \hbox (18.52762pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Zer-
+ []
+
+
+Overfull \hbox (26.83313pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 legung
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (29.01645pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Pakete
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 der
+ []
+
+
+Overfull \hbox (35.39415pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 besseren
+ []
+
+
+Overfull \hbox (26.70535pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Struk-
+ []
+
+
+Overfull \hbox (43.44414pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 turierung,
+ []
+
+
+Overfull \hbox (15.461pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Or-
+ []
+
+
+Overfull \hbox (18.91098pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gan-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 sa-
+ []
+
+
+Overfull \hbox (20.18877pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 tion,
+ []
+
+
+Overfull \hbox (14.97209pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ar-
+ []
+
+
+Overfull \hbox (18.65538pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 beit-
+ []
+
+
+Overfull \hbox (33.222pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 steilung
+ []
+
+
+Overfull \hbox (11.75545pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 bei
+ []
+
+
+Overfull \hbox (15.61101pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Im-
+ []
+
+
+Overfull \hbox (15.84433pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ple-
+ []
+
+
+Overfull \hbox (21.97763pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 men-
+ []
+
+
+Overfull \hbox (30.79422pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 tierung
+ []
+
+
+Overfull \hbox (16.09991pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 und
+ []
+
+
+Overfull \hbox (64.01617pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 bersichtlichkeit
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 der
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 der
+ []
+
+
+Overfull \hbox (40.12195pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gesamten
+ []
+
+
+Overfull \hbox (14.97209pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ar-
+ []
+
+
+Overfull \hbox (28.87755pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 chitek-
+ []
+
+
+Overfull \hbox (12.90546pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 tur
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ver-
+ []
+
+
+Overfull \hbox (20.4443pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 wen-
+ []
+
+
+Overfull \hbox (13.28879pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 de-
+ []
+
+
+Overfull \hbox (13.54434pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ten
+ []
+
+
+Overfull \hbox (33.75536pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Klassen
+ []
+
+
+Overfull \hbox (11.75548pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 di-
+ []
+
+
+Overfull \hbox (23.51096pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 enen. 
+ []
+
+
+Overfull \hbox (16.7499pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Das
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 fol-
+ []
+
+
+Overfull \hbox (24.53316pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gende
+ []
+
+
+Overfull \hbox (27.99423pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Paket-
+ []
+
+
+Overfull \hbox (11.75548pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 di-
+ []
+
+
+Overfull \hbox (8.68883pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 a-
+ []
+
+
+Overfull \hbox (29.77202pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 gramm
+ []
+
+
+Overfull \hbox (15.71655pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 fhrt
+ []
+
+
+Overfull \hbox (29.01645pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Pakete
+ []
+
+
+Overfull \hbox (13.2888pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ein
+ []
+
+
+Overfull \hbox (16.09991pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 und
+ []
+
+
+Overfull \hbox (41.78297pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 beschreibt
+ []
+
+
+Overfull \hbox (16.4832pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ihre
+ []
+
+
+Overfull \hbox (15.35542pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 Ab-
+ []
+
+
+Overfull \hbox (8.68883pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 h-
+ []
+
+
+Overfull \hbox (46.76633pt too wide) in paragraph at lines 1--7
+\OT1/cmr/m/it/10 ngigkeiten.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{figure}
+                  [H]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{figure}[
+                   H]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.10 \includegraphics
+                     [width=0.8\textwidth]{../images/Iteration0_Entwurf_6_Pa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.10 \includegraphics[width=0.8\textwidth]
+                                          {../images/Iteration0_Entwurf_6_Pa...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.10 \includegraphics[width=0.8\textwidth]
+                                          {../images/Iteration0_Entwurf_6_Pa...
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 ...width=0.8\textwidth]{../images/Iteration0_
+                                                  Entwurf_6_Paketdiagramm.png}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 10.
+! Double subscript.
+l.10 ...textwidth]{../images/Iteration0_Entwurf_6_
+                                                  Paketdiagramm.png}
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+l.10 ...es/Iteration0_Entwurf_6_Paketdiagramm.png}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \caption
+             {Abbildung 6.1: Paketdiagramm}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.13 \end{figure}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.13 \end{figure}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> 6_paketstruktur.tex
+                       
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 14 strings out of 494935
+ 262 string characters out of 6178123
+ 52065 words of memory out of 5000000
+ 3344 multiletter control sequences out of 15000+600000
+ 3986 words of font info for 15 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 18i,4n,14p,573b,113s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,55 +1,55 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.11)  14 MAY 2016 14:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.9)  21 MAY 2016 07:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2015/07/02 v3.18 KOMA-Script document class (article)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2015/07/02 v3.18 KOMA-Script package (KOMA-Script-dependent b
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 9 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2013/12/19 v3.12 KOMA-Script document class (article)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2015/07/02 v3.18 KOMA-Script package (KOMA-Script-independent 
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2015/07/02 v3.18 KOMA-Script package (loading files)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
 
-Package scrlfile, 2015/07/02 v3.18 KOMA-Script package (loading files)
+Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) (/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2015/07/02 v3.18 KOMA-Script package (handling toc-files)
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 123.
+(tocbasic)             for `toc' on input line 115.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 124.
+(tocbasic)             for `lof' on input line 116.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 125.
+(tocbasic)             for `lot' on input line 117.
 Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 202
-7.
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 153
+1.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2015/07/02 v3.18 KOMA-Script font size class option (11pt
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (11pt
 )
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2015/07/02 v3.18 KOMA-Script package (type area)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
 
-Package typearea, 2015/07/02 v3.18 KOMA-Script package (type area)
+Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -75,7 +75,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1506.
+(typearea)              on input line 1330.
 )
 \c@part=\count80
 \c@section=\count81
@@ -83,34 +83,33 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count83
 \c@paragraph=\count84
 \c@subparagraph=\count85
-LaTeX Info: Redefining \textsubscript on input line 3836.
 \abovecaptionskip=\skip46
 \belowcaptionskip=\skip47
 \c@pti@nb@sid@b@x=\box26
 \c@figure=\count86
 \c@table=\count87
 \bibindent=\dimen102
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -118,59 +117,53 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/lastpage/lastpage.sty
-Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2015/07/02 v3.18 KOMA-Script package (end user interf
-ace for scrlayer)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 14/12/2013 v0.9.1548 package (end user interface for 
+scrlayer)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2015/07/02 v3.18 KOMA-Script package (defining layers and pag
-e styles)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 31/10/2013 v0.9.1480 package (defining layers and page styles
+)
 Package scrlayer Info: Using already defined \footheight
 (scrlayer)             hoping, that this is a length and
 (scrlayer)             not only a macro on input line 107.
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 193
-0.
-)
-Package scrlayer-scrpage Info: deactivating warning for font element
-(scrlayer-scrpage)             `pagefoot' on input line 1191.
-)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 174
+9.
+))
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2015/08/03 3.9m The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
 Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2015/08/03 3.9m Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen105
 )
 \l@naustrian = a dialect from \language\l@ngerman 
 \l@nswissgerman = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 88.
-)))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -319,8 +312,8 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -350,8 +343,8 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -374,19 +367,19 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen106
 \extrarowheight=\dimen107
 \NC@list=\toks17
@@ -401,7 +394,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@cols=\count90
 \TX@ftn=\toks18
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count91
 \float@exts=\toks19
@@ -409,18 +402,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks20
 \@floatcapt=\box28
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count92
@@ -440,7 +433,20 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 LaTeX Warning: Unused global option(s):
     [includeheaders].
 
-No file main.aux.
+(./main.aux
+
+LaTeX Warning: Label `BeschreibungKlasse1' multiply defined.
+
+
+LaTeX Warning: Label `BeschreibungKlasse1' multiply defined.
+
+
+LaTeX Warning: Label `BeschreibungKlasse1' multiply defined.
+
+
+LaTeX Warning: Label `BeschreibungKlasse1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -455,7 +461,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count95
 \scratchdimen=\dimen121
@@ -468,11 +474,11 @@ LaTeX Font Info:    ... okay on input line 25.
 \MPnumerator=\count99
 \makeMPintoPDFobject=\count100
 \everyMPtoPDFconversion=\toks23
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -481,22 +487,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -508,12 +514,16 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package lastpage Info: Please have a look at the pageslts package at
-(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
 (lastpage)             ! on input line 25.
 
 *geometry* driver: auto-detecting
@@ -576,14 +586,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-
-LaTeX Warning: Reference `KomponentendiagrammAbstrakt' on page 1 undefined on i
-nput line 48.
-
 [1
 
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
@@ -600,7 +608,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
 [2
 
-] <img/logo.png, id=13, 777.90625pt x 445.665pt>
+
+
+] <img/logo.png, id=12, 777.90625pt x 445.665pt>
 File: img/logo.png Graphic file (type png)
  <use img/logo.png>
 Package pdftex.def Info: img/logo.png used on input line 81.
@@ -640,7 +650,7 @@ Underfull \hbox (badness 2277) in paragraph at lines 5--6
 onenten ein und be-schreibt ih-re
  []
 
-<img/KomponentendiagrammAbstrakt.png, id=18, 306.746pt x 107.602pt>
+<img/KomponentendiagrammAbstrakt.png, id=17, 306.746pt x 107.602pt>
 File: img/KomponentendiagrammAbstrakt.png Graphic file (type png)
 
 <use img/KomponentendiagrammAbstrakt.png>
@@ -669,7 +679,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
-<img/SequenzDiagrammInteraktion.png, id=24, 505.89pt x 370.986pt>
+<img/SequenzDiagrammInteraktion.png, id=23, 505.89pt x 370.986pt>
 File: img/SequenzDiagrammInteraktion.png Graphic file (type png)
 
 <use img/SequenzDiagrammInteraktion.png>
@@ -755,70 +765,100 @@ Package pdftex.def Info: img/logo.png used on input line 91.
 (pdftex.def)             Requested size: 54.459pt x 31.19974pt.
  [9 <./img/Komponenten2.png> <./img/Komponenten3.png> <./img/Komponenten4.png>]
  (./6_paketstruktur.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<img/Paketstruktur.png, id=51, 408.77719pt x 331.99031pt>
-File: img/Paketstruktur.png Graphic file (type png)
 
-<use img/Paketstruktur.png>
-Package pdftex.def Info: img/Paketstruktur.png used on input line 9.
-(pdftex.def)             Requested size: 364.19667pt x 295.79971pt.
+<../images/Iteration0_Entwurf_6_Paketdiagramm.png, id=51, 484.05844pt x 421.575
+pt>
+File: ../images/Iteration0_Entwurf_6_Paketdiagramm.png Graphic file (type png)
+ <use ../images/Iteration0_Entwurf_6_Paketdiagramm.png>
+Package pdftex.def Info: ../images/Iteration0_Entwurf_6_Paketdiagramm.png used 
+on input line 10.
+(pdftex.def)             Requested size: 364.19667pt x 317.19682pt.
 )
 File: img/logo.png Graphic file (type png)
  <use img/logo.png>
 Package pdftex.def Info: img/logo.png used on input line 93.
 (pdftex.def)             Requested size: 54.459pt x 31.19974pt.
- [10 <./img/Paketstruktur.png>]
-(./7_paketdetails.tex <img/Paketdetails.png, id=55, 299.61937pt x 141.52875pt>
-File: img/Paketdetails.png Graphic file (type png)
 
-<use img/Paketdetails.png>
-Package pdftex.def Info: img/Paketdetails.png used on input line 7.
-(pdftex.def)             Requested size: 273.14923pt x 129.03539pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
+[10 <../images/Iteration0_Entwurf_6_Paketdiagramm.png (PNG copy)>]
+(./7_paketdetails.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 5.
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 14--15
-\OT1/cmr/m/it/10.95 mo-del-liert wer-den. Der Le-bens-zy-klus kann durch ein en
-t-spre-chen-des Zu-stands-dia-gramm
- []
+<../images/Iteration0_Entwurf_7-1-1_Klasse_RobotController.png, id=55, 207.7762
+5pt x 71.51718pt>
+File: ../images/Iteration0_Entwurf_7-1-1_Klasse_RobotController.png Graphic fil
+e (type png)
 
-<img/BeschreibungKlasse1.png, id=56, 693.59125pt x 332.24126pt>
+<use ../images/Iteration0_Entwurf_7-1-1_Klasse_RobotController.png>
+Package pdftex.def Info: ../images/Iteration0_Entwurf_7-1-1_Klasse_RobotControl
+ler.png used on input line 20.
+(pdftex.def)             Requested size: 273.14923pt x 94.02974pt.
+
+<../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSystem.png, id=56, 361.35pt x
+ 55.70813pt>
+File: ../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSystem.png Graphic file 
+(type png)
+ <use ../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSystem.png>
+Package pdftex.def Info: ../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSyste
+m.png used on input line 50.
+(pdftex.def)             Requested size: 273.14923pt x 42.1108pt.
+
+<../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.png, id=57, 50
+2.12593pt x 170.13562pt>
+File: ../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.png Graph
+ic file (type png)
+
+<use ../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.png>
+Package pdftex.def Info: ../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDe
+stination.png used on input line 65.
+(pdftex.def)             Requested size: 273.14923pt x 92.55461pt.
+File: img/logo.png Graphic file (type png)
+
+<use img/logo.png>
+Package pdftex.def Info: img/logo.png used on input line 69.
+(pdftex.def)             Requested size: 54.459pt x 31.19974pt.
+ [11 <../images/Iteration0_Entwurf_7-1-1_Klasse_RobotController.png (PNG copy)>
+ <../images/Iteration0_Entwurf_7-1-2_Klasse_DrivingSystem.png (PNG copy)>] <img
+/BeschreibungKlasse1.png, id=61, 693.59125pt x 332.24126pt>
 File: img/BeschreibungKlasse1.png Graphic file (type png)
 
 <use img/BeschreibungKlasse1.png>
-Package pdftex.def Info: img/BeschreibungKlasse1.png used on input line 18.
+Package pdftex.def Info: img/BeschreibungKlasse1.png used on input line 81.
 (pdftex.def)             Requested size: 273.14923pt x 130.84602pt.
+File: img/BeschreibungKlasse1.png Graphic file (type png)
+ <use img/BeschreibungKlasse1.png>
+Package pdftex.def Info: img/BeschreibungKlasse1.png used on input line 96.
+(pdftex.def)             Requested size: 273.14923pt x 130.84602pt.
+File: img/logo.png Graphic file (type png)
 
-<img/BeschreibungKlasse2.png, id=57, 573.60756pt x 577.59094pt>
+<use img/logo.png>
+Package pdftex.def Info: img/logo.png used on input line 101.
+(pdftex.def)             Requested size: 54.459pt x 31.19974pt.
+ [12 <../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination.png (PNG 
+copy)> <./img/BeschreibungKlasse1.png>]
+<img/BeschreibungKlasse2.png, id=65, 573.60756pt x 577.59094pt>
 File: img/BeschreibungKlasse2.png Graphic file (type png)
 
 <use img/BeschreibungKlasse2.png>
-Package pdftex.def Info: img/BeschreibungKlasse2.png used on input line 25.
+Package pdftex.def Info: img/BeschreibungKlasse2.png used on input line 111.
 (pdftex.def)             Requested size: 273.14923pt x 275.04599pt.
 )
 File: img/logo.png Graphic file (type png)
  <use img/logo.png>
 Package pdftex.def Info: img/logo.png used on input line 95.
 (pdftex.def)             Requested size: 54.459pt x 31.19974pt.
- [11 <./img/Paketdetails.png> <./img/BeschreibungKlasse1.png>]
-File: img/logo.png Graphic file (type png)
- <use img/logo.png>
-Package pdftex.def Info: img/logo.png used on input line 95.
-(pdftex.def)             Requested size: 54.459pt x 31.19974pt.
- [12 <./img/BeschreibungKlasse2.png>] (./8_ablaeufe.tex
+ [13 <./img/BeschreibungKlasse2.png>] (./8_ablaeufe.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
@@ -838,7 +878,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-<img/Interaktion1.png, id=66, 353.06906pt x 167.12437pt>
+<img/Interaktion1.png, id=71, 353.06906pt x 167.12437pt>
 File: img/Interaktion1.png Graphic file (type png)
 
 <use img/Interaktion1.png>
@@ -849,51 +889,46 @@ File: img/logo.png Graphic file (type png)
  <use img/logo.png>
 Package pdftex.def Info: img/logo.png used on input line 97.
 (pdftex.def)             Requested size: 54.459pt x 31.19974pt.
- [13 <./img/Interaktion1.png>]
+ [14 <./img/Interaktion1.png>]
 (./9_produkteinsatz.tex
-<img/Produkteinsatz.png, id=71, 634.37pt x 681.54625pt>
+<img/Produkteinsatz.png, id=75, 634.37pt x 681.54625pt>
 File: img/Produkteinsatz.png Graphic file (type png)
 
 <use img/Produkteinsatz.png>
 Package pdftex.def Info: img/Produkteinsatz.png used on input line 7.
 (pdftex.def)             Requested size: 341.43307pt x 366.83354pt.
-)
-
-Package lastpage Warning: Rerun to get the references right on input line 100.
-
-
+) 
 AED: lastpage setting LastPage
 File: img/logo.png Graphic file (type png)
 <use img/logo.png>
 Package pdftex.def Info: img/logo.png used on input line 100.
 (pdftex.def)             Requested size: 54.459pt x 31.19974pt.
- [14 <./img/Produkteinsatz.png>] (./main.aux)
+ [15 <./img/Produkteinsatz.png>] (./main.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5975 strings out of 493091
- 122124 string characters out of 6134964
- 271226 words of memory out of 5000000
- 9346 multiletter control sequences out of 15000+600000
- 10634 words of font info for 37 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 49i,23n,81p,692b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (14 pages, 350485 bytes).
+ 5670 strings out of 494935
+ 116798 string characters out of 6178123
+ 238304 words of memory out of 5000000
+ 8785 multiletter control sequences out of 15000+600000
+ 9721 words of font info for 34 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 49i,23n,81p,692b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (15 pages, 380903 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
