@@ -2,15 +2,15 @@
 \section{Paketdetails}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7_Paketdetails}
+\includegraphics[width=1\textwidth]{../images/Iteration0_Entwurf_7_Paketdetails}
 \caption{Klassendiagramm zur detaillierten Beschreibung der strukturellen Gliederung}
 \label{Paketdetails}
 \end{figure}
 
 %7.1 Paket Robot
 \subsection{Paket \textit{Robot}}
-	Im folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{Robot} 
-	und ihre zugehörigen wichtigen Methoden, sowie ihre Interaktion zwischeneinander. 
+	Im Folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{Robot} 
+	und ihre zugehörigen wichtigen Methoden, sowie ihre Interaktion untereinander. 
 
 
 	%7.1.1 RobotController
@@ -25,20 +25,20 @@
 		%#destination : Destination
 		Die Klasse \textit{RobotController} ist die Hauptklasse des \textit{Robots}, 
 		da sie den aktuellen Zustand des \textit{Robots} enthält.
-		So hat diese Klasse die Möglichkeit höchstens eine \textit{Destination} zu speichern. 
+		So hat diese Klasse die Möglichkeit, maximal eine \textit{Destination} zu speichern. 
 		Diese \textit{Destination} kann ein vom \textit{Server} zugeteiltes Ziel sein, 
 		der dem \textit{Robot} zugehörige \textit{Charger}, oder gerade kein Ziel, 
-		also \textit{null} sein. Nur wenn der \textit{Robot} gerade keine \textit{Destination} 
+		also \texttt{null} sein. Nur wenn der \textit{Robot} gerade keine \textit{Destination} 
 		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
 
 			%7.1.1.1 #collectSensorData():void
-			\paragraph{Beschreibung der Methode \textit{collectSensorData}}
-			Die Methode \textit{collectSensorData} wird von der Methode \textit{receiveMessag} 
+			\paragraph{Beschreibung der Methode \texttt{collectSensorData}}
+			{\color{red}Die Methode \texttt{collectSensorData} wird von der Methode \textit{receiveMessag} 
 			aus der Klasse \textit{RobotCommunication} aufgerufen, wenn eine Neue \textit{Message} 
 			vom Server eingegangen ist, welche den \textit{Robot} dazu auffordert, Informationen 
 			über seinen Zustand zu senden. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
 			nach seiner Position und seinem Akkustand an, und verfasst eine neue \textit{Message} 
-			die diese Informationen, sowie seinen Aktuellen Zustand bzw. seine aktuelle \textit{Destination} enthalten.
+			die diese Informationen, sowie seinen Aktuellen Zustand bzw. seine aktuelle \textit{Destination} enthalten.}
 
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
@@ -55,34 +55,40 @@
 		die gerade ausgeführt wird, gibt Auskunft über die aktuelle Beschäftigung des \textit{Robots}.
 
 			%7.1.2.1 	#driveToDestination(destination: Destination, arrivalHandler: ArrivalHandler): void
-			\paragraph{Beschreibung der Methode \textit{driveToDestination}}
+			\paragraph{Beschreibung der Methode \texttt{driveToDestination}}
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination}
-			\caption{\textcolor{blue}{Durch eigene Diagramme ersetzen}}
-			\label{BeschreibungKlasse1}
+			\includegraphics[width=0.9\textwidth]{../images/Iteration0_Entwurf_7-1-2-1_Methode_driveToDestination}
+			\caption{Aktivitätsdiagramm von \texttt{driveToDestination}}
+			\label{AktivitaetDriveToDestination}
 			\end{figure}
 
 			Wenn diese Methode aufgerufen wird, macht der \textit{Robot} sich auf den Weg zur 
 			übergebenen \textit{Destination}. Wenn der \textit{Robot} an dieser \textit{Destination} 
-			angekommen ist, wird die \textit{arrive}-Methode des übergebenen \textit{ArrivalHandlers} ausgeführt. 
-			Wenn sich ein \textit{Obstacle} auf dem Weg befindet, wird die Methode \textit{driveAroundObstacle} 
+			angekommen ist, wird die \texttt{arrive}-Methode des übergebenen \textit{ArrivalHandlers} ausgeführt. 
+			Wenn sich ein \textit{Obstacle} auf dem Weg befindet, wird die Methode \texttt{driveAroundObstacle} 
 			aufgerufen, bis das \textit{Obstacle} umfahren wurde.
+			
+			Abbildung \ref{AktivitaetDriveToDestination} zeigt ein entsprechendes Aktivitätsdiagramm.
 
 			%7.1.2.2    -driveAroundObstacle(destination: Destination): void
-			\paragraph{Beschreibung der Methode \textit{driveAroundObstacle}}
+			\paragraph{Beschreibung der Methode \texttt{driveAroundObstacle}}
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.6\textwidth]{../images/Iteration0_Entwurf_7-1-2-2_Methode_driveAroundObstacle}
-			\caption{UML Sequenzdiagramm zur Beschreibung der Methode driveAroundObstacle}
-			\label{BeschreibungKlasse1}
+			\includegraphics[width=0.7\textwidth]{../images/Iteration0_Entwurf_7-1-2-2_Methode_driveAroundObstacle}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
+			\label{SequenzDriveAroundObstacle}
 			\end{figure}
 
-			Diese Methode wird von \textit{driveToDestination} mit des Position eines \textit{Obstacles} aufgerufen, 
+			Diese Methode wird von \texttt{driveToDestination} mit des Position eines \textit{Obstacles} aufgerufen, 
 			wenn ein \textit{Obstacle} zu umfahren ist.
 			Dabei entscheidet sich der Roboter zunächst ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
 			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen 
 			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für den \textit{Robot} ist.
+			
+			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Sequenzdiagramm.
+	
+\pagebreak
 	
 %7.2 Paket Server
 \subsection{Paket \textit{Server}}
@@ -99,16 +105,16 @@
 	%7.2.1 TaskSystem
 	\subsubsection{Beschreibung der Klasse \textit{TaskSystem}}
 		%	-taskDistribution
-		Das Task-System des Roboters verarbeitet alle Tasks, die es mit der Zuordnung vom RobotControlSystem übergeben bekommt. Dafür besitzt es eine Struktur, die die taskDistribution intern verwaltet und somit die Tasks und die jeweils zugeordneten Roboter kennt.
+		Das \emph{TaskSystem} des \emph{Servers} verarbeitet alle \emph{Tasks}, die es mit der Zuordnung vom \emph{RobotControlSystem} übergeben bekommt. Dafür besitzt es eine Struktur, die die \emph{taskDistribution} intern verwaltet und somit die \emph{Tasks} und die jeweils zugeordneten \emph{Robots} kennt.
 		
 		%7.2.2.1	~assignTask(virtualRobot : VirtualRobot, destination : Destination): void
-			\paragraph{Beschreibung der Methode \textit{assignTask}}
-			Die Methode assignTask führt die Zuordnung und Abspeicherung der Roboter und Tasks bzw. Destinations durch.
+			\paragraph{Beschreibung der Methode \texttt{assignTask}}
+			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der Roboter und \emph{Tasks} bzw. \emph{Destinations} durch.
 			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{RobotControlSystem}}
-		Das RobotControlSystem sorgt bei eingehenden Tasks dafür, dass ein passender Roboter ausgewählt wird. Diese Information übergibt es dann an das Task-System, dass für die endgültige Zuordnung zuständig ist.
+		Das \emph{RobotControlSystem} sorgt bei eingehenden \emph{Tasks} dafür, dass ein passender \emph{Robot} ausgewählt wird. Diese Information übergibt es dann an das \emph{TaskSystem}, das für die endgültige Zuordnung zuständig ist.
 	
 			%7.2.1.1	~chooseRobot(destination: Destination): void
-			\paragraph{Beschreibung der Methode \textit{chooseRobot}}
-			Die Methode chooseRobot wählt für den aktuell eingegangenen Task einen Robot aus. Dazu fragt es die Sensorwerte der verschiedenen Roboter ab und wählt den am Besten geeigneten aus.
+			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
+			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. Dazu fragt es die Sensorwerte der verschiedenen \emph{Robotes} ab und wählt den am besten geeigneten aus.
