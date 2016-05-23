@@ -1,12 +1,16 @@
 \section{Interaktion der Komponenten}
-\textcolor{blue}{\textit{Die Interaktion zwischen den Komponenten während der Ausführung eines Use Case wird durch Sequenzdiagramme (oder Interaktionsdiagramme) auf Instanzen der Komponenten (repräsentiert durch Instanzen von Schnittstellenklassen/Interfaces) beschrieben. Die dabei ver-wendeten Operationen müssen sich später in den Schnittstellen der Komponenten wiederfinden.\\\\Es müssen nicht alle Use Cases hier beschrieben werden. Stattdessen sollen nur wesentliche oder charakteristische  Use Cases  (z. B. solche, deren Ablauf bei anderen Use Cases sehr ähn-lich stattfindet) beschrieben werden.}}\\
-\\
+Auf Basis der Analyse Use Cases wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem der Interaktion zwischen dem Server und der RobotUnit., die Use Cases innerhalb der Komponenten werden in Kapitel 8 näher ausgeführt.\\
+
+
 \textbf{Interaktion bei Ausführung von\\
-$<$Use Cae-ID$>$: $<$Use Case-Name$>$}
+4 : Coose Robot}\\
+Die Auswahl eines Robots läuft wie im Diagramm beschrieben folgendermaßen ab: Bei einer neueingehenden Destination sendet der Server mit getTaskRating(task) Anfragen an alle zur Verfügung stehenden RobotUnits(, im Diagramm sind Beispielhaft zwei angeführt, der Aufruf findet asynchron statt.) Die RobotUnit führt dann Read Sensor(Use Case 2) aus. Dabei sammelt er alle notwendigen Informationen von seinen Hardwareschnittstellen, wie Ladestand und Nähe zum Ziel, die der Server benötigt um den bestmöglichen Roboter auszuwählen. Er wartet auf das Zusammentragen der Daten, also das Abschließen des internen Loop-Prozesses bis er eine Nachricht mit den Informationen an den Server zurücksendet; erst dann kann der Server auf Grund der übermittelten Daten beurteilen, welcher Roboter am besten geeignet ist den Zielpunkt zu erreichen und entsendet ihn zu den Zielkoordinaten( Usecase 5 assign Task.) Bei dem darauffolgenden Use Cases DriveToDestionation ist der Server hingegen nicht beteiligt. Bei dem Use Case Charching kommt es ausschließlich zur Wechselwirkung mit der CharchingStation Komponente.
+
+
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.75\textwidth]{img/SequenzDiagrammInteraktion.png}
-\caption{\textcolor{blue}{Durch eigenes Sequenzdiagramm ersetzen}}
-\label{SequenzDiagrammInteraktion}
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/2-chooseRobot}
+	\caption{Coose Robot}
+	\label{SequenzDiagrammInteraktion}
 \end{figure}

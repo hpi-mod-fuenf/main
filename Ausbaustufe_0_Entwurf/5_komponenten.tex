@@ -1,34 +1,33 @@
 \section{Komponenten}
-\textcolor{blue}{\textit{Es sollen die in der Architektur definierten Komponenten weiter beschrieben werden. Dazu ist ihre innere Struktur zu beschreiben und mit Hilfe von Klassendiagrammen, Kompositionsstrukturdiagrammen sowie Komponentendiagrammen zu modellieren. Pro Komponente sollen Parts, Ports und Konnektoren beschrieben werden. Pro Komponente sollen Klassen und Assoziationen sowie deren Methoden und Attribute definiert werden, die für die Durchführung der vorher beschriebenen Abläufe innerhalb der Komponenten benötigt werden. In den Klassendiagrammen müssen sich gegebenenfalls die in Abschnitt 4 definierten Schnittstellen wiederfinden.\\\\
-Komponenten können sich während der Ausführung in verschiedenen Zuständen befinden. Sie wechseln diese, ausgelöst durch interne oder externe Ereignisse. Zustandsbezogenes Verhalten wird durch Zustandsdiagramme modelliert. Auslösende Ereignisse müssen als Operationen an den Komponentenschnittstellen zur Verfügung stehen. Ebenso sollen durch Transitionen ausgelöste Aktionen in der Komponente oder an externen Komponenten verfügbar sein.\\\\
-Es muss nicht für jede Komponente ein Zustandsdiagramm erstellt werden. Zustandsdiagramme sollen nur für die Komponenten modelliert werden, die reaktiven Charakter haben und in verschiedenen Modi operieren.\\
-}}
 
+%5.1 Server Software
+\subsection{Komponente \textit{ServerSoftware}}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{img/Komponenten1.png}
 \caption{\textcolor{blue}{Durch eigene Diagramm ersetzen}}
 \label{KomponentenStruktur1}
 \end{figure}
-
+Die Komponente \textit{ServerSoftware} umfasst 4 Klassen: \textit{TaskSystem}, \textit{Destination}, \textit{RobotControlSystem} und \textit{Virtual Robot}.
+Das \textit{TaskSystem} verwaltet die \textit{Tasks}, in der nullten Ausbaustufe fallen dabei allerdings noch nicht viele Aufgaben an, 
+da es keine Priorisierungen, unterschiedliche Arten von \textit{Tasks} oder dergleichen gibt. Die Klasse \textit{Destination} ist die Klasse 
+der Aufgaben, die vom \textit{TaskSystem} verwaltet werden. Das \textit{RobotControlSystem} verteilt die \textit{Tasks} auf die \textit{Robots}. 
+Dabei findet die Auswahl anhand der zurückgegebenen \textit{SensorData} der einzelnen \textit{Robots} statt. Bei \textit{VirtualRobot} handelt 
+es sich um eine Kapselung der Kommunikation mit den \textit{Robots}. Hier werden alle von der Komponente \textit{Robot} bereitgestellten 
+\textit{Interfaces} implementiert.
+%5.1 Robot Software
+\subsection{Komponente \textit{RobotSoftware}}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{img/Komponenten2.png}
 \caption{\textcolor{blue}{Durch eigene Diagramm ersetzen}}
 \label{KomponentenStruktur2}
 \end{figure}
+Die Komponente \textit{RobotSoftware} enthält 3 Klassen: \textit{DrivingSystem}, \textit{RobotController} und \textit{Destination}. 
+Das \textit{DrivingSystem} stellt eine Abstraktion der Hardware dar und wird dazu genutzt, Ziele anzufahren und Dabei, 
+falls nötig, Hindernisse zu umfahren. Dazu greift es auf die von der Hardware bereitgestellten \textit{Interfaces} zurück. 
+Um auf Kollisionen reagieren zu können, implementiert das \textit{DrivingSystem} die Schnittstelle \textit{IBumperHandler}
+Der \textit{RobotController} stellt die Interfaces \textit{ITask} und \textit{ISensordata} (dem Server) zur Verfügung und verwaltet den gerade 
+zu absolvierenden \textit{Task}. Zur Messwertübermittlung greift er zum einen auf das \textit{DrivingSystem} und zum anderen auf das 
+von der Hardware angebotenen \textit{Interface} \textit{IBattery} zu.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{img/Komponenten3.png}
-\caption{\textcolor{blue}{Durch eigene Diagramm ersetzen}}
-\label{KomponentenStruktur3}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.6\textwidth]{img/Komponenten4.png}
-\caption{\textcolor{blue}{Durch eigene Diagramm ersetzen}}
-\label{KomponentenStruktur4}
-\end{figure}

@@ -1,10 +1,8 @@
 \section{Komponentenschnittstellen}
-\textcolor{blue}{\textit{Hier sollen die Schnittstellen der in Abschnitt 1 eingeführten Komponenten definiert werden. Des Weiteren sollen hier Nachrichten, die eventuell  über die Schnittstellen verschickt werden, definiert werden. Nachrichten sind Klassen, die beispielsweise als Parameter der in den Schnittstellen deklarierten Operationen verwendet werden.
-}}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.3\textwidth]{img/Komponentenschnittstellen.png}
-\caption{\textcolor{blue}{Durch eigenes Klassendiagramm ersetzen}}
-\label{Komponentenschnittstellen}
-\end{figure}
+Die Aufgabe des Datentyp SensorData ist es primär, die Koordination mit dem Server zu unterstützen, um festzustellen, inwieweit eine Zielposition gut erreicht werden kann. Dazu besitzt er als Attribute die Orientierungsrichtung im Koordinatensystem, den Batteriestatus und zuletzt die mit einem eigenen Datentyp versehenen Position und Destination. Position besitzt wiederum die Koordinaten x und y, die einen beliebigen Punkt im Bereich des Einsatzgebietes des Roboters darstellen. Um Redundanz zu vermeiden sind Task und Position über keine zusätzliche Klassendiagrammbeziehung verknüpft. Zielpunkte erben von Position und existieren, um zu spezifizieren, um was für einen Zielpunkt es sich handelt: Also zum Beispiel eine allgemeine Destination oder den Charger.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{img/3_komponentenschnittstellen}
+		\label{Komponentenschnittstellen}
+	\end{figure}

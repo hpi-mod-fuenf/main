@@ -1,17 +1,28 @@
 \section{Abläufe}
-\textcolor{blue}{\textit{Wesentliche Abläufe innerhalb des Produkts oder innerhalb von Paketen sollen weiter verfeinert werden. Dabei sind gegebenenfalls die Abläufe auf Komponentenebene zu verfeinern sowie das interne Verhalten umzusetzen.\\\\
-Dabei kann es sich um Abläufe handeln, welche Use Cases entsprechen oder von Objekten einer Klasse selber angestoßen werden (z. B.  bei aktiven Klassen). \\\\
-Die Modellierung kann mit Hilfe von Interaktionsdiagrammen unter Berücksichtigung der in vorangehenden Abschnitten definierten inneren Struktur erfolgen. \\\\
-Bei der Erstellung der Interaktionen sollen folgende Eigenschaften gelten. Die Rollen der modellierten Interaktionen müssen in den Strukturen vorhanden sein, die verwendeten Operationen der Nachrichten müssen in der zugehörigen Klasse, bzw. Schnittstelle spezifiziert sein, die Interaktion muss mit einem evtl. angegebenen Lebenszyklus (siehe Abschnitt 7.1) zusammenspielen und die umgesetzten Interaktionen sollen Use Cases, bzw. Abläufen auf Komponentenebene entsprechen.
-}}
 
-\textbf{Interaktion \textcolor{blue}{$<$kurzer Titel$>$}}\\
-\textit{\textcolor{blue}{oder}}\\
-\textbf{Interaktion bei Ausführung von \textcolor{blue}{$<$Use Case-ID$>$: $<$Use Case-Name$>$}}\\
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.75\textwidth]{img/Interaktion1.png}
-\caption{\textcolor{blue}{Durch eigene Diagramm ersetzen}}
-\label{Interaktion1}
-\end{figure}
+Während in Kapitel 3 die Interaktion der Hauptkomponenten Server und der RobotUnit abgehandelt wurden, werden im Folgenden die Abläufe des UseCases genauer spezifiert und auch interne Komponentenabläufe beschrieben, im speziellen die Abläufe innerhalb der RobotUnit.
+	
+	\textbf{Interaktion bei Ausführung von Usecase 1 – DriveToDestionation:}\\
+	Wie es schon der Name des Use Cases DriveToDestionation beschreibt, befindet sich die RobotUnit bei Ausführung diese Use Cases in einem Fahrvorgang, der vorher konkret mit der Zielposition und er Geschwindigkeit vom Server eingestellt wird. Es reagieren intern ihre Software mit der Sensor/Hardwarekomponenten, wenn ein Hindernis auftaucht und dieses mit Hilfe der durch die Sensoren gesammelten Informationen umfahren werden muss. Der unmittelbare Fahrvorgang hingegen wird über die IDrive Komponente gesteuert, die zurückmeldet wenn der Roboter das Ziel erreicht hat.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth]{img/8-driveToDest}
+		\label{DriveToDestionation}
+	\end{figure}
+	
+	
+	\textbf{Interaktion bei Ausführung von Usecase 2 – Read Sensors:}\\
+	In der folgenden Grafik wird der reine Anfrageprozess zwischen Server und der RobotUnit aus Kapitel 3 erweitert. Nach der Anfrage, wird der Robot alle nötigen Informationen naheinander abfragen: Sowohl die Position als auch die werden von der INorthStar Komponente zurückgeliefert. Für den Batteriestatus Orientierungsrichten muss die IBatteriekomponente angefragt werden. Erst wenn alle Informationen als Gesamtpaket bereitstehen, können sie an den Server zurückgemeldet werden.\\
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth]{img/8-readSensors}
+		\label{Read Sensors}
+	\end{figure}
+	
+	\textbf{Interaktion bei Ausführung von Usecase 3 – Charching:}\\
+	Auch beim Use Case Charching findet keine Kommunikation mit der Komponente Server statt, dafür allerdings zwischen der RobotUnit und der CharchingStation. Hat der Roboter einen bestimmten kritischen Ladestand erreicht), den er regelmäßig überprüft), läuft er die CharchingStation Komponente an. Der Ladevorgang triggert automatische, sobald der Roboter die Position der Ladestation erreich hat, und interagiert solange mit ihr bis seine Batterie wieder aufgeladen ist. Innerhalb des Robots werden zum Anfahren der Charching Station die Komponenten IBatterie mit der Position der Robotereigenen Ladestation und IDrive benötigt. Konkret: Wenn IDrive arrived() zurückgibt kann der Ladevorgang begonnen werden.\\
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth]{img/8-charging}
+		\label{Charching}
+	\end{figure}
