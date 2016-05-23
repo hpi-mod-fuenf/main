@@ -1,4 +1,5 @@
 *.log
 *.aux
 *.synctex.gz
+*.out
 Thumbs.db

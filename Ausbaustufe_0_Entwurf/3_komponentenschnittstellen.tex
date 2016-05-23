@@ -1,8 +1,11 @@
 \section{Komponentenschnittstellen}
-Die Aufgabe des Datentyp SensorData ist es primär, die Koordination mit dem Server zu unterstützen, um festzustellen, inwieweit eine Zielposition gut erreicht werden kann. Dazu besitzt er als Attribute die Orientierungsrichtung im Koordinatensystem, den Batteriestatus und zuletzt die mit einem eigenen Datentyp versehenen Position und Destination. Position besitzt wiederum die Koordinaten x und y, die einen beliebigen Punkt im Bereich des Einsatzgebietes des Roboters darstellen. Um Redundanz zu vermeiden sind Task und Position über keine zusätzliche Klassendiagrammbeziehung verknüpft. Zielpunkte erben von Position und existieren, um zu spezifizieren, um was für einen Zielpunkt es sich handelt: Also zum Beispiel eine allgemeine Destination oder den Charger.
+Abbildung \ref{KomponentenschnittstellenDiagramm} zeigt die Schnittstellen der eingeführten Komponenten. 
+
+Die Aufgabe des Datentyps \emph{SensorData} ist primär, die Koordination mit dem Server zu unterstützen, um festzustellen, inwieweit eine Zielposition gut erreicht werden kann. Dazu besitzt er als Attribute die Orientierungsrichtung im Koordinatensystem, den Batteriestatus und zuletzt Attribute der Datentypen \emph{Position} und \emph{Destination}. \emph{Position} besitzt wiederum die Koordinaten x und y, die einen beliebigen Punkt im Bereich des Einsatzgebietes des Roboters darstellen. Um Redundanz zu vermeiden sind \emph{Destination} und \emph{Position} über keine zusätzliche Klassendiagrammbeziehung verknüpft. Zielpunkte erben von \emph{Position} und existieren, um zu spezifizieren, um was für einen Zielpunkt es sich handelt: Also zum Beispiel eine allgemeine \emph{Destination} oder den \emph{Charger}.
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.3\textwidth]{img/3-Zusatzklassen}
-		\label{Komponentenschnittstellen}
+		\includegraphics[width=0.75\textwidth]{img/3-Zusatzklassen}
+		\caption{Komponentenschnittstellen}
+		\label{KomponentenschnittstellenDiagramm}
 	\end{figure}

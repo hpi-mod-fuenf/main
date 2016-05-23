@@ -1,0 +1,30 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Abstrakte Architektur}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Server}{5}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}ServerSoftware}{5}{subsubsection.1.1.1}
+\contentsline {subsection}{\numberline {1.2}RobotUnit}{5}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}RobotSoftware}{5}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Robot}{5}{subsubsection.1.2.2}
+\contentsline {section}{\numberline {2}Interaktion der Komponenten}{6}{section.2}
+\contentsline {section}{\numberline {3}Komponentenschnittstellen}{7}{section.3}
+\contentsline {section}{\numberline {4}Konkrete Architektur}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}\textit {ServerSoftware}}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}\textit {RobotSoftware}}{9}{subsection.4.2}
+\contentsline {section}{\numberline {5}Komponenten}{10}{section.5}
+\contentsline {subsection}{\numberline {5.1}Komponente \textit {ServerSoftware}}{10}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Komponente \textit {RobotSoftware}}{11}{subsection.5.2}
+\contentsline {section}{\numberline {6}Paketstruktur}{12}{section.6}
+\contentsline {section}{\numberline {7}Paketdetails}{14}{section.7}
+\contentsline {subsection}{\numberline {7.1}Paket \textit {Robot}}{14}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Beschreibung der Klasse \textit {RobotController}}{14}{subsubsection.7.1.1}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \textit {collectSensorData}}{14}{section*.14}
+\contentsline {subsubsection}{\numberline {7.1.2}Beschreibung der Klasse \textit {DrivingSystem}}{14}{subsubsection.7.1.2}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \textit {driveToDestination}}{15}{section*.15}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \textit {driveAroundObstacle}}{15}{section*.17}
+\contentsline {subsection}{\numberline {7.2}Paket \textit {Server}}{16}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Beschreibung der Klasse \textit {TaskSystem}}{16}{subsubsection.7.2.1}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \textit {assignTask}}{16}{section*.19}
+\contentsline {subsubsection}{\numberline {7.2.2}Beschreibung der Klasse \textit {RobotControlSystem}}{16}{subsubsection.7.2.2}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \textit {chooseRobot}}{16}{section*.20}
+\contentsline {section}{\numberline {8}Abl\IeC {\"a}ufe}{17}{section.8}
+\contentsline {section}{\numberline {9}Produkteinsatz}{19}{section.9}
