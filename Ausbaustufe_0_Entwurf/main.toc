@@ -17,14 +17,16 @@
 \contentsline {section}{\numberline {7}Paketdetails}{12}{section.7}
 \contentsline {subsection}{\numberline {7.1}Paket \textit {Robot}}{12}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Beschreibung der Klasse \textit {RobotController}}{12}{subsubsection.7.1.1}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \textit {collectSensorData}}{12}{section*.13}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {assignTask}}{12}{section*.13}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {getTaskRating}}{13}{section*.14}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {collectSensorData}}{13}{section*.15}
 \contentsline {subsubsection}{\numberline {7.1.2}Beschreibung der Klasse \textit {DrivingSystem}}{13}{subsubsection.7.1.2}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveToDestination}}{13}{section*.14}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveAroundObstacle}}{14}{section*.16}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveToDestination}}{13}{section*.16}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {driveAroundObstacle}}{14}{section*.18}
 \contentsline {subsection}{\numberline {7.2}Paket \textit {Server}}{15}{subsection.7.2}
 \contentsline {subsubsection}{\numberline {7.2.1}Beschreibung der Klasse \textit {TaskSystem}}{15}{subsubsection.7.2.1}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {assignTask}}{15}{section*.18}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {assignTask}}{15}{section*.20}
 \contentsline {subsubsection}{\numberline {7.2.2}Beschreibung der Klasse \textit {RobotControlSystem}}{15}{subsubsection.7.2.2}
-\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {chooseRobot}}{15}{section*.19}
+\contentsline {paragraph}{\nonumberline Beschreibung der Methode \texttt {chooseRobot}}{15}{section*.21}
 \contentsline {section}{\numberline {8}Abl\IeC {\"a}ufe}{16}{section.8}
 \contentsline {section}{\numberline {9}Produkteinsatz}{19}{section.9}
