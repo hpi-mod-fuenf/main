@@ -30,10 +30,16 @@
 		der dem \textit{Robot} zugehörige \textit{Charger}, oder gerade kein Ziel, 
 		also \texttt{null} sein. Nur wenn der \textit{Robot} gerade keine \textit{Destination} 
 		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
-
+			\paragraph{Beschreibung der Methode \texttt{assignTask}}
+			Der Server kann in dieser Aufbaustufe direkt auf die Methoden vom \textit{Robot} zugreifen. Mit \textit{assignTask} kann er dem \textit{Robot} so direkt eine neue \textit{Destination} zuweisen.
+	
+			
+			\paragraph{Beschreibung der Methode \texttt{getTaskRating}}
+			Der Server lässt einen jeweiligen \textit{Robot} prüfen, wie gut seine Aktuelle Lage in Bezug auf eine \textit{Destination} ist. So sammelt der \textit{Robot} seine Sensordaten und wertet diese aus. 
+			
 			%7.1.1.1 #collectSensorData():void
-			\paragraph{Beschreibung der Methode \textit{collectSensorData}}
-			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Sensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle 
+			\paragraph{Beschreibung der Methode \texttt{collectSensorData}}
+			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
 			nach seiner Position und seinem Akkustand an, und gibt diese Informationen, zusammen mit Informationen über den Aktuellen Zustand des \textit{Robots} bzw. seine aktuelle \textit{Destination}, zurück and den \textit{Server}.
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
