@@ -1,0 +1,1 @@
+java -jar deltrans.jar *.svg -pattern "Paradigm" -outformat pdf
