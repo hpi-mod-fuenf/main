@@ -1,0 +1,98 @@
+\documentclass[includeheaders]{scrartcl}
+
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{scrlayer-scrpage}
+ 
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{float}
+ \usepackage{geometry}
+       \geometry{a4paper, 
+             left=2.5cm, 
+             right=2.5cm, 
+             top=2.5cm, 
+             bottom=2.5cm}
+
+\setlength{\parindent}{10pt}
+%\setlength{\headheight}{78pt}
+\setkomafont{pageheadfoot}{\sffamily} 
+\sloppy
+
+\begin{document}
+\input{hpi-headers.tex}
+\setlength{\parindent}{0pt}
+
+
+% einfach diesen Teil entfernen, um nur noch eine Titelseite zu haben -->
+\title{Hinweise zum Bearbeiten des Analysedokuments\\ \small{(Im Rahmen der Veranstaltung Modellierung II, SoSe 2015)}
+}
+\date{}
+\author{}
+\maketitle
+\textcolor{blue}{\itshape{\underline{Allgemeine Hinweise:}}}
+
+\textcolor{blue}{\itshape{Alles, was in dieser Schriftart gesetzt ist, dient nur zur Erläuterung und sollte im fertigen Dokument nicht mehr auftauchen.}}
+\\
+
+\textcolor{blue}{\itshape{Im Analysedokument können (und sollen) Diagramme und verschiedene Abbildungen verwendet werden. Diagramme und Abbildungen ohne erläuternden Text sind jedoch wertlos. Bitte achten Sie daher  darauf, dass jede Abbildung im Text referenziert und auch erklärt wird. Das Verhältnis zwischen erläuternden Texten und  Abbildungen sollte möglichst ausgewogen sein, d.h. ein Analysedokument mit 30 Seiten darf maximal 15 Seiten Abbildungen enthalten. Das Analysedokument darf maximal 30 Seiten umfassen.}}
+\\
+
+\textcolor{blue}{\itshape{\underline{Das Template soll vollständig bearbeitet werden}}}
+\\
+
+\textcolor{blue}{\itshape{\underline{Latex-Hinweis:}}}
+
+\textcolor{blue}{\itshape{Bilder werden folgendermaßen referenziert: In Abbildung \ref{KlassendiagramProblembereich} steht ...}}
+
+\newpage
+% --> ende des zu entfernenden Teils
+
+\newpage 
+
+\title{Analysedokument\\ \small{(Template zur Veranstaltung Modellierung II, SoSe 2016)}}
+\date{}
+\author{}
+
+\maketitle
+\begin{tabular}{l  l}
+\textbf{Projekt:} & \textcolor{blue}{\itshape{\textbf{Name des Projekts}}}\\
+&\\
+\textbf{Auftraggeber: }& \textcolor{blue}{\itshape{\textbf{Name des Auftraggebers}}}\\
+& \textcolor{blue}{\itshape{\textbf{Adresse}}} \\
+& \textcolor{blue}{\itshape{\textbf{Telefon}}} \\
+& \textcolor{blue}{\itshape{\textbf{Ansprechpartner}}} \\
+&\\
+\textbf{Auftragnehmer: }& \textcolor{blue}{\itshape{\textbf{Name des Auftragnehmers}}}\\
+& \textcolor{blue}{\itshape{\textbf{Adresse}}} \\
+& \textcolor{blue}{\itshape{\textbf{Ansprechpartner}}} \\
+\end{tabular}
+
+ 
+\newpage
+
+\begin{table}[h]
+	\center    
+    \begin{tabular}{l | l | l}
+    Verantwortlichkeit & Name, Vorname & Datum \\
+    \hline
+    Ansprechpartner    & ~             & ~     \\
+    Bearbeitender      & ~             & ~     \\
+    Bearbeitender      & ~             & ~     \\
+    Bearbeitender      & ~             & ~     \\
+    \end{tabular}
+\end{table}
+
+\newpage
+\input{1_zielbestimmung}
+
+\input{2_produkteinsatz}
+
+\input{3_produktfunktionen}
+
+\input{4_produktumgebung}
+
+\end{document}

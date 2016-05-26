@@ -1,0 +1,55 @@
+\section{Produkteinsatz}
+\textcolor{blue}{\textit{Dieser Abschnitt hat die Aufgabe, den Einsatzbereich des zu entwickelnden Systems klarzustellen. Dazu gehören Erläuterungen der notwendigen Fachbegriffe und deren Zusammenhänge ebenso wie die Darstellung der systemrelevanten Abläufe im Einsatzbereich.}}
+\textcolor{blue}{\textit{Unter dem Produkteinsatz versteht man sowohl den direkten Problembereich, in dem das zu entwickelnde System eingesetzt werden soll, als auch die umgebenden Geschäftsprozesse.
+}}
+
+\subsection{Beschreibung des Problembereichs}
+\textcolor{blue}{\textit{Aufgabe dieses Abschnittes ist es, den Laien mit der Terminologie und den Zusammenhängen im Problembereich vertraut zu machen. Daher muss die Beschreibung möglichst allgemein sein. Außerdem sollte der Text gut strukturiert sein. Auch der Einsatz von erläuternden Graphiken ist manchmal sinnvoll.}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{img/Problembereich.png}
+\caption{\textcolor{blue}{\textit{Graphik zur Illustration des Problembereichs}}}
+\label{Problembereich}
+\end{figure}
+
+\textcolor{blue}{\textit{Wichtig ist es auch, Annahmen sauber von den oben beschriebenen Fakten getrennt aufzulisten. Dies erleichtert eine spätere Fehlersuche, wenn das System die Erwartungen nicht erfüllt.}}
+
+\subsection{Glossar}
+\textcolor{blue}{\textit{Dieser Abschnitt hat eine ganz ähnliche Aufgabe wie der vorherige. Er ist jedoch nicht zum zusammenhängenden Lesen, sondern zum Nachschlagen gedacht. Auch steht der einzelne Fachbegriff im Mittelpunkt und nicht das Verständnis der Zusammenhänge.}}
+
+\textcolor{blue}{\textit{Fachbegriff:  Erläuterung mit maximal 3 kurzen Sätzen.}}
+
+\subsection{Modell des Problembereichs}
+\textcolor{blue}{\textit{Dieser Abschnitt ergänzt die beiden vorherigen. Durch die Verwendung eines graphischen Modells (UML Klassendiagramm) sollen die Zusammenhänge zwischen den Fachbegriffen präzisiert und übersichtlich dargestellt werden.}}
+\\
+
+\textcolor{blue}{\textit{Einleitende Worte können ergänzt werden durch Begründungen, warum an bestimmten Stellen eine bestimmte Art der Modellierung gewählt wurde.}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{img/KlassendiagrammProblembereich.png}
+\caption{\textcolor{blue}{Klassendiagramm für den Problembereich}}
+\label{KlassendiagramProblembereich}
+\end{figure}
+
+\subsection{Beschreibung der Geschäftsprozesse}
+\textcolor{blue}{\textit{In diesem Abschnitt wird der Ablauf der Geschäftsprozesse genauer beschrieben. Diese Abläufe sind es, die das zu entwickelnde System ausschnittsweise unterstützen soll.}}
+
+\subsection{Beschreibung zu \textcolor{blue}{Prozess-ID: Name des Geschäftsprozesses}}
+
+\begin{table}[H]
+    \begin{tabularx}{\textwidth}{| X | X |} 
+	\hline    
+    Auslösendes Ereignis & \textcolor{blue}{\textit{Handlung oder Zeitpunkt, die Geschäftsprozess auslöst bzw. zu dem er beginnt}} \\ \hline
+    Ergebnis:            & \textcolor{blue}{\textit{Was im Falle einer erfolgreichen Ausführung des Geschäftsprozesses erreicht werden soll}} \\ \hline
+    Mitwirkende:         & \textcolor{blue}{\textit{Rollenname derjenigen, die an der Durchführung des Geschäftsprozesses beteiligt sind. Das können auch existierende Systeme sein.}} \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{img/Aktivitaetendiagramm.png}
+\caption{\textcolor{blue}{Illustration von Prozess-ID durch Aktivitätendiagramm}}
+\label{Aktivitaetendiagramm}
+\end{figure}

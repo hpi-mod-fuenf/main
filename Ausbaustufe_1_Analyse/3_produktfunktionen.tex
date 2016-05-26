@@ -1,0 +1,58 @@
+\section{Produktfunktionen}
+\textcolor{blue}{\textit{Dieser Abschnitt hat die Aufgabe, die Funktionalität des zu entwickelnden Systems sowohl überblicksartig als auch detaillierter zu beschreiben. In diesem Abschnitt werden die vom Produkt erwarteten Funktionalitäten beschrieben. Jede dieser Funktionalitäten lässt sich einem elementaren Geschäftsprozess zuordnen, der im zweiten Abschnitt beschrieben wurde.}}
+
+\subsection{Use Cases}
+\textcolor{blue}{\textit{Aufgabe dieses Abschnittes ist es, einen Überblick über die Produktfunktionen zu geben. Dazu wird ein Use Case Diagramm eingesetzt, das eine abstrakte Sicht auf die Produktfunktionen und die externen Beteiligten an diesen Funktionen gibt. Es dürfen auch mehrere Use Case Diagramme genutzt werden, um so Funktionalität von Teilsystemen aufführen zu können.}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{img/UseCase.png}
+\caption{\textcolor{blue}{Use Case Diagramm mit den Produktfunktionen}}
+\label{UseCase}
+\end{figure}
+
+\subsection{Beschreibung zu \textcolor{blue}{Use Case-ID : Use Case-Name}}
+\textcolor{blue}{\textit{Dieser Abschnitt muss für jeden Use Case wiederholt werden. Hier sollen Details zu den Use Cases erläutert werden. Sollten in dem Use Case beispielsweise von dem Benutzer Eingaben verlangt werden, erfolgt hier eine Beschreibung der Eingaben.}}
+
+\subsubsection*{Charakterisierende Informationen}
+\textcolor{blue}{\textit{Aufgabe dieses Abschnittes ist die Erfassung der Hintergründe der Existenz des Use Cases.}}
+
+\begin{table}[H]
+    \begin{tabularx}{\textwidth}{| l | X |} 
+	\hline    
+    \"Ubergeordneter elementarer Geschäftsprozess: & \textcolor{blue}{\textit{Prozess-ID: elementarer Geschäftsprozess (verweist auf Abschnitt 2.4)}} \\ \hline
+    \textit{Ziel des Use Cases:} & \textcolor{blue}{\textit{Ausführliche Beschreibung des Zieles des Use Cases}} \\ \hline
+    \textit{Umgebende Systemgrenze:} & \textcolor{blue}{\textit{System, das betrachtet wird (Systemgrenze im Diagramm des vorigen Abschnittes)}} \\ \hline
+    \textit{Vorbedingung:} & \textcolor{blue}{\textit{Was muss garantiert werden, damit der Use Case durchgeführt werden kann?)}} \\ \hline
+    \textit{Nachbedingung bei erfolgreicher Ausführung:} & \textcolor{blue}{\textit{Was muss sichergestellt werden für eine erfolgreiche Ausführung des Use Case}} \\ \hline
+    \textit{Beteiligte Nutzer:} & \textcolor{blue}{\textit{System, das betrachtet wird (Systemgrenze im Diagramm des vorigen Abschnittes)}} \\ \hline
+    \textit{auslösendes Ereignis:} & \textcolor{blue}{\textit{Handlung oder Zeitpunkt, die Use Case auslöst bzw. zu dem er beginnt}} \\ \hline
+    \end{tabularx}
+\end{table}
+
+\subsubsection*{Szenario für den Standardablauf (Erfolg)}
+\textcolor{blue}{\textit{Dieser Abschnitt beschreibt die einzelnen Schritte, die vom auslösenden Ereignis bis zur erfolgreichen Beendigung des Use Cases aus der Sicht der beteiligten Nutzer notwendig sind.}}
+
+\begin{table}[H]
+    \begin{tabularx}{\textwidth}{| X | X | X |} 
+	\hline    
+    \textbf{Schritt} & \textbf{Nutzer} & \textbf{Beschreibung der Aktivität} \\ \hline
+    \textcolor{blue}{\textit{Schrittnr.}} & \textcolor{blue}{\textit{Name des beteiligten Nutzers}} & \textcolor{blue}{\textit{Beschreibung dessen, was der Nutzer tut}} \\ \hline
+    \end{tabularx}
+\end{table}
+
+\subsubsection*{Szenarien für alternative Abläufe (Misserfolg oder Umwege zum Erfolg)}
+\textcolor{blue}{\textit{Aufgabe dieses Abschnittes ist es, Fehlerfälle sowie Variationsmöglichkeiten im Ablauf des Use Cases zu beschreiben.}}
+
+\begin{table}[H]
+    \begin{tabularx}{\textwidth}{| X | X | X |} 
+	\hline    
+    \textbf{Schritt} & \textbf{Bedingung für Alternative} & \textbf{Beschreibung der Aktivität} \\ \hline
+    \textcolor{blue}{\textit{Referenz auf Schrittnr. aus Standardablauf}} & \textcolor{blue}{\textit{Was verursacht den alternativen Ablauf?}} & \textcolor{blue}{\textit{Beschreibung der entsprechenden Aktivität bzw. Use Case-ID des Unter-Use Cases}} \\ \hline
+    \end{tabularx}
+\end{table}
+
+\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+\textcolor{blue}{\textit{In diesem Abschnitt werden die beiden vorherigen in einem Aktivitätsdiagramm zusammengefasst. Außerdem wird die unvollständige Nutzersicht um interne Abläufe ergänzt, so dass eine vollständige Beschreibung entsteht. Existiert nur ein einziger Ablauf, kann auf die Angabe eines Aktivitätsdiagramms verzichtet werden.}}
+
+\textcolor{blue}{\textit{für manche Use Cases kann es auch sinnvoll sein, das Wechselspiel des Systems mit den Akteuren durch ein Sequenzdiagramm (oder Interaktionsdiagramm) genauer zu beschreiben.}}
