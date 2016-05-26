@@ -25,10 +25,10 @@ echo "install"
 git-lfs/bin/git-lfs install
 
 echo "pull"
-git-lfs/bin/git-lfs pull
+git-lfs/bin/git-lfs GIT_TRACE=1 pull
 
-echo "pull again to work around https://github.com/github/git-lfs/issues/904"
-git-lfs/bin/git-lfs pull
+# echo "pull again to work around https://github.com/github/git-lfs/issues/904"
+# git-lfs/bin/git-lfs pull
 
 echo "ls-files"
 git-lfs/bin/git-lfs ls-files
