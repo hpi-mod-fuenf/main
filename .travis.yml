@@ -17,6 +17,7 @@ warnings_are_errors: false
 before_install: 
   - cd Ausbaustufe_1_Analyse
   - sudo apt-get install -y openjdk-7-jre
+  - git lfs pull
 
 script:
 # if you have a markdown source, you can use pandoc to convert it to a LaTeX document
