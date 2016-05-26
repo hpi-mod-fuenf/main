@@ -1,35 +1,17 @@
-GIT_LFS_VERSION=v1.2.0
+lfs_install () {
+    # Install git-lfs and pull the data files
+    wget https://github.com/github/git-lfs/releases/download/v1.1.0/git-lfs-linux-amd64-1.1.0.tar.gz
+    tar -zxvf git-lfs-linux-amd64-1.1.0.tar.gz
+    export PATH=`pwd`/git-lfs-1.1.0:$PATH
+    git config credential.helper store
+    echo "https://baschdl:$GITHUB_TOKEN@github.com" > ~/.git-credentials
+    git lfs install
+}
+echo 'install git lfs'
+lfs_install
 
-echo "cloning"
-git clone https://github.com/github/git-lfs.git
+echo 'git reset'
+git reset
 
-echo "cd into git-lfs"
-cd git-lfs
-
-echo "checkout $GIT_LFS_VERSION"
-git checkout $GIT_LFS_VERSION
-
-echo "scripts/bootstrap"
-script/bootstrap
-
-echo "ls bin"
-ls bin
-
-echo "cd back down"
-cd ..
-
-echo "resetting travis remote"
-git remote set-url origin "git@github.com:hpi-mod-fuenf/main.git"
-
-echo "install"
-git-lfs/bin/git-lfs install
-
-echo "pull"
-GIT_TRACE=1 git-lfs/bin/git-lfs pull
-
-# echo "pull again to work around https://github.com/github/git-lfs/issues/904"
-# git-lfs/bin/git-lfs pull
-
-echo "ls-files"
-git-lfs/bin/git-lfs ls-files
-ls -lah Ausbaustufe_1_Analyse/img/
+echo 'pulling from git-lfs'
+git lfs pull
