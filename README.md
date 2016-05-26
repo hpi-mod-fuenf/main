@@ -1,5 +1,7 @@
 # HPI-Modgruppe Fünf
 
+[![Build Status](https://travis-ci.org/hpi-mod-fuenf/main.svg?branch=master)](https://travis-ci.org/hpi-mod-fuenf/main)
+
 Das ist unser Arbeits-Repo
 
 ## Protokolle
