@@ -15,3 +15,7 @@ git reset
 
 echo 'pulling from git-lfs'
 git lfs pull
+
+echo "ls-files"
+git-lfs ls-files
+ls -lah Ausbaustufe_1_Analyse/img/
