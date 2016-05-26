@@ -1,0 +1,50 @@
+os: linux
+
+# we use the R VM because it contains LaTeX and pandoc
+language: r
+cache: packages
+
+# we need super user privileges, so we depend on the old travis-ci infrastructure
+sudo: required
+
+# we can install additional software
+# apt_packages:
+# we download pdf2djvu to also generate a djvu file of our LaTeX source
+#  - pdf2djvu
+
+warnings_are_errors: false
+
+before_install: 
+  - cd Ausbaustufe_1_Analyse
+  - sudo apt-get install -y openjdk-7-jre
+
+script:
+# if you have a markdown source, you can use pandoc to convert it to a LaTeX document
+#  - cat README.md | grep --invert-match "\[\!\[" > README2.md
+#  - cat README2.md | grep --invert-match "Howto Deploy LaTeX Documents" > README.md
+#  - pandoc -s --from=markdown_github --to=latex -M title="Howto Deploy LaTeX Documents" -M author="S$
+#  - make
+
+# in the next step we use pdflatex to convert .tex to .pdf
+# of course we could use pandoc for this also, but pdflatex generates nicer PDFs
+#  - pdflatex -interaction=nonstopmode HowtoDeployLatexDocs-DE.tex
+#  - pdflatex -interaction=nonstopmode HowtoDeployLatexDocs-EN.tex
+#  - pdflatex -interaction=nonstopmode README.tex
+  - java -jar ../images/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
+  - pdflatex -interaction=nonstopmode main.tex || echo test
+
+# now we convert the pdf file to a much smaller djvu document
+#  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-DE.djvu HowtoDeployLatexDocs-DE.pdf
+#  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-EN.djvu HowtoDeployLatexDocs-EN.pdf
+after_success:
+# upload the previously generated pdf file to simonwaldherr.de (use $UPLOADSECRET as password)
+#  - wget --post-file=HowtoDeployLatexDocs-DE.pdf -q -O- "https://simonwaldherr.de/pdf/?repo=HowtoDep$
+
+
+deploy:
+  provider: releases
+  api_key:
+    secure: Uvi4dz4LfT+Epm2ncmtPKdkPPdvHXluG2Wy4Ivmr8hEhTm/d8SqZgnK6BwuO8Fj0TDNm+YNAnnmMHH2B0FVjKk/LifbjsDh7PU9wq3Spe+4Pn2fKyhkpb79+PWGLuH8VF0jHa8TWw4hh9ovGfl5iX34kLXnY7WTD265k7XoQHz225XeTgm0zMbMvExOv5TnL7vFTyf9+IeQfwrHJszIwJ4g/lFpIyK9M27TiW7VQo/FI9XWos+UiHez46mo4lPR9FA7g4DCSHvUao66Xb45xC8O+K8SNjFGZpTRyOgLK8+NH35lHKX65w8eJ6pDk+tE64nwr/oNNcMF+oGrDT7DngFDZdFUiE3EAJpFi4kV/9LsHePa1yd1B6l3sF2DdKfgcDPD9SwU9zIlU58bIHDym++7DeDl3j9GS037wIWysQF2RMzv9kNaioYwhTNQQydI+73A4ugVSB7XcSNLHUfBlE3Mkl4Fa/JU9aCLhQJIQFng5AoumcPzGbU212tmMG69k/zITLn5pvtCmko1Egsm8nyK8Qcm0Avhfk/vjwz1C1v9QfP3FMhHi31mBZkbEQLpiWMX9SeIAxliHPm0LqGnA8MwzjsRL3YdEUfyaDuUB4euuSNacVGppHQTw5gFZYAx9L9zXJJA1s+kFXPIP5rgGLmjsr7bH9KOFeksXdiFDXlE=
+  file: "main.pdf"
+  on:
+    repo: Baschdl/main
