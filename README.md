@@ -1,6 +1,6 @@
 # HPI-Modgruppe Fünf
 
-[![Build Status](https://travis-ci.org/hpi-mod-fuenf/main.svg?branch=master)](https://travis-ci.org/hpi-mod-fuenf/main)
+[![Build Status](https://travis-ci.org/hpi-mod-fuenf/main.svg?branch=master)](https://travis-ci.org/hpi-mod-fuenf/main) – [Letzte erfolgreich erstellte PDF](https://github.com/hpi-mod-fuenf/main/releases/latest)
 
 Das ist unser Arbeits-Repo
 
