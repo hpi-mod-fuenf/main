@@ -1,55 +1,184 @@
-\section{Produkteinsatz}
-\textcolor{blue}{\textit{Dieser Abschnitt hat die Aufgabe, den Einsatzbereich des zu entwickelnden Systems klarzustellen. Dazu gehören Erläuterungen der notwendigen Fachbegriffe und deren Zusammenhänge ebenso wie die Darstellung der systemrelevanten Abläufe im Einsatzbereich.}}
-\textcolor{blue}{\textit{Unter dem Produkteinsatz versteht man sowohl den direkten Problembereich, in dem das zu entwickelnde System eingesetzt werden soll, als auch die umgebenden Geschäftsprozesse.
-}}
 
-\subsection{Beschreibung des Problembereichs}
-\textcolor{blue}{\textit{Aufgabe dieses Abschnittes ist es, den Laien mit der Terminologie und den Zusammenhängen im Problembereich vertraut zu machen. Daher muss die Beschreibung möglichst allgemein sein. Außerdem sollte der Text gut strukturiert sein. Auch der Einsatz von erläuternden Graphiken ist manchmal sinnvoll.}}
+	\section{Produkteinsatz}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{img/Problembereich.png}
-\caption{\textcolor{blue}{\textit{Graphik zur Illustration des Problembereichs}}}
-\label{Problembereich}
-\end{figure}
+		\subsection{Beschreibung des Problembereichs}
+		Der Problembereich lässt sich für diese Analysestufe in drei Punkte einteilen, um eine Gesamtkoordination effizient zu gestalten:
 
-\textcolor{blue}{\textit{Wichtig ist es auch, Annahmen sauber von den oben beschriebenen Fakten getrennt aufzulisten. Dies erleichtert eine spätere Fehlersuche, wenn das System die Erwartungen nicht erfüllt.}}
+		\begin{enumerate}
+		\item
+			Zuallererst muss das automatische Fahren im zweidimensionalen
+			Koordinatensystem zu einem angegebenen Zielpunkt(\emph{Destination})
+			fehlerfrei möglich sein. Ebenfalls steht eine manuelle Steuerung zur
+			Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings
+			wiederum sinnvoll in das Gesamtsystem integriert werden muss.
+		\item
+			Als zweite Herausforderung geht es darum den Schaden von Kollisionen
+			zu minimieren; wie diese erkannt, wie auf sie reagiert wird und diese
+			Kollisionen durch vorrauschendes Umfahren von
+			Objekten (\emph{Obstacle}) verhindert werden können. Dies schließt
+			sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein.
+		\item
+			Im dritten Punkt gilt es einen möglichst reibungs- und
+			unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich
+			vorrauschendes Fahren zu ermöglichen. Im Falle eines niedrigen
+			Batteriestands also unverzüglich an seiner individuellen Ladestation
+			(\emph{Charger}) anzudocken und aufzuladen, beziehungsweise längere
+			Fahrten nicht anzutreten, die den Batteriestand gefährden würden.
+		\end{enumerate}
 
-\subsection{Glossar}
-\textcolor{blue}{\textit{Dieser Abschnitt hat eine ganz ähnliche Aufgabe wie der vorherige. Er ist jedoch nicht zum zusammenhängenden Lesen, sondern zum Nachschlagen gedacht. Auch steht der einzelne Fachbegriff im Mittelpunkt und nicht das Verständnis der Zusammenhänge.}}
+		\begin{figure}[H]
+			\centering
+			\begin{subfigure}[t]{0.3\textwidth}
+				\includegraphics[width=\textwidth]{../images/grafikZumProblembereich1.jpg}
+				\caption{Fahren zu einem angegebenen Zielpunkt}
+				\label{fig:2-1-problembereich-1}
+			\end{subfigure}
+			~~~~
+			\begin{subfigure}[t]{0.3\textwidth}
+				\includegraphics[width=\textwidth]{../images/grafikZumProblembereich2.jpg}
+				\caption{Umfahren von Objekten}
+				\label{fig:2-1-problembereich-2}
+			\end{subfigure}
+			~~~~
+			\begin{subfigure}[t]{0.3\textwidth}
+				\includegraphics[width=\textwidth]{../images/grafikZumProblembereich3.jpg}
+				\caption{Automatisches Laden}
+				\label{fig:2-1-problembereich-3}
+			\end{subfigure}
+			\caption{Visualisierung der Problembereiche}\label{fig:2-1-problembereiche}
+		\end{figure}
 
-\textcolor{blue}{\textit{Fachbegriff:  Erläuterung mit maximal 3 kurzen Sätzen.}}
+		Abbildung \ref{fig:2-1-problembereiche} zeigt die drei o.g. Problembereiche in einer fotografischen Repräsentation.\\
 
-\subsection{Modell des Problembereichs}
-\textcolor{blue}{\textit{Dieser Abschnitt ergänzt die beiden vorherigen. Durch die Verwendung eines graphischen Modells (UML Klassendiagramm) sollen die Zusammenhänge zwischen den Fachbegriffen präzisiert und übersichtlich dargestellt werden.}}
-\\
 
-\textcolor{blue}{\textit{Einleitende Worte können ergänzt werden durch Begründungen, warum an bestimmten Stellen eine bestimmte Art der Modellierung gewählt wurde.}}
+		Daran anknüpfend wird mit folgenden Annahmen gearbeitet:
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{img/KlassendiagrammProblembereich.png}
-\caption{\textcolor{blue}{Klassendiagramm für den Problembereich}}
-\label{KlassendiagramProblembereich}
-\end{figure}
+		\begin{enumerate}
+		\item
+			Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch
+			erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das
+			gleiche gilt für Ladestationen.
+		\item
+			Roboter können autark vom \emph{Server} agieren, damit ihre Ziele
+			bestimmen und eine Ladestation anfahren.
+		\item
+			Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im
+			Verkehrsbetrieb ausschließlich um andere Roboter handelt. Für die
+			unbeweglichen Objekte ist es notwendig, dass ihre Position von
+			vornerein bekannt ist und sie unverändert bleibt.
+		\end{enumerate}
 
-\subsection{Beschreibung der Geschäftsprozesse}
-\textcolor{blue}{\textit{In diesem Abschnitt wird der Ablauf der Geschäftsprozesse genauer beschrieben. Diese Abläufe sind es, die das zu entwickelnde System ausschnittsweise unterstützen soll.}}
+		\subsection{Glossar}
 
-\subsection{Beschreibung zu \textcolor{blue}{Prozess-ID: Name des Geschäftsprozesses}}
+		% \begin{description}
+		% 	\item[Robot]{Roboter, der sich im 2-Dimensionalen Raum bewegen kann.}
+		% 	\item[Server]{Verteilt Aufträge an die Roboter}
+		% 	\item[Charger]{Ladestation für den Roboter}
+		% 	\item[Destination]{Vom Server verwaltete Ziele, die der Roboter ansteuern kann.}
+		% 	\item[Obstacle]{Hindernisse, die der Roboter erkennt und umfährt.}
+		% \end{description}
 
-\begin{table}[H]
-    \begin{tabularx}{\textwidth}{| X | X |} 
-	\hline    
-    Auslösendes Ereignis & \textcolor{blue}{\textit{Handlung oder Zeitpunkt, die Geschäftsprozess auslöst bzw. zu dem er beginnt}} \\ \hline
-    Ergebnis:            & \textcolor{blue}{\textit{Was im Falle einer erfolgreichen Ausführung des Geschäftsprozesses erreicht werden soll}} \\ \hline
-    Mitwirkende:         & \textcolor{blue}{\textit{Rollenname derjenigen, die an der Durchführung des Geschäftsprozesses beteiligt sind. Das können auch existierende Systeme sein.}} \\ \hline
-    \end{tabularx}
-\end{table}
+		\begin{table}[H]
+			\centering
+			\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+				\toprule
+				Begriff & Erklärung\\
+				\midrule
+				Robot & Roboter, der sich im 2-Dimensionalen Raum bewegen
+				kann.\\
+				Server & Verteilt Aufträge an die Roboter\\
+				Charger & Ladestation für den Roboter\\
+				Destination & Vom Server verwaltete Ziele, die der Roboter ansteuern
+				kann.\\
+				Obstacle & Hindernisse, die der Roboter erkennt und
+				umfährt\\
+				\bottomrule
+			\end{tabularx}
+			\label{tab:2-2-glossar}
+		\end{table}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{img/Aktivitaetendiagramm.png}
-\caption{\textcolor{blue}{Illustration von Prozess-ID durch Aktivitätendiagramm}}
-\label{Aktivitaetendiagramm}
-\end{figure}
+		\subsection{Modell des Problembereichs}
+		Abbildung \ref{fig:2-3-modell-problembereich} zeigt ein Klassendiagramm, welches das Modell des Problembereichs grafisch darstellt.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{../images/Problembereich.pdf}
+			\caption{Klassendiagramm des Problembereichs}
+			\label{fig:2-3-modell-problembereich}
+		\end{figure}
+
+		\subsection{Beschreibung der Geschäftsprozesse}
+
+			\subsubsection*{Beschreibung zu 1: Choose Robot}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+				\toprule
+				\textbf{Auslösendes Ereignis:} & Der Server will den für ein bestimmtes Ziel bestmöglichen Roboter auswählen und diesen zum Ziel schicken. \\ \midrule
+				\textbf{Ergebnis:} & Alle Roboter haben ihre Sensordaten ausgelesen und diese dem Server
+				mitgeteilt. Daraufhin hat der Server einen Roboter ausgewählt, der für
+				die Zielanfahrung optimal geeignet ist, und diesem den Auftrag zum
+				Anfahren des Ziels übermittelt. \\ \midrule
+				\textbf{Mitwirkende:} &	Server, Roboter \\
+				\bottomrule
+				\end{tabularx}
+				\label{tab:2-4-choose-robot}
+			\end{table}
+
+			Abbildung \ref{fig:2-4-choose-robot-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{1: Choose Robot} darstellt.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_chooseRobot.pdf}
+				\caption{Illustration von \emph{1: Choose Robot} durch Aktivitätendiagramm}
+				\label{fig:2-4-choose-robot-aktivitaetendiagramm}
+			\end{figure}
+
+			Um den für ein gegebenes Ziel bestmöglichen \emph{Robot} auszuwählen, sendet
+			der \emph{Server} zunächst an alle \emph{Robots} eine Anfrage (\emph{request}),
+			woraufhin die \emph{Robots} ihre Sensordaten (\emph{sensor data}) auslesen und
+			an den \emph{Server} senden. Auf Grundlage dieser Daten wählt der \emph{Server} den
+			\emph{Robot} aus, der für die Zielanfahrung optimal positioniert ist und
+			sendet ihm die konkrete Aufforderung (\emph{task}) zum Anfahren des
+			Ziels.
+
+			Wie die Sensordaten und der Algorithmus zur Wahl des optimalen \emph{Robots}
+			konkret definiert sind, ist eine Entwurfsentscheidung, die zum Zeitpunkt
+			dieser ersten Ausbaustufe noch nicht getroffen wurde.
+
+			\subsubsection*{Beschreibung zu 2: Drive to Destination}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+				\toprule
+				\textbf{Auslösendes Ereignis:} & Ein \emph{Robot} hat eine \emph{Destination} erhalten.\\ \midrule
+				\textbf{Ergebnis:} & Der \emph{Robot} ist unter Umfahrung von womöglichen \emph{Obstacles} zur \emph{Destination} gefahren.\\ \midrule
+				\textbf{Mitwirkende:} &	Ein einzelner, autonomer \emph{Robot}. \\
+				\bottomrule
+				\end{tabularx}
+				\label{tab:2-4-drive-to-destination}
+			\end{table}
+
+			Abbildung \ref{fig:2-4-drive-to-destination-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{2: Drive to Destination} darstellt.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_driveToDestination}
+				\caption{Illustration von \emph{2: Drive to Destination} durch Aktivitätendiagramm}
+				\label{fig:2-4-drive-to-destination-aktivitaetendiagramm}
+			\end{figure}
+
+			Dieser Prozess wird autonom vom \emph{Robot} ausgeführt. Er wird genau
+			dann ausgeführt, wenn der Roboter eine \emph{Destination} vom Server
+			erhalten hat, die er anfahren soll. Da der \emph{Robot} an dieser Stelle
+			dem Server schon bestätigt hat, dass sein Akkustand hoch genug ist, ist
+			der einzige Sonderfall, den wir betrachten müssen, dass ein
+			\emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und
+			\emph{Destination} liegt. Dann wird der \emph{Robot} nach Wahl des
+			besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur
+			\emph{Destination} Aufnehmen.
+
+
+	\pagebreak
+
+	
