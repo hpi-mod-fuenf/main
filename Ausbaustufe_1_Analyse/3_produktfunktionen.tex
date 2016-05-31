@@ -8,25 +8,24 @@
 		
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.8\textwidth]{/img/1-Analyse-3-Robot}
+				\includegraphics[width=0.8\textwidth]{img/1-Analyse-3-Robot}
 				\caption{Use Case Diagramm 1: Use Cases des Roboters}
 				\label{fig:3-1-robot-use-cases}
 			\end{figure}
 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.8\textwidth]{../images/ServerEnvironment.pdf}
+				\includegraphics[width=0.8\textwidth]{img/1-Analyse-3-Server}
 				\caption{Use Case Diagramm 2: Use Cases des Servers}
 				\label{fig:3-1-server-use-cases}
 			\end{figure}
-			
+
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.8\textwidth]{/img/1-Analyse-3-Hospital}
-				\caption{Use Case Diagramm 3: Use Cases des Hospitals}
+				\includegraphics[width=0.8\textwidth]{img/1-Analyse-3-Hospital}
+				\caption{Use Case Diagramm 2: Use Cases des Hospitals}
 				\label{fig:3-1-hospital-use-cases}
 			\end{figure}
-
 
 		\pagebreak
 
@@ -244,6 +243,32 @@
 				\bottomrule
 				\end{tabularx}
 			\end{table}
+
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+
+	\pagebreak
+
+
+		\subsection{Beschreibung zu Use Case \emph{6}: Check Availability}
+
+			\subsubsection*{Charakterisierende Informationen}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
+				\toprule
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Take Patient to Hospital  \\ \midrule
+				\textbf{Ziel des Use Cases:} & \emph{Hospital} erfährt, ob ein Auftrag vom System entgegengenommen werden kann. \midrule
+				\textbf{Umgebende Systemgrenze:} &  \\ \midrule
+				\textbf{Vorbedingung:} &  \midrule
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das System führt den Auftrag aus und bringt den \emph{Patient} in das \emph{Hospital} \\ \midrule
+				\textbf{Beteiligte Nutzer:} & \emph{Hospital} und \emph{Server}\\ \midrule
+				\textbf{Auslösendes Ereignis:} & \emph{Hospital} hat einen neuen Auftrag\\
+				\bottomrule
+				\end{tabularx}
+			\end{table}
+
+			Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und ins \emph{Hospital} zu bringen. Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht teil des Systems ist.
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 

@@ -128,7 +128,7 @@
 			Abbildung \ref{fig:2-4-choose-robot-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{1: Choose Robot} darstellt.
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_chooseRobot.pdf}
+				\includegraphics[width=\textwidth]{img/1-Analyse-3-Choose_Robot}
 				\caption{Illustration von \emph{1: Choose Robot} durch Aktivitätendiagramm}
 				\label{fig:2-4-choose-robot-aktivitaetendiagramm}
 			\end{figure}
@@ -137,13 +137,7 @@
 			der \emph{Server} zunächst an alle \emph{Robots} eine Anfrage (\emph{request}),
 			woraufhin die \emph{Robots} ihre Sensordaten (\emph{sensor data}) auslesen und
 			an den \emph{Server} senden. Auf Grundlage dieser Daten wählt der \emph{Server} den
-			\emph{Robot} aus, der für die Zielanfahrung optimal positioniert ist und
-			sendet ihm die konkrete Aufforderung (\emph{task}) zum Anfahren des
-			Ziels.
-
-			Wie die Sensordaten und der Algorithmus zur Wahl des optimalen \emph{Robots}
-			konkret definiert sind, ist eine Entwurfsentscheidung, die zum Zeitpunkt
-			dieser ersten Ausbaustufe noch nicht getroffen wurde.
+			\emph{Robot} aus, der für die Erfüllung des Zieles am besten geeignet ist. Es kann auch vorkommen, dass kein \emph{Robot} geeignet ist, um ein Ziel zu erfüllen. Wie die Sensordaten und der Algorithmus zur Wahl des optimalen \emph{Robots} konkret definiert sind, ist eine Entwurfsentscheidung.
 
 			\subsubsection*{Beschreibung zu 2: Drive to Destination}
 
