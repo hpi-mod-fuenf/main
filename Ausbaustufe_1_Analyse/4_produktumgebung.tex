@@ -7,18 +7,21 @@
   \emph{Chargern} und einem zentralen \emph{Server}.
 
     \subsubsection{Hardwareumgebung}
-    \paragraph{Server}\label{server} \newline
+    \paragraph{Server}\label{server}
+    \\
 
     Es existiert ein zentraler \emph{Server}. Dieser \emph{Server} verfügt
     über ausreichende Ressourcen.
 
-    \subparagraph{IServerCore}\label{iservercore} \newline
+    \subparagraph{IServerCore}\label{iservercore}
+    \\
 
     Der \emph{Server} verfügt über einen zentralen Hauptprozessor, über den
     auf alle weiteren Komponenten zugegriffen werden kann. Dies wird der
     Einfachheit halber angenommen.
 
-    \subparagraph{IServerWlanAdapter}\label{iserverwlanadapter} \newline
+    \subparagraph{IServerWlanAdapter}\label{iserverwlanadapter}
+    \\
 
     Beim \emph{IServerWlanAdapter} handelt es sich um eine Komponente, mit der der \emp{Server}
     auf das Funknetzwerk zugreifen kann. Über dieses Funknetzwerk können alle
@@ -26,33 +29,38 @@
     und Nachrichten, die über das Funknetzwerk für den \emp{Server} übertragen wurden,
     empfangen werden.
 
-    \subparagraph{IHospital}\label{ihospital} \newline
+    \subparagraph{IHospital}\label{ihospital}
+    \\
 
     Der \emph{Server} verfügt auch über eine \emph{IHospital} Komponente, über die
     der Server mit dem Krankenhaus kommunizieren kann. Dies schließt das Senden und
     und das Empfangen von Nachrichten in beiden Richtungen ein. Es ist nicht spezifiziert,
     wie der genaue Zugriff des Krankenhauses auf diese Komponente realisiert wird.
 
-    \paragraph{Robot}\label{robot} \newline
+    \paragraph{Robot}\label{robot}
+    \\
 
     Das Transportvehikel \emph{Robot} erfüllt Grundfunktionalitäten wie das
     Anfahren von Zielen, das Umfahren von Hindernissen und das Laden des
     Akkumulators. Nachfolgend werden die zentralen Hardwarekomponenten des
     \emph{Robots} beschrieben.
 
-    \subparagraph{IRobotCore}\label{irobotcore} \newline
+    \subparagraph{IRobotCore}\label{irobotcore}
+    \\
 
     Der \emph{Robot} verfügt über einen zentralen Hauptprozessor, über den
     auf alle weiteren Komponenten zugegriffen werden kann. Dies wird der
     Einfachheit halber angenommen.
 
-    \subparagraph{IRobotWlanAdapter}\label{irobotwlanadapter} \newline
+    \subparagraph{IRobotWlanAdapter}\label{irobotwlanadapter}
+    \\
 
     Mit dem \emph{IRobotWlanAdapter} kann der \emph{Robot} auf das Funknetzwerk
     zugreifen. Er kann über diese Komponente Nachrichten, die beispielsweise vom
     zentralen \emph{Server} gesendet wurden, empfangen und Nachrichten versenden.
 
-    \subparagraph{IRobotEngine}\label{irobotengine} \newline
+    \subparagraph{IRobotEngine}\label{irobotengine}
+    \\
 
     Als Antrieb nutzt das Transportvehikel einen omnidirektionalen Antrieb
     mit 3 Motoren, über welchen es sich vorwärts, nach rechts, nach links
@@ -60,7 +68,8 @@
     ermöglicht eine Fahrt in verschiedenen Geschwindigkeiten, wobei eine
     nicht näher spezifizierte Grenze nicht überschritten werden kann.
 
-    \subparagraph{IBattery}\label{ibattery} \newline
+    \subparagraph{IBattery}\label{ibattery}
+    \\
 
     Jeder \emph{Robot} verfügt über einen Akkumulator, der zur
     Energieversorgung dient. Eine ausreichende Ladung des Akkumulators ist
@@ -69,14 +78,16 @@
     \emph{Charger} geladen werden. Die genaue Beschaffenheit des
     Akkumulators ist nicht bekannt.
 
-    \subparagraph{INorthStar}\label{inorthstar} \newline
+    \subparagraph{INorthStar}\label{inorthstar}
+    \\
 
     Die Komponente \emph{INorthStar} kann ähnlich einem GPS-Modul die
     Position des \emph{Robots} feststellen. Hierbei ist die Komponente in
     der Lage, die Koordinaten der Position in einem zweidimensionalen
     Koodinatensystem und die aktuelle Ausrichtung des Vehikels zu ermitteln.
 
-    \subparagraph{IRSensorDistance}\label{irsensordistance} \newline
+    \subparagraph{IRSensorDistance}\label{irsensordistance}
+    \\
 
     Das Transportvehikel verfügt über 9 Infarotdistanzsensoren, die an der
     kreisförmigen Außenwand des Vehikels im Abstand von jeweils 40
@@ -84,13 +95,15 @@
     Vehikels von allen bewegten und unbewegten Objekten in der Umgebung
     möglich.
 
-    \subparagraph{IBumper}\label{ibumper} \newline
+    \subparagraph{IBumper}\label{ibumper}
+    \\
 
     Bei einer Kollision des \emph{Robots} mit einem anderen Objekt wird
     dieses Ereignis über die Sensorik einer Kollisionserkennung festgestellt, worauf
     weitere Schritte eingeleitet werden können.
 
-    \paragraph{Charger}\label{charger} \newline
+    \paragraph{Charger}\label{charger}
+    \\
 
     Es existieren Ladestationen, über die sich die \emph{IBattery} der
     \emph{Robots} vollständig laden lässt. Eine Ladestation ist dabei genau
