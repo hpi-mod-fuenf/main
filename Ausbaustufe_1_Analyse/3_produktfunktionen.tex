@@ -174,8 +174,45 @@
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 			
 		\pagebreak
+		
+			\subsection{Beschreibung zu Use Case \emph{4}: Inform about arrival}
 
-		\subsection{Beschreibung zu Use Case \emph{4}: Choose Robot}
+			\subsubsection*{Charakterisierende Informationen}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital\\ \hline
+				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ankunft dem Krnakenhaus mitzuteilen\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot}\\ \hline
+				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht die \emph{Position} des Patienten\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} wartet bis er beladen wurde\\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot}\\ \hline
+				\textbf{Auslösendes Ereignis:} & \emph{Robot} erreicht Patienten\\
+				\hline
+				\end{tabularx}
+			\end{table}
+
+			Der \emph{Robot} erreicht seine vorgegebene \emph{Destination} und muss dem \emph{Hospital} mitteilen, dass er angekommen ist. 
+
+			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
+				1 & Robot & \emph{Robot} informiert \emph{Server}, dass er angekommen ist.
+				\hline
+				\end{tabularx}
+			\end{table}
+
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+		\pagebreak
+
+		\subsection{Beschreibung zu Use Case \emph{5}: Choose Robot}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -213,7 +250,7 @@
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{5}: Assign Task}
+		\subsection{Beschreibung zu Use Case \emph{6}: Assign Task}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -251,7 +288,7 @@
 	\pagebreak
 
 
-		\subsection{Beschreibung zu Use Case \emph{6}: Check Availability}
+		\subsection{Beschreibung zu Use Case \emph{7}: Check Availability}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -259,7 +296,7 @@
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\hline
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Take Patient to Hospital  \\ \hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital  \\ \hline
 				\textbf{Ziel des Use Cases:} & \emph{Hospital} erfährt, ob ein Auftrag vom System entgegengenommen werden kann. \hline
 				\textbf{Umgebende Systemgrenze:} &  \\ \hline
 				\textbf{Vorbedingung:} &  \hline
@@ -271,6 +308,43 @@
 			\end{table}
 
 			Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und ins \emph{Hospital} zu bringen. Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht teil des Systems ist.
+
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+
+	\pagebreak
+		\subsection{Beschreibung zu Use Case \emph{8}: Inform about boarding}
+
+			\subsubsection*{Charakterisierende Informationen}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital   \\ \hline
+				\textbf{Ziel des Use Cases:} & Dem \emph{Robot} mitteilen, dass Patient auf den \emph{Robot} beladen wurde \\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Hospital} \\ \hline
+				\textbf{Vorbedingung:} & Patient befindet sich auf \emph{Robot}\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} fährt Patienten zum \emph{Hospital} \\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Hospital}\\ \hline
+				\textbf{Auslösendes Ereignis:} & \emph{Server} wurde informiert, dass \emph{Robot} am Patienten angekommen ist(Inform about arrival)\\
+				\hline
+				\end{tabularx}
+			\end{table}
+			
+			Das \emph{Hospital} muss dem \emph{Robot} mitteilen, dass der Patient beladen wurde um einen sicheren Transport des Patienten zu gewährleisten. Der \emph{Robot} hat somit keinen Eingriff in das Beladen des Patienten.
+
+			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
+				1 & \emph{Hospital} & Patient wird auf Roboter beladen \\
+				2 & \emph{Hospital} & \emph{Hospital} sendet Nachricht an Server, dass sich Patient auf dem \emph{Robot} befindet \\
+				\hline
+				\end{tabularx}
+			\end{table}
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 
