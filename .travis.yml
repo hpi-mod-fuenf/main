@@ -38,6 +38,7 @@ script:
 #  - pdflatex -interaction=nonstopmode README.tex
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
   - pdflatex -interaction=nonstopmode main.tex || echo test
+  - pdflatex -interaction=nonstopmode main.tex || echo test
 
 # now we convert the pdf file to a much smaller djvu document
 #  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-DE.djvu HowtoDeployLatexDocs-DE.pdf
