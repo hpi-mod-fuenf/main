@@ -8,20 +8,17 @@
 
     \subsubsection{Hardwareumgebung}
     \paragraph{Server}\label{server}
-    \\
 
     Es existiert ein zentraler \emph{Server}. Dieser \emph{Server} verfügt
     über ausreichende Ressourcen.
 
     \subparagraph{IServerCore}\label{iservercore}
-    \\
 
     Der \emph{Server} verfügt über einen zentralen Hauptprozessor, über den
     auf alle weiteren Komponenten zugegriffen werden kann. Dies wird der
     Einfachheit halber angenommen.
 
     \subparagraph{IServerWlanAdapter}\label{iserverwlanadapter}
-    \\
 
     Beim \emph{IServerWlanAdapter} handelt es sich um eine Komponente, mit der der \emp{Server}
     auf das Funknetzwerk zugreifen kann. Über dieses Funknetzwerk können alle
@@ -30,7 +27,6 @@
     empfangen werden.
 
     \subparagraph{IHospital}\label{ihospital}
-    \\
 
     Der \emph{Server} verfügt auch über eine \emph{IHospital} Komponente, über die
     der Server mit dem Krankenhaus kommunizieren kann. Dies schließt das Senden und
@@ -38,7 +34,6 @@
     wie der genaue Zugriff des Krankenhauses auf diese Komponente realisiert wird.
 
     \paragraph{Robot}\label{robot}
-    \\
 
     Das Transportvehikel \emph{Robot} erfüllt Grundfunktionalitäten wie das
     Anfahren von Zielen, das Umfahren von Hindernissen und das Laden des
@@ -46,21 +41,18 @@
     \emph{Robots} beschrieben.
 
     \subparagraph{IRobotCore}\label{irobotcore}
-    \\
 
     Der \emph{Robot} verfügt über einen zentralen Hauptprozessor, über den
     auf alle weiteren Komponenten zugegriffen werden kann. Dies wird der
     Einfachheit halber angenommen.
 
     \subparagraph{IRobotWlanAdapter}\label{irobotwlanadapter}
-    \\
 
     Mit dem \emph{IRobotWlanAdapter} kann der \emph{Robot} auf das Funknetzwerk
     zugreifen. Er kann über diese Komponente Nachrichten, die beispielsweise vom
     zentralen \emph{Server} gesendet wurden, empfangen und Nachrichten versenden.
 
     \subparagraph{IRobotEngine}\label{irobotengine}
-    \\
 
     Als Antrieb nutzt das Transportvehikel einen omnidirektionalen Antrieb
     mit 3 Motoren, über welchen es sich vorwärts, nach rechts, nach links
@@ -69,7 +61,6 @@
     nicht näher spezifizierte Grenze nicht überschritten werden kann.
 
     \subparagraph{IBattery}\label{ibattery}
-    \\
 
     Jeder \emph{Robot} verfügt über einen Akkumulator, der zur
     Energieversorgung dient. Eine ausreichende Ladung des Akkumulators ist
@@ -79,7 +70,6 @@
     Akkumulators ist nicht bekannt.
 
     \subparagraph{INorthStar}\label{inorthstar}
-    \\
 
     Die Komponente \emph{INorthStar} kann ähnlich einem GPS-Modul die
     Position des \emph{Robots} feststellen. Hierbei ist die Komponente in
@@ -87,7 +77,6 @@
     Koodinatensystem und die aktuelle Ausrichtung des Vehikels zu ermitteln.
 
     \subparagraph{IRSensorDistance}\label{irsensordistance}
-    \\
 
     Das Transportvehikel verfügt über 9 Infarotdistanzsensoren, die an der
     kreisförmigen Außenwand des Vehikels im Abstand von jeweils 40
@@ -96,14 +85,12 @@
     möglich.
 
     \subparagraph{IBumper}\label{ibumper}
-    \\
 
     Bei einer Kollision des \emph{Robots} mit einem anderen Objekt wird
     dieses Ereignis über die Sensorik einer Kollisionserkennung festgestellt, worauf
     weitere Schritte eingeleitet werden können.
 
     \paragraph{Charger}\label{charger}
-    \\
 
     Es existieren Ladestationen, über die sich die \emph{IBattery} der
     \emph{Robots} vollständig laden lässt. Eine Ladestation ist dabei genau
