@@ -36,15 +36,15 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
-				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \midrule
-				\textbf{Ziel des Use Cases:} & \emph{Robot} fährt eine \emph{Destination} an\\ \midrule
-				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \midrule
-				\textbf{Vorbedingung:} & Ein spezieller \emph{Robot} wurde vom Server ausgewählt und sein Akkustand ist hoch genug um den Auftrag auszuführen \\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} ist an der \emph{Destination} angekommen und meldet dies dem \emph{Server} \\ \midrule
-				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \midrule
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} fährt eine \emph{Destination} an\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \hline
+				\textbf{Vorbedingung:} & Ein spezieller \emph{Robot} wurde vom Server ausgewählt und sein Akkustand ist hoch genug um den Auftrag auszuführen \\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} ist an der \emph{Destination} angekommen und meldet dies dem \emph{Server} \\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine \emph{Destination} erhalten. \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -65,12 +65,12 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
-				\toprule
-				Schritt & Nutzer & Beschreibung der Aktivität \\ \midrule
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 				1 & Robot & \emph{Robot} dreht sich in Richtung aktueller \emph{Destination} \\
 				2 & Robot & \emph{Robot} fährt geradeaus \\
 				3 & Robot & \emph{Robot} erreicht \emph{Destination} \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -79,10 +79,10 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}cp{6cm}X@{}}
-				\toprule
-				Schritt & Bedingung für Alternative & Beschreibung der Aktivität \\ \midrule
+				\hline
+				Schritt & Bedingung für Alternative & Beschreibung der Aktivität \\ \hline
 				3 & \emph{Robot} erkennt ein \emph{Obstacle} zwischen auf seinem Weg zum Ziel & \emph{Robot} sucht sich einen Umweg um das \emph{Obstacle}, umfährt das \emph{Obstacle} und nimmt schließlich Standardablauf wieder auf \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -97,15 +97,15 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
-				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot\\ \midrule
-				\textbf{Ziel des Use Cases:} & \emph{Robot} kann über seinen Akkustand und seine Position Auskunft geben\\ \midrule
-				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \midrule
-				\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten \\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den \emph{Server} \\ \midrule
-				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \midrule
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot\\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} kann über seinen Akkustand und seine Position Auskunft geben\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \hline
+				\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten \\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den \emph{Server} \\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten, seine Sensoren zu lesen und sie dem \emph{Server} zu schicken \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -122,12 +122,12 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
-				\toprule
-				Schritt & Nutzer & Beschreibung der Aktivität \\ \midrule
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 				1 & Robot & \emph{Robot} erhält Anfrage vom \emph{Server} \\
 				2 & Robot & \emph{Robot} sammelt Informationen von seiner Hardwareschnittstelle und fasst sie zusammen \\
 				3 & Robot & \emph{Robot} schickt zusammengefasste Informationen an den Server \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -142,15 +142,15 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
-				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \midrule
-				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ladestation anzufahren\\ \midrule
-				\textbf{Umgebende Systemgrenze:} & \emph{Robot}\\ \midrule
-				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht sein vorgegebenes Ziel\\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} erreicht seine Ladestation\\ \midrule
-				\textbf{Beteiligte Nutzer:} & \emph{Robot}\\ \midrule
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \hline
+				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ladestation anzufahren\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot}\\ \hline
+				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht sein vorgegebenes Ziel\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} erreicht seine Ladestation\\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot}\\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Robot} erreicht \emph{Destination} (Use-Case)\\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -161,13 +161,13 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
-				\toprule
-				Schritt & Nutzer & Beschreibung der Aktivität \\ \midrule
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 				1 & Robot & \emph{Robot} erreicht Ziel \\
 				2 & Robot & \emph{Robot} fährt zur Ladestation \\
 				3 & Robot & \emph{Robot} erreicht Ladestation und lädt sich auf \\
 				4 & Robot & \emph{Robot} erhält neues Ziel und fährt dorthin \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -182,15 +182,15 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
-				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot \\ \midrule
-				\textbf{Ziel des Use Cases:} & passenden \emph{Robot} für die durch den \emph{Server} gesendete \emph{Destination} auswählen\\ \midrule
-				\textbf{Umgebende Systemgrenze:} & \emph{Robot} und \emph{Server} \\ \midrule
-				\textbf{Vorbedingung:} & \emph{Server} hat eine neue \emph{Destination} bekommen\\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & dem ausgewählten \emph{Robot} wird die Task übertragen\\ \midrule
-				\textbf{Beteiligte Nutzer:} & \emph{Robot} und \emph{Server}\\ \midrule
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot \\ \hline
+				\textbf{Ziel des Use Cases:} & passenden \emph{Robot} für die durch den \emph{Server} gesendete \emph{Destination} auswählen\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot} und \emph{Server} \\ \hline
+				\textbf{Vorbedingung:} & \emph{Server} hat eine neue \emph{Destination} bekommen\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & dem ausgewählten \emph{Robot} wird die Task übertragen\\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot} und \emph{Server}\\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Server} empfängt neue \emph{Destination}\\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -199,13 +199,13 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
-				\toprule
-				Schritt & Nutzer & Beschreibung der Aktivität \\ \midrule
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 				1 & Server & \emph{Server} sendet Anfragen an alle \emph{Robots} \\
 				2 & Robot & \emph{Robots} empfangen Anfrage und führen dann den Use-Case „read Sensor“ aus \\
 				3 & Robot & \emph{Robots} senden ihre ermittelten Sensorwerte an den \emph{Server}\\
 				4 & Server & \emph{Server} empfängt Daten und wählt den am Besten geeigneten \emph{Robot} aus \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -220,15 +220,15 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
-				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot  \\ \midrule
-				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destination}) zuweisen\\ \midrule
-				\textbf{Umgebende Systemgrenze:} & \emph{Server} und \emph{Robot} \\ \midrule
-				\textbf{Vorbedingung:} & „choose Robot“ hat am Besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & ausgewähler \emph{Robot} steuert die \emph{Destination} an\\ \midrule
-				\textbf{Beteiligte Nutzer:} & \emph{Server} und \emph{Robot}\\ \midrule
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot  \\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destination}) zuweisen\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Server} und \emph{Robot} \\ \hline
+				\textbf{Vorbedingung:} & „choose Robot“ hat am Besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & ausgewähler \emph{Robot} steuert die \emph{Destination} an\\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Server} und \emph{Robot}\\ \hline
 				\textbf{Auslösendes Ereignis:} & im Use-Case „choose Robot“ wurde passender \emph{Robot} ausgewählt\\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -237,10 +237,10 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
-				\toprule
-				Schritt & Nutzer & Beschreibung der Aktivität \\ \midrule
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 				1 & Server & \emph{Server} überträgt ausgewähltem \emph{Robot} den Task \\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
@@ -256,15 +256,15 @@
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
-				\toprule
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Take Patient to Hospital  \\ \midrule
-				\textbf{Ziel des Use Cases:} & \emph{Hospital} erfährt, ob ein Auftrag vom System entgegengenommen werden kann. \midrule
-				\textbf{Umgebende Systemgrenze:} &  \\ \midrule
-				\textbf{Vorbedingung:} &  \midrule
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das System führt den Auftrag aus und bringt den \emph{Patient} in das \emph{Hospital} \\ \midrule
-				\textbf{Beteiligte Nutzer:} & \emph{Hospital} und \emph{Server}\\ \midrule
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Take Patient to Hospital  \\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Hospital} erfährt, ob ein Auftrag vom System entgegengenommen werden kann. \hline
+				\textbf{Umgebende Systemgrenze:} &  \\ \hline
+				\textbf{Vorbedingung:} &  \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das System führt den Auftrag aus und bringt den \emph{Patient} in das \emph{Hospital} \\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Hospital} und \emph{Server}\\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Hospital} hat einen neuen Auftrag\\
-				\bottomrule
+				\hline
 				\end{tabularx}
 			\end{table}
 
