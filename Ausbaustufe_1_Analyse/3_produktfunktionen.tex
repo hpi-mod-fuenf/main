@@ -29,7 +29,7 @@
 
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{1}: Drive to Destination}
+		\subsection{Beschreibung zu Use Case \emph{1}: Choose Path around Obstacle}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -38,59 +38,46 @@
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \hline
-				\textbf{Ziel des Use Cases:} & \emph{Robot} fährt eine \emph{Destination} an\\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} wählt einen Weg um ein \emph{Obstacle} \\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \hline
-				\textbf{Vorbedingung:} & Ein spezieller \emph{Robot} wurde vom Server ausgewählt und sein Akkustand ist hoch genug um den Auftrag auszuführen \\ \hline
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} ist an der \emph{Destination} angekommen und meldet dies dem \emph{Server} \\ \hline
+				\textbf{Vorbedingung:} & Der \emph{Robot} befindet sich dabei, eine \emph{Destination} anzufahren \\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & 
+				Der \emph{Robot} umfährt das \emph{Obstacle} \\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \hline
-				\textbf{Auslösendes Ereignis:} & \emph{Robot} hat eine \emph{Destination} erhalten. \\
-				\hline
+				\textbf{Auslösendes Ereignis:} & Ein \emph{Robot} hat ein \emph{Obstacle} auf dem Weg zwischen sich und der \emph{Destination} gefunden\\ \hline
 				\end{tabularx}
 			\end{table}
 
-			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} eine aktuelle
-			\emph{Destination} hat. In dieser Ausbaustufe betrachten wir lediglich das Anfahren
-			einer \emph{Destination} von einem \emph{Robot}. Der \emph{Robot} dreht sich zunächst in die
-			Richtung der \emph{Destination} und fährt so lange in Luftlinie, bis er entweder
-			ankommt oder ein Hindernis erkennt. Ein konkreter Prozess zur Erkennung
-			eines Hindernisses ist eine Entwurfsentscheidung und wird daher noch
-			nicht berücksichtigt. Wenn der \emph{Robot} ein \emph{Obstacle} erkennt, dann
-			sucht er einen guten Weg um das Hindernis herum. Wie er diesen Weg sucht
-			ist auch zunächst eine Entwurfsentscheidung und noch nicht relevant. Auf
-			diesem Weg umfährt er dann das \emph{Obstacle} und nimmt erneut die Fahrt auf
-			Luftlinie auf.
+			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein \emph{Obstacle} vor sich findet, dass umfahren werden muss. Im wesentlichen spricht der Robot dann seine Peripherie an um Informationen über das \emph{Obstacle} zu sammeln. Dabei findet eine Fallunterscheidung statt, so dass sich zum Beispiel zwei gegenüberstehende \emph{Robots} erkennen und beide nach rechts ausweichen. Bei statischen \emph{Obstacles} wird diese Entscheidung abhängig von dem Teil des \emph{Obstacles} entschieden, den der \emph{Robot} mit seinen Sensoren wahrnehmen kann.
+		
+		\pagebreak
+		
+		
+		\subsection{Beschreibung zu Use Case \emph{2}: Drive around Obstacle}
 
-			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
+			\subsubsection*{Charakterisierende Informationen}
 
 			\begin{table}[H]
 				\centering
-				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
+				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\hline
-				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
-				1 & Robot & \emph{Robot} dreht sich in Richtung aktueller \emph{Destination} \\
-				2 & Robot & \emph{Robot} fährt geradeaus \\
-				3 & Robot & \emph{Robot} erreicht \emph{Destination} \\
-				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Drive to Destination\\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} umfährt ein \emph{Obstacle} \\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \hline
+				\textbf{Vorbedingung:} & Ein \emph{Robot} hat ein \emph{Obstacle} auf dem Weg zwischen sich und der \emph{Destination} gefunden\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & 
+				Der \emph{Robot} umfährt das \emph{Obstacle} \\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \hline
+				\textbf{Auslösendes Ereignis:} & Der \emph{Robot} hat den besten (nach seinen Berechnungen) Weg um das \emph{Obstacle} gewählt. \\ \hline
 				\end{tabularx}
 			\end{table}
-
-			\subsubsection*{Szenarien für alternative Abläufe\\ (Misserfolg oder Umwege zum Erfolg)}
-
-			\begin{table}[H]
-				\centering
-				\begin{tabularx}{\textwidth}{@{}cp{6cm}X@{}}
-				\hline
-				Schritt & Bedingung für Alternative & Beschreibung der Aktivität \\ \hline
-				3 & \emph{Robot} erkennt ein \emph{Obstacle} zwischen auf seinem Weg zum Ziel & \emph{Robot} sucht sich einen Umweg um das \emph{Obstacle}, umfährt das \emph{Obstacle} und nimmt schließlich Standardablauf wieder auf \\
-				\hline
-				\end{tabularx}
-			\end{table}
-
+		Dieser Use Case beschreibt die eigentliche Umfahrung eines \emph{Obstacles} von einem \emph{Robot}. Der \emph{Robot} hat davor ausgewählt, zu welcher Richtung hin er das \emph{Obstacle} umfahren möchte. Wenn es sich um ein statisches \emph{Obstacle} handelt, fährt der \emph{Robot} immer eine kleine Distanz parallel zur Kante des \emph{Obstacles} und prüft ob der Weg zur \emph{Destination} wieder frei ist. Wenn dieser frei ist, wird die normale Fahrt wieder aufgenommen, ansonsten wird der Kurs wieder parallel zur Kante des \emph{Obstacles} korrigiert und das ganze wird erneut ausgeführt. Wenn sich zwei \emph{Robots} gegenseitig als \emph{Obstacles} wahrgenommen haben, ist ihnen aus dem Use Case \textit{Choose Path around Obstacle} klar, dass sie beide nach rechts ausweichen müssen um dann den Normalbetrieb wieder aufzunehmen.
+			
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{2}: Read Sensors}
+		\subsection{Beschreibung zu Use Case \emph{3}: Read Sensors}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -135,7 +122,7 @@
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{3}: Charging}
+		\subsection{Beschreibung zu Use Case \emph{4}: Charging}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -175,7 +162,7 @@
 			
 		\pagebreak
 		
-			\subsection{Beschreibung zu Use Case \emph{4}: Inform about arrival}
+			\subsection{Beschreibung zu Use Case \emph{5}: Inform about arrival}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -212,7 +199,7 @@
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{5}: Choose Robot}
+		\subsection{Beschreibung zu Use Case \emph{6}: Choose Robot}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -250,7 +237,7 @@
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{6}: Assign Task}
+		\subsection{Beschreibung zu Use Case \emph{7}: Assign Task}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -288,7 +275,7 @@
 	\pagebreak
 
 
-		\subsection{Beschreibung zu Use Case \emph{7}: Check Availability}
+		\subsection{Beschreibung zu Use Case \emph{8}: Check Availability}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -312,7 +299,7 @@
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 
 	\pagebreak
-		\subsection{Beschreibung zu Use Case \emph{8}: Inform about boarding}
+		\subsection{Beschreibung zu Use Case \emph{9}: Inform about boarding}
 
 			\subsubsection*{Charakterisierende Informationen}
 
