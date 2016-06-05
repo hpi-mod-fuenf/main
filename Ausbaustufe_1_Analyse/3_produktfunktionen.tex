@@ -4,12 +4,12 @@
 		\subsection{Use Cases}
 		% \input{3-1-Use_Cases}
 		
-		Die Abbildungen \ref{fig:3-1-robot-use-cases} und \ref{fig:3-1-server-use-cases} zeigen die Funktionalitäten der beiden Teilsysteme \emph{Robot} und \emph{Server}.
+		Die Abbildungen \ref{fig:3-1-robot-use-cases}, \ref{fig:3-1-server-use-cases} und \ref{fig:3-1-hospital-use-cases} zeigen die Funktionalitäten der Teilsysteme \emph{Robot}, \emph{Server} sowie \emph{Hospital}.
 		
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.8\textwidth]{img/1-Analyse-3-Robot}
-				\caption{Use Case Diagramm 1: Use Cases des Roboters}
+				\caption{Use Case Diagramm 1: Use Cases des Robots}
 				\label{fig:3-1-robot-use-cases}
 			\end{figure}
 
@@ -48,7 +48,7 @@
 				\end{tabularx}
 			\end{table}
 
-			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein \emph{Obstacle} vor sich findet, dass umfahren werden muss. Im wesentlichen spricht der Robot dann seine Peripherie an um Informationen über das \emph{Obstacle} zu sammeln. Dabei findet eine Fallunterscheidung statt, so dass sich zum Beispiel zwei gegenüberstehende \emph{Robots} erkennen und beide nach rechts ausweichen. Bei statischen \emph{Obstacles} wird diese Entscheidung abhängig von dem Teil des \emph{Obstacles} entschieden, den der \emph{Robot} mit seinen Sensoren wahrnehmen kann.
+			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein \emph{Obstacle} vor sich findet, das umfahren werden muss. Im Wesentlichen spricht der Robot dann seine Peripherie an, um Informationen über das \emph{Obstacle} zu sammeln. Dabei findet eine Fallunterscheidung statt, sodass sich zum Beispiel zwei gegenüberstehende \emph{Robots} erkennen und beide nach rechts ausweichen. Bei statischen \emph{Obstacles} wird diese Entscheidung abhängig von dem Teil des \emph{Obstacles} entschieden, den der \emph{Robot} mit seinen Sensoren wahrnehmen kann.
 		
 		\pagebreak
 		
@@ -71,7 +71,7 @@
 				\textbf{Auslösendes Ereignis:} & Der \emph{Robot} hat den besten (nach seinen Berechnungen) Weg um das \emph{Obstacle} gewählt. \\ \hline
 				\end{tabularx}
 			\end{table}
-		Dieser Use Case beschreibt die eigentliche Umfahrung eines \emph{Obstacles} von einem \emph{Robot}. Der \emph{Robot} hat davor ausgewählt, zu welcher Richtung hin er das \emph{Obstacle} umfahren möchte. Wenn es sich um ein statisches \emph{Obstacle} handelt, fährt der \emph{Robot} immer eine kleine Distanz parallel zur Kante des \emph{Obstacles} und prüft ob der Weg zur \emph{Destination} wieder frei ist. Wenn dieser frei ist, wird die normale Fahrt wieder aufgenommen, ansonsten wird der Kurs wieder parallel zur Kante des \emph{Obstacles} korrigiert und das ganze wird erneut ausgeführt. Wenn sich zwei \emph{Robots} gegenseitig als \emph{Obstacles} wahrgenommen haben, ist ihnen aus dem Use Case \textit{Choose Path around Obstacle} klar, dass sie beide nach rechts ausweichen müssen um dann den Normalbetrieb wieder aufzunehmen.
+		Dieser Use Case beschreibt die eigentliche Umfahrung eines \emph{Obstacles} von einem \emph{Robot}. Der \emph{Robot} hat davor ausgewählt, zu welcher Richtung hin er das \emph{Obstacle} umfahren möchte. Wenn es sich um ein statisches \emph{Obstacle} handelt, fährt der \emph{Robot} immer eine kleine Distanz parallel zur Kante des \emph{Obstacles} und prüft ob der Weg zur \emph{Destination} wieder frei ist. Wenn dieser frei ist, wird die normale Fahrt wieder aufgenommen, ansonsten wird der Kurs wieder parallel zur Kante des \emph{Obstacles} korrigiert und der Vorgang wiederholt. Wenn sich zwei \emph{Robots} gegenseitig als \emph{Obstacles} wahrgenommen haben, ist ihnen aus dem Use Case \textit{Choose Path around Obstacle} klar, dass sie beide nach rechts ausweichen müssen, um dann den Normalbetrieb wieder aufzunehmen.
 			
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 			
@@ -174,7 +174,7 @@
 				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ankunft dem Krnakenhaus mitzuteilen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot}\\ \hline
 				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht die \emph{Position} des Patienten\\ \hline
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} wartet bis er beladen wurde\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} wartet, bis er beladen wurde\\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Robot}\\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Robot} erreicht Patienten\\
 				\hline
@@ -208,10 +208,10 @@
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot \\ \hline
-				\textbf{Ziel des Use Cases:} & passenden \emph{Robot} für die durch den \emph{Server} gesendete \emph{Destination} auswählen\\ \hline
+				\textbf{Ziel des Use Cases:} & Passenden \emph{Robot} für die durch den \emph{Server} gesendete \emph{Destination} auswählen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot} und \emph{Server} \\ \hline
 				\textbf{Vorbedingung:} & \emph{Server} hat eine neue \emph{Destination} bekommen\\ \hline
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & dem ausgewählten \emph{Robot} wird die Task übertragen\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Dem ausgewählten \emph{Robot} wird die Task übertragen\\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} und \emph{Server}\\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Server} empfängt neue \emph{Destination}\\
 				\hline
@@ -228,7 +228,7 @@
 				1 & Server & \emph{Server} sendet Anfragen an alle \emph{Robots} \\
 				2 & Robot & \emph{Robots} empfangen Anfrage und führen dann den Use-Case „read Sensor“ aus \\
 				3 & Robot & \emph{Robots} senden ihre ermittelten Sensorwerte an den \emph{Server}\\
-				4 & Server & \emph{Server} empfängt Daten und wählt den am Besten geeigneten \emph{Robot} aus \\
+				4 & Server & \emph{Server} empfängt Daten und wählt den am besten geeigneten \emph{Robot} aus \\
 				\hline
 				\end{tabularx}
 			\end{table}
@@ -248,7 +248,7 @@
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot  \\ \hline
 				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destination}) zuweisen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Server} und \emph{Robot} \\ \hline
-				\textbf{Vorbedingung:} & „Choose Robot“ hat am Besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
+				\textbf{Vorbedingung:} & „Choose Robot“ hat den am besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Ausgewählter \emph{Robot} steuert die \emph{Destination} an\\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Server} und \emph{Robot}\\ \hline
 				\textbf{Auslösendes Ereignis:} & Im Use-Case „choose Robot“ wurde passender \emph{Robot} ausgewählt\\
@@ -275,7 +275,7 @@
 	\pagebreak
 
 
-		\subsection{Beschreibung zu Use Case \emph{8}: Check Availability}
+		\subsection{Beschreibung zu Use Case \emph{8}: Check availability}
 
 			\subsubsection*{Charakterisierende Informationen}
 
