@@ -199,7 +199,7 @@
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{6}: Choose Robot}
+		\subsection{Beschreibung zu Use Case \emph{6}: Select best Match}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -208,12 +208,12 @@
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot \\ \hline
-				\textbf{Ziel des Use Cases:} & Passenden \emph{Robot} für die durch den \emph{Server} gesendete \emph{Destination} auswählen\\ \hline
+				\textbf{Ziel des Use Cases:} & Passenden \emph{Robot} für die aktuelle \emph{Destination} auswählen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Robot} und \emph{Server} \\ \hline
-				\textbf{Vorbedingung:} & \emph{Server} hat eine neue \emph{Destination} bekommen\\ \hline
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Dem ausgewählten \emph{Robot} wird die Task übertragen\\ \hline
+				\textbf{Vorbedingung:} & \emph{Server} sucht \emph{Robot} für eine neu erhaltene \emph{Destination}\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Wenn es einen geeigneten \emph{Robot} gibt, dann wird diesem die \emph{Destination} zugeteilt.\\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} und \emph{Server}\\ \hline
-				\textbf{Auslösendes Ereignis:} & \emph{Server} empfängt neue \emph{Destination}\\
+				\textbf{Auslösendes Ereignis:} & \emph{Server} hat von allen \emph{Robots} die Sensordaten empfangen\\
 				\hline
 				\end{tabularx}
 			\end{table}
@@ -225,10 +225,10 @@
 				\begin{tabularx}{\textwidth}{@{}cp{2cm}X@{}}
 				\hline
 				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
-				1 & Server & \emph{Server} sendet Anfragen an alle \emph{Robots} \\
-				2 & Robot & \emph{Robots} empfangen Anfrage und führen dann den Use-Case „read Sensor“ aus \\
-				3 & Robot & \emph{Robots} senden ihre ermittelten Sensorwerte an den \emph{Server}\\
-				4 & Server & \emph{Server} empfängt Daten und wählt den am besten geeigneten \emph{Robot} aus \\
+				1 & Server & \emph{Server} erhält Sensordaten von allen \emph{Robots} \\
+				2 & Server & \emph{Server} berechnet, ob es einen \emph{Robot} gibt, der zur \emph{Destination} fahren kann\\
+				3 & Server & Wenn es keinen geeigneten \emph{Robot} gibt, weise die \emph{Destination} ab.
+				4 & Server & Es gitb einen geeigneten \emph{Robot} und \emph{Server} führt den Use-Case \textit{Assign Task} aus und gibt dem \emph{Robot} die \emph{Destination}\\
 				\hline
 				\end{tabularx}
 			\end{table}
