@@ -227,7 +227,7 @@
 				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 				1 & Server & \emph{Server} erhält Sensordaten von allen \emph{Robots} \\
 				2 & Server & \emph{Server} berechnet, ob es einen \emph{Robot} gibt, der zur \emph{Destination} fahren kann\\
-				3 & Server & Wenn es keinen geeigneten \emph{Robot} gibt, weise die \emph{Destination} ab.
+				3 & Server & Wenn es keinen geeigneten \emph{Robot} gibt, weise die \emph{Destination} ab. \\
 				4 & Server & Es gitb einen geeigneten \emph{Robot} und \emph{Server} führt den Use-Case \textit{Assign Task} aus und gibt dem \emph{Robot} die \emph{Destination}\\
 				\hline
 				\end{tabularx}
@@ -285,8 +285,8 @@
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital  \\ \hline
 				\textbf{Ziel des Use Cases:} & \emph{Hospital} erfährt, ob ein Auftrag vom System entgegengenommen werden kann. \hline
-				\textbf{Umgebende Systemgrenze:} &  \\ \hline
-				\textbf{Vorbedingung:} &  \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Hospital} und \emph{Server} \\ \hline
+				\textbf{Vorbedingung:} & Das \emph{Hospital} hat einen neuen Patienten registriert. \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das System führt den Auftrag aus und bringt den \emph{Patient} in das \emph{Hospital} \\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Hospital} und \emph{Server}\\ \hline
 				\textbf{Auslösendes Ereignis:} & \emph{Hospital} hat einen neuen Auftrag\\
