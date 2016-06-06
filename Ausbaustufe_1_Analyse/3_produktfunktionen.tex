@@ -48,7 +48,7 @@
 				\end{tabularx}
 			\end{table}
 
-			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein \emph{Obstacle} vor sich findet, das umfahren werden muss. Im Wesentlichen spricht der Robot dann seine Peripherie an, um Informationen über das \emph{Obstacle} zu sammeln. Dabei findet eine Fallunterscheidung statt, sodass sich zum Beispiel zwei gegenüberstehende \emph{Robots} erkennen und beide nach rechts ausweichen. Bei statischen \emph{Obstacles} wird diese Entscheidung abhängig von dem Teil des \emph{Obstacles} entschieden, den der \emph{Robot} mit seinen Sensoren wahrnehmen kann.
+			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein zu umfahrendes \emph{Obstacle} vor sich entdeckt. Im Wesentlichen sammelt der \emph{Robot} mittels seiner Peripherie Informationen über das \emph{Obstacle}, um darauf hin eine Fallunterscheidung zu treffen. Erkennen sich zwei gegenüberstehende \emph{Robots}, so weichen beide nach rechts aus. Bei statischen \emph{Obstacles} wird die Entscheidung für eine Ausweichrichtung in Abhängigkeit von dem vom \emph{Robot} wahrnehmbaren Teil des \emph{Obstacles} getroffen.
 		
 		\pagebreak
 		
@@ -99,7 +99,7 @@
 			Im Rahmen vom Geschäftsprozess \emph{Choose Robot} sammelt der \emph{Server}
 			Informationen über jeden \emph{Robot}. Diese Informationen (z.B
 			Akkustand, aktuelle Position, ob der \emph{Robot} gerade ein Ziel verfolgt)
-			kann der \emph{Robot} von seinen Hardware-Schnittstellen anfordern. Dieses
+			kann der \emph{Robot} von seinen Hardware-Schnittstellen anfordern. Dieser
 			Use Case wird dann ausgefüht, wenn der \emph{Robot} eine Anfrage vom
 			Server erhält, seine Sensoren zu lesen, und endet damit, dass der \emph{Robot}
 			die zusammengefassten Informationen an den \emph{Server} schickt.
@@ -217,6 +217,8 @@
 				\hline
 				\end{tabularx}
 			\end{table}
+			
+			Nach Abrufen der Sensordaten von den \emph{Robots} prüft der \emph{Server} mittels dieser Daten, welcher \emph{Robot} für den anstehenden \emph{Task} am besten geeignet ist und wählt diesen aus.
 
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
@@ -228,7 +230,7 @@
 				1 & Server & \emph{Server} erhält Sensordaten von allen \emph{Robots} \\
 				2 & Server & \emph{Server} berechnet, ob es einen \emph{Robot} gibt, der zur \emph{Destination} fahren kann\\
 				3 & Server & Wenn es keinen geeigneten \emph{Robot} gibt, weise die \emph{Destination} ab. \\
-				4 & Server & Es gitb einen geeigneten \emph{Robot} und \emph{Server} führt den Use-Case \textit{Assign Task} aus und gibt dem \emph{Robot} die \emph{Destination}\\
+				4 & Server & Es gitb einen geeigneten \emph{Robot} und \emph{Server} führt den Use-Case \textit{ \glqq Assign Task \grqq } aus und gibt dem \emph{Robot} die \emph{Destination}\\
 				\hline
 				\end{tabularx}
 			\end{table}
@@ -248,10 +250,10 @@
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot  \\ \hline
 				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destination}) zuweisen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Server} und \emph{Robot} \\ \hline
-				\textbf{Vorbedingung:} & „Choose Robot“ hat den am besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
+				\textbf{Vorbedingung:} & \textit{ \glqq Choose Robot \grqq } hat den am besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Ausgewählter \emph{Robot} steuert die \emph{Destination} an\\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Server} und \emph{Robot}\\ \hline
-				\textbf{Auslösendes Ereignis:} & Im Use-Case „choose Robot“ wurde passender \emph{Robot} ausgewählt\\
+				\textbf{Auslösendes Ereignis:} & Im Use-Case \textit{ \glqq choose Robot \grqq } wurde ein passender \emph{Robot} ausgewählt\\
 				\hline
 				\end{tabularx}
 			\end{table}
@@ -294,7 +296,7 @@
 				\end{tabularx}
 			\end{table}
 
-			Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und ins \emph{Hospital} zu bringen. Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht teil des Systems ist.
+			Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und in das \emph{Hospital} zu bringen. Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht Teil des Systems ist.
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 
@@ -308,17 +310,17 @@
 				\begin{tabularx}{\textwidth}{@{}p{5cm}X@{}}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital   \\ \hline
-				\textbf{Ziel des Use Cases:} & Dem \emph{Robot} mitteilen, dass Patient auf den \emph{Robot} beladen wurde \\ \hline
+				\textbf{Ziel des Use Cases:} & Dem \emph{Robot} mitteilen, dass Patient auf den \emph{Robot} geladen wurde \\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Hospital} \\ \hline
 				\textbf{Vorbedingung:} & Patient befindet sich auf \emph{Robot}\\ \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} fährt Patienten zum \emph{Hospital} \\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Hospital}\\ \hline
-				\textbf{Auslösendes Ereignis:} & \emph{Server} wurde informiert, dass \emph{Robot} am Patienten angekommen ist(Inform about arrival)\\
+				\textbf{Auslösendes Ereignis:} & \emph{Server} wurde informiert, dass \emph{Robot} am Patienten angekommen ist (\textit{ \glqq Inform about arrival \grqq }) \\
 				\hline
 				\end{tabularx}
 			\end{table}
 			
-			Das \emph{Hospital} muss dem \emph{Robot} mitteilen, dass der Patient beladen wurde um einen sicheren Transport des Patienten zu gewährleisten. Der \emph{Robot} hat somit keinen Eingriff in das Beladen des Patienten.
+			Das \emph{Hospital} muss dem \emph{Robot} mitteilen, dass der \emph{Robot} mit dem \emph{Patient} beladen wurde, um einen sicheren Transport des Patienten zu gewährleisten. Der \emph{Robot} hat somit keinen Eingriff in den Verladevorgang des Patienten.
 
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 
