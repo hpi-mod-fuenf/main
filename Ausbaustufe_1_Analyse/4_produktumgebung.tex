@@ -20,10 +20,10 @@
 
     \subparagraph{IServerWlanAdapter}\label{iserverwlanadapter}
 
-    Beim \emph{IServerWlanAdapter} handelt es sich um eine Komponente, mit der der \emp{Server}
+    Beim \emph{IServerWlanAdapter} handelt es sich um eine Komponente, mit der der \emph{Server}
     auf das Funknetzwerk zugreifen kann. Über dieses Funknetzwerk können alle
     \emph{Robots} erreicht werden, sodass Nachrichten an sie abgesetzt werden können
-    und Nachrichten, die über das Funknetzwerk für den \emp{Server} übertragen wurden,
+    und Nachrichten, die über das Funknetzwerk für den \emph{Server} übertragen wurden,
     empfangen werden können.
 
     \subparagraph{IHospital}\label{ihospital}
@@ -107,7 +107,7 @@
     		Bei \emph{IHospital} handelt es sich um die \emph{Server} Komponente, die die Kommunikation mit dem \emph{Hospital} gewährleistet. Dabei werden zum einen Methoden bereitgestellt, die das \emph{Hospital} über ein Interface aufrufen kann, um Aufträge zu verteilen und dem \emph{Hospital} Informationen über den aktuellen Stand des Auftrags mitzuteilen (getPatientAt(), patientOnBoard() sowie patientArrived()), und zum anderen kann die Komponente über ein Interface Methoden des \emph{Hospitals} aufrufen, um diesem Informationen zu übermitteln (informRobotArrivedAtPatient() und informRobotArrivedAtHospital()).
     \paragraph{Robot}\label{robot}
     		Nachfolgend werden die zentralen Softwareschnittstellen des \emph{Robots} beschrieben.
-    	\subpragraph{IRobotCore}\label{irobotcore}
+    	\subparagraph{IRobotCore}\label{irobotcore}
     		Auf der zentralen Recheneinheit des \emph{Robots}, dem \emph{IRobotCore}, läuft eine JavaRuntimeEnvironment, in der sich die gesamte Steuerung und die Verwendung der Komponenten und Schnittstellen abspielt. Die einzelnen Komponenten mit ihren Methoden werden im folgenden näher erläutert.
     	\subparagraph{IRSensorDistance}\label{irsensordistance}
     		Die \emph{IRSensorDistance} Komponente stellt drei Methoden bereit, mit denen die Distanz und der Winkel des entdeckten Objekts und der an der Entdeckung beteiligte Infrarotsensor erfasst und in Arrays gespeichert werden.
@@ -120,7 +120,7 @@
     	\subparagraph{IBumperHandler}\label{ibumperhandler}
     		\emph{IBumperHandler} ist die Komponente zum Umgang mit Zusammenstößen. Die Kollisionserkennung IBumper registriert einen Aufprall und die \emph{IBumperHandler} Komponente stellt zwei Methoden zum Umgang mit dem Aufprall bereit.
     	\subparagraph{IDrive}\label{idrive}
-    		Die Bewegungssteuerung des \emph{Robots} heißt \emph{IDrive}. Sie stellt vier Methoden bereit. Die Methoden driveToPosition() und driveToPositionCautiously() erwarten beide eine Position, eine Geschwindigkeit und einen ArrivalHandler, der eine Methode zur Meldung aufruft, wenn der \emph{Robot} am Ziel angekommen ist. Die Methoden sind beide dafür da, ein gegebenes Ziel anzufahren, wobei bei der Zweiten die Höchstgeschwindigkeit geringer ist. Die höchstgeschwindigkeit für Cautiously, Regular und Fast Methoden stellt die \emph{IDrive} Komponente bereit, wobei Cautiously ≤ Regular ≤ Fast gilt. Die anderen beiden Methoden, drive() und driveCautiously() unterscheiden sich ebenfalls nur in der Höchstgeschwindigkeit und ermöglichen ein manuelles Fahren. Dabei erwarten sie die Drehung des \emph{Robots} als float-Wert sowie die Vorwärts- und die Seitwärtsgeschwindigkeit, ebenfalls als float-Wert.
+    		Die Bewegungssteuerung des \emph{Robots} heißt \emph{IDrive}. Sie stellt vier Methoden bereit. Die Methoden driveToPosition() und driveToPositionCautiously() erwarten beide eine Position, eine Geschwindigkeit und einen ArrivalHandler, der eine Methode zur Meldung aufruft, wenn der \emph{Robot} am Ziel angekommen ist. Die Methoden sind beide dafür da, ein gegebenes Ziel anzufahren, wobei bei der Zweiten die Höchstgeschwindigkeit geringer ist. Die höchstgeschwindigkeit für Cautiously, Regular und Fast Methoden stellt die \emph{IDrive} Komponente bereit, wobei Cautiously $\leq$ Regular $\leq$ Fast gilt. Die anderen beiden Methoden, drive() und driveCautiously() unterscheiden sich ebenfalls nur in der Höchstgeschwindigkeit und ermöglichen ein manuelles Fahren. Dabei erwarten sie die Drehung des \emph{Robots} als float-Wert sowie die Vorwärts- und die Seitwärtsgeschwindigkeit, ebenfalls als float-Wert.
     	\subparagraph{IBattery}\label{ibattery}
     		Bei \emph{IBattery} handelt es sich um die Akkusteuerung des \emph{Robots}. Sie stellt zwei Methoden bereit. getBatteryLevel() gibt den aktuellen Akkuladestand als float-Wert zurück, getChargingPosition() gibt die Position des zugeordneten Chargers zurück.
 
