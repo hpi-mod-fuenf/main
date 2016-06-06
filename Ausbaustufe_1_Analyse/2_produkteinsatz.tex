@@ -1,72 +1,23 @@
 
 	\section{Produkteinsatz}
 
-		\subsection{Beschreibung des Problembereichs}
-		Der Problembereich lässt sich für diese Analysestufe in drei Punkte einteilen, um eine Gesamtkoordination effizient zu gestalten:
+	Der Problembereich erweitert sich für diese Analyse auf sechs Punkte, um eine Gesamtkoordination effizient zu gestalten:\\
 
-		\begin{enumerate}
-		\item
-			Zuallererst muss das automatische Fahren im zweidimensionalen
-			Koordinatensystem zu einem angegebenen Zielpunkt(\emph{Destination})
-			fehlerfrei möglich sein. Ebenfalls steht eine manuelle Steuerung zur
-			Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings
-			wiederum sinnvoll in das Gesamtsystem integriert werden muss.
-		\item
-			Als zweite Herausforderung geht es darum den Schaden von Kollisionen
-			zu minimieren; wie diese erkannt, wie auf sie reagiert wird und diese
-			Kollisionen durch vorrauschendes Umfahren von
-			Objekten (\emph{Obstacle}) verhindert werden können. Dies schließt
-			sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein.
-		\item
-			Im dritten Punkt gilt es einen möglichst reibungs- und
-			unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich
-			vorrauschendes Fahren zu ermöglichen. Im Falle eines niedrigen
-			Batteriestands also unverzüglich an seiner individuellen Ladestation
-			(\emph{Charger}) anzudocken und aufzuladen, beziehungsweise längere
-			Fahrten nicht anzutreten, die den Batteriestand gefährden würden.
-		\end{enumerate}
+\begin{enumerate}
+	\item Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.
+	\item Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich vorausschauendes Fahren zu ermöglichen. Im Falle eines niedrigen Batteriestands also unverzüglich an eine Ladestation anzudocken und aufzuladen, beziehungsweise längere Fahrten nicht anzutreten, für die der Batteriestand nicht ausreicht.
+	\item Im dritten Punkt geht es darum den Schaden von Kollisionen zu minimieren; wie diese erkannt, wie auf sie reagiert wird und diese Kollisionen durch vorrauschendes Umfahren von Objekten verhindert werden können. Dies schließt sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein. Im Speziellen muss eine Priorisierung der Roboter stattfinden, damit den Krankentransportern ein reibungsloser Fahrtverlauf garantiert wird.
+	\item Dieser Punkt beschäftigt sich mit dem Abholvorgang. Jeder Krankentransport benötigt mindesten ein Vehikel das zur Verfügung steht. Jeder dieser Roboter muss unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit diese Kriterien Einfluss auf die Entscheidung des Servers nehmen. Wenn dieser Roboter angekommen ist, müssen wiederum Patient und mögliche Helfende benachrichtigt werden.
+	\item Außerdem muss das Fahrverhalten an einen Transport mit Patienten angepasst werden. Welche Daten werden ausgetauscht, damit dem Patienten nach der Ankunft die schnellstmögliche Behandlung zukommen kann?
+\end{enumerate}
 
-		\begin{figure}[H]
-			\centering
-			\begin{subfigure}[t]{0.3\textwidth}
-				\includegraphics[width=\textwidth]{../images/grafikZumProblembereich1.jpg}
-				\caption{Fahren zu einem angegebenen Zielpunkt}
-				\label{fig:2-1-problembereich-1}
-			\end{subfigure}
-			~~~~
-			\begin{subfigure}[t]{0.3\textwidth}
-				\includegraphics[width=\textwidth]{../images/grafikZumProblembereich2.jpg}
-				\caption{Umfahren von Objekten}
-				\label{fig:2-1-problembereich-2}
-			\end{subfigure}
-			~~~~
-			\begin{subfigure}[t]{0.3\textwidth}
-				\includegraphics[width=\textwidth]{../images/grafikZumProblembereich3.jpg}
-				\caption{Automatisches Laden}
-				\label{fig:2-1-problembereich-3}
-			\end{subfigure}
-			\caption{Visualisierung der Problembereiche}\label{fig:2-1-problembereiche}
-		\end{figure}
+An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
+\begin{enumerate}
+	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das gleiche gilt für Ladestationen.
+	\item Roboter können autark vom Server agieren, damit ihre Ziele bestimmen und eine Ladestation anfahren.
+	\item Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. Für die unbeweglichen Objekte ist es notwendig, dass ihre Position von vornerein bekannt ist und sie unverändert bleibt.
+\end{enumerate}
 
-		Abbildung \ref{fig:2-1-problembereiche} zeigt die drei o.g. Problembereiche in einer fotografischen Repräsentation.\\
-
-
-		Daran anknüpfend wird mit folgenden Annahmen gearbeitet:
-
-		\begin{enumerate}
-		\item
-			Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch
-			erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das
-			gleiche gilt für Ladestationen.
-		\item
-			Roboter können autark vom \emph{Server} agieren, damit ihre Ziele
-			bestimmen und eine Ladestation anfahren.
-		\item
-			Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im
-			Verkehrsbetrieb ausschließlich um andere Roboter handelt. Für die
-			unbeweglichen Objekte ist es notwendig, dass ihre Position von
-			vornerein bekannt ist und sie unverändert bleibt.
-		\end{enumerate}
 
 		\subsection{Glossar}
 
