@@ -19,7 +19,7 @@ public class ExitCodeManager {
 		if (i==1) {
 			if (log.contains("Package babel Error:")) {
 				System.out.println("There was an unimportant 'Package Babel Error', see the log file for more information, the build will not fail because of this");
-				log.replace("Package babel Error:","");
+				log.replaceAll("Package babel Error:","");
 			}
 			if (log.contains("Error")) {
 				System.out.println("Latex exited with Exit code 1 - BUILD FAILED");
