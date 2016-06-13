@@ -20,7 +20,7 @@ before_install:
   - cd Ausbaustufe_1_Analyse
 # installs openjdk for professorial chair watermark-removal-tool
   - sudo apt-get install -y openjdk-7-jre
-  - sudo add-apt-repository ppa:texlive-backports/ppa
+  - sudo add-apt-repository -y ppa:texlive-backports/ppa
   - sudo apt-get install -y texlive-lang-german
 # LaTeX-packages which aren't included in the standard package 
   - tlmgr install babel
