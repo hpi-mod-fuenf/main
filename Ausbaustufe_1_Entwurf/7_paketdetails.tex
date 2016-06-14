@@ -2,7 +2,7 @@
 \section{Paketdetails}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{../images/Iteration0_Entwurf_7_Paketdetails}
+\includegraphics[width=1\textwidth]{img/7_paketdetails}
 \caption{Klassendiagramm zur detaillierten Beschreibung der strukturellen Gliederung}
 \label{Paketdetails}
 \end{figure}
@@ -25,22 +25,20 @@
 		%#destination : Destination
 		Die Klasse \textit{RobotController} ist die Hauptklasse des \textit{Robots}, 
 		da sie den aktuellen Zustand des \textit{Robots} enthält.
-		So hat diese Klasse die Möglichkeit, maximal eine \textit{Destination} zu speichern. 
-		Diese \textit{Destination} kann ein vom \textit{Server} zugeteiltes Ziel sein, 
+		So hat diese Klasse die Möglichkeit, maximal einen \textit{Task} zu speichern. 
+		Dieser \textit{Task} kann ein vom \textit{Server} zugeteiltes Ziel sein, 
 		der dem \textit{Robot} zugehörige \textit{Charger}, oder gerade kein Ziel, 
-		also \texttt{null} sein. Nur wenn der \textit{Robot} gerade keine \textit{Destination} 
+		also \texttt{null} sein. Nur wenn der \textit{Robot} gerade keinen \textit{Task} 
 		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
-			\paragraph{Beschreibung der Methode \texttt{assignTask}}
-			Der Server kann in dieser Aufbaustufe direkt auf die Methoden vom \textit{Robot} zugreifen. Mit \textit{assignTask} kann er dem \textit{Robot} so direkt eine neue \textit{Destination} zuweisen.
-	
-			
-			\paragraph{Beschreibung der Methode \texttt{getTaskRating}}
-			Der Server lässt einen jeweiligen \textit{Robot} prüfen, wie gut seine Aktuelle Lage in Bezug auf eine \textit{Destination} ist. So sammelt der \textit{Robot} seine Sensordaten und wertet diese aus. 
-			
+
 			%7.1.1.1 #collectSensorData():void
-			\paragraph{Beschreibung der Methode \texttt{collectSensorData}}
+			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
 			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
-			nach seiner Position und seinem Akkustand an, und gibt diese Informationen, zusammen mit Informationen über den Aktuellen Zustand des \textit{Robots} bzw. seine aktuelle \textit{Destination}, zurück and den \textit{Server}.
+			nach seiner Position und seinem Akkustand an, und gibt diese Informationen, zusammen mit Informationen über den Aktuellen Zustand des \textit{Robots} bzw. sein aktueller \textit{Task}, zurück an den \textit{Server}. Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über die im \texttt{Common} Paket enthaltene Schnittstelle über den \textit{IWlanAdapter} mit der Methode \texttt{send} verschickt wird.
+			
+			\paragraph{Beschreibung der Methode \texttt{informAboutArrival}}
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Robot} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat. Übergeben wird dabei genau diese \textit{Position}. Der \textit{Robot} verfasst eine neue \textit{Message} und schickt sie über die \textit{IWlanAdapter} Schnittstelle an den \textit{Server}. 
+			
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
 %		\begin{figure}[H]
@@ -76,7 +74,7 @@
 			\paragraph{Beschreibung der Methode \texttt{driveAroundObstacle}}
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.7\textwidth]{../images/Iteration0_Entwurf_7-1-2-2_Methode_driveAroundObstacle}
+			\includegraphics[width=0.7\textwidth]{img/1-Entwurf-7-driveAroundObstacle}
 			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
 			\label{SequenzDriveAroundObstacle}
 			\end{figure}
@@ -110,7 +108,7 @@
 		
 		%7.2.2.1	~assignTask(virtualRobot : VirtualRobot, destination : Destination): void
 			\paragraph{Beschreibung der Methode \texttt{assignTask}}
-			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der Roboter und \emph{Tasks} bzw. \emph{Destinations} durch.
+			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der Roboter und \emph{Tasks} bzw. \emph{Destinations} durch. Sie wird aufgerufen, wenn \texttt{Choose Robot} einen passenden \textit{Robot} gefunden hat, der einen \textit{Task} entgegennehmen kann. \textit{AssignTask} schickt dann eine neue \textit{Message} über den \textit{IWlanAdapter} an den \textit{Robot}, welche den \textit{Task} enthält.
 			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{RobotControlSystem}}
@@ -119,3 +117,10 @@
 			%7.2.1.1	~chooseRobot(destination: Destination): void
 			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
 			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. Dazu fragt es die Sensorwerte der verschiedenen \emph{Robotes} ab und wählt den am besten geeigneten aus.
+			
+			\paragraph{Beschreibung der Methode \texttt{denyHospitalRequest}
+			Laut Aufgabenstellung kann das Krankentransportsystem nur neue Aufträge vom \textit{Hospital} entgegennehmen, wenn auch mindestens ein \textit{Robot} den \textit{Patienten} erreichen könnte. Falls der \textit{Server} über die Schnittstelle \textit{IHospitalInputHandler} also einen \textit{Patienten} holen soll, der für das System unerreichbar ist, muss das System dies dem \textit{Hospital} mitteilen, damit dieses weiß, dass es nach einer alternativen Lösung suchen muss.
+			
+			
+			\paragraph{Beschreibung der Methode \texttt{acceptHospitalRequest}
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine neue Anfrage vom \textit{Hospital} über die \textit{IHospitalInputHandler} bekommt, und anschließend im Rahmen von \texttt{chooseRobot} klar wird, dass es einen geeigneten \textit{Robot} gibt, der den \textit{Patienten} auch erreichen kann. Es wird eine neue \textit{Message} verfasst und über die \textit{IWlanAdapter} Schnittstelle verschickt, die dem \textit{Hospital} mitteilt, dass ein \textit{Robot} zum \textit{Patient} geschickt wurde, und dieser demnächst eintreffen wird.
