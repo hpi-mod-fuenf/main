@@ -39,7 +39,14 @@ script:
 #  - pdflatex -interaction=nonstopmode HowtoDeployLatexDocs-EN.tex
 #  - pdflatex -interaction=nonstopmode README.tex
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
+  - cd Ausbaustufe_2_Analyse
+  - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
+  - cd Ausbaustufe_1_Entwurf
   - java -cp ../travis ExitCodeManager
+  - cd Ausbaustufe_2_Analyse
+  - java -cp ../travis ExitCodeManager
+  - mv main.pdf main-2-Analyse.pdf
+  - cd Ausbaustufe_1_Entwurf
 
 # now we convert the pdf file to a much smaller djvu document
 #  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-DE.djvu HowtoDeployLatexDocs-DE.pdf
@@ -50,7 +57,9 @@ after_success:
 
 deploy:
   provider: releases
-  file: "main.pdf"
+  file: 
+   - "main.pdf"
+   - ../Ausbaustufe_2_Analyse/main-2-Analyse.pdf
   api_key:
     secure: gOgjpQN4xC9zBH0SY742Aa/mR1J7P+9wJl+4QR77SLpApjCFWY/M0oBnZxfuXWuo3arAjeMpPC/CAZEL0FYsjS4xqhqmFoMsKMiSBKASeX2CDGTy/LydERBlI/IgQQOk1eHTV2V0xfrwZulXEwdNZF7BXDCC5A2Ehz07PYk8Vlz7dQcR3PbPEuyVX0kyMCaYNJKy5Lad+AbJv8HFThFQuyrxsDsbDJPeQtQMMi6i5Z6e+rlMGyEWfm5zM5teAGhoUf17qn7+NAFi2nCeno2FB8nmwJv9AeJGVyaOvXDZxmtnoZvZr2cJXRh7xj5GBETqMP5VwtvnHsot9iZY8lGNdAsgHj267mqrNJs9IFfey3YoV3Vdzt1d59G0c+q3WsWYEwLAH2bcZZYHK9FnWZGiyJiJ5fVNIivJ3FUmWKaN/1tTyYsobZcW1DJyQL8hoHaCoBn+mzkAyZy3KpU9xpMG3doveqckRC1fhUvmdEmnVZOAD6JL8/fqC5D8TPGsruQSfNsUGwUZW+Har1NcWx9iqJ6WWnO39Zq9IwItpzl8qo6ttUgT8i93j17Ccwq7Qi0+1A8tGe5B6vrVvZ/Y5L4/osUf9PaLZdh0enz3aduoWgV88gjHXxAHOQ8Jmbmy8w0BoW8X1Ch37xsxu8iITrjilq0qbjyvypfioBUTLj6mvMU=
   on:
