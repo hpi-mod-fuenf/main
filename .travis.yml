@@ -17,9 +17,11 @@ warnings_are_errors: false
 before_install:
 # bash script which installs git lfs in travis deployment machine and pulls files 
   - ./travis/installGitLFS.sh
-  - cd Ausbaustufe_1_Analyse
+  - cd Ausbaustufe_1_Entwurf
 # installs openjdk for professorial chair watermark-removal-tool
   - sudo apt-get install -y openjdk-7-jre
+  - sudo add-apt-repository -y ppa:texlive-backports/ppa
+  - sudo apt-get install -y texlive-lang-german
 # LaTeX-packages which aren't included in the standard package 
   - tlmgr install babel
   - tlmgr install was
@@ -37,8 +39,7 @@ script:
 #  - pdflatex -interaction=nonstopmode HowtoDeployLatexDocs-EN.tex
 #  - pdflatex -interaction=nonstopmode README.tex
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
-  - pdflatex -interaction=nonstopmode main.tex || echo test
-  - pdflatex -interaction=nonstopmode main.tex || echo test
+  - java -cp ../travis ExitCodeManager
 
 # now we convert the pdf file to a much smaller djvu document
 #  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-DE.djvu HowtoDeployLatexDocs-DE.pdf

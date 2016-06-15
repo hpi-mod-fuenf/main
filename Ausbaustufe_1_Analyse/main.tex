@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 % Deutsche Silbentrennung
-\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
 % Unterstützung für Farben
 \usepackage[dvipsnames]{xcolor}
 % Erweiterte Mathematik-Symbole
@@ -49,6 +49,23 @@
 \sloppy
 \parindent0mm
 \parskip3mm
+
+\addto\captionsenglish{% Replace "english" with the language you use
+	\renewcommand{\contentsname}%
+	{Inhaltsverzeichnis}%
+	\renewcommand{\figurename}%
+	{Abbildung}%
+	\renewcommand{\tablename}%
+	{Tabelle}%
+}
+\addto\captionsngerman{% Replace "english" with the language you use
+	\renewcommand{\contentsname}%
+	{Inhaltsverzeichnis}%
+	\renewcommand{\figurename}%
+	{Abbildung}%
+	\renewcommand{\tablename}%
+	{Tabelle}%
+}
 
 \begin{document}
 \input{hpi-headers.tex}

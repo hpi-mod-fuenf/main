@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/hpi-mod-fuenf/main.svg?branch=master)](https://travis-ci.org/hpi-mod-fuenf/main) – [Letzte erfolgreich erstellte PDF](https://github.com/hpi-mod-fuenf/main/releases/latest)
 
-Das ist unser Arbeits-Repo
-
 ## Protokolle
 
 ### April
@@ -29,7 +27,7 @@ Das ist unser Arbeits-Repo
 *KW*| Mo  | Di  | Mi  | Do  | Fr  | Sa  | So
 ---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 *22*|     |     | **[1](protokolle/2016-06-01.md)**   | 2   | 3   | 4   | 5  
-*23*| 6   | 7   | 8   | 9   | 10  | 11  | 12  
+*23*| 6   | 7   | **[8](protokolle/2016-06-08.md)**   | 9   | 10  | 11  | 12  
 *24*| 13  | 14  | 15  | 16  | 17  | 18  | 19 
 *25*| 20  | 21  | 22  | 23  | 24  | 25  | 26 
 *26*| 27  | 28  | 29  | 30  |     |     |   
