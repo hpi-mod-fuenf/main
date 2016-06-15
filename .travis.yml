@@ -55,6 +55,7 @@ after_success:
 # upload the previously generated pdf file to simonwaldherr.de (use $UPLOADSECRET as password)
 #  - wget --post-file=HowtoDeployLatexDocs-DE.pdf -q -O- "https://simonwaldherr.de/pdf/?repo=HowtoDep$
 
+
 deploy:
   provider: releases
   file: 
