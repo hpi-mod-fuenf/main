@@ -39,14 +39,14 @@ script:
 #  - pdflatex -interaction=nonstopmode HowtoDeployLatexDocs-EN.tex
 #  - pdflatex -interaction=nonstopmode README.tex
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
-  - cd Ausbaustufe_2_Analyse
+  - cd ../Ausbaustufe_2_Analyse
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
-  - cd Ausbaustufe_1_Entwurf
+  - cd ../Ausbaustufe_1_Entwurf
   - java -cp ../travis ExitCodeManager
-  - cd Ausbaustufe_2_Analyse
+  - cd ../Ausbaustufe_2_Analyse
   - java -cp ../travis ExitCodeManager
   - mv main.pdf main-2-Analyse.pdf
-  - cd Ausbaustufe_1_Entwurf
+  - cd ../Ausbaustufe_1_Entwurf
 
 # now we convert the pdf file to a much smaller djvu document
 #  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-DE.djvu HowtoDeployLatexDocs-DE.pdf
