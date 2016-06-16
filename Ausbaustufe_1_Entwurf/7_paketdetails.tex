@@ -80,8 +80,8 @@
 			\end{figure}
 
 			Diese Methode wird von \texttt{driveToDestination} mit des Position eines \textit{Obstacles} aufgerufen, 
-			wenn ein \textit{Obstacle} zu umfahren ist.
-			Dabei entscheidet sich der Roboter zunächst ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
+			wenn ein \textit{Obstacle} zu umfahren ist. 
+			Im Spezialfall, dass es sich bei dem \textit{Obstacle} um einen anderen \textit{Robot} handelt, merken dies beide wenn sie sich nähern und weichen beide nach Rechts aus. Im allgemeinen entscheidet sich der Roboter zunächst ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
 			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen 
 			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für den \textit{Robot} ist.
 			

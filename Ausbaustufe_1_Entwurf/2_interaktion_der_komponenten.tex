@@ -1,14 +1,23 @@
 \section{Interaktion der Komponenten}
-Auf Basis der Use Cases aus dem Analysedokument wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Server} und der \emph{RobotUnit}. Die Use Cases innerhalb der Komponenten werden in Kapitel 8 näher ausgeführt.\\
+Auf Basis der Analyse Use Cases wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem der Interaktion zwischen dem Server und der RobotUnit. Die Use Cases innerhalb der Komponenten werden in Kapitel 8 näher ausgeführt. \\
 
 
-\subsection*{Interaktion bei Ausführung von \emph{4: Choose Robot}}
+\subsection*{Interaktion bei Ausführung von \emph{Take Patient To Hospital & Select Best Match}}
 
-Die Auswahl eines \emph{Robots} läuft wie in Abbildung \ref{SequenzDiagrammInteraktion} beschrieben folgendermaßen ab: Bei einer neu eingehenden \emph{Destination} sendet der \emph{Server} mit \texttt{getTaskRating(task)} Anfragen an alle zur Verfügung stehenden \emph{RobotUnits} (im Diagramm sind beispielhaft zwei angeführt, der Aufruf findet asynchron statt). Die \emph{RobotUnit} führt dann \emph{Read Sensor} (Use Case 2) aus. Dabei sammelt sie alle notwendigen Informationen von ihren Hardwareschnittstellen, wie Ladestand und Nähe zum Ziel, die der \emph{Server} benötigt, um den bestmöglichen \emph{Robot} für das Ziel auszuwählen. Der \emph{Robot} wartet auf das Zusammentragen der Daten, also das Abschließen des internen Loop-Prozesses, bis er eine Nachricht mit den Informationen an den \emph{Server} zurücksendet; erst dann kann der \emph{Server} auf Grund der übermittelten Daten beurteilen, welcher \emph{Robot} am besten dazu geeignet ist, die \emph{Destination} zu erreichen und entsendet ihn zu den Zielkoordinaten (\emph{assign Task} – Use Case 5). Bei dem darauffolgenden Use Cases \emph{DriveToDestination} ist der \emph{Server} hingegen nicht beteiligt. Bei dem Use Case \emph{Charging} kommt es ausschließlich zur Wechselwirkung mit der \emph{ChargingStation}-Komponente.
+Zuallerst fragt das Hospital über Check availability (Use Case 8) den Server an, ob ein Roboter überhaupt verfügbar ist. Dann läuft die Auswahl eines Robots nach Choose Robot wie im Diagramm beschrieben folgendermaßen ab: Bei einer neueingehenden Destination sendet der Server mit getSensorData(task) Anfragen an alle zur Verfügung stehenden RobotUnits(, im Diagramm sind Beispielhaft zwei angeführt, der Aufruf findet asynchron statt.) Die RobotUnit führt dann Read Sensor(Use Case 3) aus. Dabei sammelt er alle notwendigen Informationen von seinen Hardwareschnittstellen, wie Ladestand und Nähe zum Ziel, die der Server benötigt um den bestmöglichen Roboter auszuwählen. Er wartet auf das Zusammentragen der Daten, also das Abschließen des internen Loop-Prozesses, bis er eine Nachricht mit den Informationen an den Server zurücksendet; erst dann kann der Server auf Grund der übermittelten Daten beurteilen, welcher Roboter am besten geeignet ist den Patienten abzuholen(demzufolge das beste rating hat) und entsendet ihn zu den Zielkoordinaten( Usecase 7 Assign Task.) Daraufhin folgt der Ablauf wieder vollständig dem Take Patient To Hospital Use Case. Wenn der Robor nach Aufragannahme und Fahrvorgang beim Patienten ankommt( arrived()) wird dabei immer auf die nächste direkte Bestätigung gewartet, damit das Warten nicht als eigene Sequenz verwenden muss. Dies setzt der Ausgangspunkt für den Uscase Inform about boarding(Usecase 9). Denn sobald der Patient sicher auf dem Roboter wurde, meldet das Hospital dies unverzüglich über dem Server an den Roboter zurück. Im Gegenzug existiert ebenso der Use Case Inform about arrival(Usecase 5): Bei dem der Roboter sobald er das Krankenhaus erreicht hat, die Information an den Server weiterleitet, um die bestmögliche Koordinate über den Server mit dem Krankenhaus zu ermöglichen und die Versorgung des Patienten sofortig zu gewährleisten.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-chooseRobot}
-	\caption{\emph{ChooseRobot}-Sequenzdiagramm}
+	\includegraphics[width=0.9\textwidth]{img/1-Analyse-2-TakePatientToHospital}
+	\caption{\emph{Take Patient To Hospital}-Sequenzdiagramm}
+	\label{SequenzDiagrammInteraktion}
+\end{figure}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/0-Entwurf-2-ChooseRob}
+	\caption{\emph{Select Best Match}-Sequenzdiagramm}
 	\label{SequenzDiagrammInteraktion}
 \end{figure}

@@ -1,13 +1,16 @@
 \section{Abstrakte Architektur}
-In diesem Dokument soll ein System mit autonom agierenden Robotern (\emph{Robots}) entwickelt werden, welche von einem \emph{Server} zu bestimmten Zielen (\emph{Destinations}) in Form von Positionen (\emph{Positions}) geschickt werden. 
+In diesem Dokument soll ein Transportsystem mit autonom agierenden Transportvehikeln (\emph{Robots})
+entwickelt werden, welche Notfalltransporte für ein Krankenhaus (\emph{Hospital}) erledigen. Die \emph{Robots} werden zu
+einem vom \emph{Hospital} angegebenen Ort geschickt, um dort einen Patienten (\emph{Patient}) abzuholen und
+danach zur Klinik zu fahren.
 
 Dieser Entwurf basiert auf der in der Analyse erarbeiteten Spezifikation des Systems. Abbildung \ref{KomponentendiagrammAbstrakt} zeigt das abstrakte Komponentendiagramm.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{img/AbstrakteArchitektur}
-\caption{Abstraktes Komponentendiagramm}
-\label{KomponentendiagrammAbstrakt}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/AbstrakteArchitektur}
+	\caption{Abstraktes Komponentendiagramm}
+	\label{KomponentendiagrammAbstrakt}
 \end{figure}
 
 Da eine Komponente mit dem Namen \emph{Robot} bereits vorhanden ist, nennen wir die \emph{Robot}-Hauptkomponente \emph{RobotUnit}. Dieser Name verdeutlicht, dass jeder physische Roboter im System durch diese Hauptkomponente repr\"{a}sentiert wird.
@@ -17,7 +20,15 @@ In diesem Kapitel wird die im Rahmen der Analyse ermittelte Einteilung des Syste
 
 \subsection{Server}
 
-Der \emph{Server} verwaltet die \emph{Destinations} f\"{u}r die \emph{RobotUnits} und beh\"{a}lt einen st\"{a}ndigen \"{U}berblick \"{u}ber die Positionen der \emph{RobotUnits}. Er ist f\"{u}r die effiziente Allokation der Auftr\"{a}ge f\"{u}r die \emph{RobotUnits} zust\"{a}ndig.
+Der \emph{Server} verwaltet die \emph{Tasks} f\"{u}r die \emph{RobotUnits} und beh\"{a}lt einen st\"{a}ndigen \"{U}berblick \"{u}ber die Positionen der \emph{RobotUnits}. Er ist f\"{u}r die effiziente Allokation der Auftr\"{a}ge f\"{u}r die \emph{RobotUnits} zust\"{a}ndig.
+
+\subsubsection{NetworkAccess}
+
+Die Komponente \emph{NetworkAccess} dient der Kommunikation mit dem Netzwerk.
+
+\subsubsection{Hospital}
+
+Die Komponente \emph{Hospital} dient der Kommunikation mit dem Krankenhaus.
 
 \subsubsection{ServerSoftware}
 
@@ -31,8 +42,8 @@ Die Komponente \emph{RobotUnit} sublimiert die \emph{RobotSoftware} und \emph{-H
 
 \subsubsection{RobotSoftware}
 
-Die \emph{RobotSoftware} steuert den \emph{Robot} an und verwertet seine Sensordaten. Dazu geh\"{o}rt unter anderem die Fahrlogik und die Verwaltung der \emph{Battery}, damit angenommene Aufträge auch komplett ausgef\"{u}hrt werden k\"{o}nnen und die \emph{RobotUnit} rechtzeitig die \emph{ChargingStation} erreicht. 
+Die \emph{RobotSoftware} steuert den \emph{Robot} an und verwertet seine Sensordaten. Dazu geh\"{o}rt unter anderem die Fahrlogik und die Verwaltung der \emph{Battery}, damit angenommene \emph{Tasks} auch komplett ausgef\"{u}hrt werden k\"{o}nnen und die \emph{RobotUnit} rechtzeitig die \emph{ChargingStation} erreicht. 
 
 \subsubsection{Robot}
 
-Die Komponente \emph{Robot} steht f\"{u}r alle hardwaretechnischen Spezifikationen des \emph{Robots}. Dazu geh\"{o}ren die Fahreinheit und die interne Sensorik so wie die \emph{Battery}.   
+Die Komponente \emph{Robot} steht f\"{u}r alle hardwaretechnischen Spezifikationen des \emph{Robots}. Dazu geh\"{o}ren die Fahreinheit und die interne Sensorik sowie die \emph{Battery}.   
