@@ -4,7 +4,8 @@
 \subsection{\textit{Datentypen}}
 Die in Abbildung \ref{KomponentenschnittstellenDiagramm} dargestellten Datentypen werden von den Schnittstellen der eingeführten Komponenten verwendet. 
 
-Die Aufgabe des Datentyps \emph{SensorData} ist primär, die Koordination mit dem Server zu unterstützen, um festzustellen, inwieweit eine Zielposition gut erreicht werden kann. Dazu besitzt er als Attribute die Orientierungsrichtung im Koordinatensystem, den Batteriestatus und zuletzt Attribute der Datentypen \emph{Position} und \emph{Destination}. \emph{Position} besitzt wiederum die Koordinaten x und y, die einen beliebigen Punkt im Bereich des Einsatzgebietes des Roboters darstellen. Um Redundanz zu vermeiden sind \emph{Destination} und \emph{Position} über keine zusätzliche Klassendiagrammbeziehung verknüpft. Zielpunkte erben von \emph{Position} und existieren zur Spezifikation, um welche Art Zielpunkt es sich handelt: Also zum Beispiel eine allgemeine \emph{Destination} oder den \emph{Charger}.
+Die Aufgabe des Datentyp SensorData ist es primär, die Koordination mit dem Server zu unterstützen, um festzustellen, inwieweit eine Zielposition gut erreicht werden kann. Dazu besitzt er als Attribute die Orientierungsrichtung im Koordinatensystem, den Batteriestatus, seine Position in den räumlichen Koordinaten und zuletzt die mit einem eigenen Datentyp versehene Destination. Wird dem Roboter nun eine neue Task zugewiesen, erhält er damit genau diesen Datentyp Destination und die damit verbundene position des Patienten. Mit dem Attribut speed kann der Server außerdem genau bestimmen, mit welcher Geschwindigkeit der Roboter den Patienten anlaufen soll – also die Wichtigkeit des Einsatzes bestimmen.
+
 	
 	\begin{figure}[H]
 		\centering
