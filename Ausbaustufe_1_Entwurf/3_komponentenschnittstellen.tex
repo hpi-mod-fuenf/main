@@ -19,7 +19,7 @@ Die Aufgabe des Datentyps SensorData ist es, die Koordination mit dem \emph{Serv
 \subsection{\textit{Interfaces}}
 	%3.2.1 ISensorData
 	\subsubsection{\textit{ISensorData}}
-	Das Interface \textit{ISensorData} wird vom \textit{Robot} angeboten, um dem Server alle Sensordaten zu senden. Der Server kann anhand dieser jederzeit feststellen, in welchem Zustand sich der \textit{Robot} befindet um diesem dann eine \textit{Task} zuzuweisen.
+	Das Interface \textit{ISensorData} wird vom \textit{Robot} angeboten, um dem Server alle Sensordaten zu senden. Der Server kann anhand dieser jederzeit feststellen, in welchem Zustand sich der \textit{Robot} befindet, um diesem dann eine \textit{Task} zuzuweisen.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{img/1-Entwurf-3-1_ISensorData}
@@ -29,7 +29,7 @@ Die Aufgabe des Datentyps SensorData ist es, die Koordination mit dem \emph{Serv
 
 	%3.2.2 ITask
 	\subsubsection{\textit{ITask}}
-	Das Interface \textit{ITask} wird vom \textit{Robot} angeboten, um Tasks zu erhalten. Der \emph{Server} kann somit ohne Probleme \textit{Tasks} dem \textit{Robot} zuweisen. Hierbei findet eine unidirektionale Kommunikation zwischen Server und Robot statt.
+	Das Interface \textit{ITask} wird vom \textit{Robot} angeboten, um Tasks zu erhalten. Der \emph{Server} kann somit ohne Probleme dem \textit{Robot} \textit{Tasks} zuweisen. Hierbei findet eine unidirektionale Kommunikation zwischen Server und Robot statt.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{img/1-Entwurf-3-1_ITask}
