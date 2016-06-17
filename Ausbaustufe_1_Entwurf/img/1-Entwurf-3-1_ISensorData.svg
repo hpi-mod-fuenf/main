@@ -27,7 +27,7 @@
     /></g
     ><g font-size="11" transform="matrix(1,0,0,1,2,30)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="2" xml:space="preserve" y="13" clip-path="url(#clipPath2)" stroke="none"
-      >+getSensorData : SensorData</text
+      >+getSensorData() : SensorData</text
     ></g
     ><g font-size="11" transform="translate(2,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="55" xml:space="preserve" y="11" clip-path="url(#clipPath3)" stroke="none"
