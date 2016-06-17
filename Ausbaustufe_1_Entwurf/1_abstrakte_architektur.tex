@@ -20,7 +20,7 @@ In diesem Kapitel wird die im Rahmen der Analyse ermittelte Einteilung des Syste
 
 \subsection{Server}
 
-Der \emph{Server} verwaltet die \emph{Tasks} f\"{u}r die \emph{RobotUnits} und beh\"{a}lt einen st\"{a}ndigen \"{U}berblick \"{u}ber die Positionen der \emph{RobotUnits}. Er ist f\"{u}r die effiziente Allokation der Auftr\"{a}ge f\"{u}r die \emph{RobotUnits} zust\"{a}ndig.
+Der \emph{Server} verwaltet die \emph{Tasks} f\"{u}r die \emph{RobotUnits} und beh\"{a}lt \"{U}berblick \"{u}ber die Positionen der \emph{RobotUnits}. Er ist außerdem f\"{u}r die effiziente Allokation der Auftr\"{a}ge an \emph{RobotUnits} zust\"{a}ndig.
 
 \subsubsection{NetworkAccess}
 
@@ -32,18 +32,18 @@ Die Komponente \emph{Hospital} dient der Kommunikation mit dem Krankenhaus.
 
 \subsubsection{ServerSoftware}
 
-Die Komponente \emph{ServerSoftware} ist die Verwaltungslogik des \emph{Servers}. Sie greift auf die serverseitigen Subsysteme zu und stellt die zentrale Anlaufstelle f\"{u}r alle \emph{RobotUnits} dar. 
+Die Komponente \emph{ServerSoftware} ist die Verwaltungslogik des \emph{Servers}. Sie greift auf die serverseitigen Subsysteme zu und stellt die zentrale Anlaufstelle f\"{u}r alle \emph{RobotUnits} dar.
 
-Bei einer Anfrage ermittelt sie die passende \emph{RobotUnit} und sendet ihr die Position des Ziels. 
+Bei einer Anfrage ermittelt sie die passende \emph{RobotUnit} und sendet ihr die Position des Ziels.
 
 \subsection{RobotUnit}
 
-Die Komponente \emph{RobotUnit} sublimiert die \emph{RobotSoftware} und \emph{-Hardware} (Komponente \emph{Robot}) als eine Oberkomponente. Sie vereint alle Hard- und Softwareinterfaces dieser Komponenten und leitet die ein- und ausgehenden Nachrichten der \emph{RobotSoftware} an den \emph{Server} weiter. Sie dient somit als \"{u}bergeordnete Schnittstelle f\"{u}r die Kommunikation. 
+Die Komponente \emph{RobotUnit} sublimiert die \emph{RobotSoftware} und \emph{-Hardware} (Komponente \emph{Robot}) als eine Oberkomponente. Sie vereint alle Hard- und Softwareinterfaces dieser Komponenten und leitet die ein- und ausgehenden Nachrichten der \emph{RobotSoftware} an den \emph{Server} weiter. Sie dient somit als \"{u}bergeordnete Schnittstelle f\"{u}r die Kommunikation.
 
 \subsubsection{RobotSoftware}
 
-Die \emph{RobotSoftware} steuert den \emph{Robot} an und verwertet seine Sensordaten. Dazu geh\"{o}rt unter anderem die Fahrlogik und die Verwaltung der \emph{Battery}, damit angenommene \emph{Tasks} auch komplett ausgef\"{u}hrt werden k\"{o}nnen und die \emph{RobotUnit} rechtzeitig die \emph{ChargingStation} erreicht. 
+Die \emph{RobotSoftware} steuert den \emph{Robot} an und verwertet seine Sensordaten. Dazu geh\"{o}rt unter anderem die Fahrlogik und die Verwaltung der \emph{Battery}, damit angenommene \emph{Tasks} auch komplett ausgef\"{u}hrt werden k\"{o}nnen und die \emph{RobotUnit} rechtzeitig die \emph{ChargingStation} erreicht.
 
 \subsubsection{Robot}
 
-Die Komponente \emph{Robot} steht f\"{u}r alle hardwaretechnischen Spezifikationen des \emph{Robots}. Dazu geh\"{o}ren die Fahreinheit und die interne Sensorik sowie die \emph{Battery}.   
+Die Komponente \emph{Robot} steht f\"{u}r alle hardwaretechnischen Spezifikationen des \emph{Robots}. Dazu geh\"{o}ren die Fahreinheit und die interne Sensorik sowie die \emph{Battery}.
