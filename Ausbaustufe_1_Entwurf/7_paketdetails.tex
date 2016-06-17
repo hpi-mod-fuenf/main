@@ -34,10 +34,10 @@
 			%7.1.1.1 #collectSensorData():void
 			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
 			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
-			nach seiner Position und seinem Akkustand an, und gibt diese Informationen, zusammen mit Informationen über den Aktuellen Zustand des \textit{Robots} bzw. sein aktueller \textit{Task}, zurück an den \textit{Server}. Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über die im \texttt{Common} Paket enthaltene Schnittstelle über den \textit{IWlanAdapter} mit der Methode \texttt{send} verschickt wird.
+			nach seiner Position und seinem Akkustand an und gibt diese Informationen zusammen mit einer Information über seinen aktuellen Zustand (also seinem aktuellen \textit{Task}) zurück an den \textit{Server}. Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über die im \texttt{Common}-Paket enthaltene Schnittstelle über den \textit{IWlanAdapter} mit der Methode \texttt{send} verschickt wird.
 			
 			\paragraph{Beschreibung der Methode \texttt{informAboutArrival}}
-			Diese Methode wird immer dann aufgerufen, wenn der \textit{Robot} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat. Übergeben wird dabei genau diese \textit{Position}. Der \textit{Robot} verfasst eine neue \textit{Message} und schickt sie über die \textit{IWlanAdapter} Schnittstelle an den \textit{Server}. 
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Robot} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat. Übergeben wird dabei genau diese \textit{Position}. Der \textit{Robot} verfasst eine neue \textit{Message} und schickt sie über die \textit{IWlanAdapter}-Schnittstelle an den \textit{Server}. 
 			
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
@@ -58,7 +58,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=1\textwidth]{img/1-Entwurf-7-1-methode_driveAroundObstacle}
-			\caption{Aktivitätsdiagramm zu Metode \texttt{driveToDestination}}
+			\caption{Aktivitätsdiagramm zur Methode \texttt{driveToDestination}}
 			\label{AktivitaetDriveToDestination}
 			\end{figure}
 
@@ -81,8 +81,8 @@
 
 			Diese Methode wird von \texttt{driveToDestination} mit der Position eines \textit{Obstacles} aufgerufen, 
 			wenn ein \textit{Obstacle} zu umfahren ist. 
-			Im Spezialfall, dass es sich bei dem \textit{Obstacle} um einen anderen \textit{Robot} handelt, merken dies beide, wenn sie sich nähern und weichen beide nach rechts aus. Im Allgemeinen entscheidet sich der Roboter zunächst, ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
-			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen dem 
+			Im Spezialfall, dass es sich bei dem \textit{Obstacle} um einen anderen \textit{Robot} handelt, merken dies beide, wenn sie sich nähern und weichen beide nach rechts aus. Im Allgemeinen entscheidet sich der \emph{Robot} zunächst, ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
+			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen 
 			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für den \textit{Robot} ist.
 			
 			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Sequenzdiagramm. Dabei ist \texttt{min\_dist} eine vorher festgelegte Konstante, welche die Mindestdistanz, die der \textit{Robot} halten muss, wenn er an einem \textit{Obstacle} vorbeifährt, speichert.
@@ -97,8 +97,8 @@
 %	\caption{\textcolor{blue}{HIER KOMMT DAS Server - PAKETDIAGRMAM HIN}}
 %	\label{Paketdetails}
 %	\end{figure}
-	Im folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{Server} 
-	und ihre zugehörigen Methoden, sowie ihre Interaktion zwischeneinander. 
+	Im Folgenden werden die wichtigen Klassen des Pakets \textit{Server} 
+	und ihre zugehörigen Methoden sowie ihre Interaktion untereinander beschrieben. 
 
 
 	%7.2.1 TaskSystem
@@ -108,7 +108,7 @@
 		
 		%7.2.2.1	~assignTask(virtualRobot : VirtualRobot, destination : Destination): void
 			\paragraph{Beschreibung der Methode \texttt{assignTask}}
-			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der Roboter und \emph{Tasks} bzw. \emph{Destinations} durch. Sie wird aufgerufen, wenn \texttt{Choose Robot} einen passenden \textit{Robot} gefunden hat, der einen \textit{Task} entgegennehmen kann. \textit{AssignTask} schickt dann eine neue \textit{Message} über den \textit{IWlanAdapter} an den \textit{Robot}, welche den \textit{Task} enthält.
+			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der \emph{Robots} und \emph{Tasks} bzw. \emph{Destinations} durch. Sie wird aufgerufen, wenn \texttt{chooseRobot} einen passenden \textit{Robot} gefunden hat, der einen \textit{Task} entgegennehmen kann. Die Methode \texttt{assignTask} schickt dann eine neue \textit{Message} über den \textit{IWlanAdapter} an den \textit{Robot}, welche den \textit{Task} enthält.
 			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{RobotControlSystem}}
@@ -116,11 +116,11 @@
 	
 			%7.2.1.1	~chooseRobot(destination: Destination): void
 			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
-			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. Dazu fragt es die Sensorwerte der verschiedenen \emph{Robotes} ab und wählt den am besten geeigneten aus.
+			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. Dazu fragt es die Sensorwerte der verschiedenen \emph{Robots} ab und wählt den am besten geeigneten aus.
 			
 			\paragraph{Beschreibung der Methode \texttt{denyHospitalRequest}}
-			Laut Aufgabenstellung kann das Krankentransportsystem nur neue Aufträge vom \textit{Hospital} entgegennehmen, wenn auch mindestens ein \textit{Robot} den \textit{Patienten} erreichen könnte. Falls der \textit{Server} über die Schnittstelle \textit{IHospitalInputHandler} also einen \textit{Patienten} holen soll, der für das System unerreichbar ist, muss das System dies dem \textit{Hospital} mitteilen, damit dieses weiß, dass es nach einer alternativen Lösung suchen muss.
+			Laut Aufgabenstellung kann das Krankentransportsystem nur neue Aufträge vom \textit{Hospital} entgegennehmen, wenn auch mindestens ein \textit{Robot} den \textit{Patient} erreichen könnte. Falls der \textit{Server} über die Schnittstelle \textit{IHospitalInputHandler} also einen \textit{Patient} holen soll, der für das System unerreichbar ist, muss das System dies dem \textit{Hospital} mitteilen, damit dieses weiß, dass es nach einer alternativen Lösung suchen muss.
 			
 			
 			\paragraph{Beschreibung der Methode \texttt{acceptHospitalRequest}}
-			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine neue Anfrage vom \textit{Hospital} über die \textit{IHospitalInputHandler} bekommt, und anschließend im Rahmen von \texttt{chooseRobot} klar wird, dass es einen geeigneten \textit{Robot} gibt, der den \textit{Patienten} auch erreichen kann. Es wird eine neue \textit{Message} verfasst und über die \textit{IWlanAdapter} Schnittstelle verschickt, die dem \textit{Hospital} mitteilt, dass ein \textit{Robot} zum \textit{Patient} geschickt wurde, und dieser demnächst eintreffen wird.
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine neue Anfrage vom \textit{Hospital} über die \textit{IHospitalInputHandler} bekommt, und anschließend im Rahmen von \texttt{chooseRobot} klar wird, dass es einen geeigneten \textit{Robot} gibt, der den \textit{Patient} auch erreichen kann. Es wird eine neue \textit{Message} verfasst und über die \textit{IWlanAdapter}-Schnittstelle verschickt, die dem \textit{Hospital} mitteilt, dass ein \textit{Robot} zum \textit{Patient} geschickt wurde, und dieser demnächst eintreffen wird.
