@@ -11,8 +11,7 @@
 Abbildung \ref{KomponentenStruktur1} zeigt ein Komponentendiagramm von \emph{ServerSoftware}. Diese Komponente umfasst 4 Klassen: \textit{TaskSystem}, \textit{Destination}, \textit{RobotControlSystem}, \textit{VirtualRobot} und \textit{HospitalServiceSystem}.
 
 
-Das \textit{TaskSystem} verwaltet die \textit{Tasks}, in der nullten Ausbaustufe fallen dabei allerdings noch nicht viele Aufgaben an,
-da es keine Priorisierungen, unterschiedliche Arten von \textit{Tasks} oder dergleichen gibt. Die Klasse \textit{Destination} ist die Klasse
+Das \textit{TaskSystem} verwaltet die \textit{Tasks} und liefert Information über diese. Die Klasse \textit{Destination} ist die Klasse
 der Aufgaben, die vom \textit{TaskSystem} verwaltet werden. Das \textit{RobotControlSystem} verteilt die \textit{Tasks} auf die \textit{Robots}.
 Dabei findet die Auswahl anhand der zurückgegebenen \textit{SensorData} der einzelnen \textit{Robots} statt. Bei \textit{VirtualRobot} handelt
 es sich um eine Kapselung der Kommunikation mit den \textit{Robots}. Hier werden alle von der Komponente \textit{Robot} bereitgestellten
@@ -25,7 +24,7 @@ es sich um eine Kapselung der Kommunikation mit den \textit{Robots}. Hier werden
 \caption{\emph{RobotSoftware}-Komponentendiagramm}
 \label{KomponentenStruktur2}
 \end{figure}
-In Abbildung \ref{KomponentenStruktur2} ist das Komponentendiagramm der Komponente \textit{RobotSoftware} dargestellt. Sie enthält 3 Klassen: \textit{DrivingSystem}, \textit{RobotController} und \textit{Task}.
+In Abbildung \ref{KomponentenStruktur2} ist das Komponentendiagramm der Komponente \textit{RobotSoftware} dargestellt. Die Komponente enthält 3 Klassen: \textit{DrivingSystem}, \textit{RobotController} und \textit{Task}.
 
 
 Das \textit{DrivingSystem} stellt eine Abstraktion der Hardware dar und wird dazu genutzt, Ziele anzufahren und dabei,
