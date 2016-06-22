@@ -105,6 +105,9 @@
     		Der \emph{IServerWlanAdapter} ist die Komponente des \emph{Servers}, mit der er die Verbindung zum \emph{Robot} herstellt. Hierüber werden Nachrichten ausgetauscht. Dementsprechend stehen Methoden zum Senden einer Message, registrieren eines IMessageHandlers, auslesen von NetworkIDs usw. bereit.
     	\subparagraph{IHospital}\label{ihospital}
     		Bei \emph{IHospital} handelt es sich um die \emph{Server} Komponente, die die Kommunikation mit dem \emph{Hospital} gewährleistet. Dabei werden zum einen Methoden bereitgestellt, die das \emph{Hospital} über ein Interface aufrufen kann, um Aufträge zu verteilen und dem \emph{Hospital} Informationen über den aktuellen Stand des Auftrags mitzuteilen (getPatientAt(), patientOnBoard() sowie patientArrived()), und zum anderen kann die Komponente über ein Interface Methoden des \emph{Hospitals} aufrufen, um diesem Informationen zu übermitteln (informRobotArrivedAtPatient() und informRobotArrivedAtHospital()).
+      \subparagraph{ITaxiApp}
+      Die \emph{ITaxiApp} Komponente ist ein Contatiner, über den die Kommunikation des Servers mit den Apps der Benutzer der nicht-modellierten mobilen Taxi-Applikation realisiert wird. Der Container stellt ein Taxi-App Objekt für jeden Benutzer bereit. Die Kommunikation findet über mehrere Schnittstellen statt. Über das IAppContainer Interface, kann der Server Taxi-App Objekte bekommen. Über die Interfaces ITaxiAppUserOutput und ITaxiAppUserInputHandler kann der Server mit den einzelnen Apps und damit mit den Kunden kommunizieren. Das ITaxiApp Interface stellt die Methoden zum Zugriff aud die Kommunikationsinterfaces, sowie eine Methode zur Ermittlung der App-ID bereit.
+Robot
     \paragraph{Robot}\label{robot}
     		Nachfolgend werden die zentralen Softwareschnittstellen des \emph{Robots} beschrieben.
     	\subparagraph{IRobotCore}\label{irobotcore}
@@ -120,7 +123,7 @@
     	\subparagraph{IBumperHandler}\label{ibumperhandler}
     		\emph{IBumperHandler} ist die Komponente zum Umgang mit Zusammenstößen. Die Kollisionserkennung IBumper registriert einen Aufprall und die \emph{IBumperHandler} Komponente stellt zwei Methoden zum Umgang mit dem Aufprall bereit.
     	\subparagraph{IDrive}\label{idrive}
-    		Die Bewegungssteuerung des \emph{Robots} heißt \emph{IDrive}. Sie stellt vier Methoden bereit. Die Methoden driveToPosition() und driveToPositionCautiously() erwarten beide eine Position, eine Geschwindigkeit und einen ArrivalHandler, der eine Methode zur Meldung aufruft, wenn der \emph{Robot} am Ziel angekommen ist. Die Methoden sind beide dafür da, ein gegebenes Ziel anzufahren, wobei bei der Zweiten die Höchstgeschwindigkeit geringer ist. Die höchstgeschwindigkeit für Cautiously, Regular und Fast Methoden stellt die \emph{IDrive} Komponente bereit, wobei Cautiously $\leq$ Regular $\leq$ Fast gilt. Die anderen beiden Methoden, drive() und driveCautiously() unterscheiden sich ebenfalls nur in der Höchstgeschwindigkeit und ermöglichen ein manuelles Fahren. Dabei erwarten sie die Drehung des \emph{Robots} als float-Wert sowie die Vorwärts- und die Seitwärtsgeschwindigkeit, ebenfalls als float-Wert.
+    		Die Bewegungssteuerung des \emph{Robots} heißt \emph{IDrive}. Sie stellt vier Methoden bereit. Die Methoden driveToPosition() und driveToPositionCautiously() erwarten beide eine Position, eine Geschwindigkeit und einen ArrivalHandler, der eine Methode zur Meldung aufruft, wenn der \emph{Robot} am Ziel angekommen ist. Die Methoden sind beide dafür da, ein gegebenes Ziel anzufahren, wobei bei der Zweiten die Höchstgeschwindigkeit geringer ist. Die Höchstgeschwindigkeit für Cautiously, Regular und Fast Methoden stellt die \emph{IDrive} Komponente bereit, wobei Cautiously $\leq$ Regular $\leq$ Fast gilt. Die anderen beiden Methoden, drive() und driveCautiously() unterscheiden sich ebenfalls nur in der Höchstgeschwindigkeit und ermöglichen ein manuelles Fahren. Dabei erwarten sie die Drehung des \emph{Robots} als float-Wert sowie die Vorwärts- und die Seitwärtsgeschwindigkeit, ebenfalls als float-Wert.
     	\subparagraph{IBattery}\label{ibattery}
     		Bei \emph{IBattery} handelt es sich um die Akkusteuerung des \emph{Robots}. Sie stellt zwei Methoden bereit. getBatteryLevel() gibt den aktuellen Akkuladestand als float-Wert zurück, getChargingPosition() gibt die Position des zugeordneten Chargers zurück.
 
@@ -132,7 +135,7 @@
 
     \begin{figure}[H]
       \centering
-      \includegraphics[width=1.2\textwidth, angle=90]{img/1-Analyse-4-Produktumgebung}
+      \includegraphics[width=1.2\textwidth, angle=90]{img/2-Analyse-4-Produktumgebung}
       \caption{Verteilungsdiagramm}
       \label{fig:4-1-3-verteilungsdiagramm}
     \end{figure}
