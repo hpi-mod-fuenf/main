@@ -31,6 +31,8 @@ public class ExitCodeManager {
 			System.out.println("Latex exited with Exit code 0 - BUILD SUCESS");
 			System.exit(0);
 		}
+		pr = rt.exec("pdflatex -interaction=nonstopmode main.tex");
+		pr.waitFor();
 	}
 	
 	static String readFile(String pathname) throws IOException {
