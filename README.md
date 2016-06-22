@@ -29,7 +29,7 @@
 *22*|     |     | **[1](protokolle/2016-06-01.md)**   | 2   | 3   | 4   | 5  
 *23*| 6   | 7   | **[8](protokolle/2016-06-08.md)**   | 9   | 10  | 11  | 12  
 *24*| 13  | 14  | **[15](protokolle/2016-06-15.md)**  | 16  | 17  | 18  | 19 
-*25*| 20  | 21  | **[22](protokollle/2016-06-22_Review_Feedback_von_Hr_Haensel.md)**  | 23  | 24  | 25  | 26 
+*25*| 20  | 21  | **[22](protokolle/2016-06-22_Review_Feedback_von_Hr_Haensel.md)**  | 23  | 24  | 25  | 26 
 *26*| 27  | 28  | 29  | 30  |     |     |   
 
 ### Juli
