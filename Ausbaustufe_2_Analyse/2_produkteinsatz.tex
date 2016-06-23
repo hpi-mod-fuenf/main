@@ -99,24 +99,17 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 				\end{tabularx}
 				\label{tab:2-4-drive-to-destination}
 			\end{table}
-
-			Abbildung \ref{fig:2-4-drive-to-destination-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{2: Drive to Destination} darstellt.
-
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=\textwidth]{../images/Iteration0_Analyse_2-4_driveToDestination}
-				\caption{Illustration von \emph{2: Drive to Destination} durch Aktivitätendiagramm}
-				\label{fig:2-4-drive-to-destination-aktivitaetendiagramm}
-			\end{figure}
+			
+			\emph{Aufgrund des in der Analyse nicht näher spezifizierten Ablaufs von \emph{Drive to Destination} 
+			entfällt hier ein Aktivitätendiagramm.}
 
 			Dieser Prozess wird autonom vom \emph{Robot} ausgeführt. 
-			Er wird genau dann ausgeführt, wenn der Roboter eine \emph{Destination} vom Server erhalten hat, die er anfahren soll. 
-			Dabei wird vorher festgelegt, mit welcher Geschwindigkeit der \emph{Robot} das Ziel anfahren soll. 
-			Damit können Patienten schnell erreicht werden und sicher zum \emph{Hospital} gebracht werden. 
-			Da der \emph{Robot} an dieser Stelle	dem Server schon bestätigt hat, dass sein Akkustand hoch genug ist, ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
-			Dann wird der \emph{Robot} nach Wahl des	besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
-
-
+			Er wird genau dann ausgeführt, wenn der Roboter einen \emph{Task} vom Server erhalten hat, den er erfüllen soll. 
+			Dabei wird vorher festgelegt, mit welcher Geschwindigkeit der \emph{Robot} die in dem \texttt{Task} enthaltene(n) \emph{Destination(s)} jeweils anfahren soll. 
+			Damit können bei einem Auftrag vom \emph{Hospital} Patienten schnell erreicht werden und sicher zur Klinik gebracht werden. 
+			Da der \emph{Robot} an dieser Stelle dem Server schon bestätigt hat, dass sein Akkustand für die Ausführung des \emph{Tasks} ausreichend ist, 
+			ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
+			Dann wird der \emph{Robot} nach Wahl des besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
 
 			\subsubsection*{Beschreibung zu 3: Take Patient to Hospital}
 
