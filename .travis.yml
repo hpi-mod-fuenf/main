@@ -17,7 +17,7 @@ warnings_are_errors: false
 before_install:
 # bash script which installs git lfs in travis deployment machine and pulls files 
   #- ./travis/installGitLFS.sh
-  - cd Ausbaustufe_1_Entwurf
+  - cd Ausbaustufe_2_Entwurf
 # installs openjdk for professorial chair watermark-removal-tool
   - sudo apt-get install -y openjdk-7-jre
   - sudo add-apt-repository -y ppa:texlive-backports/ppa
@@ -42,12 +42,13 @@ script:
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
   - cd ../Ausbaustufe_2_Analyse
   - java -jar ../travis/remove-watermark-from-svg/deltrans.jar img/*.svg -pattern "Paradigm" -outformat pdf
-  - cd ../Ausbaustufe_1_Entwurf
+  - cd ../Ausbaustufe_2_Entwurf
   - java -cp ../travis ExitCodeManager
   - cd ../Ausbaustufe_2_Analyse
   - java -cp ../travis ExitCodeManager
   - mv main.pdf main-2-Analyse.pdf
-  - cd ../Ausbaustufe_1_Entwurf
+  - cd ../Ausbaustufe_2_Entwurf
+  - mv main.pdf main-2-Entwurf.pdf
 
 # now we convert the pdf file to a much smaller djvu document
 #  - pdf2djvu -d 1200 -o HowtoDeployLatexDocs-DE.djvu HowtoDeployLatexDocs-DE.pdf
@@ -60,7 +61,7 @@ after_success:
 deploy:
   provider: releases
   file: 
-   - "main.pdf"
+   - "main-2-Entwurf.pdf.pdf"
    - "../Ausbaustufe_2_Analyse/main-2-Analyse.pdf"
   skip_cleanup: true
   api_key:
