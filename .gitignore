@@ -2,6 +2,7 @@
 *.aux
 *.synctex.gz
 *.out
+*.pdf
 main.toc
 main.pdf
 Thumbs.db
