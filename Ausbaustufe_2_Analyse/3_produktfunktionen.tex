@@ -48,7 +48,10 @@
 				\end{tabularx}
 			\end{table}
 
-			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein zu umfahrendes \emph{Obstacle} vor sich entdeckt. Im Wesentlichen sammelt der \emph{Robot} mittels seiner Peripherie Informationen über das \emph{Obstacle}, um darauf hin eine Fallunterscheidung zu treffen. Erkennen sich zwei gegenüberstehende \emph{Robots}, so weichen beide nach rechts aus. Bei statischen \emph{Obstacles} wird die Entscheidung für eine Ausweichrichtung in Abhängigkeit von dem vom \emph{Robot} wahrnehmbaren Teil des \emph{Obstacles} getroffen.
+			Dieser Use Case wird dann benutzt, wenn ein \emph{Robot} auf dem Weg zu seiner aktuellen \emph{Destination} ein zu umfahrendes \emph{Obstacle} vor sich entdeckt. 
+			Im Wesentlichen sammelt der \emph{Robot} mittels seiner Peripherie Informationen über das \emph{Obstacle}, um darauf hin eine Fallunterscheidung zu treffen. 
+			Erkennen sich zwei gegenüberstehende \emph{Robots}, so weichen beide nach rechts aus. 
+			Bei statischen \emph{Obstacles} wird die Entscheidung für eine Ausweichrichtung in Abhängigkeit von dem vom \emph{Robot} wahrnehmbaren Teil des \emph{Obstacles} getroffen.
 		
 		\pagebreak
 		
@@ -71,7 +74,11 @@
 				\textbf{Auslösendes Ereignis:} & Der \emph{Robot} hat den besten (nach seinen Berechnungen) Weg um das \emph{Obstacle} gewählt. \\ \hline
 				\end{tabularx}
 			\end{table}
-		Dieser Use Case beschreibt die eigentliche Umfahrung eines \emph{Obstacles} von einem \emph{Robot}. Der \emph{Robot} hat davor ausgewählt, zu welcher Richtung hin er das \emph{Obstacle} umfahren möchte. Wenn es sich um ein statisches \emph{Obstacle} handelt, fährt der \emph{Robot} immer eine kleine Distanz parallel zur Kante des \emph{Obstacles} und prüft ob der Weg zur \emph{Destination} wieder frei ist. Wenn dieser frei ist, wird die normale Fahrt wieder aufgenommen, ansonsten wird der Kurs wieder parallel zur Kante des \emph{Obstacles} korrigiert und der Vorgang wiederholt. Wenn sich zwei \emph{Robots} gegenseitig als \emph{Obstacles} wahrgenommen haben, ist ihnen aus dem Use Case \textit{Choose Path around Obstacle} klar, dass sie beide nach rechts ausweichen müssen, um dann den Normalbetrieb wieder aufzunehmen.
+		Dieser Use Case beschreibt die eigentliche Umfahrung eines \emph{Obstacles} von einem \emph{Robot}. 
+		Der \emph{Robot} hat davor ausgewählt, zu welcher Richtung hin er das \emph{Obstacle} umfahren möchte. 
+		Wenn es sich um ein statisches \emph{Obstacle} handelt, fährt der \emph{Robot} immer eine kleine Distanz parallel zur Kante des \emph{Obstacles} und prüft ob der Weg zur \emph{Destination} wieder frei ist. 
+		Wenn dieser frei ist, wird die normale Fahrt wieder aufgenommen, ansonsten wird der Kurs wieder parallel zur Kante des \emph{Obstacles} korrigiert und der Vorgang wiederholt. 
+		Wenn sich zwei \emph{Robots} gegenseitig als \emph{Obstacles} wahrgenommen haben, ist ihnen aus dem Use Case \textit{Choose Path around Obstacle} klar, dass sie beide nach rechts ausweichen müssen, um dann den Normalbetrieb wieder aufzunehmen.
 			
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 			
@@ -296,7 +303,10 @@
 				\end{tabularx}
 			\end{table}
 
-			Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und in das \emph{Hospital} zu bringen. Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht Teil des Systems ist.
+			Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und in das \emph{Hospital} zu bringen. 
+			Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. 
+			Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. 
+			Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht Teil des Systems ist.
 
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 
@@ -320,7 +330,8 @@
 				\end{tabularx}
 			\end{table}
 			
-			Das \emph{Hospital} muss dem \emph{Robot} mitteilen, dass der \emph{Robot} mit dem \emph{Patient} beladen wurde, um einen sicheren Transport des Patienten zu gewährleisten. Der \emph{Robot} hat somit keinen Eingriff in den Verladevorgang des Patienten.
+			Das \emph{Hospital} muss dem \emph{Robot} mitteilen, dass der \emph{Robot} mit dem \emph{Patient} beladen wurde, um einen sicheren Transport des Patienten zu gewährleisten. 
+			Der \emph{Robot} hat somit keinen Eingriff in den Verladevorgang des Patienten.
 
 			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 

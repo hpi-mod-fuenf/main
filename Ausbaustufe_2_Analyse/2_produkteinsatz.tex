@@ -4,18 +4,27 @@
 	Der Problembereich erweitert sich für diese Analyse auf sechs Punkte, um eine Gesamtkoordination effizient zu gestalten:\\
 
 \begin{enumerate}
-	\item Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.
-	\item Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich vorausschauendes Fahren zu ermöglichen. Im Falle eines niedrigen Batteriestands also unverzüglich an eine Ladestation anzudocken und aufzuladen, beziehungsweise längere Fahrten nicht anzutreten, für die der Batteriestand nicht ausreicht.
-	\item Im dritten Punkt geht es darum den Schaden von Kollisionen zu minimieren; wie diese erkannt, wie auf sie reagiert wird und diese Kollisionen durch vorrauschendes Umfahren von Objekten verhindert werden können. Dies schließt sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein. Im Speziellen muss eine Priorisierung der Roboter stattfinden, damit den Krankentransportern ein reibungsloser Fahrtverlauf garantiert wird.
-	\item Dieser Punkt beschäftigt sich mit dem Abholvorgang. Jeder Krankentransport benötigt mindesten ein Vehikel das zur Verfügung steht. Jeder dieser Roboter muss unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit diese Kriterien Einfluss auf die Entscheidung des Servers nehmen. Wenn dieser Roboter angekommen ist, müssen wiederum Patient und mögliche Helfende benachrichtigt werden.
-	\item Außerdem muss das Fahrverhalten an einen Transport mit Patienten angepasst werden. Welche Daten werden ausgetauscht, damit dem Patienten nach der Ankunft die schnellstmögliche Behandlung zukommen kann?
+	\item Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. 
+	Ebenfalls steht eine manuelle Steuerung zur Verfügung, um unerwarteten Ereignissen zu begegnen, die allerdings wiederum sinnvoll in das Gesamtsystem integriert werden muss.
+	\item Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungslosen Batteriebetrieb zu garantieren, um zeitlich vorausschauendes Fahren zu ermöglichen. 
+	Im Falle eines niedrigen Batteriestands also unverzüglich an eine Ladestation anzudocken und aufzuladen, beziehungsweise längere Fahrten nicht anzutreten, für die der Batteriestand nicht ausreicht.
+	\item Im dritten Punkt geht es darum den Schaden von Kollisionen zu minimieren; wie diese erkannt, wie auf sie reagiert wird und diese Kollisionen durch vorrauschendes Umfahren von Objekten verhindert werden können. 
+	Dies schließt sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein. 
+	Im Speziellen muss eine Priorisierung der Roboter stattfinden, damit den Krankentransportern ein reibungsloser Fahrtverlauf garantiert wird.
+	\item Dieser Punkt beschäftigt sich mit dem Abholvorgang. 
+	Jeder Krankentransport benötigt mindesten ein Vehikel das zur Verfügung steht. 
+	Jeder dieser Roboter muss unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit diese Kriterien Einfluss auf die Entscheidung des Servers nehmen. 
+	Wenn dieser Roboter angekommen ist, müssen wiederum Patient und mögliche Helfende benachrichtigt werden.
+	\item Außerdem muss das Fahrverhalten an einen Transport mit Patienten angepasst werden. 
+	Welche Daten werden ausgetauscht, damit dem Patienten nach der Ankunft die schnellstmögliche Behandlung zukommen kann?
 \end{enumerate}
 
 An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 \begin{enumerate}
 	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das Gleiche gilt für Ladestationen.
 	\item Roboter können autark vom Server agieren, damit ihre Ziele bestimmen und eine Ladestation anfahren.
-	\item Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. Für die unbeweglichen Objekte ist es notwendig, dass ihre Position unveränderlich ist.
+	\item Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. 
+	Für die unbeweglichen Objekte ist es notwendig, dass ihre Position unveränderlich ist.
 \end{enumerate}
 
 
@@ -51,7 +60,8 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 				\hline
 				\textbf{Auslösendes Ereignis:} & Der Server will den für ein bestimmtes Ziel bestmöglichen Roboter auswählen und diesen zum Ziel schicken. \\ \hline
 				\textbf{Ergebnis:} & Alle Roboter haben ihre Sensordaten ausgelesen und diese dem Server
-				mitgeteilt. Daraufhin hat der Server einen Roboter ausgewählt, der für
+				mitgeteilt. 
+				Daraufhin hat der Server einen Roboter ausgewählt, der für
 				die Zielanfahrung optimal geeignet ist, und diesem den Auftrag zum
 				Anfahren des Ziels übermittelt. \\ \hline
 				\textbf{Mitwirkende:} &	Server, Roboter \\
@@ -72,7 +82,9 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 			der \emph{Server} zunächst an alle \emph{Robots} eine Anfrage (\emph{request}),
 			woraufhin die \emph{Robots} ihre Sensordaten (\emph{sensor data}) auslesen und
 			an den \emph{Server} senden. Auf Grundlage dieser Daten wählt der \emph{Server} den
-			\emph{Robot} aus, der für die Erfüllung des Zieles am besten geeignet ist. Es kann auch vorkommen, dass kein \emph{Robot} geeignet ist, um ein Ziel zu erfüllen. Wie die Sensordaten und der Algorithmus zur Wahl des optimalen \emph{Robots} konkret definiert sind, ist eine Entwurfsentscheidung.
+			\emph{Robot} aus, der für die Erfüllung des Zieles am besten geeignet ist. 
+			Es kann auch vorkommen, dass kein \emph{Robot} geeignet ist, um ein Ziel zu erfüllen. 
+			Wie die Sensordaten und der Algorithmus zur Wahl des optimalen \emph{Robots} konkret definiert sind, ist eine Entwurfsentscheidung.
 
 			\subsubsection*{Beschreibung zu 2: Drive to Destination}
 
@@ -97,15 +109,12 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 				\label{fig:2-4-drive-to-destination-aktivitaetendiagramm}
 			\end{figure}
 
-			Dieser Prozess wird autonom vom \emph{Robot} ausgeführt. Er wird genau
-			dann ausgeführt, wenn der Roboter eine \emph{Destination} vom Server
-			erhalten hat, die er anfahren soll. Dabei wird vorher festgelegt, mit welcher Geschwindigkeit der \emph{Robot} das Ziel anfahren soll. Damit können Patienten schnell erreicht werden und sicher zum \emph{Hospital} gebracht werden. Da der \emph{Robot} an dieser Stelle
-			dem Server schon bestätigt hat, dass sein Akkustand hoch genug ist, ist
-			der einzige Sonderfall, den wir betrachten müssen, dass ein
-			\emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und
-			\emph{Destination} liegt. Dann wird der \emph{Robot} nach Wahl des
-			besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur
-			\emph{Destination} Aufnehmen.
+			Dieser Prozess wird autonom vom \emph{Robot} ausgeführt. 
+			Er wird genau dann ausgeführt, wenn der Roboter eine \emph{Destination} vom Server erhalten hat, die er anfahren soll. 
+			Dabei wird vorher festgelegt, mit welcher Geschwindigkeit der \emph{Robot} das Ziel anfahren soll. 
+			Damit können Patienten schnell erreicht werden und sicher zum \emph{Hospital} gebracht werden. 
+			Da der \emph{Robot} an dieser Stelle	dem Server schon bestätigt hat, dass sein Akkustand hoch genug ist, ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
+			Dann wird der \emph{Robot} nach Wahl des	besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
 
 
 
@@ -126,7 +135,13 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 
 			Abbildung \ref{fig:2-4-take-patient-to-hospital-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Take Patient to Hospital} darstellt.
 
-			Um die Verfügbarkeit eines \emph{Robots} anzufragen gibt das \emph{Hospital} die Adresse des \emph{Patient} an den \emph{Server}. Dieser wählt dann den passenden \emph{Robot} aus. Falls keiner verfügbar ist, lehnt der \emph{Server} den Krankentransport ab, anderenfalls wird dem \emph{Robot} dieser \emph{Task} zugewiesen. Darauf fährt der \emph{Robot} zum \emph{Patient}, wenn er angekommen ist, gibt er das über den \emph{Server} ans \emph{Krankenhaus} weiter und wartet bis die Helfenden den \emph{Patient} aufgeladen haben. Nach dem Aufladen informiert das \emph{Hospital} den \emph{Robot} und wartet selber bis der \emph{Patient} am \emph{Hospital} angekommen ist. Darauf fährt der \emph{Robot} zum \emph{Hospital} und wartet bis der \emph{Patient} abgeladen ist. Danach ist er wieder für alle weiteren \emph{Tasks} verfügbar.
+			Um die Verfügbarkeit eines \emph{Robots} anzufragen gibt das \emph{Hospital} die Adresse des \emph{Patient} an den \emph{Server}. 
+			Dieser wählt dann den passenden \emph{Robot} aus. 
+			Falls keiner verfügbar ist, lehnt der \emph{Server} den Krankentransport ab, anderenfalls wird dem \emph{Robot} dieser \emph{Task} zugewiesen. 
+			Darauf fährt der \emph{Robot} zum \emph{Patient}, wenn er angekommen ist, gibt er das über den \emph{Server} ans \emph{Krankenhaus} weiter und wartet bis die Helfenden den \emph{Patient} aufgeladen haben. 
+			Nach dem Aufladen informiert das \emph{Hospital} den \emph{Robot} und wartet selber bis der \emph{Patient} am \emph{Hospital} angekommen ist. 
+			Darauf fährt der \emph{Robot} zum \emph{Hospital} und wartet bis der \emph{Patient} abgeladen ist. 
+			Danach ist er wieder für alle weiteren \emph{Tasks} verfügbar.
 			
 			\begin{figure}[H]
 				\centering
