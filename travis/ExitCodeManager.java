@@ -26,13 +26,16 @@ public class ExitCodeManager {
 				System.out.println("Latex exited with Exit code 1 - BUILD FAILED");
 				System.exit(1);
 			}
+			pr = rt.exec("pdflatex -interaction=nonstopmode main.tex");
+			pr.waitFor();
 			System.exit(0);
 		} if (i==0) {
 			System.out.println("Latex exited with Exit code 0 - BUILD SUCESS");
+			pr = rt.exec("pdflatex -interaction=nonstopmode main.tex");
+			pr.waitFor();
 			System.exit(0);
 		}
-		pr = rt.exec("pdflatex -interaction=nonstopmode main.tex");
-		pr.waitFor();
+
 	}
 	
 	static String readFile(String pathname) throws IOException {
