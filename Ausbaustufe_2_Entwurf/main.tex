@@ -1,0 +1,120 @@
+%\documentclass[11pt, a4paper]{article}
+\documentclass[includeheaders]{scrartcl}
+\usepackage{scrlayer-scrpage}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+% Deutsche Silbentrennung
+\usepackage[ngermanb]{babel}
+% Unterstützung für Farben
+\usepackage[dvipsnames]{xcolor}
+% Erweiterte Mathematik-Symbole
+\usepackage{amsmath,amscd,amssymb}
+% Nummerierte Listen
+\usepackage{enumerate}
+% Erweiterte Bildeinbettungsoptionen
+\usepackage{graphicx}
+% Typografisch hochwertige Tabellen
+%\usepackage{tabularx,ragged2e,booktabs}
+\usepackage{tabularx}
+% Unterstützung für Unter-Abbildungen (z.B. 2x2-Matrix)
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+% Seitenränder
+\usepackage{geometry}
+\geometry{a4paper,
+	left=2.5cm,
+	right=2.5cm,
+	top=2.5cm,
+	bottom=2.5cm}
+
+% Unterstützung für °-Zeichen
+\usepackage{textcomp}
+\usepackage{gensymb}
+% Formatierung von \paragraph und \subparagraph anpassen
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\raggedsection\normalfont\sectfont\size@paragraph}%
+}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\raggedsection\normalfont\sectfont\size@subparagraph\mdseries}%
+}
+\makeatother
+\usepackage{lastpage}
+\setkomafont{pageheadfoot}{\sffamily} 
+\sloppy
+\parindent0mm
+\parskip3mm
+
+\begin{document}
+	
+	\input{hpi-headers.tex}
+	
+	\newpage
+	
+	\title{Entwurfsdokument\\ \small{(Veranstaltung Modellierung II, SoSe 2016)}}
+	\date{}
+	\author{}
+	
+	\maketitle
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{lp{7.5cm}}
+			\textbf{Projekt:} & Roboterbasiertes Personentransportsystem\\
+			&\\
+			\textbf{Auftraggeber: }& Prof. Holger Giese \newline Hasso-Platter-Institut \newline Prof.-Dr.-Helmert-Str. 2–3 \newline 14482 Potsdam\\
+			&\\
+			\textbf{Auftragnehmer: }& Modellierung II – Projektgruppe 5 \\
+		\end{tabular}
+	\end{table}
+	
+	
+	
+	\newpage
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabularx}{\textwidth}{|p{4cm}|X|p{4cm}|}
+			\hline
+			Verantwortlichkeit & Name, Vorname & Datum \\ \hline
+			Ansprechpartner    & Bischoff, Sebastian & 17.06.2016 \\
+			Bearbeitender      & Sauder, Jonathan & 17.06.2016 \\ 
+			Bearbeitender      & Lüpke, Fabian & 17.06.2016 \\ 
+			Bearbeitender      & Hering, Jonas & 17.06.2016 \\
+			Bearbeitender      & Braun, Jakob & 17.06.2016  \\
+			Bearbeitender      & Cremerius, Jonas & 17.06.2016 \\
+			Bearbeitender      & Wischner, Jakob & 17.06.2016 \\
+			Bearbeitender      & Schwenkert, Daniel & 17.06.2016 \\
+			Bearbeitender      & Jäkel, Dominik & 17.06.2016 \\
+			Bearbeitender      & König, Bastian & 17.06.2016 \\ \hline
+		\end{tabularx}
+	\end{table}
+	
+	\newpage
+	
+	\tableofcontents
+
+\newpage
+\input{1_abstrakte_architektur}
+\newpage
+\input{2_interaktion_der_komponenten}
+\newpage
+\input{3_komponentenschnittstellen}
+\newpage
+\input{4_konkrete_architektur}
+\newpage
+\input{5_komponenten}
+\newpage
+\input{6_paketstruktur}
+\newpage
+\input{7_paketdetails}
+\newpage
+\input{8_ablaeufe}
+\newpage
+\input{9_produkteinsatz}
+
+\end{document}
