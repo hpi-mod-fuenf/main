@@ -61,7 +61,7 @@ after_success:
 deploy:
   provider: releases
   file: 
-   - "main-2-Entwurf.pdf.pdf"
+   - "main-2-Entwurf.pdf"
    - "../Ausbaustufe_2_Analyse/main-2-Analyse.pdf"
   skip_cleanup: true
   api_key:
