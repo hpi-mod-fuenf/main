@@ -1,15 +1,13 @@
 	\begin{tabularx}{\textwidth}{|l|X|}
 		\hline
 		\textbf{Begriff} & \textbf{Erklärung}\\ \hline
-		Robot & Roboter, der sich im zweidimensionalen Raum bewegen kann. Der wird
-		als Fahrzeug verwendet und kann Personen transportieren.\\ \hline
-		Position & Eine Position ist eine zweidimensionale Position im Raum,
-		also ein Punkt, zu dem der Roboter fahren kann\\ \hline
-		Task & Ein Task beinhaltet zusätzlich zu einer Position auch eine
-		Geschwindigkeit. Dadurch kann der Server dem Roboter mitteilen, ob
+		Robot & Roboter, der sich im zweidimensionalen Raum bewegen kann. Er wird als Fahrzeug verwendet und kann Personen transportieren.\\ \hline
+		Position & Eine Position ist eine zweidimensionaler Punkt im Raum, zu dem der Roboter fahren kann\\ \hline
+		Destination & Eine Destination beinhaltet zusätzlich zu einer Position auch eine Geschwindigkeit. Dadurch kann der Server dem Roboter mitteilen, ob
 		dieser vorsichtig oder schnell zu einer Position fahren
-		soll.\\ \hline
-		Server & Der Server ist eine einzelne, zentrale Instanz, die die Aufträge
+		soll \\ \hline
+		Task & Ein Task ist eine Kette von Destinations. Der Roboter führt stets einen Schritt (Destination) aus und wartet auf ein Kommando, um weiter zu machen. Ein typischer Task ist z.B. fahrte schnell zum Adresse XXX; Fahre vorsichtig zum Krankenhaus.\\ \hline
+		Server & Der Server ist eine einzelne, zentrale Instanz, die die Tasks
 		an die Roboter verteilt\\ \hline
 		Charger & Ladestation für den Roboter\\ \hline
 		Destination & Ziele die der Roboter ansteuern kann.\\ \hline
