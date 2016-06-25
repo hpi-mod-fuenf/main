@@ -1,7 +1,7 @@
 
 	\section{Produkteinsatz}
 
-	Der Problembereich erweitert sich für diese Analyse auf sechs Punkte, um eine Gesamtkoordination effizient zu gestalten:\\
+	Der Problembereich erweitert sich für diese Analyse auf sieben Punkte, um eine Gesamtkoordination effizient zu gestalten:\\
 
 \begin{enumerate}
 	\item Zuallererst muss das automatische Fahren im zweidimensionalen Koordinatensystem zu einem angegebenen Zielpunkt fehlerfrei möglich sein. 
@@ -10,11 +10,12 @@
 	Im Falle eines niedrigen Batteriestands also unverzüglich an eine Ladestation anzudocken und aufzuladen, beziehungsweise längere Fahrten nicht anzutreten, für die der Batteriestand nicht ausreicht.
 	\item Im dritten Punkt geht es darum den Schaden von Kollisionen zu minimieren; wie diese erkannt, wie auf sie reagiert wird und diese Kollisionen durch vorrauschendes Umfahren von Objekten verhindert werden können. 
 	Dies schließt sowohl bewegliche Objekte als auch unbewegliche Objekte mit ein. 
-	Im Speziellen muss eine Priorisierung der Roboter stattfinden, damit den Krankentransportern ein reibungsloser Fahrtverlauf garantiert wird.
-	\item Dieser Punkt beschäftigt sich mit dem Abholvorgang. 
-	Jeder Krankentransport benötigt mindesten ein Vehikel das zur Verfügung steht. 
-	Jeder dieser Roboter muss unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit diese Kriterien Einfluss auf die Entscheidung des Servers nehmen. 
-	Wenn dieser Roboter angekommen ist, müssen wiederum Patient und mögliche Helfende benachrichtigt werden.
+	Im Speziellen muss eine Priorisierung der Roboter stattfinden, damit jedem Krankentransporter vor dem Taxiservice ein reibungsloser Fahrtverlauf garantiert wird.
+	\item Für den Taxidienst braucht es dabei eine Serviceapp. Diese funktioniert mit einer Warteschleife funktioniert, in Teilnehmer die Möglichkeit haben sich jederzeit einzuwählen, wenn Taxis zur Verfügung stehen, und anderseits jederzeit ihre Anfrage abbrechen können.
+	\item Dieser Punkt beschäftigt sich mit dem Auswahlvorgang.
+	Jede Serviceleistung benötigt mindesten ein Vehikel das zur Verfügung steht. 
+	Diese Roboter müssen unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit die Kriterien wiederum Einfluss auf die Entscheidung des Servers nehmen. Krankentransporter werden als Hauptbedingung immer priorisiert.
+		Wenn dieser Roboter angekommen ist, müssen wiederum Patient und mögliche Helfende bzw. der Fahrtgast benachrichtigt werden.
 	\item Außerdem muss das Fahrverhalten an einen Transport mit Patienten angepasst werden. 
 	Welche Daten werden ausgetauscht, damit dem Patienten nach der Ankunft die schnellstmögliche Behandlung zukommen kann?
 \end{enumerate}
@@ -25,6 +26,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:\\
 	\item Roboter können autark vom Server agieren, damit ihre Ziele bestimmen und eine Ladestation anfahren.
 	\item Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. 
 	Für die unbeweglichen Objekte ist es notwendig, dass ihre Position unveränderlich ist.
+	\item Da der Taxiservice alle Transporte in der Großstadt übernimmt, laufen keine Menschen wahllos durch die Gegend, die das Koordinationssystem der Roboter stören könnten.
 \end{enumerate}
 
 
