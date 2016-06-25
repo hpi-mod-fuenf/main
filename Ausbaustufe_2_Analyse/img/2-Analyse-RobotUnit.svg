@@ -73,8 +73,8 @@
     ><ellipse rx="64.5" fill="none" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5"
     /></g
     ><g font-size="11" transform="translate(241,157)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="33" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
-      >AssignTask</text
+    ><text x="31" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
+      >Assign Task</text
     ></g
     ><g font-size="11" transform="translate(241,248)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
     ><ellipse rx="64.5" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5" stroke="none"
@@ -83,8 +83,8 @@
     ><ellipse rx="64.5" fill="none" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5"
     /></g
     ><g font-size="11" transform="translate(241,248)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="26" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
-      >ContinueTask</text
+    ><text x="25" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
+      >Continue Task</text
     ></g
     ><g font-size="11" transform="translate(10,254)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="7" xml:space="preserve" y="11" clip-path="url(#clipPath6)" stroke="none"

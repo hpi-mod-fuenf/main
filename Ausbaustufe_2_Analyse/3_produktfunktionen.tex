@@ -4,26 +4,30 @@
 		\subsection{Use Cases}
 		% \input{3-1-Use_Cases}
 		
-		In dem zu modellierenden System gibt es zwei Unterumgebungen (\emph{Server} sowie \emph{Robot Unit}), auf welchen die Aktoren \emph{Customer}, \emph{Hospital} und \emph{Robot Unit} verschiedene Anwendungsfälle aufrufen können. Der fiktionale Aktor \emph{User} aggregiert die gemeinsamen Use-Cases von \emph{Customer} und \emph{Hospital} \\
-		Die Abbildungen \ref{fig:3-1-server-use-cases} und \ref{fig:3-1-use-cases-robot-unit} stellen die Funktionalitäten dieser Teilsysteme dar.
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=0.8\textwidth]{img/2-Analyse-Server}
-				\caption{Use Case Diagramm 1: Use Cases des Teilsystems \emph{Server}}
-				\label{fig:3-1-server-use-cases}
-			\end{figure}
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=0.8\textwidth]{img/2-Analyse-RobotUnit}
-				\caption{Use Case Diagramm 2: Use Cases des Teilsystems \emph{Robot}}
-				\label{fig:3-1-use-cases-robot-unit}
-			\end{figure}
+		In dem zu modellierenden System wurden zwei Unterumgebungen (\emph{Server} sowie \emph{Robot Unit}) identifiziert, auf welchen die Aktoren \emph{Customer}, \emph{Hospital} und \emph{Robot Unit} verschiedene Anwendungsfälle aufrufen können. Der fiktionale Aktor \emph{User} aggregiert die gemeinsamen Use-Cases von \emph{Customer} und \emph{Hospital} \\
+		%Die Abbildungen \ref{fig:3-1-server-use-cases} und \ref{fig:3-1-use-cases-robot-unit} stellen die Funktionalitäten dieser Teilsysteme dar.
+			\subsubsection{Server}
+			Der \emph{Server} stellt das zentrale System da, über welches die Aufträge der \emph{Customer} und des \emph{Hospitals} abgewickelt und an die \emph{Robots} verteilt werden.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{img/2-Analyse-Server}
+					\caption{Use Case Diagramm 1: Use Cases des Teilsystems \emph{Server}}
+					\label{fig:3-1-server-use-cases}
+				\end{figure}
+			\pagebreak
+			\subsubsection{Robot Unit}
+			Die \emph{Robot Unit} stellt als Kombination des \emph{Robots} sowie der \emph{Robotsoftware} die ausführende Komponente dar und bietet dem Server Möglichkeiten der Steuerung und Informationsabfrage.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{img/2-Analyse-RobotUnit}
+					\caption{Use Case Diagramm 2: Use Cases des Teilsystems \emph{Robot}}
+					\label{fig:3-1-use-cases-robot-unit}
+				\end{figure}
 
 		\pagebreak
 
 
-		\subsection{Beschreibung zu Use Case \emph{3}: Read Sensors}
+		\subsection{Beschreibung zu Use Case \emph{1}: Read Sensors}
 
 			\subsubsection*{Charakterisierende Informationen}
 
@@ -32,8 +36,8 @@
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot\\ \hline
-				\textbf{Ziel des Use Cases:} & \emph{Robot} kann über seinen Akkustand und seine Position Auskunft geben\\ \hline
-				\textbf{Umgebende Systemgrenze:} & \emph{Robot} \\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} kann über seinen Akkustand, seine Position und seine derzeitige \emph{Destination} Auskunft geben\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot Unit} und \emph{Server} \\ \hline
 				\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten \\ \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den \emph{Server} \\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \hline
@@ -68,7 +72,7 @@
 			
 		\pagebreak
 
-		\subsection{Beschreibung zu Use Case \emph{7}: Assign Task}
+		\subsection{Beschreibung zu Use Case \emph{2}: Assign Task}
 		
 		\subsubsection*{Charakterisierende Informationen}
 		
@@ -77,12 +81,12 @@
 			\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & Choose Robot  \\ \hline
-				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destination}) zuweisen\\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Robot} den Task (die \emph{Destinations}) zuweisen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Server} und \emph{Robot} \\ \hline
 				\textbf{Vorbedingung:} & \textit{ \glqq Choose Robot \grqq } hat den am besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Ausgewählter \emph{Robot} steuert die \emph{Destination} an\\ \hline
 				\textbf{Beteiligte Nutzer:} & \emph{Server} und \emph{Robot}\\ \hline
-				\textbf{Auslösendes Ereignis:} & Im Use-Case \textit{ \glqq choose Robot \grqq } wurde ein passender \emph{Robot} ausgewählt\\
+				\textbf{Auslösendes Ereignis:} & Im Use-Case \textit{ \glqq choose Robot \grqq } wurde ein passender \emph{Robot} ausgewählt. Diesem soll nun die \emph{Task} übermittelt werden. \\
 				\hline
 			\end{tabularx}
 		\end{table}
@@ -106,7 +110,7 @@
 		\pagebreak
 		
 		
-		\subsection{Beschreibung zu Use Case \emph{8}: Check availability}
+		\subsection{Beschreibung zu Use Case \emph{3}: Continue Task, TODO}
 		
 		\subsubsection*{Charakterisierende Informationen}
 		
@@ -114,33 +118,117 @@
 			\centering
 			\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 				\hline
-				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital  \\ \hline
-				\textbf{Ziel des Use Cases:} & \emph{Hospital} erfährt, ob ein Auftrag vom System entgegengenommen werden kann. \\ \hline
-				\textbf{Umgebende Systemgrenze:} & \emph{Hospital} und \emph{Server} \\ \hline
-				\textbf{Vorbedingung:} & Das \emph{Hospital} hat einen neuen Patienten registriert. \\ \hline
-				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das System führt den Auftrag aus und bringt den \emph{Patient} in das \emph{Hospital} \\ \hline
-				\textbf{Beteiligte Nutzer:} & \emph{Hospital} und \emph{Server}\\ \hline
-				\textbf{Auslösendes Ereignis:} & \emph{Hospital} hat einen neuen Auftrag\\
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+				\textbf{Ziel des Use Cases:} & TODO \\ \hline
+				\textbf{Umgebende Systemgrenze:} & TODO \\ \hline
+				\textbf{Vorbedingung:} & TODO \\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & TODO \\ \hline
+				\textbf{Beteiligte Nutzer:} & TODO \\ \hline
+				\textbf{Auslösendes Ereignis:} & TODO \\
 				\hline
 			\end{tabularx}
 		\end{table}
 		
-		Das \emph{Hospital} fragt laut Aufgabenstellung an dem zu modellierenden System an, ob ein \emph{Robot} verfügbar ist, um einen \emph{Patient} anzufahren und in das \emph{Hospital} zu bringen. 
-		Dazu wird vom \emph{Server} unter anderem der Use Case \emph{Choose Robot} ausgeführt. 
-		Es kann passieren, dass kein \emph{Robot} verfügbar ist, dann soll wie in der Aufgabenstellung beschrieben der Auftrag vom System abgelehnt werden. 
-		Was das \emph{Hospital} dann für Maßnahmen ergreift, wird hier nicht modelliert da es nicht Teil des Systems ist.
+		TODO
 		
 		%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 		
 		\pagebreak
+
+		\subsection{Beschreibung zu Use Case \emph{4}: Send order}
 		
+		
+		\subsubsection*{Charakterisierende Informationen}
+		
+		\begin{table}[H]
+			\centering
+			\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+				\textbf{Ziel des Use Cases:} & \emph{Customer} sowie \emph{Hospital} können eine Anforderung (mit unterschiedlicher Dringlichkeit) an das System stellen. \\ \hline
+				\textbf{Umgebende Systemgrenze:} & Gesamtsystem \\ \hline
+				\textbf{Vorbedingung:} & \emph{Customer} bzw. \emph{Hospital} verlangen ein Transportvehikel. \\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Auftrag wird ausgeführt. \\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Customer} bzw. \emph{Hospital}, \emph{Server} und \emph{Robot Unit} \\ \hline
+				\textbf{Auslösendes Ereignis:} & \emph{Customer} bzw \emph{Hospital} schickt einen konkreten Auftrag an das System. \\
+				\hline
+			\end{tabularx}
+		\end{table}
+		
+		Über diesen Anwendungsfall können Aufträge und Anforderungen an das Taxisystem durch Nutzer (\emph{Hospital} und \emph{Customer}) gestellt werden.
+		Es findet eine Unterscheidung des anfragenden Nutzers statt, sodass Krankenfahrten priorisiert werden. \\ Sollte eine Fahrt auf Anfrage des Krankenhauses nicht sofort möglich sein, lehnt das System den Auftrag ab. Im Falle eines normalen Taxikunden (\emph{Customer}) wird der Auftrag, sofern kein \emph{Robot} bereit steht, in eine Warteschlange eingereiht.
+		
+		%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 		
 		\pagebreak
 
-
+		\subsection{Beschreibung zu Use Case \emph{5}: Confirm customer on board}
+			\subsubsection*{Charakterisierende Informationen}
+			
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+					\hline
+					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+					\textbf{Ziel des Use Cases:} & Dem System signalisieren, dass ein \emph{Customer} in ein Taxi (\emph{Robot}) gestiegen ist. \\ \hline
+					\textbf{Umgebende Systemgrenze:} & Gesamtsystem \\ \hline
+					\textbf{Vorbedingung:} & Das Taxi (\emph{Robot}) erreicht den \emph {Customer} \\ \hline
+					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das Taxi (\emph{Robot}) setzt seine Fahrt mit zugestiegenem \emph{Customer} in Richtung dessen Ziel fort. \\ \hline
+					\textbf{Beteiligte Nutzer:} & \emph{Customer} und \emph{Server} \\ \hline
+					\textbf{Auslösendes Ereignis:} & Der \emph{Customer} bestätigt dem System, dass er in das Taxi (\emph{Robot}) eingestiegen ist. \\
+					\hline
+				\end{tabularx}
+			\end{table}
+			
+			TODO
+	
+		\subsection{Beschreibung zu Use Case \emph{6}: Confirm order, TODO}
+			\subsubsection*{Charakterisierende Informationen}
+			
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+					\hline
+					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+					\textbf{Ziel des Use Cases:} & TODO \\ \hline
+					\textbf{Umgebende Systemgrenze:} & TODO \\ \hline
+					\textbf{Vorbedingung:} & TODO \\ \hline
+					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & TODO \\ \hline
+					\textbf{Beteiligte Nutzer:} & TODO \\ \hline
+					\textbf{Auslösendes Ereignis:} & TODO \\
+					\hline
+				\end{tabularx}
+			\end{table}
+			
+			TODO
+			
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+			\pagebreak
+	
+		\subsection{Beschreibung zu Use Case \emph{7}: Cancel order}
+			\subsubsection*{Charakterisierende Informationen}
+			
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+					\hline
+					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+					\textbf{Ziel des Use Cases:} & \emph{Customer} kann eine gestellte Anfrage an das System zurückziehen. \\ \hline
+					\textbf{Umgebende Systemgrenze:} & \emph{Server}, \emph{Robot Unit} \\ \hline
+					\textbf{Vorbedingung:} & Der \emph{Customer} überlegt sich, dass er die Bestellung eines Taxis stornieren möchte. \\ \hline
+					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der Auftrag wird gelöscht und der \emph{Robot} steht für andere Fahrten wieder zur Verfügung. \\ \hline
+					\textbf{Beteiligte Nutzer:} & \emph{Customer} \\ \hline
+					\textbf{Auslösendes Ereignis:} & Der \emph{Customer} storniert seine Bestellung eines Taxis. \\
+					\hline
+				\end{tabularx}
+			\end{table}
+			
+			Der \emph{Customer} kann seine Bestellung eines Taxis solange stornieren, bis er zugestiegen ist.
+			
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 		
-		\subsection{Beschreibung zu Use Case \emph{9}: Inform about boarding}
-
+		\subsection{Beschreibung zu Use Case \emph{8}: Inform about boarding}
 			\subsubsection*{Charakterisierende Informationen}
 
 			\begin{table}[H]
@@ -177,4 +265,52 @@
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 
 	\pagebreak
-f
+	
+		\subsection{Beschreibung zu Use Case \emph{9}: Inform about unload, TODO}
+			\subsubsection*{Charakterisierende Informationen}
+			
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+					\hline
+					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+					\textbf{Ziel des Use Cases:} & TODO \\ \hline
+					\textbf{Umgebende Systemgrenze:} & TODO \\ \hline
+					\textbf{Vorbedingung:} & TODO \\ \hline
+					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & TODO \\ \hline
+					\textbf{Beteiligte Nutzer:} & TODO \\ \hline
+					\textbf{Auslösendes Ereignis:} & TODO \\
+					\hline
+				\end{tabularx}
+			\end{table}
+			
+			TODO
+			
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+			\pagebreak
+	
+		\subsection{Beschreibung zu Use Case \emph{10}: Inform about arrival, TODO}
+			
+			\subsubsection*{Charakterisierende Informationen}
+			
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+					\hline
+					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
+					\textbf{Ziel des Use Cases:} & TODO \\ \hline
+					\textbf{Umgebende Systemgrenze:} & TODO \\ \hline
+					\textbf{Vorbedingung:} & TODO \\ \hline
+					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & TODO \\ \hline
+					\textbf{Beteiligte Nutzer:} & TODO \\ \hline
+					\textbf{Auslösendes Ereignis:} & TODO \\
+					\hline
+				\end{tabularx}
+			\end{table}
+			
+			TODO
+			
+			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+			\pagebreak
