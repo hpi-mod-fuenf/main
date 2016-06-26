@@ -1,3 +1,4 @@
+
 	\section{Produkteinsatz}
 	Im folgenden wird der wesentliche Problembereich um eine effiziente, reibungslose, und sichere Gesamtkoordination zu erreichen beschrieben.\\
 
@@ -18,12 +19,12 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 \begin{enumerate}
 	\item Wir starten das System mit vollgeladenen Akkus für jeden Roboter
 	\item Es existiert genau ein Hospital
-	\item Die Kommunikation funktioniert zuverlässig, insbesondere kommen alle gesendeten \textit{Messages} auch bei dem Empfänger ungeschädigt an.
+	\item Die Kommunikation funktioniert zuverlässig, insbesondere kommen alle gesendeten \textit{Messages} auch bei dem Empfänger ungeschädigt an. Dazu nehmen wir auch an, dass die Latenz vernachlässigbar klein ist.
 	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das Gleiche gilt für Ladestationen.
-	\item Roboter können autark vom Server agieren, damit ihre Ziele bestimmen und eine Ladestation anfahren.
 	\item Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. 
 	Für die unbeweglichen Objekte ist es notwendig, dass ihre Position unveränderlich ist.
-	\item Da der Taxiservice alle Transporte in der Großstadt übernimmt, laufen keine Menschen wahllos durch die Gegend, die das Koordinationssystem der Roboter stören könnten. 
+	\item Wenn ein Kunde ein Taxi bestellt und dieses ankommt, steigt dieser auch zeitnah ein und nimmt seine Fahrt wahr.
+	\item Der Taxikunde schließt nach Ankunft bei seinem Ziel die Taxifahrt ab. Es gibt also eine entsprechende Nachricht an das System.
 \end{enumerate}
 
 
@@ -51,7 +52,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 
 		\subsection{Beschreibung der Geschäftsprozesse}
 
-			\subsubsection*{Beschreibung zu 1: Choose Robot}
+			\subsubsection{Beschreibung zu 1: Choose Robot}
 
 			\begin{table}[H]
 				\centering
@@ -85,7 +86,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			Es kann auch vorkommen, dass kein \emph{Robot} geeignet ist, um ein Ziel zu erfüllen. 
 			Wie die Sensordaten und der Algorithmus zur Wahl des optimalen \emph{Robots} konkret definiert sind, ist eine Entwurfsentscheidung.
 
-			\subsubsection*{Beschreibung zu 2: Drive to Destination}
+			\subsubsection{Beschreibung zu 2: Drive to Destination}
 
 			\begin{table}[H]
 				\centering
@@ -110,7 +111,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
 			Dann wird der \emph{Robot} nach Wahl des besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
 
-			\subsubsection*{Beschreibung zu 3: Take Patient to Hospital}
+			\subsubsection{Beschreibung zu 3: Take Patient to Hospital}
 
 			\begin{table}[H]
 				\centering
