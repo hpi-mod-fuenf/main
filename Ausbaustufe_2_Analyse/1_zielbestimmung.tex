@@ -1,11 +1,24 @@
 
 \section{Zielbestimmung}
-Die Aufgabe des Projektteams ist es, ein System zu entwickeln, das selbstfahrende Roboter in einer Stadt der Zukunft koordiniert. Sie sollen sowohl für einen Krankentransport- als auch einen Taxiservicedienst eingesetzt werden. 
-In dieser Stadt existieren keine Straßen mehr. Damit verlangt es eine gewisse Komplexität zu erfassen und in die richtigen Bahnen zu lenken, um die Roboterdienste unfallfrei über den Raum der Stadtkarte zu koordinieren. Die größte Schwierigkeit stellt hierbei der Prozess dar das Navigationsverhalten der Roboter mit den richtigen Parametern einzustellen und zu modellieren. Weitere Probleme ergeben sich daraus, die verschiedenen Krankentransporter in einer Weise zu synchronisieren, dass keine gegenseitigen Behinderungen auftreten. 
-Die Voraussetzungen und Spezifikation dafür zu erfassen, ist Ziel dieser Analyse – die sich elementar mit dem Fahr- und dem Aufladevorgang der Roboter und ihren Manövrierfähigkeiten gegenüber Hindernissen beschäftigt; im speziellen Fall des Krankentransporters zudem mit dem Entsenden zum Einsatzstandort, der Aufnahme von Patienten und der Kommunikation mit dem Hospital; und im Nutzungsgebiet des Taxiservice dem Grundbau eines Appdienstes, der eine Servicefläche bietet, um verfügbare Taxis anzuzeigen und an Kunden zu senden. \\
+Die Aufgabe des Projektteams ist es, ein System zu entwickeln, das selbstfahrende Roboter in einer Stadt der Zukunft koordiniert. 
+Sie sollen sowohl für einen Krankentransport- als auch einen Taxiservicedienst eingesetzt werden. \\
 
-Als Ausgangspunkt stellt das Unternehmen eine unbegrenzte Anzahl von Transportrobotern zur Verfügung, die mit Aktoren, Sensoren und einem Ortungsgerät ausgestattet sind, und im Wechselspiel mit einem Server agieren. \\
+Es gibt eine feste Menge von Robotern, welche alle über Aktoren, Sensoren, und einem Ortungsgerät ausgestattet. 
+In dieser Stadt existieren keine Straßen mehr, aber es gibt statische Objekte und andere Verkehrsteilnehmer. 
+Die Roboter sollen diese  eigenständig umfahren können und dabei weitesgehend Unfälle vermeiden. 
+Die Abläufe dieses Fahrsystems werden in diesem Analysedokument thematisiert und so modelliert, dass unterbrechungen im System vermieden werden.\\ 
 
-Das Primärziel dieser Analyse ist es, dabei einen möglichst reibungslosen Ablauf der Kranken und Taxitransporte für menschliche Individuen zu ermöglichen. Davon würde die Zielgruppe, spezifisch die Bewohner der Stadt, nachhaltig profitieren, indem die Zahl der Verkehrsunfälle und Staus sowie die Dauer des Fahrens auf ein Minimum reduziert werden – somit Verletze stets rechtzeitig zur Behandlung im Krankenhaus eintreffen und Privatpersonen schnellstmöglich und flexibel jeden Ort der Stadt erreichen. Die Umsetzung des Systems birgt jedoch zahlreiche Herausforderungen, die im Verlauf dieser Analyse betrachtet werden. Falls die verschiedenen Hürden gemeistert werden, könnte langfristig ein einzelnes Unternehmen die gesamte Versorgungstransportinfrastruktur einer Großstadt übernehmen. Das System wird von sich aus selbstständig und vollständig autonom agieren. Unter Beachtung von Sicherheitsregeln, sollten damit keine weiteren Vorkenntnisse notwendig sein, um die Servicedienste zu nutzen. Gerade für Patienten sollten die Roboter den Fahrvorgang dabei mit kleinstmöglichem Aufwand und Belastung gestalten und für Taxiservicegäste den schnellstmöglichen und sichersten Weg anbieten. \\
+Es gibt außerdem einen Server, welcher vom Krankenhaus oder Taxikunden Aufträge entgegennehmen kann. 
+Der Server ist dafür zuständig, dass die Aufträge sinnvoll an Roboter verteilt werden. 
+Der reibungslose Ablauf dieser Verteilung ist ein wichtiges Element des in diesem Analysedokument zu modellierenden Sachverhalts. 
+So müssen zum Beispiel Krankenhaustransporte immer über Taxitransporte priorisiert werden, und es dürfen grundsätzlich nur Aufträge an Roboter verteilt werden, wenn diese genug Akkustand haben, um sie durchzuführen.\\
+
+Ein weiterer Gegenstand dieses Dokuments ist die Modellierung der Kommunikation zwischen dem Server, den Robotern, und dem Krankenhaus beziehungsweise Taxikunden.\\
+
+Die Automatisierung des Verkehrs ist eine große Aufgabe der kommenden Jahrzehnte - wenn diese fertig durchgesetzt ist würde sie aber auch viele Probleme Lösen beziehungsweise vorhandene Lösungen optimieren. Ein zentral verwaltetes Verkehrssystem wird Fahrtzeiten erheblich kürzen und so, wie auch in diesem Projekt modelliert, Patienten eine bessere und schnellere gesundheitliche Versorgung garantieren. Auch alle anderen Verkehrswege, so wie in unserem Falle Taxitransporte, profitieren von den optimierten Abläufen.\\
+
+Oberste Priorität ist natürlich die Sicherheit und Unfallfreiheit der Verkehrsteilnehmer und die schnellstmögliche Versorgung bzw. Erreichbarkeit der Patienten. Wenn dies gewährleistet ist, gilt es für alle anderen Verkehrsteilnehmer die Abläufe so schnell und effizient wie möglich zu gestalten.\\
+
+ 
 
 \pagebreak
