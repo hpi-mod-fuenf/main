@@ -1,93 +1,96 @@
 \section{Produktumgebung}
 
   \subsection{Systemumgebung}
-  Im nachfolgenden Abschnitt werden die bekannten Komponenten des Systems
-  und die dazugehörigen Schnittstellen beschrieben.
-  Grundsätzlich besteht
-  das System aus mindestens einer \emph{RobotUnit}, hierfür geeigneten
-  \emph{Chargern} und einem zentralen \emph{Server}.
+  Im nachfolgenden Abschnitt werden die bekannten Komponenten des Systems und die dazugehörigen Schnittstellen beschrieben.
+  Grundsätzlich besteht das System aus mindestens einer \emph{RobotUnit}, hierfür geeigneten \emph{Chargern} und einem zentralen \emph{Server}, über welchen das \emph{Hospital} und die \emph{Taxi-Customer} mithilfe der \emph{TaxiApp} mit dem System interagieren können.
 
   \subsubsection{Hardwareumgebung}
 
-  \paragraph{Server}\label{server}
+    \paragraph{Server}\label{server}
 
-  Es existiert ein zentraler \emph{Server}, der über ausreichende Ressourcen verfügt.
-  Dieser \emph{Server} besitzt einen zentralen Hauptprozessor, den \emph{ServerCore}, über den er auf alle weiteren Komponenten zugreifen kann.
-  Zu diesen Komponenten zählt der \emph{WlanAdapter}, über welchen der \emph{Server} auf das Funknetzwerk zugreifen kann.
-  Über dieses Funknetzwerk können alle \emph{RobotUnits} erreicht werden, sodass Nachrichten an sie abgesetzt werden können und Nachrichten, die über das Funknetzwerk für den \emph{Server} übertragen wurden, empfangen werden können.
-  Über eine weitere Komponente, den \emph{HospitalAdapter}, kann der \emph{Server} mit dem zentralen \emph{Hospital} kommunizieren.
-  Die Kommunikation mit den Kunden der Taxi-App wird ebenfalls über eine gesonderte Komponente, den \emph{TaxiAppAdapter}, mit ähnlicher Funktionalität realisiert.
+    Es existiert ein zentraler \emph{Server}, der über ausreichende Ressourcen verfügt.
+    Dieser \emph{Server} besitzt einen zentralen Hauptprozessor, den \emph{ServerCore}, über den er auf alle weiteren Komponenten zugreifen kann.
+    Zu diesen Komponenten zählt der \emph{NetworkAccess}, über welchen der \emph{Server} auf das Funknetzwerk zugreifen kann.
+    Über dieses Funknetzwerk können alle \emph{RobotUnits} erreicht werden, sodass Nachrichten an sie abgesetzt werden können und Nachrichten, die über das Funknetzwerk für den \emph{Server} übertragen wurden, empfangen werden können.
+    Über eine weitere Komponente, den \emph{HospitalAdapter}, kann der \emph{Server} mit dem zentralen \emph{Hospital} kommunizieren.
+    Die Kommunikation mit den \emph{Taxi-Customers} wird ebenfalls über die gesonderte Komponente \emph{TaxiApp} mit ähnlicher Funktionalität realisiert.
 
-  \paragraph{RobotUnit}\label{robotunit}
+    \paragraph{RobotUnit}\label{robotunit}
 
-  Das Transportvehikel \emph{RobotUnit} stellt die Kernkomponente der Hardwareumgebung dar.
-  Über den zentralen Hauptprozessor \emph{RobotCore} kann auf alle weiteren Komponenten zugegriffen werden.
-  Als Antrieb nutzt das Transportvehikel die \emph{RobotEngine}: einen omnidirektionalen Antrieb mit 3 Motoren, über welchen es sich vorwärts, nach rechts, nach links oder durch Drehen um die eigene Achse bewegen lässt.
-  Der Antrieb ermöglicht eine Fahrt in verschiedenen Geschwindigkeiten.
-  Die \emph{RobotUnit} verfügt außerdem über die Komponente \emph{DistanceSensor} bestehend aus 9 Infarotdistanzsensoren, die an der kreisförmigen Außenwand des Vehikels im Abstand von jeweils 40 Grad angeordnet sind.
-  Über sie ist die Feststellung der Entfernung des Vehikels von allen bewegten und unbewegten Objekten in der Umgebung möglich.
-  Bei einer Kollision der \emph{RobotUnit} mit einem anderen Objekt wird dieses Ereignis über die Sensorik der Kollisionserkennung \emph{Bumper} festgestellt, worauf weitere Schritte eingeleitet werden können.
-  Über das GPS-Modul \emph{NorthStar} kann die aktuelle Lage und Ausrichtung der \emph{RobotUnit} ermittelt werden.
-  Zur Ermöglichung von Kommunikation besitzt die \emph{RobotUnit} einen \emph{WlanAdapter}, über welchen Nachrichten über ein zur Verfügung stehendendes Funknetzwerk gesendet und empfangen werden können.
-  Jede \emph{RobotUnit} verfügt über einen Akkumulator \emph{Battery}, der zur Energieversorgung dient.
-  Eine ausreichende Ladung des Akkumulators ist zum Betrieb der \emph{RobotUnit} unbedingt erforderlich.
-  Der Akkumulator kann über einen \emph{Charger} geladen werden.
+    Das Transportvehikel \emph{RobotUnit} stellt die Kernkomponente der Hardwareumgebung dar.
+    Über den zentralen Hauptprozessor \emph{RobotCore} kann auf alle weiteren Komponenten zugegriffen werden.
+    Als Antrieb nutzt das Transportvehikel die \emph{RobotEngine}: einen omnidirektionalen Antrieb mit 3 Motoren, über welchen es sich vorwärts, nach rechts, nach links oder durch Drehen um die eigene Achse bewegen lässt.
+    Der Antrieb ermöglicht eine Fahrt in verschiedenen Geschwindigkeiten.
+    Die \emph{RobotUnit} verfügt außerdem über die Komponente \emph{DistanceSensor} bestehend aus 9 Infarotdistanzsensoren, die an der kreisförmigen Außenwand des Vehikels im Abstand von jeweils 40 Grad angeordnet sind.
+    Über sie ist die Feststellung der Entfernung des Vehikels von allen bewegten und unbewegten Objekten in der Umgebung möglich.
+    Bei einer Kollision der \emph{RobotUnit} mit einem anderen Objekt wird dieses Ereignis über die Sensorik der Kollisionserkennung \emph{Bumper} festgestellt, worauf weitere Schritte eingeleitet werden können.
+    Über das GPS-Modul \emph{NorthStar} kann die aktuelle Lage und Ausrichtung der \emph{RobotUnit} ermittelt werden.
+    Zur Ermöglichung von Kommunikation besitzt die \emph{RobotUnit} einen \emph{WlanAdapter}, über welchen Nachrichten über ein zur Verfügung stehendendes Funknetzwerk gesendet und empfangen werden können.
+    Jede \emph{RobotUnit} verfügt über einen Akkumulator \emph{Battery}, der zur Energieversorgung dient.
+    Eine ausreichende Ladung des Akkumulators ist zum Betrieb der \emph{RobotUnit} unbedingt erforderlich.
+    Der Akkumulator kann über einen \emph{Charger} geladen werden.
 
-  \paragraph{Charger}\label{charger}
+    \paragraph{Charger}\label{charger}
 
-  Es existieren die Ladestationen \emph{Charger}, über die sich die \emph{Battery} der \emph{RobotUnit} vollständig laden lässt.
-  Eine Ladestation ist dabei genau einer \emph{RobotUnit} zugeordnet.
-  Zum Laden muss eine \emph{RobotUnit} seine Ladestation anfahren, worauf die Ladung sofort beginnt.
-  Jede Ladestation verfügt über eine feste Position.
+    Es existieren die Ladestationen \emph{Charger}, über die sich die \emph{Battery} der \emph{RobotUnit} vollständig laden lässt.
+    Eine Ladestation ist dabei genau einer \emph{RobotUnit} zugeordnet.
+    Zum Laden muss eine \emph{RobotUnit} seine Ladestation anfahren, worauf die Ladung sofort beginnt.
+    Jede Ladestation verfügt über eine feste Position.
 
-    \subsubsection{Softwareumgebung}
+    \paragraph{Hospital}\label{hospital}
+
+    Es existiert außerdem ein zentrales Krankenhaus, das \emph{Hospital}.
+    Das \emph{Hospital} befindet sich an einer festen Position, die die \emph{RobotUnits} anfahren können, um \emph{Patients} dem Personal zu übergeben.
+    Über die \emph{Hospital}-Komponente des Servers kann das \emph{Hospital} auf nicht näher spezifizierte Weise mit dem Server kommunizieren.
+
+  \subsubsection{Softwareumgebung}
 
     \paragraph{Server}\label{server}
     		Auf dem \emph{Server} läuft, da nicht anders angegeben, ein Standard-Betriebssystem.
     		Darauf läuft eine Laufzeitumgebung, die die benötigten Methoden zur Kommunikation mit den \emph{RobotUnits} bereitstellt.
-    		Die wichtigste Methode, ist die CallRobot() Methode um eine \emph{RobotUnit} anzurufen und einen Datenaustausch herzustellen.
-    	\subparagraph{WlanAdapter}\label{wlanadapter}
-    		Der \emph{WlanAdapter} ist die Komponente des \emph{Servers}, mit der er die Verbindung zu den \emph{RobotUnits} herstellt. Hierüber werden Nachrichten ausgetauscht.
+    	\subparagraph{NetworkAccess}\label{networkaccess}
+    		Der \emph{NetworkAccess} ist die Schnittstelle des \emph{Servers}, mit der er die Verbindung zu den \emph{RobotUnits} herstellt.
+        Hierüber werden Nachrichten ausgetauscht.
     		Dementsprechend stehen Methoden zum Senden einer Message, registrieren eines IMessageHandlers, auslesen von NetworkIDs usw. bereit.
     	\subparagraph{HospitalAdapter}\label{hospital}
     		Bei \emph{HospitalAdapter} handelt es sich um die \emph{Server}-Komponente, die die Kommunikation mit dem \emph{Hospital} gewährleistet.
     		Dabei werden zum einen Methoden bereitgestellt, die das \emph{Hospital} über ein Interface aufrufen kann, um Aufträge zu verteilen und dem \emph{Hospital} Informationen über den aktuellen Stand des Auftrags mitzuteilen (getPatientAt(), patientOnBoard() sowie patientArrived()), und zum anderen kann die Komponente über ein Interface Methoden des \emph{Hospitals} aufrufen, um diesem Informationen zu übermitteln (informRobotArrivedAtPatient() und informRobotArrivedAtHospital()).
-      \subparagraph{TaxiAppAdapter}
-      Die \emph{TaxiAppAdapter}-Komponente ist ein Contatiner, über den die Kommunikation des Servers mit den Apps der Benutzer der nicht-modellierten mobilen Taxi-Applikation realisiert wird.
-      Der Container stellt ein Taxi-App Objekt für jeden Benutzer bereit.
-      Die Kommunikation findet über mehrere Schnittstellen statt.
-      Über das IAppContainer Interface, kann der Server Taxi-App Objekte bekommen.
-      Über die Interfaces ITaxiAppUserOutput und ITaxiAppUserInputHandler kann der Server mit den einzelnen Apps und damit mit den Kunden kommunizieren.
-      Das ITaxiApp Interface stellt die Methoden zum Zugriff aud die Kommunikationsinterfaces, sowie eine Methode zur Ermittlung der App-ID bereit.
+      \subparagraph{TaxiApp}
+        Die \emph{TaxiApp}-Komponente ist ein Container, über den die Kommunikation des \emph{Servers} mit den Apps der \emph{Taxi-Customers}, den nicht-modellierten mobilen Taxi-Applikationen, realisiert wird.
+        Der Container stellt ein Taxi-App Objekt für jeden Benutzer bereit.
+        Die Kommunikation findet über mehrere Schnittstellen statt.
+        Über das \emph{IAppContainer}-Interface, kann der \emph{Server} Taxi-App Objekte bekommen.
+        Über die Interfaces \emph{ITaxiAppUserOutput} und \emph{ITaxiAppUserInputHandler} kann der \emph{Server} mit den einzelnen Apps und damit mit den \emph{Taxi-Customers} kommunizieren.
+        Das \emph{ITaxiApp}-Interface stellt die Methoden zum Zugriff aud die Kommunikationsinterfaces, sowie eine Methode zur Ermittlung der App-ID bereit.
     \paragraph{RobotUnit}\label{robotunit}
     		Nachfolgend werden die zentralen Softwareschnittstellen der \emph{RobotUnit} beschrieben.
     	\subparagraph{RobotCore}\label{robotcore}
     		Auf der zentralen Recheneinheit der \emph{RobotUnit}, dem \emph{RobotCore}, läuft eine JavaRuntimeEnvironment, in der sich die gesamte Steuerung und die Verwendung der Komponenten und Schnittstellen abspielt.
-    		Die einzelnen Komponenten mit ihren Methoden werden im folgenden näher erläutert.
+    		Die einzelnen Komponenten mit ihren Methoden werden im Folgenden näher erläutert.
     	\subparagraph{IRSensorDistance}\label{irsensordistance}
-    		Die \emph{IRSensorDistance} Komponente stellt drei Methoden bereit, mit denen die Distanz und der Winkel des entdeckten Objekts und der an der Entdeckung beteiligte Infrarotsensor erfasst und in Arrays gespeichert werden.
+    		Die \emph{IRSensorDistance}-Schnittstelle stellt drei Methoden bereit, mit denen die Distanz und der Winkel des entdeckten Objekts und der an der Entdeckung beteiligte Infrarotsensor erfasst und in Arrays gespeichert werden.
     	\subparagraph{IDistanceSensor}\label{idistancesensor}
     		Die besagten Arrays kann der \emph{IDistanceSensor} auslesen.
-    		Er hat dazu ebenfalls drei Methoden. getIRDistances() gibt ein Array mit allen erfassten Objekten zurück, getIRDistancesInRange() gibt ebenfalls ein Array zurück, das allerdings nur die Objekte in einem gewissen Abstand enthält und getNearestIRDistances() gibt nur das nächste Objekt zurück.
+    		Er hat dazu ebenfalls drei Methoden: getIRDistances() gibt ein Array mit allen erfassten Objekten zurück, getIRDistancesInRange() gibt ebenfalls ein Array zurück, das allerdings nur die Objekte in einem gewissen Abstand enthält und getNearestIRDistances() gibt nur das nächste Objekt zurück.
     	\subparagraph{INorthStar}\label{inorthstar}
-    		Die Komponente \emph{INorthStar} ist für die Positionierung zuständig und greift dabei auf ein Device zur Standortbestimmung zurück.
+    		Die Schnittstelle \emph{INorthStar} ist für die Bestimmung der Positionierung zuständig und greift dabei auf ein Device zur Standortbestimmung zurück.
     		Sie hat zwei Methoden.
     		Eine liest die aktuelle Position aus, die andere die aktuelle Ausrichtung.
     		Die Position besteht dabei aus zwei float-Werten, einer x- und einer y-Koordinate.
-    	\subparagraph{WlanAdapter}\label{wlanadapter}
-    		Bei \emph{WlanAdapter} handelt es sich um die Komponente, mit der auf Seite der \emph{RobotUnit} die Kommunikation zwischen \emph{RobotUnit} und \emph{Server} ermöglicht wird.
-    		Entsprechend gibt es hier die gleichen Methoden zur Kommunikation, die auch die \emph{WlanAdapter}-Komponente des \emph{Servers} bereitstellt.
+    	\subparagraph{IWlanAdapter}\label{iwlanadapter}
+    		Bei \emph{IWlanAdapter} handelt es sich um die Schnittstelle, mit der auf Seite der \emph{RobotUnit} die Kommunikation zwischen \emph{RobotUnit} und \emph{Server} ermöglicht wird.
+    		Entsprechend gibt es hier die gleichen Methoden zur Kommunikation, die auch die \emph{IWlanAdapter}-Schnittstelle des \emph{Servers} bereitstellt.
     	\subparagraph{IBumperHandler}\label{ibumperhandler}
-    		\emph{IBumperHandler} ist die Komponente zum Umgang mit Zusammenstößen.
-    		Die Kollisionserkennung \emph{Bumper} registriert einen Aufprall und die \emph{IBumperHandler} Komponente stellt zwei Methoden zum Umgang mit dem Aufprall bereit.
+    		\emph{IBumperHandler} ist das Interface zum Umgang mit Zusammenstößen.
+    		Die Kollisionserkennung registriert über \emph{IBumper} einen Aufprall und das \emph{IBumperHandler}-Interface stellt zwei Methoden zum Umgang mit dem Aufprall bereit.
     	\subparagraph{IDrive}\label{idrive}
     		Die Bewegungssteuerung der \emph{RobotUnit} heißt \emph{IDrive}.
     		Sie stellt vier Methoden bereit.
     		Die Methoden driveToPosition() und driveToPositionCautiously() erwarten beide eine Position, eine Geschwindigkeit und einen ArrivalHandler, der eine Methode zur Meldung aufruft, wenn die \emph{RobotUnit} am Ziel angekommen ist.
     		Die Methoden sind beide dafür da, ein gegebenes Ziel anzufahren, wobei bei der Zweiten die Höchstgeschwindigkeit geringer ist.
-    		 Die Höchstgeschwindigkeit für Cautiously, Regular und Fast Methoden stellt die \emph{IDrive} Komponente bereit, wobei Cautiously $\leq$ Regular $\leq$ Fast gilt.
-    		 Die anderen beiden Methoden, drive() und driveCautiously() unterscheiden sich ebenfalls nur in der Höchstgeschwindigkeit und ermöglichen ein manuelles Fahren.
-    		 Dabei erwarten sie die Drehung der \emph{RobotUnit} als float-Wert sowie die Vorwärts- und die Seitwärtsgeschwindigkeit, ebenfalls als float-Wert.
+    		Die Höchstgeschwindigkeit für Cautiously, Regular und Fast Methoden stellt das \emph{IDrive}-Interface bereit, wobei Cautiously $\leq$ Regular $\leq$ Fast gilt.
+    		Die anderen beiden Methoden, drive() und driveCautiously() unterscheiden sich ebenfalls nur in der Höchstgeschwindigkeit und ermöglichen ein manuelles Fahren.
+    		Dabei erwarten sie die Drehung der \emph{RobotUnit} als float-Wert sowie die Vorwärts- und die Seitwärtsgeschwindigkeit, ebenfalls als float-Wert.
     	\subparagraph{IBattery}\label{ibattery}
     		Bei \emph{IBattery} handelt es sich um die Akkusteuerung der \emph{RobotUnit}.
     		Sie stellt zwei Methoden bereit.
@@ -101,7 +104,7 @@
 
     \begin{figure}[H]
       \centering
-      \includegraphics[width=1.2\textwidth, angle=90]{img/2-Analyse-4-Produktumgebung}
+      \includegraphics[width=1.25\textwidth, angle=90]{img/2-Analyse-4-Produktumgebung}
       \caption{Verteilungsdiagramm}
       \label{fig:4-1-3-verteilungsdiagramm}
     \end{figure}
