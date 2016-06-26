@@ -20,13 +20,17 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 	\item Wir starten das System mit vollgeladenen Akkus für jeden Roboter
 	\item Es existiert genau ein Hospital
 	\item Die Kommunikation funktioniert zuverlässig, insbesondere kommen alle gesendeten \textit{Messages} auch bei dem Empfänger ungeschädigt an. Dazu nehmen wir auch an, dass die Latenz vernachlässigbar klein ist.
-	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das Gleiche gilt für Ladestationen.
+	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das Gleiche gilt für Ladestationen, und sind prinzipiell mit einer Akkuladung erreichbar.
+	\item Der Batterieverbrauch bei Robotern ist in einem linearen Verhältnis zur zurückgelegten Strecke.
 	\item Bei den beweglichen Objekten wird davon ausgegangen, dass es sich im Verkehrsbetrieb ausschließlich um andere Roboter handelt. 
 	Für die unbeweglichen Objekte ist es notwendig, dass ihre Position unveränderlich ist.
+	\item Im Falle, dass ein Roboter kaputt geht, wird dieser nach einer endlichen Zeit von einem externen, nicht modellierten Unternehmen repariert und kann von seiner letzten Position aus wieder fahren.
+	\item Ein Patient ist immer von Helfenden umgeben, die ermöglichen, dass der Patient auf den Roboter geladen wird, und nach der Verladung diesbezüglich das Krankenhaus benachrichtigen.
 	\item Wenn ein Kunde ein Taxi bestellt und dieses ankommt, steigt dieser auch zeitnah ein und nimmt seine Fahrt wahr.
-	\item Der Taxikunde schließt nach Ankunft bei seinem Ziel die Taxifahrt ab. Es gibt also eine entsprechende Nachricht an das System.
+	\item Der Taxikunde schließt nach Ankunft bei seinem Ziel die Taxifahrt ab. Er schickt über die TaxiApp also eine entsprechende Nachricht an das System.
 \end{enumerate}
 
+\pagebreak
 
 		\subsection{Glossar}
 
@@ -111,7 +115,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
 			Dann wird der \emph{Robot} nach Wahl des besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
 
-			\subsubsection{Beschreibung zu 3: Take Patient to Hospital}
+			\subsubsection{Beschreibung zu 3: Take Customer to Destination}
 
 			\begin{table}[H]
 				\centering
