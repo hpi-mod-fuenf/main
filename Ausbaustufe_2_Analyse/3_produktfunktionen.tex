@@ -48,7 +48,35 @@
 			Über diesen Anwendungsfall können Aufträge und Anforderungen an das Taxisystem durch Nutzer (\emph{Hospital} und \emph{Customer}) gestellt werden.
 			Es findet eine Unterscheidung des anfragenden Nutzers statt, sodass Krankenfahrten priorisiert werden. \\ Sollte eine Fahrt auf Anfrage des Krankenhauses nicht sofort möglich sein, lehnt das System den Auftrag ab. Im Falle eines normalen Taxikunden (\emph{Customer}) wird der Auftrag, sofern kein \emph{Robot} bereit steht, in eine Warteschlange eingereiht.
 			
+				\subsubsection*{Szenario für den Standardablauf (Erfolg)}
+	
+				\begin{table}[H]
+					\centering
+					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
+					\hline
+					Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
+					1 & \emph{Customer} bzw. \emph{Hospital}  & \emph{Customer} bzw. \emph{Hospital} bestellen einen \emph{Robot} \\
+					2 & \emph{Server} & \emph{Robot} fährt zum \emph{Customer} bzw. \emph{Hospital}  \\
+					\hline
+					\end{tabularx}
+				\end{table}
+			\subsubsection*{Szenarien für alternative Abläufe\\ (Misserfolg oder Umwege zum Erfolg)}	
+					
+			\begin{table}[H]
+					\centering
+					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
+					\hline
+					Schritt & Bedingung für Alternative & Beschreibung der Aktivität \\ \hline
+					1 & Es ist kein \emph{Robot} verfügbar & \emph{Server} lehtn beim \emph{Hospital} den Auftrag ab bzw. gibt beim \emph{Customer} eine Warteschlange zurück \\
+					\hline
+					\end{tabularx}
+				\end{table}
+				
+				
+			
 			%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+			
+		
 			
 			\pagebreak
 	
