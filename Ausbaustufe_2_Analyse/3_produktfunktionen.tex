@@ -35,18 +35,18 @@
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 					\hline
 					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
-					\textbf{Ziel des Use Cases:} & \emph{Customer} sowie \emph{Hospital} können eine Anforderung (mit unterschiedlicher Dringlichkeit) an das System stellen. \\ \hline
+					\textbf{Ziel des Use Cases:} & \emph{Customer} sowie \emph{Hospital} können eine Anforderung (mit unterschiedlicher Dringlichkeit) an das \emph{Server} stellen. \\ \hline
 					\textbf{Umgebende Systemgrenze:} & Gesamtsystem \\ \hline
 					\textbf{Vorbedingung:} & \emph{Customer} bzw. \emph{Hospital} verlangen ein Transportvehikel. \\ \hline
 					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Auftrag wird ausgeführt. \\ \hline
 					\textbf{Beteiligte Nutzer:} & \emph{Customer} bzw. \emph{Hospital}, \emph{Server} und \emph{Robot Unit} \\ \hline
-					\textbf{Auslösendes Ereignis:} & \emph{Customer} bzw \emph{Hospital} schickt einen konkreten Auftrag an das System. \\
+					\textbf{Auslösendes Ereignis:} & \emph{Customer} bzw \emph{Hospital} schickt einen konkreten Auftrag an den \emph{Server}. \\
 					\hline
 				\end{tabularx}
 			\end{table}
 			
 			Über diesen Anwendungsfall können Aufträge und Anforderungen an das Taxisystem durch Nutzer (\emph{Hospital} und \emph{Customer}) gestellt werden.
-			Es findet eine Unterscheidung des anfragenden Nutzers statt, sodass Krankenfahrten priorisiert werden. \\ Sollte eine Fahrt auf Anfrage des Krankenhauses nicht sofort möglich sein, lehnt das System den Auftrag ab. Im Falle eines normalen Taxikunden (\emph{Customer}) wird der Auftrag, sofern kein \emph{Robot} bereit steht, in eine Warteschlange eingereiht.
+			Es findet eine Unterscheidung des anfragenden Nutzers statt, sodass Krankenfahrten priorisiert werden. \\ Sollte eine Fahrt auf Anfrage des Krankenhauses nicht sofort möglich sein, lehnt der \emph{Server} den Auftrag ab. Im Falle eines normalen Taxikunden (\emph{Customer}) wird der Auftrag, sofern kein \emph{Robot} bereit steht, in eine Warteschlange eingereiht.
 			
 				\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 	
@@ -88,17 +88,17 @@
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 						\hline
 						\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
-						\textbf{Ziel des Use Cases:} & Dem System signalisieren, dass ein \emph{Customer} in ein Taxi (\emph{Robot}) gestiegen ist. \\ \hline
+						\textbf{Ziel des Use Cases:} & Dem \emph{Server} signalisieren, dass ein \emph{Customer} in ein Taxi (\emph{Robot}) gestiegen ist. \\ \hline
 						\textbf{Umgebende Systemgrenze:} & Gesamtsystem \\ \hline
 						\textbf{Vorbedingung:} & Das Taxi (\emph{Robot}) erreicht den \emph {Customer} \\ \hline
 						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Das Taxi (\emph{Robot}) setzt seine Fahrt mit zugestiegenem \emph{Customer} in Richtung dessen Ziel fort. \\ \hline
 						\textbf{Beteiligte Nutzer:} & \emph{Customer} und \emph{Server} \\ \hline
-						\textbf{Auslösendes Ereignis:} & Der \emph{Customer} bestätigt dem System, dass er in das Taxi (\emph{Robot}) eingestiegen ist. \\
+						\textbf{Auslösendes Ereignis:} & Der \emph{Customer} bestätigt dem \emph{Server}, dass er in das Taxi (\emph{Robot}) eingestiegen ist. \\
 						\hline
 					\end{tabularx}
 				\end{table}
 				
-				Der \emph{Customer} steigt in das Taxi ein und teilt dies dem System mit.
+				Der \emph{Customer} steigt in das Taxi ein und teilt dies dem \emph{Server} mit.
 					\subsubsection*{Szenario für den Standardablauf (Erfolg)}
 	
 				\begin{table}[H]
@@ -107,7 +107,7 @@
 					\hline
 					Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
 					1 & \emph{Customer} & \emph{Customer} steigt in Taxi ein \\
-					2 & \emph{Hospital} & \emph{Customer} teilt dem System mit, dass er eingestiegen ist \\
+					2 & \emph{Hospital} & \emph{Customer} teilt dem \emph{Server} mit, dass er eingestiegen ist \\
 					\hline
 					\end{tabularx}
 				\end{table}
@@ -132,7 +132,7 @@
 					\end{tabularx}
 				\end{table}
 				
-				Nach Prüfen der Verfügbarkeit, kann der \emph{Customer} entscheiden, einen Auftrag abzusenden (\emph{Send order}). Falls nicht, ist keine weitere Interaktion mit dem System erforderlich.
+				Nach Prüfen der Verfügbarkeit, kann der \emph{Customer} entscheiden, einen Auftrag abzusenden (\emph{Send order}). Falls nicht, ist keine weitere Interaktion mit dem \emph{Server} erforderlich.
 				
 				%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
 				
@@ -146,7 +146,7 @@
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 						\hline
 						\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
-						\textbf{Ziel des Use Cases:} & \emph{Customer} kann eine gestellte Anfrage an das System zurückziehen. \\ \hline
+						\textbf{Ziel des Use Cases:} & \emph{Customer} kann eine gestellte Anfrage an den \emph{Server} zurückziehen. \\ \hline
 						\textbf{Umgebende Systemgrenze:} & \emph{Server}, \emph{Robot Unit} \\ \hline
 						\textbf{Vorbedingung:} & Der \emph{Customer} überlegt sich, dass er die Bestellung eines Taxis stornieren möchte. \\ \hline
 						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der Auftrag wird gelöscht und der \emph{Robot} steht für andere Fahrten wieder zur Verfügung. \\ \hline
