@@ -243,31 +243,38 @@
 				
 				\pagebreak
 		
-			\subsection*{Beschreibung zu Use Case \emph{1.7.}: Inform about arrival, TODO}
-			
-			
-			
-				
-				\subsubsection*{Charakterisierende Informationen}
-				
-				\begin{table}[H]
-					\centering
-					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
-						\hline
-						\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
-						\textbf{Ziel des Use Cases:} & TODO \\ \hline
-						\textbf{Umgebende Systemgrenze:} & TODO \\ \hline
-						\textbf{Vorbedingung:} & TODO \\ \hline
-						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & TODO \\ \hline
-						\textbf{Beteiligte Nutzer:} & TODO \\ \hline
-						\textbf{Auslösendes Ereignis:} & TODO \\
-						\hline
-					\end{tabularx}
-				\end{table}
-				
-				TODO
-				
-				%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+		\subsection{Beschreibung zu Use Case \emph{1.7}: Inform about arrival}
+
+			\subsubsection*{Charakterisierende Informationen}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+				\hline
+				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital\\ \hline
+				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ankunft dem Krnakenhaus mitzuteilen\\ \hline
+				\textbf{Umgebende Systemgrenze:} & \emph{Robot}\\ \hline
+				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht die \emph{Position} des Patienten\\ \hline
+				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} wartet, bis er beladen wurde\\ \hline
+				\textbf{Beteiligte Nutzer:} & \emph{Robot}\\ \hline
+				\textbf{Auslösendes Ereignis:} & \emph{Robot} erreicht Patienten\\
+				\hline
+				\end{tabularx}
+			\end{table}
+
+			Der \emph{Robot} erreicht seine vorgegebene \emph{Destination} und muss dem \emph{Hospital} mitteilen, dass er angekommen ist. 
+
+			\subsubsection*{Szenario für den Standardablauf (Erfolg)}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
+				\hline
+				Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
+				1 & Robot & \emph{Robot} informiert \emph{Server}, dass er angekommen ist. \\
+				\hline
+				\end{tabularx}
+			\end{table}
 				
 				\pagebreak
 		\subsection{Beschreibungen der Use Cases in der \emph{Robot Unit} Umgebung}
