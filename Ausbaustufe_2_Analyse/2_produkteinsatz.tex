@@ -28,6 +28,8 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 	\item Ein Patient ist immer von Helfenden umgeben, die ermöglichen, dass der Patient auf den Roboter geladen wird, und nach der Verladung diesbezüglich das Krankenhaus benachrichtigen.
 	\item Wenn ein Kunde ein Taxi bestellt und dieses ankommt, steigt dieser auch zeitnah ein und nimmt seine Fahrt wahr.
 	\item Der Taxikunde schließt nach Ankunft bei seinem Ziel die Taxifahrt ab. Er schickt über die TaxiApp also eine entsprechende Nachricht an das System.
+	\item Aufträge vom Krankenhaus kommen zunächst auf die vom Server verwaltete Warteliste und erhalten die Wartelisteposition als Nachricht. Wenn das Krankenhaus diese Wartelisteposition nicht passt, kann der Auftrag analog zum Taxiauftrag zurückgezogen werden.
+
 \end{enumerate}
 
 \pagebreak
@@ -122,12 +124,11 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 				\begin{tabularx}{\textwidth}{|p{3cm}|X|}
 				\hline
 				\textbf{Auslösendes Ereignis:} & Das \emph{Hospital} hat einen neuen Patienten registriert.\\ \hline
-				\textbf{Ergebnis:} & Der Robot ist zum \emph{Patient} gefahren, dieser wurde von Helfenden auf den \emph{Robot} geladen 
-				und der \emph{Robot} hat den \emph{Patient} zum \emph{Hospital} zurück gebracht.\\ \hline
+				\textbf{Ergebnis:} & Der \emph{Customer} wurde zu seiner \emph{Destination} gebracht.\\ \hline
 				\textbf{Mitwirkende:} &	Ein einzelner, autonomer \emph{Robot}, der \emph{Server} und das \emph{Hospital}. \\
 				\hline
 				\end{tabularx}
-				\label{tab:2-4-take-patient-to-hospital}
+				\label{tab:2-4-take-customer-to-destination}
 			\end{table}
 
 			Abbildung \ref{fig:2-4-take-patient-to-hospital-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Take Patient to Hospital} darstellt.
