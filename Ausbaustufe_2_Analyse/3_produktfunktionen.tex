@@ -215,29 +215,37 @@
 				\end{table}
 	
 		
-			\subsection*{Beschreibung zu Use Case \emph{1.6.}: Inform about unload, TODO}
+			\subsection*{Beschreibung zu Use Case \emph{1.6.}: Inform about unload}
 				\subsubsection*{Charakterisierende Informationen}
 				
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 						\hline
-						\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
-						\textbf{Ziel des Use Cases:} & TODO \\ \hline
-						\textbf{Umgebende Systemgrenze:} & TODO \\ \hline
-						\textbf{Vorbedingung:} & TODO \\ \hline
-						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & TODO \\ \hline
-						\textbf{Beteiligte Nutzer:} & TODO \\ \hline
-						\textbf{Auslösendes Ereignis:} & TODO \\
+						\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital  \\ \hline
+						\textbf{Ziel des Use Cases:} & Den \emph{Server} informieren, dass Patient vom \emph{Robot} entfernt wurde \\ \hline
+						\textbf{Umgebende Systemgrenze:} & \emph{Server} \\ \hline
+						\textbf{Vorbedingung:} & \emph{Robot} ist am Ziel angekommen \\ \hline
+						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Patient wurde erfolgreich vom \emph{Robot} entfernt und der \emph{Robot} steht für neue Aufgaben zur Verfügung \\ \hline
+						\textbf{Beteiligte Nutzer:} & \emph{Hospital}, \emph{Server} \\ \hline
+						\textbf{Auslösendes Ereignis:} & Patient wurde von Mitarbeitern des \emph{Hospitals} zur weiteren Behandlung abgeholt \\
 						\hline
 					\end{tabularx}
 				\end{table}
 				
-				TODO
+				Dieser Use Case dient dazu, den \emph{Server} zu informieren, dass der Patient sicher vom \emph{Robot} entfernt wurde und dadurch wieder für neue Aufgaben zur Verfügung steht. 
 				
-				%\subsubsection*{Beschreibung des allgemeinen Ablaufes}
-				
-				\pagebreak
+				\subsubsection*{Beschreibung des allgemeinen Ablaufes}
+					\begin{table}[H]
+					\centering
+					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
+					\hline
+					Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
+					1 & \emph{Hospital} & Patient wird vom Roboter entfernt \\
+					2 & \emph{Hospital} & \emph{Hospital} sendet Nachricht an {Server}, dass Patient vom \emph{Robot} entfernt wurde \\
+					\hline
+					\end{tabularx}
+				\end{table}
 		
 		\subsection{Beschreibung zu Use Case \emph{1.7}: Inform about arrival}
 
@@ -248,7 +256,7 @@
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 				\hline
 				\textbf{Übergeordneter elementarer Geschäftsprozess:} & TakePatientToHospital\\ \hline
-				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ankunft dem Krankenhaus mitzuteilen\\ \hline
+				\textbf{Ziel des Use Cases:} & Ziel ist es, dem \emph{Robot} zu ermöglichen seine Ankunft dem Krnakenhaus mitzuteilen\\ \hline
 				\textbf{Umgebende Systemgrenze:} & \emph{Server}\\ \hline
 				\textbf{Vorbedingung:} & Der \emph{Robot} erreicht die \emph{Position} des Patienten\\ \hline
 				\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Der \emph{Robot} wartet, bis er beladen wurde\\ \hline
