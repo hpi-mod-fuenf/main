@@ -2,23 +2,19 @@
 \section{Zielbestimmung}
 Die Aufgabe des Projektteams ist es, ein System zu entwickeln, das selbstfahrende Roboter in einer Stadt der Zukunft koordiniert. 
 Sie sollen sowohl für einen Krankentransport- als auch einen Taxiservicedienst eingesetzt werden. \\
-
 Es gibt eine feste Menge von Robotern, welche alle über Aktoren, Sensoren, und einem Ortungsgerät ausgestattet. 
-In dieser Stadt existieren keine Straßen mehr, aber es gibt statische Objekte und andere Verkehrsteilnehmer. 
+In dieser Stadt existieren keine Straßen mehr, aber es gibt statische Objekte und andere Verkehrsteilnehmer ( \textit{Obstacles} ). 
 Die Roboter sollen diese  eigenständig umfahren können und dabei weitesgehend Unfälle vermeiden. 
 Die Abläufe dieses Fahrsystems werden in diesem Analysedokument thematisiert und so modelliert, dass unterbrechungen im System vermieden werden.\\ 
-
 Es gibt außerdem einen Server, welcher vom Krankenhaus oder Taxikunden Aufträge entgegennehmen kann. 
 Der Server ist dafür zuständig, dass die Aufträge sinnvoll an Roboter verteilt werden. 
 Der reibungslose Ablauf dieser Verteilung ist ein wichtiges Element des in diesem Analysedokument zu modellierenden Sachverhalts. 
 So müssen zum Beispiel Krankenhaustransporte immer über Taxitransporte priorisiert werden, und es dürfen grundsätzlich nur Aufträge an Roboter verteilt werden, wenn diese genug Akkustand haben, um sie durchzuführen.\\
-
 Ein weiterer Gegenstand dieses Dokuments ist die Modellierung der Kommunikation zwischen dem Server, den Robotern, und dem Krankenhaus beziehungsweise Taxikunden.\\
 
-Die Automatisierung des Verkehrs ist eine große Aufgabe der kommenden Jahrzehnte - wenn diese fertig durchgesetzt ist würde sie aber auch viele Probleme Lösen beziehungsweise vorhandene Lösungen optimieren. Ein zentral verwaltetes Verkehrssystem wird Fahrtzeiten erheblich kürzen und so, wie auch in diesem Projekt modelliert, Patienten eine bessere und schnellere gesundheitliche Versorgung garantieren. Auch alle anderen Verkehrswege, so wie in unserem Falle Taxitransporte, profitieren von den optimierten Abläufen.\\
+Die Automatisierung des Verkehrs ist eine große Aufgabe der kommenden Jahrzehnte - wenn diese fertig durchgesetzt ist würde sie aber auch viele Probleme Lösen beziehungsweise vorhandene Lösungen optimieren. Ein zentral verwaltetes Verkehrssystem wird Fahrtzeiten erheblich kürzen und so, wie auch in diesem Projekt modelliert, Patienten eine bessere und schnellere gesundheitliche Versorgung garantieren. Auch alle anderen Verkehrswege, so wie in unserem Falle Taxitransporte, profitieren von den optimierten Abläufen.
 
 Oberste Priorität ist natürlich die Sicherheit und Unfallfreiheit der Verkehrsteilnehmer und die schnellstmögliche Versorgung bzw. Erreichbarkeit der Patienten. Wenn dies gewährleistet ist, gilt es für alle anderen Verkehrsteilnehmer die Abläufe so schnell und effizient wie möglich zu gestalten.\\
 
- 
 
 \pagebreak
