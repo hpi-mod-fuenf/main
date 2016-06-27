@@ -137,9 +137,9 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=1.4\textwidth]{img/DistributeOrder}
+				\includegraphics[width=\textwidth]{img/DistributeOrder}
 				\caption{Illustration von \emph{3: Distribute Order} durch Aktivitätendiagramm}
-				\label{fig:2-4-take-customer-to-destination-aktivitaetendiagramm}
+				\label{fig:2-4-distribute-order-aktivitaetendiagramm}
 			\end{figure}
 			
 		
@@ -149,9 +149,9 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 				\centering
 				\begin{tabularx}{\textwidth}{|p{3cm}|X|}
 				\hline
-				\textbf{Auslösendes Ereignis:} & Das \emph{Hospital} hat einen neuen Patienten registriert.\\ \hline
+				\textbf{Auslösendes Ereignis:} & Der \emph{Server} hat einem \emph{Robot} einen neuen \emph{Task} zugeteilt.\\ \hline
 				\textbf{Ergebnis:} & Der \emph{Customer} wurde zu seiner \emph{Destination} gebracht.\\ \hline
-				\textbf{Mitwirkende:} &	Ein einzelner, autonomer \emph{Robot}, der \emph{Server} und das \emph{Hospital}. \\
+				\textbf{Mitwirkende:} &	Ein einzelner, autonomer \emph{Robot}. \\
 				\hline
 				\end{tabularx}
 				\label{tab:2-4-take-customer-to-destination}
@@ -159,18 +159,12 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 
 			Abbildung \ref{fig:2-4-take-customer-to-destination-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Take Customer to Destination} darstellt.
 
-			Um die Verfügbarkeit eines \emph{Robots} anzufragen gibt das \emph{Hospital} die Adresse des \emph{Patient} an den \emph{Server}. 
-			Dieser wählt dann den passenden \emph{Robot} aus. 
-			Falls keiner verfügbar ist, lehnt der \emph{Server} den Krankentransport ab, anderenfalls wird dem \emph{Robot} dieser \emph{Task} zugewiesen. 
-			Darauf fährt der \emph{Robot} zum \emph{Patient}, wenn er angekommen ist, gibt er das über den \emph{Server} ans \emph{Krankenhaus} weiter und wartet bis die Helfenden den \emph{Patient} aufgeladen haben. 
-			Nach dem Aufladen informiert das \emph{Hospital} den \emph{Robot} und wartet selber bis der \emph{Patient} am \emph{Hospital} angekommen ist. 
-			Darauf fährt der \emph{Robot} zum \emph{Hospital} und wartet bis der \emph{Patient} abgeladen ist. 
-			Danach ist er wieder für alle weiteren \emph{Tasks} verfügbar.
+			Der \emph{Robot} hat eine \emph{Task} vom Server, die er aktuell bearbeiten möchte. Dabei gibt es in dem \emph{Task} gerade eine aktuell zu bearbeitende \emph{Destination}. Der \emph{Robot} fährt diese dann über \texttt{Drive to Destination} an. Im Normalfall wird diese \emph{Destination} dann auch erreicht, und der \emph{Robot} führt die nächste \emph{Destination} in dem \emph{Task} aus. Eine mögliche Unterbrechung in diesem Geschäftsprozess ist, dass der \emph{Robot} einen Unfall hat und dabei kaputt geht - dann fordert er über den Use-Case \texttt{Request Repair} beim Server Hilfe an. Der Geschäftsprozess wird auch unterbrochen, wenn der \emph{Robot} beim ausführen seines aktuellen \emph{Tasks} einen neuen \emph{Task} vom \emph{Server} zugeordnet bekommt. Dies passiert nur, wenn der neue \emph{Task} eine höhere Priorität hat, insbesondere wird immer ein Krankenhaustransport einem Taxitransport vorgezogen.
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=1.4\textwidth]{img/TakeCustomerToDestination}
-				\caption{Illustration von \emph{3: Take Patient to Hospital} durch Aktivitätendiagramm}
+				\includegraphics[width=\textwidth]{img/TakeCustomerToDestination}
+				\caption{Illustration von \emph{4: Take Customer to Destination} durch Aktivitätendiagramm}
 				\label{fig:2-4-take-customer-to-destination-aktivitaetendiagramm}
 			\end{figure}
 	\pagebreak
