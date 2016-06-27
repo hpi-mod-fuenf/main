@@ -11,16 +11,16 @@ Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungs
 
 Im dritten Punkt geht es darum, einen Ablauf zu modellieren, für den unglücklichen Fall, dass ein Roboter kaputt gehen sollte. Dies könnte zum Beispiel in einem Unfall passieren.\\
 
-Taxikunden können über eine Serviceapp Anfragen an das System schicken. Das System verwaltet eine Warteschlange, in die neue Aufträge aufgenommen werden. Andererseits können Kunden jederzeit ihre Anfrage abbrechen. Der Server muss die Aufträge in der Warteschlange effizient verteilen, im Speziellen muss eine Priorisierung der Roboter stattfinden, damit jedem Krankentransporter vor dem Taxiservice ein reibungsloser Fahrtverlauf garantiert wird.\\
+Taxikunden können über eine Serviceapp Anfragen an das System schicken. Das System verwaltet eine Warteschleife, in die neue Aufträge aufgenommen werden. Andererseits können Kunden jederzeit ihre Anfrage abbrechen. Der Server muss die Aufträge in der Warteschleife effizient verteilen, im Speziellen muss eine Priorisierung der Roboter stattfinden, damit jedem Krankentransporter vor dem Taxiservice ein reibungsloser Fahrtverlauf garantiert wird.\\
 
-Die Roboter müssen unter bestimmten Kriterien wie Nähe zum Ziel und aktuellem Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit die Kriterien wiederum Einfluss auf die Entscheidung des Servers nehmen.\\
+Die Roboter müssen unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit die Kriterien wiederum Einfluss auf die Entscheidung des Servers nehmen.\\
 
-Wenn ein Roboter bei einem Patienten oder einem Kunden angekommen ist, müssen Patient und mögliche Helfende bzw. der Fahrtgast benachrichtigt werden. Außerdem muss das Fahrverhalten bzw. die Geschwindigkeit an einen Transport mit Patienten angepasst werden.\\
+Wenn ein Roboter bei einem Patienten oder einem Kunden angekommen ist, müssen wiederum Patient und mögliche Helfende bzw. der Fahrtgast benachrichtigt werden. Außerdem muss das Fahrverhalten bzw. die Geschwindigkeit an einen Transport mit Patienten angepasst werden.\\
 
 An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 \begin{enumerate}
-	\item Wir starten das System mit voll geladenen Akkus für jeden Roboter
-	\item Es existiert genau ein Krankenhaus
+	\item Wir starten das System mit vollgeladenen Akkus für jeden Roboter
+	\item Es existiert genau ein Hospital
 	\item Die Kommunikation funktioniert zuverlässig, insbesondere kommen alle gesendeten \textit{Messages} auch bei dem Empfänger ungeschädigt an. Dazu nehmen wir auch an, dass die Latenz vernachlässigbar klein ist.
 	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das Gleiche gilt für Ladestationen, und sind prinzipiell mit einer Akkuladung erreichbar.
 	\item Der Batterieverbrauch bei Robotern ist in einem linearen Verhältnis zur zurückgelegten Strecke.
@@ -30,7 +30,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 	\item Ein Patient ist immer von Helfenden umgeben, die ermöglichen, dass der Patient auf den Roboter geladen wird, und nach der Verladung diesbezüglich das Krankenhaus benachrichtigen.
 	\item Wenn ein Kunde ein Taxi bestellt und dieses ankommt, steigt dieser auch zeitnah ein und nimmt seine Fahrt wahr.
 	\item Der Taxikunde schließt nach Ankunft bei seinem Ziel die Taxifahrt ab. Er schickt über die TaxiApp also eine entsprechende Nachricht an das System.
-	\item Aufträge vom Krankenhaus kommen, wenn aktuell alle Roboter bereits mit Krankenhausaufträgen besetzt sind, zunächst auf die vom Server verwaltete Warteliste und erhalten die Wartelisteposition als Nachricht. Wenn das Krankenhaus diese Wartelisteposition nicht passt, kann der Auftrag analog zum Taxiauftrag zurückgezogen werden.
+	\item Aufträge vom Krankenhaus kommen zunächst auf die vom Server verwaltete Warteliste und erhalten die Wartelisteposition als Nachricht. Wenn das Krankenhaus diese Wartelisteposition nicht passt, kann der Auftrag analog zum Taxiauftrag zurückgezogen werden.
 
 \end{enumerate}
 
@@ -139,9 +139,9 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=\textwidth]{img/DistributeOrder}
+				\includegraphics[width=1.4\textwidth]{img/DistributeOrder}
 				\caption{Illustration von \emph{3: Distribute Order} durch Aktivitätendiagramm}
-				\label{fig:2-4-distribute-order-aktivitaetendiagramm}
+				\label{fig:2-4-take-customer-to-destination-aktivitaetendiagramm}
 			\end{figure}
 			
 		
@@ -151,9 +151,9 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 				\centering
 				\begin{tabularx}{\textwidth}{|p{3cm}|X|}
 				\hline
-				\textbf{Auslösendes Ereignis:} & Der \emph{Server} hat einem \emph{Robot} einen neuen \emph{Task} zugeteilt.\\ \hline
+				\textbf{Auslösendes Ereignis:} & Das \emph{Hospital} hat einen neuen Patienten registriert.\\ \hline
 				\textbf{Ergebnis:} & Der \emph{Customer} wurde zu seiner \emph{Destination} gebracht.\\ \hline
-				\textbf{Mitwirkende:} &	Ein einzelner, autonomer \emph{Robot}. \\
+				\textbf{Mitwirkende:} &	Ein einzelner, autonomer \emph{Robot}, der \emph{Server} und das \emph{Hospital}. \\
 				\hline
 				\end{tabularx}
 				\label{tab:2-4-take-customer-to-destination}
@@ -161,14 +161,19 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 
 			Abbildung \ref{fig:2-4-take-customer-to-destination-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Take Customer to Destination} darstellt.
 
-			Der \emph{Robot} hat eine \emph{Task} vom Server, die er aktuell bearbeiten möchte. Dabei gibt es in dem \emph{Task} gerade eine aktuell zu bearbeitende \emph{Destination}. Der \emph{Robot} fährt diese dann über \texttt{Drive to Destination} an. Im Normalfall wird diese \emph{Destination} dann auch erreicht, und der \emph{Robot} führt die nächste \emph{Destination} in dem \emph{Task} aus. Eine mögliche Unterbrechung in diesem Geschäftsprozess ist, dass der \emph{Robot} einen Unfall hat und dabei kaputt geht - dann fordert er über den Use-Case \texttt{Request Repair} beim Server Hilfe an. Der Geschäftsprozess wird auch unterbrochen, wenn der \emph{Robot} beim ausführen seines aktuellen \emph{Tasks} einen neuen \emph{Task} vom \emph{Server} zugeordnet bekommt. Dies passiert nur, wenn der neue \emph{Task} eine höhere Priorität hat, insbesondere wird immer ein Krankenhaustransport einem Taxitransport vorgezogen.
+			Um die Verfügbarkeit eines \emph{Robots} anzufragen gibt das \emph{Hospital} die Adresse des \emph{Patient} an den \emph{Server}. 
+			Dieser wählt dann den passenden \emph{Robot} aus. 
+			Falls keiner verfügbar ist, lehnt der \emph{Server} den Krankentransport ab, anderenfalls wird dem \emph{Robot} dieser \emph{Task} zugewiesen. 
+			Darauf fährt der \emph{Robot} zum \emph{Patient}, wenn er angekommen ist, gibt er das über den \emph{Server} ans \emph{Krankenhaus} weiter und wartet bis die Helfenden den \emph{Patient} aufgeladen haben. 
+			Nach dem Aufladen informiert das \emph{Hospital} den \emph{Robot} und wartet selber bis der \emph{Patient} am \emph{Hospital} angekommen ist. 
+			Darauf fährt der \emph{Robot} zum \emph{Hospital} und wartet bis der \emph{Patient} abgeladen ist. 
+			Danach ist er wieder für alle weiteren \emph{Tasks} verfügbar.
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=\textwidth]{img/TakeCustomerToDestination}
-				\caption{Illustration von \emph{4: Take Customer to Destination} durch Aktivitätendiagramm}
+				\includegraphics[width=1.4\textwidth]{img/TakeCustomerToDestination}
+				\caption{Illustration von \emph{3: Take Patient to Hospital} durch Aktivitätendiagramm}
 				\label{fig:2-4-take-customer-to-destination-aktivitaetendiagramm}
 			\end{figure}
-	\pagebreak
 
 	
