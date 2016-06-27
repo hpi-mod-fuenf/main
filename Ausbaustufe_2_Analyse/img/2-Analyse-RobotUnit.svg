@@ -53,7 +53,7 @@
     ><rect fill="none" x="0" width="283" height="299" y="0" clip-path="url(#clipPath2)"
     /></g
     ><g font-size="11" transform="translate(163,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="113" xml:space="preserve" y="11" clip-path="url(#clipPath3)" stroke="none"
+    ><text x="112" xml:space="preserve" y="11" clip-path="url(#clipPath3)" stroke="none"
       >Robot Unit</text
     ></g
     ><g font-size="11" transform="translate(241,41)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -63,7 +63,7 @@
     ><ellipse rx="64.5" fill="none" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5"
     /></g
     ><g font-size="11" transform="translate(241,41)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="16" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
+    ><text x="14" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
       >2.1. Read Sensors</text
     ></g
     ><g font-size="11" transform="translate(241,134)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -73,8 +73,8 @@
     ><ellipse rx="64.5" fill="none" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5"
     /></g
     ><g font-size="11" transform="translate(241,134)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="20" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
-      >2.2. Assign Task</text
+    ><text x="15" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
+      >2.2. Perform Task</text
     ></g
     ><g font-size="11" transform="translate(241,225)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
     ><ellipse rx="64.5" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5" stroke="none"
@@ -83,11 +83,11 @@
     ><ellipse rx="64.5" fill="none" ry="31.5" clip-path="url(#clipPath4)" cx="64.5" cy="31.5"
     /></g
     ><g font-size="11" transform="translate(241,225)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="13" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
+    ><text x="12" xml:space="preserve" y="35" clip-path="url(#clipPath5)" stroke="none"
       >2.3. Continue Task</text
     ></g
     ><g font-size="11" transform="translate(10,231)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath6)" stroke="none"
+    ><text x="7" xml:space="preserve" y="11" clip-path="url(#clipPath6)" stroke="none"
       >Server</text
     ></g
     ><g stroke-linecap="butt" font-size="11" transform="translate(-29,62)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
