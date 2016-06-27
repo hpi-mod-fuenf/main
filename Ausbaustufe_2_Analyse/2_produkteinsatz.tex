@@ -117,7 +117,33 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
 			Dann wird der \emph{Robot} nach Wahl des besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
 
-			\subsubsection{Beschreibung zu 3: Take Customer to Destination}
+			\subsubsection{Beschreibung zu 3: Distribute Order}
+
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{\textwidth}{|p{3cm}|X|}
+				\hline
+				\textbf{Auslösendes Ereignis:} & Ein \emph{User} hat eine neue \emph{Order}, die von dem System bearbeitet werden soll.\\ \hline
+				\textbf{Ergebnis:} & Die \emph{Order} wird im System aufgenommen und entweder sofort oder sobald ein \emph{Robot} bereit ist bearbeitet.\\ \hline
+				\textbf{Mitwirkende:} &	Ein \emph{User} und der \emph{Server}. \\
+				\hline
+				\end{tabularx}
+				\label{tab:2-4-distribute Order}
+			\end{table}
+
+			Abbildung \ref{fig:2-4-distribute-order-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Distribute Order} darstellt.
+
+			Ein \emph{User} hat eine \emph{Order}, die das System bearbeiten soll. Diese \emph{Order} wird dem \emph{Server} mitgeteilt, woraufhin der \emph{Server} einen neuen \emph{Task} erstellt. Dieser wird je nach Verfügbarkeit der \emph{Robots} und Priorität des \emph{Tasks} an einen \emph{Robot} verteilt, oder in die vom \emph{Server} verwaltete Warteliste aufgenommen. Der \emph{User} kann über den Use-Case \texttt{Cancel Order} seine \emph{Order} jederzeit während der Ausführung dieses Geschäftsprozesses zurückziehen.
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=1.4\textwidth]{img/DistributeOrder}
+				\caption{Illustration von \emph{3: Distribute Order} durch Aktivitätendiagramm}
+				\label{fig:2-4-take-customer-to-destination-aktivitaetendiagramm}
+			\end{figure}
+			
+		
+			\subsubsection{Beschreibung zu 4: Take Customer to Destination}
 
 			\begin{table}[H]
 				\centering
@@ -131,7 +157,7 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 				\label{tab:2-4-take-customer-to-destination}
 			\end{table}
 
-			Abbildung \ref{fig:2-4-take-patient-to-hospital-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Take Patient to Hospital} darstellt.
+			Abbildung \ref{fig:2-4-take-customer-to-destination-aktivitaetendiagramm} zeigt ein Aktivitätendiagramm, welches den Ablauf des Geschäftsprozesses \emph{3: Take Customer to Destination} darstellt.
 
 			Um die Verfügbarkeit eines \emph{Robots} anzufragen gibt das \emph{Hospital} die Adresse des \emph{Patient} an den \emph{Server}. 
 			Dieser wählt dann den passenden \emph{Robot} aus. 
@@ -143,9 +169,9 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=1.4\textwidth, angle=90]{img/1-Analyse-2-Geschaeftsprozess_TakePatientToHospital}
+				\includegraphics[width=1.4\textwidth]{img/TakeCustomerToDestination}
 				\caption{Illustration von \emph{3: Take Patient to Hospital} durch Aktivitätendiagramm}
-				\label{fig:2-4-take-patient-to-hospital-aktivitaetendiagramm}
+				\label{fig:2-4-take-customer-to-destination-aktivitaetendiagramm}
 			\end{figure}
 	\pagebreak
 
