@@ -111,10 +111,10 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 			Dieser Prozess wird autonom vom \emph{Robot} ausgeführt. 
 			Er wird genau dann ausgeführt, wenn der Roboter einen \emph{Task} vom Server erhalten hat, den er erfüllen soll. 
 			Dabei wird vorher festgelegt, mit welcher Geschwindigkeit der \emph{Robot} die in dem \texttt{Task} enthaltene(n) \emph{Destination(s)} jeweils anfahren soll. 
-			Damit können bei einem Auftrag vom \emph{Hospital} Patienten schnell erreicht werden und sicher zur Klinik gebracht werden. 
-			Da der \emph{Robot} an dieser Stelle dem Server schon bestätigt hat, dass sein Akkustand für die Ausführung des \emph{Tasks} ausreichend ist, 
+			Damit können bei einem Auftrag vom \emph{Hospital} Patienten schneller erreicht werden und sicher zur Klinik gebracht werden. 
+			Da der \emph{Robot} an dieser Stelle dem \emph{Server} schon bestätigt hat, dass sein Akkustand für die Ausführung des \emph{Tasks} ausreichend ist, 
 			ist der einzige Sonderfall, den wir betrachten müssen, dass ein \emph{Obstacle} auf der direkten Linie zwischen \emph{Robot} und \emph{Destination} liegt. 
-			Dann wird der \emph{Robot} nach Wahl des besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen.
+			Dann wird der \emph{Robot} nach Wahl des besten Umweges das \emph{Obstacle} umfahren und wieder die Fahrt zur \emph{Destination} aufnehmen. Wie diese Umfahrung durchgeführt wird, ist eine Entwurfsentscheidung.
 
 			\subsubsection{Beschreibung zu 3: Distribute Order}
 
