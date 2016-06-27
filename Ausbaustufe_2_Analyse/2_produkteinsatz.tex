@@ -11,7 +11,7 @@ Als zweite Herausforderung gilt es einen möglichst reibungs- und unterbrechungs
 
 Im dritten Punkt geht es darum, einen Ablauf zu modellieren, für den unglücklichen Fall, dass ein Roboter kaputt gehen sollte. Dies könnte zum Beispiel in einem Unfall passieren.\\
 
-Taxikunden können über eine Serviceapp Anfragen an das System schicken. Das System verwaltet eine Warteschleife, in die neue Aufträge aufgenommen werden. Andererseits können Kunden jederzeit ihre Anfrage abbrechen. Der Server muss die Aufträge in der Warteschleife effizient verteilen, im Speziellen muss eine Priorisierung der Roboter stattfinden, damit jedem Krankentransporter vor dem Taxiservice ein reibungsloser Fahrtverlauf garantiert wird.\\
+Taxikunden können über eine Serviceapp Anfragen an das System schicken. Das System verwaltet eine Warteschlange, in die neue Aufträge aufgenommen werden. Andererseits können Kunden jederzeit ihre Anfrage abbrechen. Der Server muss die Aufträge in der Warteschleife effizient verteilen, im Speziellen muss eine Priorisierung der Roboter stattfinden, damit jedem Krankentransporter vor dem Taxiservice ein reibungsloser Fahrtverlauf garantiert wird.\\
 
 Die Roboter müssen unter bestimmten Kriterien wie Nähe und Batteriestand vom Server ausgewählt werden, und es gilt einzugrenzen, inwieweit die Kriterien wiederum Einfluss auf die Entscheidung des Servers nehmen.\\
 
