@@ -27,7 +27,7 @@
 		\pagebreak
 
 		\subsection{Beschreibungen der Use Cases in der \emph{Server} Umgebung}
-			\subsubsection{Beschreibung zu Use Case \emph{1.1.}: Receive order}	
+			\subsubsection{Beschreibung zu Use Case \emph{1.1.}: Send order}	
 			\paragraph*{Charakterisierende Informationen}
 			
 			\begin{table}[H]
@@ -35,17 +35,17 @@
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 					\hline
 					\textbf{Übergeordneter elementarer Geschäftsprozess:} & TODO  \\ \hline
-					\textbf{Ziel des Use Cases:} & \emph{Customer} können eine Anforderung (mit unterschiedlicher Dringlichkeit) an den \emph{Server} stellen. \\ \hline
-					\textbf{Umgebende Systemgrenze:} & Server \\ \hline
-					\textbf{Vorbedingung:} & \emph{Customer} verlangen ein Transportvehikel. \\ \hline
+					\textbf{Ziel des Use Cases:} & \emph{Customer} sowie \emph{Hospital} können eine Anforderung (mit unterschiedlicher Dringlichkeit) an das \emph{Server} stellen. \\ \hline
+					\textbf{Umgebende Systemgrenze:} & Gesamtsystem \\ \hline
+					\textbf{Vorbedingung:} & \emph{Customer} bzw. \emph{Hospital} verlangen ein Transportvehikel. \\ \hline
 					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Auftrag wird ausgeführt. \\ \hline
-					\textbf{Beteiligte Nutzer:} & \emph{Customer}, \emph{Server} und \emph{Robot Unit} \\ \hline
-					\textbf{Auslösendes Ereignis:} & \emph{Customer} schickt einen konkreten Auftrag an den \emph{Server}. \\
+					\textbf{Beteiligte Nutzer:} & \emph{Customer} bzw. \emph{Hospital}, \emph{Server} und \emph{Robot Unit} \\ \hline
+					\textbf{Auslösendes Ereignis:} & \emph{Customer} bzw \emph{Hospital} schickt einen konkreten Auftrag an den \emph{Server}. \\
 					\hline
 				\end{tabularx}
 			\end{table}
 			
-			Über diesen Anwendungsfall können Aufträge und Anforderungen an den \emph{Server} durch Nutzer \emph{Customer} gestellt werden.
+			Über diesen Anwendungsfall können Aufträge und Anforderungen an das Taxisystem durch Nutzer (\emph{Hospital} und \emph{Customer}) gestellt werden.
 			Es findet eine Unterscheidung des anfragenden Nutzers statt, sodass Krankenfahrten priorisiert werden. \\ Sollte eine Fahrt auf Anfrage des Krankenhauses nicht sofort möglich sein, lehnt der \emph{Server} den Auftrag ab. Im Falle eines normalen Taxikunden (\emph{Customer}) wird der Auftrag, sofern kein \emph{Robot} bereit steht, in eine Warteschlange eingereiht.
 			
 				\paragraph*{Szenario für den Standardablauf (Erfolg)}
@@ -55,8 +55,8 @@
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
 					\hline
 					Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
-					1 & \emph{Customer}  & \emph{Customer} bestellen einen \emph{Robot} \\
-					2 & \emph{Server} & \emph{Robot} fährt zum \emph{Customer}  \\
+					1 & \emph{Customer} bzw. \emph{Hospital}  & \emph{Customer} bzw. \emph{Hospital} bestellen einen \emph{Robot} \\
+					2 & \emph{Server} & \emph{Robot} fährt zum \emph{Customer} bzw. \emph{Hospital}  \\
 					\hline
 					\end{tabularx}
 				\end{table}
@@ -67,7 +67,7 @@
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
 					\hline
 					Schritt & Bedingung für Alternative & Beschreibung der Aktivität \\ \hline
-					1 & Es ist kein \emph{Robot} verfügbar & \emph{Server} lehnt beim \emph{Customer} den Auftrag ab bzw. gibt beim \emph{Customer} eine Warteschlange zurück \\
+					1 & Es ist kein \emph{Robot} verfügbar & \emph{Server} lehnt beim \emph{Hospital} den Auftrag ab bzw. gibt beim \emph{Customer} eine Warteschlange zurück \\
 					\hline
 					\end{tabularx}
 				\end{table}
