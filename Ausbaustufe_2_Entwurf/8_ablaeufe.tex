@@ -10,14 +10,14 @@ Und der Roboter setzt, sofern kein Abbruchanweisung dazwischenspielt, seinen Weg
 		\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{img/2-Entwurf-ContinueTask.svg}
-		\caption{Sequenzdiagramm von \emph{Read Sensors}}
+		\caption{Sequenzdiagramm von \emph{Continue Task}}
 		\label{ReadSensors}
 	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{img/2-Entwurf-ReceiveArrivalNotification.svg}
-		\caption{Sequenzdiagramm von \emph{Read Sensors}}
+		\caption{Sequenzdiagramm von \emph{ReceiveArrivalNotification}}
 		\label{ReadSensors}
 	\end{figure}
 
@@ -61,8 +61,8 @@ Erst wenn alle Informationen als Gesamtpaket bereitstehen, können sie an den Se
 	\vspace{1cm}
 	
 	\subsection*{Interner Ablauf Charging}
-	Charging ist ein spezieller interner Ablauf der RobotUnit für den keine weitere Kommunikation mit der Komponente Server stattfinden muss, dafür allerdings zwischen der RobotUnit und der ChargingStation. 
-	Hat der Roboter einen bestimmten kritischen Ladestand erreicht (, den er regelmäßig überprüft), läuft er die ChargingStation-Komponente an. 
+	Charging ist eine Methode und ein spezieller interner Ablauf der RobotUnit für den keine weitere Kommunikation mit der Komponente Server stattfinden muss, dafür allerdings zwischen der RobotUnit und der ChargingStation. 
+	Hat der Roboter einen bestimmten kritischen Ladestand erreicht(, den er regelmäßig überprüft), läuft er die ChargingStation-Komponente an. 
 	Der Ladevorgang triggert automatische, sobald der Roboter die Position der Ladestation erreicht hat, und interagiert solange mit ihr bis seine Batterie wieder aufgeladen ist. 
 	Innerhalb des Robots werden zum Anfahren der ChargingStation die Komponenten IBatterie mit der Position der Robotereigenen Ladestation und IDrive benötigt. 
 	Konkret: Wenn IDrive arrived() zurückgibt, kann der Ladevorgang begonnen werden.
