@@ -1,23 +1,55 @@
 \section{Interaktion der Komponenten}
-Auf Basis der Use Cases aus dem Analysedokument wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Server} und der \emph{RobotUnit}. Die Use Cases innerhalb der Komponenten werden in Kapitel 8 näher ausgeführt. \\
+Auf Basis der Analyse Use Cases wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. Dabei liegt der Fokus vor allem der Interaktion zwischen der RobotUnit und dem Server, wie dessen Austausch mit dem Hospital und der Taxiapp. Die Abläufe innerhalb der Komponenten werden dann in Kapitel 8 näher spezifiziert. \\
 
 
-\subsection*{Interaktion bei Ausführung von \emph{Take Patient To Hospital \& Select Best Match}}
+\subsection*{Interaktion bei Ausführung von \emph{Receive Order \& Cancel Order}}
 
-Zuallererst fragt das \emph{Hospital} über Use Case 8: \emph{Check availability} den \emph{Server} an, ob überhaupt ein \emph{Robot} verfügbar ist. Dann läuft die Auswahl eines \emph{Robots} nach \emph{Choose Robot} wie im Diagramm beschrieben folgendermaßen ab: Bei einer neu eingehenden \emph{Destination} sendet der Server mit \texttt{getSensorData(task)} Anfragen an alle zur Verfügung stehenden \emph{Robots} (im Diagramm sind beispielhaft zwei angeführt, der Aufruf findet asynchron statt). Die \emph{Robots} führen dann Use Case 3: \emph{Read Sensors} aus. Dabei sammeln sie alle notwendigen Informationen von ihren Hardwareschnittstellen, wie Ladestand und Nähe zum Ziel, die der \emph{Server} benötigt um den bestmöglichste \emph{Robot} auszuwählen. Sie warten auf das Zusammentragen der Daten, also das Abschließen des internen Loop-Prozesses, bis sie eine Nachricht mit den Informationen an den \emph{Server} zurücksenden; erst dann kann der \emph{Server} aufgrund der übermittelten Daten beurteilen, welcher \emph{Robot} am besten geeignet ist, den Patienten abzuholen und entsendet ihn zu den Zielkoordinaten (Use Case 7: \emph{Assign Task}). Daraufhin folgt der Ablauf wieder vollständig dem Use Case \emph{Take Patient to Hospital}. Wenn der \emph{Robot} nach Anfrageannahme und Fahrvorgang beim Patienten ankommt (\texttt{arrived()}) wird dabei immer auf die nächste direkte Bestätigung gewartet. Dies setzt den Ausgangspunkt für den Use Case 9: \emph{Inform about boarding}. Denn sobald der \emph{Patient} sicher auf den \emph{Robot} geladen wurde, meldet das \emph{Hospital} dies unverzüglich über den \emph{Server} an den \emph{Robot} zurück. Im Gegenzug existiert ebenso der Use Case 5: \emph{Inform about Arrival}, bei dem der \emph{Robot} sobald er das Krankenhaus erreicht hat, die Information über die Ankunft an den \emph{Server} weiterleitet, um die sofortige Versorgung des Patienten zu sichern.
+Elementar ist in diesem Fall der UseCase ReceiveOrder(Use Case 1.1), der es Usern ermöglicht Anfragen oder Notrufe aufzusetzen, um ein Taxi oder einen Krankentransporter anzufordern. Das System arbeitet mit einer Warteliste; Krankentransporter werden in jedem Fall priorisiert und es wird schnellstmöglich die nächste RobotUnit zur Verfügung gestellt. Im Falle des ersten Sequenzdiagramm ist dies mit der Verwendung der Taxiapp dargestellt, die wiederum die Zielkoordinate Destination an den Server weitergibt. Danach wird vom Server überprüft, ob überhaupt Taxis verfügbar sind, um schließlich ein Warteplatz an die App zurückgegeben, der an den User weitergeleitet wird. Mit Cancel Order(Use Case 1.2) können sich User dabei jederzeit aus der Warteliste streichen lassen. Im Falle des Krankentransporters existiert diese Warteliste nur in theoretischer Natur. Sie wird, wie im zweiten Sequenzdiagramm ersichtlich, nicht über das Hospital an den User zurückgegeben, sondern es wird ein Krankentransporter ein Krankentransporter, sobald ein RobotUnit verfügbar ist. \\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/1-Analyse-2-TakePatientToHospital}
+	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-RecieveOrder-Taxi.svg}
+	\caption{\emph{Take Patient To Hospital}-Sequenzdiagramm}
+	\label{SequenzDiagrammInteraktion}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-RecieveOrder-Hosp.svg}
+	\caption{\emph{Select Best Match}-Sequenzdiagramm}
+	\label{SequenzDiagrammInteraktion}
+\end{figure}
+
+
+
+\subsection*{Interaktion bei Ausführung von \emph{Receive Boarding Confirmation \& Receive Arrival Notification}}
+
+Alle Prozesse laufen wie ersichtlich über den Server, der wiederum die RobotUnit fernsteuert. So wird sowohl für Receive Boarding Confirmation( Use Case 1.3) erst vom Hospital oder der TaxiApp an den Server zurückgemeldet, dass sich der Patient oder der Costumer an Bord befindet, bevor die Fahrt aufgenommen werden kann. In gleichem Weise wird dem Server mit Receive Arrival Notification(UseCase 1.5) zurückgemeldet,das die RobotUnit wieder für weitere Einsätze verfügbar ist, sobald der Costumer die RobotUnit verlassen hat.  \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveBoardingConfirmation-taxi.svg}
+	\caption{\emph{Take Patient To Hospital}-Sequenzdiagramm}
+	\label{SequenzDiagrammInteraktion}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveUnloadConfirmation-hospital.svg}
 	\caption{\emph{Take Patient To Hospital}-Sequenzdiagramm}
 	\label{SequenzDiagrammInteraktion}
 \end{figure}
 
 
+\subsection*{Interaktion bei Ausführung von \emph{Use Cases Perfom Task \& Continue Task}}
+Konkret wird die RobotUnit dabei über die UseCases Perfom Task(Use Case 2.2) und Continue Task( Use Case 2.3) eine Task(Parameter) zugewiesen, die solange ausgeführt, bis der der RobotUnit eine Abbruch Task zugewiesen wird oder das Ziel wiederum erfolgreich erreicht wurde und dies an den Server zurückgemeldet werden kann. \\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/0-Entwurf-2-ChooseRob}
-	\caption{\emph{Select Best Match}-Sequenzdiagramm}
+	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-Perform Task.svg}
+	\caption{\emph{Take Patient To Hospital}-Sequenzdiagramm}
 	\label{SequenzDiagrammInteraktion}
 \end{figure}
+
+\subsection* Die weiteren UseCases sind diesen untergeordnet; enthalten entweder nur einseitige Server/RobutUnit Kommunikation, wie zum Beispiel bei Request Repair( Use Case 1.6) oder haben ihren Fokus vor allem auf den Wechselwirkungen innerhalb der Robot Unit( Siehe dazu Kapitel 8). \\
+
