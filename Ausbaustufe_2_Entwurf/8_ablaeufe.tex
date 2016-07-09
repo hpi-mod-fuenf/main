@@ -26,7 +26,6 @@ In der folgenden Grafik wird der reine Informationsanfrageprozess zwischen Serve
 Nach der Anfrage, wird die RobotUnit alle nötigen Informationen nacheinander abfragen: Sowohl die Position als auch die Orientierungsrichtung werden von der INorthStar-Komponente zurückgeliefert. 
 Für den Batteriestatus muss die IBattery-Komponente angefragt werden. 
 Erst wenn alle Informationen als Gesamtpaket bereitstehen, können sie an den Server zurückgemeldet werden.
-
 \\
 
 	\begin{figure}[H]
@@ -37,7 +36,7 @@ Erst wenn alle Informationen als Gesamtpaket bereitstehen, können sie an den Se
 	\end{figure}
 
 	
-	\subsection*{Interner Ablauf im Falle der Begegnung eines Hindernisses}}
+	\subsection*{Interner Ablauf im Falle der Begegnung eines Hindernisses}
 	Sowohl die Methoden Path Around Obstacle als auch der Use Case Drive AroundObstacle sind beides Bestandteile des internen Ablauflaufprozesses, der im Falle eines auftauchenden Hindernisses einsetzt. 
 	Die RobotUnit befindet sich dabei stets in einem Fahrvorgang, der stets konkret mit der Zielposition und er Geschwindigkeit vom Server eingestellt wurde. 
 	So reagiert intern seine Software mit dem IDistanceSensor, wenn ein Hindernis um ihn herum auftaucht und dieses mit Hilfe der durch die Sensoren gesammelten Informationen umfahren werden muss. 
