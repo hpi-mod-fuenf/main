@@ -2,10 +2,11 @@
 \section{Paketdetails}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth, angle=90]{img/7-paketdetails}
+\includegraphics[height=0.95\linewidth, angle=90]{img/7-paketdetails}
 \caption{Klassendiagramm zur detaillierten Beschreibung der strukturellen Gliederung}
 \label{Paketdetails}
 \end{figure}
+\pagebreak
 
 %7.1 Paket Robot
 \subsection{Paket \textit{Robot}}
@@ -116,7 +117,7 @@
 	%7.2.1 TaskSystem
 	\subsubsection{Beschreibung der Klasse \textit{TaskPriorityQueue}}
 	
-	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Priority-Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTopOfType} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, Krankenhaustransporte so schnell es geht an \textit{Robots} zu verteilen, während gleichzeitig die Wartezeiten für mögliche Taxikunden fair gehandhabt werden.
+	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Priority-Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTopOfType} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, Krankenhaustransporte so schnell es geht an die \textit{Robots} zu verteilen, während gleichzeitig die Wartezeiten für mögliche Taxikunden fair gehandhabt werden.
 	
 			\paragraph{Beschreibung der Methode \texttt{add}}		
 			\begin{figure}[H]
@@ -126,6 +127,8 @@
 			\label{SequenzQueueAdd}
 			\end{figure}
 			
+			Die Methode \texttt{add} dient dazu, neue Task je nach Typ an die passende Stellen in der Warteliste einzufügen.
+			
 			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
 			\begin{figure}[H]
 			\centering
@@ -133,6 +136,8 @@
 			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{addTopOfType}}
 			\label{SequenzQueueAddTopOfType}
 			\end{figure}			
+			
+			Die Methode \texttt{addTopOfType}
 				
 			\paragraph{Beschreibung der Methode \texttt{poll}}		
 			\begin{figure}[H]
@@ -141,6 +146,8 @@
 			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{poll}}
 			\label{SequenzQueuePoll}
 			\end{figure}			
+			
+			Die Methode \texttt{poll}
 				
 			\paragraph{Beschreibung der Methode \texttt{remove}}		
 			\begin{figure}[H]
@@ -150,16 +157,44 @@
 			\label{SequenzQueueRemove}
 			\end{figure}			
 			
+			Die Methode \texttt{remove}
+			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotManager}}
 			\paragraph{Beschreibung der Methode \texttt{handleArrival}}
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/HandleArrival}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
+			\label{SequenzQueuePoll}
+			\end{figure}	
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine \textit{Message} von einem \textit{Robot} erhält, welche von ihm über das von uns definierte Interface \textit{IArrivalNotification} gesandt wurde. Da der \textit{Server} eingespeichert hat, welchen \textit{Task} der \textit{Robot} gerade ausführt, müssen keine Parameter übergeben werden, sondern der \textit{Server} kann einfach nachschauen, welcher Typ von \textit{Destination} gerade erreicht wurde. Je nach Typ wird dann eine Benachrichtigung an die zugehörigen \textit{Customers} gesendet. Bei einem Taxiauftrag wird keine Nachricht an den Taxikunden geschickt, wenn dieser sein Ziel erreicht. Laut Aufgabenstellung ist eine Taxifahrt mit erreichen der \textit{Destination} des Taxikunden sofort beendet, ohne dass weitere Benachrichtigungen an den Taxikunden geschickt werden müssen.
+			
+			
 			%7.2.1.1	~chooseRobot(destination: Destination): void
 			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
 			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. 
 			Dazu fragt es die Sensorwerte der verschiedenen \emph{Robots} ab und wählt den am besten geeigneten aus.
+				
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/1-Analyse-3-Choose_Robot}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{chooseRobot}}
+			\label{SequenzQueueRemove}
+			\end{figure}			
+				
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-SelectBestMatch}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Aktivität \texttt{selectBestMatch}}
+			\label{SequenzQueueRemove}
+			\end{figure}
 
 			\paragraph{Beschreibung der Methode \texttt{notifyRepairService}}
-
+			Wenn ein \textit{Robot} nach einem Zusammenstoß defekt ist, teilt er dies dem \textit{Server} unter Verwendung seiner Methode \texttt{requestRepair} mit.	Daraufhin erstellt der \textit{Server} einen neuen  \textit{Task}, der am Unfallort des \textit{Robots} beginnt. Der \textit{Customer}, der an Bord des verunglückten \textit{Robots} war, wird also nicht im Stich gelassen. Der neue \textit{Task} wird mit der Methode \texttt{addTopOfType} in die \textit{TaskPriorityQueue} eingefügt, um die Wartezeit dieses \textit{Customers} zu minimieren. Daraufhin benachrichtigt der \textit{Server} einen System-externen Servicedienst, und übergibt diesem die Position des Unfallorts. Nach unserer Annahme aus der Analyse wird der dort verunglückte \textit{Robot} dann nach einer endlichen Zeit wieder vom System benutzbar sein.
+			
+			
+			
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotUnit}}
 	Die Klasse \textit{VirtualRobotUnit} ist die Umsetzung der Remote-Procedure-Calls von der Seite des \textit{Servers}. Diese Klasse implementiert die Methoden der von uns in 3. beschriebenen Interfaces \textit{ITask} und \textit{ISensorData}. Da diese Klasse auch die Repräsentation des \textit{Robots} auf dem \textit{Server} ist, werden hier auch Zustand des zugehörigen \textit{Robots}, insbesondere aktuell auszuführenden \textit{Task}, gespeichert. Alle Methoden dieser Klasse werden im \textit{Server} aufgerufen und Verfassen zunächst eine \textit{Message}, welche dann über die \textit{IWlanAdapter}-Schnittstelle verschickt werden und daraufhin die zugehörigen Lokalen Methoden auf den \textit{Robots} aufgerufen werden.
 	

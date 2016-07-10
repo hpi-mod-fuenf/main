@@ -12,14 +12,12 @@ Krankentransporte werden in jedem Fall priorisiert und es wird schnellstmöglich
 Im Falle des ersten Sequenzdiagramms ist dies mit der Verwendung der TaxiApp dargestellt, die wiederum den Task mit den Destinations an den Server weitergibt. 
 Danach wird vom Server überprüft, ob überhaupt Taxis verfügbar sind.
 Falls keins mehr verfügbar ist, wird die Anzahl der Kunden in der Wartschlange an die App und somit an den User zurückgegeben. 
-Mit "Cancel Order" (Use Case 1.2) können sich User dabei aus der Warteliste streichen lassen, solange sie noch nicht in das Taxi eingestiegen sind. 
-Im Falle des Krankentransports existiert diese Warteliste nur in theoretischer Natur. 
-Sie wird, wie im zweiten Sequenzdiagramm ersichtlich, nicht über das Hospital an den User zurückgegeben, sondern es wird ein Krankentransporter ein Krankentransporter, sobald ein RobotUnit verfügbar ist. \\
+Mit "Cancel Order" (Use Case 1.2) können sich User dabei aus der Warteliste streichen lassen, solange sie noch nicht in das Taxi eingestiegen sind. \\
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveOrder-Taxi}
-	\caption{\emph{RecieveOrder}-Sequenzdiagramm, falls ein Kunde ein Taxi anfragt}
+	\caption{\emph{ReceiveOrder}-Sequenzdiagramm, falls ein Kunde ein Taxi anfragt}
 	\label{SequenzDiagrammInteraktion}
 \end{figure}
 
@@ -63,5 +61,5 @@ Konkret wird der RobotUnit dabei über die Use Cases "Perfom Task" (Use Case 2.2
 	\label{SequenzDiagrammInteraktion}
 \end{figure}
 
-Die weiteren UseCases sind diesen untergeordnet; enthalten entweder nur einseitige Server/RobotUnit Kommunikation, wie zum Beispiel bei "Request Repair" (Use Case 1.6) oder haben ihren Fokus vor allem auf den Wechselwirkungen innerhalb der RobotUnit (Siehe dazu Kapitel 8). \\
+Die weiteren Use Cases sind diesen untergeordnet; enthalten entweder nur einseitige Server/RobotUnit Kommunikation, wie zum Beispiel bei "Request Repair" (Use Case 1.6) oder haben ihren Fokus vor allem auf den Wechselwirkungen innerhalb der RobotUnit (Siehe dazu Kapitel 8). \\
 

@@ -304,14 +304,6 @@
       ><text x="41" xml:space="preserve" y="39" clip-path="url(#clipPath9)" font-weight="bold" stroke="none"
       >tion</text
     ></g
-    ><g font-size="11" transform="translate(599,139)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
-      >1</text
-    ></g
-    ><g font-size="11" transform="translate(308,197)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
-      >1</text
-    ></g
     ><g font-size="11" transform="translate(235,184)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
       >1</text
@@ -327,6 +319,14 @@
     ><g font-size="11" transform="translate(197,331)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath25)" stroke="none"
       >0..1</text
+    ></g
+    ><g font-size="11" transform="translate(599,139)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
+      >1</text
+    ></g
+    ><g font-size="11" transform="translate(308,197)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
+      >1</text
     ></g
     ><g font-size="11" transform="translate(30,61)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" font-weight="bold" stroke-opacity="1"
     ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath26)" stroke="none"
