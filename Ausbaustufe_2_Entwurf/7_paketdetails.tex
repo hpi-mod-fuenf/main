@@ -127,6 +127,7 @@
 			\label{SequenzQueueAdd}
 			\end{figure}
 			
+			
 			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
 			\begin{figure}[H]
 			\centering
@@ -160,6 +161,9 @@
 			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
 			\label{SequenzQueuePoll}
 			\end{figure}	
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine \textit{Message} von einem \textit{Robot} erhält, welche von ihm über das von uns definierte Interface \textit{IArrivalNotification} gesandt wurde. Da der \textit{Server} eingespeichert hat, welchen \textit{Task} der \textit{Robot} gerade ausführt, müssen keine Parameter übergeben werden, sondern der \textit{Server} kann einfach nachschauen, welcher Typ von \textit{Destination} gerade erreicht wurde. Je nach Typ wird dann eine Benachrichtigung an die zugehörigen \textit{Customers} gesendet. Bei einem Taxiauftrag wird keine Nachricht an den Taxikunden geschickt, wenn dieser sein Ziel erreicht. Laut Aufgabenstellung ist eine Taxifahrt mit erreichen der \textit{Destination} des Taxikunden sofort beendet, ohne dass weitere Benachrichtigungen an den Taxikunden geschickt werden müssen.
+			
+			
 			%7.2.1.1	~chooseRobot(destination: Destination): void
 			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
 			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. 
