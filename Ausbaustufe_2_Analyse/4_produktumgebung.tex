@@ -52,8 +52,8 @@
     		Der \emph{NetworkAccess} ist die Schnittstelle des \emph{Servers}, mit der er die Verbindung zu den \emph{RobotUnits} herstellt.
         Hierüber werden Nachrichten ausgetauscht.
     		Dementsprechend stehen Methoden zum Senden einer Message, Registrieren eines IMessageHandlers, Auslesen von NetworkIDs usw. bereit.
-    	\subparagraph{HospitalAdapter}\label{hospital}
-    		Bei \emph{HospitalAdapter} handelt es sich um die \emph{Server}-Komponente, die die Kommunikation mit dem \emph{Hospital} gewährleistet.
+    	\subparagraph{Hospital}\label{hospital}
+    		Bei \emph{Hospital} handelt es sich um die \emph{Server}-Komponente, die die Kommunikation mit dem \emph{Hospital} gewährleistet.
     		Dabei werden zum einen Methoden bereitgestellt, die das \emph{Hospital} über ein Interface aufrufen kann, um Aufträge zu verteilen und dem \emph{Hospital} Informationen über den aktuellen Stand des Auftrags mitzuteilen (getPatientAt(), patientOnBoard() sowie patientArrived()), und zum anderen kann die Komponente über ein Interface Methoden des \emph{Hospitals} aufrufen, um diesem Informationen zu übermitteln (informRobotArrivedAtPatient() und informRobotArrivedAtHospital()).
       \subparagraph{TaxiApp}
         Die \emph{TaxiApp}-Komponente ist ein Container, über den die Kommunikation des \emph{Servers} mit den Apps der \emph{Taxi Customers}, den nicht-modellierten mobilen Taxi-Applikationen, realisiert wird.
