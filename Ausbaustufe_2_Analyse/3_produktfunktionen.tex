@@ -4,10 +4,10 @@
 		\subsection{Use Cases}
 		% \input{3-1-Use_Cases}
 
-		In dem zu modellierenden System wurden zwei Unterumgebungen (\emph{Server} sowie \emph{RobotUnit}) identifiziert, auf welchen die Aktoren \emph{Taxi customer}, \emph{Hospital} und \emph{RobotUnit} verschiedene Anwendungsfälle aufrufen können. Der fiktionale Aktor \emph{User} aggregiert die gemeinsamen Use-Cases von \emph{Taxi customer} und \emph{Hospital} \\
+		In dem zu modellierenden System wurden zwei Unterumgebungen (\emph{Server} sowie \emph{RobotUnit}) identifiziert, auf welchen die Aktoren \emph{Taxi-Customer}, \emph{Hospital} und \emph{RobotUnit} verschiedene Anwendungsfälle aufrufen können. Der fiktionale Aktor \emph{User} aggregiert die gemeinsamen Use-Cases von \emph{Taxi-Customer} und \emph{Hospital} \\
 		%Die Abbildungen \ref{fig:3-1-server-use-cases} und \ref{fig:3-1-use-cases-robot-unit} stellen die Funktionalitäten dieser Teilsysteme dar.
 			\subsubsection{Server}
-			Der \emph{Server} stellt das zentrale System dar, über welches die \emph{Orders} der \emph{Taxi Customers} und des \emph{Hospitals} abgewickelt und an die \emph{Robots} verteilt werden.
+			Der \emph{Server} stellt das zentrale System dar, über welches die \emph{Orders} der \emph{Taxi-Customer} und des \emph{Hospitals} abgewickelt und an die \emph{Robots} verteilt werden.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=1.0\textwidth]{img/2-Analyse-Server}
@@ -138,7 +138,7 @@
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
 					\hline
 					Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
-					1 & \emph{Customer} & \emph{Customer} befindet sich auf dem \emph{Robot}. (\emph{Taxi Customer} steigt selber zu, ein \emph{Patient} wird von Helfern verladen) \\
+					1 & \emph{Customer} & \emph{Customer} befindet sich auf dem \emph{Robot}. (\emph{Taxi-Customer} steigt selber zu, ein \emph{Patient} wird von Helfern verladen) \\
 					2 & \emph{User} & \emph{User} teilt dem \emph{Server} mit, dass der \emph{Customer} sich auf dem \emph{Robot} befindet \\
 					3 & \emph{Server} & \emph{Server} gibt \emph{Robot} den Befehl seine Fahrt in Richtung der nächsten \emph{Destination} fortzusetzen \\
 					\hline
@@ -157,7 +157,7 @@
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 						\hline
 						\textbf{Übergeordneter elementarer Geschäftsprozess:} & \emph{Take Customer to Destination} \\ \hline
-						\textbf{Ziel des Use Cases:} & Den \emph{Server} informieren, dass \emph{Customer} vom \emph{Robot} abgeladen wurde (im Falle eines \emph{Patients}) , bzw. ausgestiegen ist (im Falle eines \emph{Taxi Customers}) \\ \hline
+						\textbf{Ziel des Use Cases:} & Den \emph{Server} informieren, dass \emph{Customer} vom \emph{Robot} abgeladen wurde (im Falle eines \emph{Patients}) , bzw. ausgestiegen ist (im Falle eines \emph{Taxi-Customers}) \\ \hline
 						\textbf{Umgebende Systemgrenze:} & \emph{Server} \\ \hline
 						\textbf{Vorbedingung:} & \emph{Robot} ist am Ziel angekommen \\ \hline
 						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} steht für neue \emph{Tasks} zur Verfügung \\ \hline
@@ -167,7 +167,7 @@
 					\end{tabularx}
 				\end{table}
 
-				Dieser Use Case dient dazu, den \emph{Server} zu informieren, dass der \emph{Patient} sicher vom \emph{Robot} entfernt wurde, bzw. \emph{Taxi Customer} ausgestiegen ist. Der \emph{Robot} steht für neue \emph{Tasks} wieder zur Verfügung.
+				Dieser Use Case dient dazu, den \emph{Server} zu informieren, dass der \emph{Patient} sicher vom \emph{Robot} entfernt wurde, bzw. \emph{Taxi-Customer} ausgestiegen ist. Der \emph{Robot} steht für neue \emph{Tasks} wieder zur Verfügung.
 
 				\paragraph*{Beschreibung des allgemeinen Ablaufes}
 					\begin{table}[H]
@@ -175,7 +175,7 @@
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
 					\hline
 					Schritt & Nutzer & Beschreibung der Aktivität \\ \hline
-					1 & \emph{User} & \emph{Patient} wird vom Roboter entfernt, bzw. \emph{Taxi Customer} steigt aus \\
+					1 & \emph{User} & \emph{Patient} wird vom Roboter entfernt, bzw. \emph{Taxi-Customer} steigt aus \\
 					2 & \emph{User} & \emph{User} sendet Nachricht an {Server}, dass sich der \emph{Customer} nicht länger auf dem \emph{Robot} befindet \\
 					\hline
 					\end{tabularx}
