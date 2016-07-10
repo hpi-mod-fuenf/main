@@ -9,18 +9,11 @@
 \label{KomponentenStruktur1}
 \end{figure}
 Abbildung \ref{KomponentenStruktur1} zeigt ein Komponentendiagramm von \emph{ServerSoftware}. 
-Diese Komponente umfasst vier Klassen: \textit{TaskSystem}, \textit{Destination}, \textit{RobotControlSystem}, \textit{VirtualRobot} und \textit{HospitalServiceSystem}.
+Diese Komponente umfasst sechs Klassen: \textit{TaskSystem}, \textit{Task}, \textit{VirtualRobotManager}, \textit{VirtualRobotUnit}, \textit{HospitalServiceSystem} und \textit{TaxiServiceSystem}.
 
-
-Das \textit{TaskSystem} verwaltet die \textit{Tasks} und liefert Information über diese. 
-Die Klasse \textit{Destination} ist die Klasse
-der Aufgaben, die vom \textit{TaskSystem} verwaltet werden. 
-Das \textit{RobotControlSystem} verteilt die \textit{Tasks} auf die \textit{Robots}.
-Dabei findet die Auswahl anhand der zurückgegebenen \textit{SensorData} der einzelnen \textit{Robots} statt. 
-Bei \textit{VirtualRobot} handelt
-es sich um eine Kapselung der Kommunikation mit den \textit{Robots}. 
-Hier werden alle von der Komponente \textit{Robot} bereitgestellten
-\textit{Interfaces} implementiert.
+Die Klasse \textit{Task} beinhaltet die Aufgaben, die von der \textit{TaskPriorityQueue} verwaltet werden. 
+Die \textit{TaskPriorityQueue} priorisiert die \textit{Tasks} und ordnet diese so an, dass der \textit{VirtualRobotManager} die \textit{Task} mit der höchsten Priorität erhält. 
+Der \textit{VirtualRobotManager} ist die zentrale Kommunikationskomponente in der \textit{ServerSoftware}, der für die Koordination der \textit{RobotUnits} zuständig ist, wobei die \textit{RobotUnits} serverintern als \textit{VirtualRobotUnits} repräsentiert werden, um RPC zu ermöglichen. Über das \textit{HospitalServiceSystem} und das \textit{TaxiServiceSystem} werden \textit{Orders} entgegengenommen. Daraus erzeugt der \textit{VirtualRobotManager} \textit{Tasks}. Der \textit{VirtualRobotManager} deligiert die \textit{Tasks} entweder sofort an eine verfügbare \textit{RobotUnit} oder speichert diese, falls keine \textit{RobotUnit} verfügbar ist, in der \textit{TaskPriorityQueue}. Die am besten geeignete \textit{RobotUnit} wird anhand der Sensordaten ermittelt, die über das Interface \textit{ISensorData} bereitgestellt werden. Die \textit{Task} wird anschließend über das Interface \textit{ITask} der \textit{RobotUnit} zugewiesen. Des Weiteren implementiert der \textit{VirtualRobotManager} die Interfaces \textit{IRepair} und \textit{IArrivalNotification}, womit die \textit{RobotUnits} in der Lage sind, einen Defekt und Ihre Ankunft an einer \textit{Destination} zu melden.
 %5.1 Robot Software
 \subsection{Komponente \textit{RobotSoftware}}
 \begin{figure}[H]
