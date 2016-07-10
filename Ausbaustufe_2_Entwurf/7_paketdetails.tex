@@ -137,7 +137,13 @@
 			\paragraph{Beschreibung der Methode \texttt{notifyRepairService}}
 
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotUnit}}
+	Die Klasse \textit{VirtualRobotUnit} ist die Umsetzung der Remote-Procedure-Calls von der Seite des \textit{Servers}. Diese Klasse implementiert die Methoden der von uns in 3. beschriebenen Interfaces \textit{ITask} und \textit{ISensorData}. Da diese Klasse auch die Repräsentation des \textit{Robots} auf dem \textit{Server} ist, werden hier auch Zustand des zugehörigen \textit{Robots}, insbesondere aktuell auszuführenden \textit{Task}, gespeichert. Alle Methoden dieser Klasse werden im \textit{Server} aufgerufen und Verfassen zunächst eine \textit{Message}, welche dann über die \textit{IWlanAdapter}-Schnittstelle verschickt werden und daraufhin die zugehörigen Lokalen Methoden auf den \textit{Robots} aufgerufen werden.
+	
 			\paragraph{Beschreibung der Methode \texttt{assignTask}}
+			Mit dieser Methode teilt der \textit{Server} einem \textit{VirtualRobot} einen neuen \textit{Task} zu, der dann von dem zugehörigen \textit{Robot} ausgeführt wird. Auf dem zugehörigen \textit{Robot} wird dafür die Methode \texttt{setTask} aufgerufen.
+			
 			\paragraph{Beschreibung der Methode \texttt{continueTask}}
+			Diese Methode wird zum Beispiel dann aufgerufen, wenn der \textit{Server} die Nachricht erhalten hat, dass sich der \textit{Customer} nun an Bord des \textit{Robots} befindet. Daraufhin wird eine \textit{Message} an den zu diesem \textit{VirtualRobot} zugehörigen \textit{Robot} geschickt, der ihn wissen lässt, dass er die nächste \textit{Destination} in seinem aktuellen \textit{Task}			
+			
 			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
 			
