@@ -42,3 +42,23 @@ Mit dem Attribut \texttt{speed} kann der \emph{Server} außerdem genau bestimmen
 	\caption{Interface \emph{ITask}}
 	\label{ITask}
 	\end{figure}
+	
+	%3.2.3 IRepair
+	\subsubsection{\textit{IRepair}}
+	Im Falle einer Kollision, die bspw. mittels \textit{IBumperHandler} detektiert wird, benötigt die \textit{RobotUnit} manuelle Wartung, die es mittels des Interfaces \textit{IRepair} vom Server anfordern kann.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/2-Entwurf-3-IRepair}
+	\caption{Interface \emph{IRepair}}
+	\label{IRepair}
+	\end{figure}
+		
+	%3.2.3 IArrivaleNotification
+	\subsubsection{\textit{IArrivalNotification}}
+	Erreicht die \texit{RobotUnit} eine ihr eine aus dem aktuellen \textit{Task} vorgegebene \textit{Destination}, informiert Sie mittels der Methode \texttt{informAboutArrival} aus dem Interface \texit{IArrivalNotification} den Server über seine Ankunft.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/2-Entwurf-3-IArrivalNotification}
+	\caption{Interface \emph{IArrivaleNotification}}
+	\label{IArrivaleNotification}
+	\end{figure}

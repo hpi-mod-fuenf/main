@@ -18,16 +18,16 @@
       ><path d="M-7 -7 L19 -7 L19 23 L-7 23 L-7 -7 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath5"
-      ><path d="M-70 -15 L140 -15 L140 30 L-70 30 L-70 -15 Z"
+      ><path d="M-70 -14 L140 -14 L140 28 L-70 28 L-70 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath6"
-      ><path d="M-96 -15 L192 -15 L192 30 L-96 30 L-96 -15 Z"
+      ><path d="M-96 -14 L192 -14 L192 28 L-96 28 L-96 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath7"
       ><path d="M0 0 L475 0 L475 204 L0 204 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath8"
-      ><path d="M144 24 L144 39 L48 39 L48 24 ZM410 24 L410 39 L340 39 L340 24 ZM292 79 L292 94 L173 94 L173 79 ZM0 0 L0 204 L475 204 L475 0 Z"
+      ><path d="M144 24 L144 38 L48 38 L48 24 ZM410 24 L410 38 L340 38 L340 24 ZM292 79 L292 94 L173 94 L173 79 ZM0 0 L0 204 L475 204 L475 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
       ><path d="M-119 -15 L238 -15 L238 30 L-119 30 L-119 -15 Z"
@@ -63,11 +63,11 @@
     ><rect fill="none" x="0" width="8" height="12" y="0" clip-path="url(#clipPath4)"
     /></g
     ><g font-size="11" transform="translate(294,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="19" xml:space="preserve" y="12" clip-path="url(#clipPath5)" stroke="none"
+    ><text x="18" xml:space="preserve" y="11" clip-path="url(#clipPath5)" stroke="none"
       >Server</text
     ></g
     ><g font-size="11" transform="translate(2,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="27" xml:space="preserve" y="12" clip-path="url(#clipPath6)" stroke="none"
+    ><text x="26" xml:space="preserve" y="11" clip-path="url(#clipPath6)" stroke="none"
       >Hospital</text
     ></g
     ><g stroke-linecap="butt" font-size="11" transform="translate(-46,-22)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
@@ -77,7 +77,7 @@
     /></g
     ><g font-size="11" transform="translate(127,57)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
     ><rect x="0" width="119" height="15" y="0" clip-path="url(#clipPath9)" stroke="none"
-      /><text fill="black" x="9" xml:space="preserve" y="12" clip-path="url(#clipPath9)" stroke="none"
+      /><text fill="black" x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
       >1: getPatientAt(pos)</text
     ></g
     ><g fill="rgb(120,120,120)" text-rendering="geometricPrecision" fill-opacity="1" font-size="8" stroke-opacity="1" stroke="rgb(120,120,120)"

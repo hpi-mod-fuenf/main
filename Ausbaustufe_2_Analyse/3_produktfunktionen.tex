@@ -3,8 +3,8 @@
 
 		\subsection{Use Cases}
 		% \input{3-1-Use_Cases}
-		
-		In dem zu modellierenden System wurden zwei Unterumgebungen (\emph{Server} sowie \emph{Robot Unit}) identifiziert, auf welchen die Aktoren \emph{Taxi customer}, \emph{Hospital} und \emph{Robot Unit} verschiedene Anwendungsfälle aufrufen können. Der fiktionale Aktor \emph{User} aggregiert die gemeinsamen Use-Cases von \emph{Taxi customer} und \emph{Hospital} \\
+
+		In dem zu modellierenden System wurden zwei Unterumgebungen (\emph{Server} sowie \emph{RobotUnit}) identifiziert, auf welchen die Aktoren \emph{Taxi customer}, \emph{Hospital} und \emph{RobotUnit} verschiedene Anwendungsfälle aufrufen können. Der fiktionale Aktor \emph{User} aggregiert die gemeinsamen Use-Cases von \emph{Taxi customer} und \emph{Hospital} \\
 		%Die Abbildungen \ref{fig:3-1-server-use-cases} und \ref{fig:3-1-use-cases-robot-unit} stellen die Funktionalitäten dieser Teilsysteme dar.
 			\subsubsection{Server}
 			Der \emph{Server} stellt das zentrale System dar, über welches die \emph{Orders} der \emph{Taxi Customers} und des \emph{Hospitals} abgewickelt und an die \emph{Robots} verteilt werden.
@@ -15,8 +15,8 @@
 					\label{fig:3-1-server-use-cases}
 				\end{figure}
 			\pagebreak
-			\subsubsection{Robot Unit}
-			Die \emph{Robot Unit} stellt als Kombination des \emph{Robots} sowie der \emph{Robot Software} die ausführende Komponente dar und bietet dem \emph{Server} Möglichkeiten der Steuerung und Informationsabfrage.
+			\subsubsection{RobotUnit}
+			Die \emph{RobotUnit} stellt als Kombination des \emph{Robots} sowie der \emph{Robot Software} die ausführende Komponente dar und bietet dem \emph{Server} Möglichkeiten der Steuerung und Informationsabfrage.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.8\textwidth]{img/2-Analyse-RobotUnit}
@@ -27,9 +27,9 @@
 		\pagebreak
 
 		\subsection{Beschreibungen der Use Cases in der \emph{Server} Umgebung}
-			\subsubsection{Beschreibung zu Use Case \emph{1.1}: Receive Order}	
+			\subsubsection{Beschreibung zu Use Case \emph{1.1}: Receive Order}
 			\paragraph*{Charakterisierende Informationen}
-			
+
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
@@ -44,12 +44,12 @@
 					\hline
 				\end{tabularx}
 			\end{table}
-			
+
 			Über diesen Anwendungsfall können \emph{User} \emph{Orders} über den \emph{Server} an das Personentransportsystem durch stellen.
 			Krankenfahrten werden priorisiert. Sollte eine Fahrt auf Anfrage nicht sofort möglich sein, informiert der \emph{Server} den \emph{User} über die Wartelistenposition.
-			
+
 				\paragraph*{Szenario für den Standardablauf (Erfolg)}
-	
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -60,8 +60,8 @@
 					\hline
 					\end{tabularx}
 				\end{table}
-			\paragraph*{Szenarien für alternative Abläufe\\ (Misserfolg oder Umwege zum Erfolg)}	
-					
+			\paragraph*{Szenarien für alternative Abläufe\\ (Misserfolg oder Umwege zum Erfolg)}
+
 			\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -71,14 +71,14 @@
 					\hline
 					\end{tabularx}
 				\end{table}
-				
-				
+
+
 			\pagebreak
 			%\paragraph*{Beschreibung des allgemeinen Ablaufes}
-			
+
 			\subsubsection{Beschreibung zu Use Case \emph{1.2}: Cancel Order}
 			\paragraph*{Charakterisierende Informationen}
-			
+
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
@@ -93,11 +93,11 @@
 					\hline
 				\end{tabularx}
 			\end{table}
-			
+
 			Der \emph{User} kann seine \emph{Order} stornieren. Ist die zu transportierende Person (\emph{Customer}) zugestiegen, wird die Stornierung ignoriert.
-			
+
 			\paragraph*{Szenario für den Standardablauf (Erfolg)}
-			
+
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -108,13 +108,13 @@
 					\hline
 				\end{tabularx}
 			\end{table}
-		
-			
+
+
 			\pagebreak
-	
+
 			\subsubsection{Beschreibung zu Use Case \emph{1.3.}: Receive Boarding Confirmation}
 				\paragraph*{Charakterisierende Informationen}
-				
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
@@ -129,10 +129,10 @@
 						\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				Der \emph{Customer} befindet sich auf dem \emph{Robot}. Um die Fahrt fortzusetzen, wird dies dem \emph{Server} mitgeteilt.
 					\paragraph*{Szenario für den Standardablauf (Erfolg)}
-	
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -144,14 +144,14 @@
 					\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				%\paragraph*{Beschreibung des allgemeinen Ablaufes}
-				
-			
-		
+
+
+
 			\subsubsection{Beschreibung zu Use Case \emph{1.4.}: Receive Unload Confirmation}
 				\paragraph*{Charakterisierende Informationen}
-				
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
@@ -166,9 +166,9 @@
 						\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				Dieser Use Case dient dazu, den \emph{Server} zu informieren, dass der \emph{Patient} sicher vom \emph{Robot} entfernt wurde, bzw. \emph{Taxi Customer} ausgestiegen ist. Der \emph{Robot} steht für neue \emph{Tasks} wieder zur Verfügung.
-				
+
 				\paragraph*{Beschreibung des allgemeinen Ablaufes}
 					\begin{table}[H]
 					\centering
@@ -180,7 +180,7 @@
 					\hline
 					\end{tabularx}
 				\end{table}
-		
+
 		\subsubsection{Beschreibung zu Use Case \emph{1.5.}: Receive Arrival Notification}
 
 			\paragraph*{Charakterisierende Informationen}
@@ -200,7 +200,7 @@
 				\end{tabularx}
 			\end{table}
 
-			Der \emph{Robot} erreicht die \emph{Destination} und muss dem \emph{Server} mitteilen, dass er angekommen ist. 
+			Der \emph{Robot} erreicht die \emph{Destination} und muss dem \emph{Server} mitteilen, dass er angekommen ist.
 
 			\paragraph*{Szenario für den Standardablauf (Erfolg)}
 
@@ -213,11 +213,11 @@
 				\hline
 				\end{tabularx}
 			\end{table}
-				
+
 		\subsubsection{Beschreibung zu Use Case \emph{1.6.}: Request Repair}
-		
+
 		\paragraph*{Charakterisierende Informationen}
-		
+
 		\begin{table}[H]
 			\centering
 			\begin{tabularx}{\textwidth}{|p{5cm}|X|}
@@ -232,11 +232,11 @@
 				\hline
 			\end{tabularx}
 		\end{table}
-		
+
 		Trotz vorsichtigen Fahrens kann es zu Kollisionen kommen, in diesem Falle kann der \emph{Robot} Hilfe beim \emph{Server} beantragen.
-		
+
 		\paragraph*{Szenario für den Standardablauf (Erfolg)}
-		
+
 		\begin{table}[H]
 			\centering
 			\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -247,20 +247,20 @@
 				\hline
 			\end{tabularx}
 		\end{table}
-		
+
 				\pagebreak
-		\subsection{Beschreibungen der Use Cases in der \emph{Robot Unit} Umgebung}
+		\subsection{Beschreibungen der Use Cases in der \emph{RobotUnit} Umgebung}
 			\subsubsection{Beschreibung zu Use Case \emph{2.1.}: Read Sensors}
-				
+
 				\paragraph*{Charakterisierende Informationen}
-				
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 						\hline
 						\textbf{Übergeordneter elementarer Geschäftsprozess:} & \emph{Choose Robot} \\ \hline
 						\textbf{Ziel des Use Cases:} & \emph{Robot} kann über seinen Akkustand, seine Position und seine derzeitige \emph{Destination} Auskunft geben\\ \hline
-						\textbf{Umgebende Systemgrenze:} & \emph{Robot Unit} \\ \hline
+						\textbf{Umgebende Systemgrenze:} & \emph{RobotUnit} \\ \hline
 						\textbf{Vorbedingung:} & \emph{Robot} hat eine Anfrage vom \emph{Server} erhalten \\ \hline
 						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} schickt die ermittelten Informationen an den \emph{Server} \\ \hline
 						\textbf{Beteiligte Nutzer:} & \emph{Robot} \\ \hline
@@ -268,7 +268,7 @@
 						\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				Im Rahmen vom Geschäftsprozess \emph{Choose Robot} sammelt der \emph{Server}
 				Informationen über jeden \emph{Robot}. Diese Informationen (z.B
 				Akkustand, aktuelle Position, ob der \emph{Robot} gerade ein Ziel verfolgt)
@@ -276,9 +276,9 @@
 				Use Case wird dann ausgefüht, wenn der \emph{Robot} eine Anfrage vom
 				Server erhält, seine Sensoren zu lesen, und endet damit, dass der \emph{Robot}
 				die zusammengefassten Informationen an den \emph{Server} schickt.
-				
+
 				\paragraph*{Szenario für den Standardablauf (Erfolg)}
-				
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -290,22 +290,22 @@
 						\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				%\paragraph*{Beschreibung des allgemeinen Ablaufes}
-				
+
 				\pagebreak
-				
+
 			\subsubsection{Beschreibung zu Use Case \emph{2.2.}: Perform Task}
-				
+
 				\paragraph*{Charakterisierende Informationen}
-				
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 						\hline
 						\textbf{Übergeordneter elementarer Geschäftsprozess:} & \emph{Take Customer to Destination} \\ \hline
 						\textbf{Ziel des Use Cases:} & \emph{Robot} den \emph{Task} (die \emph{Destinations}) zuweisen\\ \hline
-						\textbf{Umgebende Systemgrenze:} & \emph{Robot Unit} \\ \hline
+						\textbf{Umgebende Systemgrenze:} & \emph{RobotUnit} \\ \hline
 						\textbf{Vorbedingung:} & \textit{ \glqq Choose Robot \grqq } hat den am besten geeigneten \emph{Robot} gefunden und ausgewählt\\ \hline
 						\textbf{Nachbedingung bei erfolgreicher Ausführung:} & Ausgewählter \emph{Robot} steuert die erste \emph{Destination} an\\ \hline
 						\textbf{Beteiligte Nutzer:} & \emph{Server} \\ \hline
@@ -313,11 +313,11 @@
 						\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				Dem \emph{Server} wird hiermit die Möglichkeit gegeben, dem \emph{Robot} eine beliebige \emph{Task} zuzuweisen. Es ist möglich den Robot hierrüber zum Abbruch der aktuellen \emph{Task} aufzufordern.
-				
+
 				\paragraph*{Szenario für den Standardablauf (Erfolg)}
-				
+
 				\begin{table}[H]
 					\centering
 					\begin{tabularx}{\textwidth}{|c|p{2cm}|X|}
@@ -329,23 +329,23 @@
 						\hline
 					\end{tabularx}
 				\end{table}
-				
+
 				%\paragraph*{Beschreibung des allgemeinen Ablaufes}
-				
+
 				\pagebreak
-				
-				
+
+
 			\subsubsection{Beschreibung zu Use Case \emph{2.3.}: Continue Task}
-			
+
 			\paragraph*{Charakterisierende Informationen}
-			
+
 			\begin{table}[H]
 				\centering
 				\begin{tabularx}{\textwidth}{|p{5cm}|X|}
 					\hline
 					\textbf{Übergeordneter elementarer Geschäftsprozess:} & \emph{Take Customer to Destination}  \\ \hline
 					\textbf{Ziel des Use Cases:} & \emph{Robot} soll seinen Weg zur nächsten \emph{Destination} seiner aktuellen \emph{Task} fortsetzen \\ \hline
-					\textbf{Umgebende Systemgrenze:} & \emph{Robot Unit} \\ \hline
+					\textbf{Umgebende Systemgrenze:} & \emph{RobotUnit} \\ \hline
 					\textbf{Vorbedingung:} & \emph{Robot} hat seine aktuelle \emph{Destination} erreicht \\ \hline
 					\textbf{Nachbedingung bei erfolgreicher Ausführung:} & \emph{Robot} fährt seine nächste \emph{Destination} seiner aktuellen \emph{Task} an \\ \hline
 					\textbf{Beteiligte Nutzer:} & \emph{Server} \\ \hline
@@ -353,8 +353,7 @@
 					\hline
 				\end{tabularx}
 			\end{table}
-			
+
 			Der \emph{Robot} wartet nach Erreichen der aktuellen \emph{Destination} auf eine Benachrichtigung vom \emph{Server}, die ihn zur Weiterfahrt zur nächsten \emph{Destination} seiner aktuellen \emph{Task} auffordert. In diesem Zeitraum ist bpsw. das Beladen des \emph{Robots} mit einem \emph{Patient} möglich.
-			
+
 			%\paragraph*{Beschreibung des allgemeinen Ablaufes}
-			
