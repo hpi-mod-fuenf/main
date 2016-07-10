@@ -29,20 +29,25 @@
 		Dieser \textit{Task} kann ein vom \textit{Server} zugeteiltes Ziel sein, 
 		der dem \textit{Robot} zugehörige \textit{Charger}, oder gerade kein Ziel, 
 		also \texttt{null} sein. 
-		Nur wenn der \textit{Robot} gerade keinen \textit{Task} 
-		gespeichert hat, kann er neue Aufträge vom \textit{Server} annehmen.
 
 			%7.1.1.1 #collectSensorData():void
-			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
+			\paragraph{Beschreibung der Methode \texttt{readSensors}}
 			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. 
 			Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
 			nach seiner Position und seinem Akkustand an und gibt diese Informationen zusammen mit einer Information über seinen aktuellen Zustand (also seinem aktuellen \textit{Task}) zurück an den \textit{Server}. 
 			Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über die im \texttt{Common}-Paket enthaltene Schnittstelle über den \textit{IWlanAdapter} mit der Methode \texttt{send} verschickt wird.
 			
+			\paragraph{Beschreibung der Methode \texttt{setTask}}
+			Diese Methode wird aufgerufen, wenn der \textit{Robot} einen neuen Task erhält. Wenn der \textit{Robot} davor keinen \textit{Task} hatte, wird dieser einfach ausgeführt. Wenn der übergebene \textit{Task} \texttt{null} ist, nimmt der \textit{Robot} fahrt zur Ladestation auf. Wenn der \textit{Robot} gerade einen \textit{TaxiCustomer} an bord hat und in dieser Methode einen Krankenhaustransport als \textit{Task} erhält, wird der \textit{TaxiCustomer} abgeladen, und der Krankenhaustransport wird ausgeführt.
+			
+	\subsubsection{Beschreibung der Klasse \textit{VirtualServer}}
+	Die Klasse \textit{VirtualServer} ist die Klasse, welche die Remote-Procedure-Calls von der Seite des \textit{Robots} implementiert. \textit{VirtualServer} implementiert unsere in 3. definierten Interfaces \textit{IRepair} und \textit{IArrivalNotification}. Alle Methoden in dieser Klasse verfassen natürlich eine \textit{Message} und nutzen dann die \textit{IWlanAdapter}-Schnittstelle, um diese an den \textit{Server} zu schicken.
+	
 			\paragraph{Beschreibung der Methode \texttt{informAboutArrival}}
-			Diese Methode wird immer dann aufgerufen, wenn der \textit{Robot} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat. 
-			Übergeben wird dabei genau diese \textit{Position}. 
-			Der \textit{Robot} verfasst eine neue \textit{Message} und schickt sie über die \textit{IWlanAdapter}-Schnittstelle an den \textit{Server}. 
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Robot} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat.  Da der \textit{Server} weiß, welcher \textit{Task} von welchem \textit{Robot} ausgeführt wird, muss \texttt{informAboutArrival} keine Parameter übergeben.
+	
+			\paragraph{Beschreibung der Methode \texttt{requestRepair}}
+			Diese Methode wird dann von einen \textit{Robot} aufgerufen, wenn er nach einem Unfall kaputt ist. Der \textit{Robot} verfasst dafür eine \textit{Message} an den \textit{Server}, woraufhin auf dem \textit{Server} der \textit{Task}, den der kaputte \textit{Robot} gerade ausführen sollte, neu verteilt. In seiner Prioritätsstufe ist dieser \textit{Task} dann an erster Stelle, und wird nicht wieder hinten angestellt. Zusätzlich wird auf dem \textit{Server} dann die Methode \texttt{notifyRepairService} aufgerufen.		
 			
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
@@ -69,7 +74,7 @@
 
 			Wenn diese Methode aufgerufen wird, macht der \textit{Robot} sich auf den Weg zur 
 			übergebenen \textit{Destination}. Wenn der \textit{Robot} an dieser \textit{Destination} 
-			angekommen ist, wird die \texttt{arrive}-Methode des übergebenen \textit{ArrivalHandlers} ausgeführt. 
+			angekommen ist, wird die \texttt{arrive}-Methode des übergebenen \textit{ArrivalHandlers} ausgeführt. Wenn es sich bei der \textit{Destination} nicht um einen \textit{Charger} handelte, wird darin insbesondere über die von uns definierte Schnittstelle \textit{IArrivalNotifivation} der \textit{Server} über die Ankunft benachrichtigt. 
 			Wenn sich ein \textit{Obstacle} auf dem Weg befindet, wird die Methode \texttt{driveAroundObstacle} 
 			aufgerufen, bis das \textit{Obstacle} umfahren wurde.
 			
@@ -109,32 +114,30 @@
 
 
 	%7.2.1 TaskSystem
-	\subsubsection{Beschreibung der Klasse \textit{TaskSystem}}
-		%	-taskDistribution
-		Das \emph{TaskSystem} des \emph{Servers} verarbeitet alle \emph{Tasks}, die es mit der Zuordnung vom \emph{RobotControlSystem} übergeben bekommt. 
-		Dafür besitzt es eine Struktur, die die \emph{taskDistribution} intern verwaltet und somit die \emph{Tasks} und die jeweils zugeordneten \emph{Robots} kennt.
-		
-		%7.2.2.1	~assignTask(virtualRobot : VirtualRobot, destination : Destination): void
+	\subsubsection{Beschreibung der Klasse \textit{TaskPriorityQueue}}
+			\paragraph{Beschreibung der Methode \texttt{add}}		
+			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
+			\paragraph{Beschreibung der Methode \texttt{poll}}		
+			\paragraph{Beschreibung der Methode \texttt{remove}}		
+
+	
 			\paragraph{Beschreibung der Methode \texttt{assignTask}}
 			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der \emph{Robots} und \emph{Tasks} bzw. \emph{Destinations} durch. 
 			Sie wird aufgerufen, wenn \texttt{chooseRobot} einen passenden \textit{Robot} gefunden hat, der einen \textit{Task} entgegennehmen kann. 
 			Die Methode \texttt{assignTask} schickt dann eine neue \textit{Message} über den \textit{IWlanAdapter} an den \textit{Robot}, welche den \textit{Task} enthält.
 			
 	%7.2.2 RobotControlSystem
-	\subsubsection{Beschreibung der Klasse \textit{RobotControlSystem}}
-		Das \emph{RobotControlSystem} sorgt bei eingehenden \emph{Tasks} dafür, dass ein passender \emph{Robot} ausgewählt wird. 
-		Diese Information übergibt es dann an das \emph{TaskSystem}, das für die endgültige Zuordnung zuständig ist.
-	
+	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotManager}}
+			\paragraph{Beschreibung der Methode \texttt{handleArrival}}
 			%7.2.1.1	~chooseRobot(destination: Destination): void
 			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
 			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. 
 			Dazu fragt es die Sensorwerte der verschiedenen \emph{Robots} ab und wählt den am besten geeigneten aus.
+
+			\paragraph{Beschreibung der Methode \texttt{notifyRepairService}}
+
+	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotUnit}}
+			\paragraph{Beschreibung der Methode \texttt{assignTask}}
+			\paragraph{Beschreibung der Methode \texttt{continueTask}}
+			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
 			
-			\paragraph{Beschreibung der Methode \texttt{denyHospitalRequest}}
-			Laut Aufgabenstellung kann das Krankentransportsystem nur neue Aufträge vom \textit{Hospital} entgegennehmen, wenn auch mindestens ein \textit{Robot} den \textit{Patient} erreichen könnte. 
-			Falls der \textit{Server} über die Schnittstelle \textit{IHospitalInputHandler} also einen \textit{Patient} holen soll, der für das System unerreichbar ist, muss das System dies dem \textit{Hospital} mitteilen, damit dieses weiß, dass es nach einer alternativen Lösung suchen muss.
-			
-			
-			\paragraph{Beschreibung der Methode \texttt{acceptHospitalRequest}}
-			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine neue Anfrage vom \textit{Hospital} über die \textit{IHospitalInputHandler} bekommt, und anschließend im Rahmen von \texttt{chooseRobot} klar wird, dass es einen geeigneten \textit{Robot} gibt, der den \textit{Patient} auch erreichen kann. 
-			Es wird eine neue \textit{Message} verfasst und über die \textit{IWlanAdapter}-Schnittstelle verschickt, die dem \textit{Hospital} mitteilt, dass ein \textit{Robot} zum \textit{Patient} geschickt wurde, und dieser demnächst eintreffen wird.
