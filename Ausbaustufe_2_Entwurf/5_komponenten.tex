@@ -23,14 +23,11 @@ Der \textit{VirtualRobotManager} ist die zentrale Kommunikationskomponente in de
 \label{KomponentenStruktur2}
 \end{figure}
 In Abbildung \ref{KomponentenStruktur2} ist das Komponentendiagramm der Komponente \textit{RobotSoftware} dargestellt. 
-Die Komponente enthält drei Klassen: \textit{DrivingSystem}, \textit{RobotController} und \textit{Task}.
-
+Die Komponente enthält vier Klassen: \textit{DrivingSystem}, \textit{RobotController}, \textit{Task} und \textit{VirtualServer}.
 
 Das \textit{DrivingSystem} stellt eine Abstraktion der Hardware dar und wird dazu genutzt, Ziele anzufahren und dabei,
-falls nötig, Hindernisse zu umfahren. 
-Dazu greift es auf die von der Hardware bereitgestellten Interfaces zurück.
+falls nötig, Hindernisse zu umfahren. Dazu greift es auf die von der Hardware bereitgestellten Interfaces zu.
 Um auf Kollisionen reagieren zu können, implementiert das \textit{DrivingSystem} die Schnittstelle \textit{IBumperHandler}.
-Der \textit{RobotController} stellt dem Server das Interfaces \textit{ISensorData} zur Verfügung und verwaltet den gerade
-zu absolvierenden \emph{Task}. 
-Zur Messwertübermittlung greift er zum einen auf das \textit{DrivingSystem} und zum anderen auf das
-von der Hardware angebotenen Interface \textit{IBattery} zu.
+Der \textit{RobotController} stellt dem Server die Interfaces \textit{ISensorData} und \emph{ITask} zur Verfügung. Außerdem verwaltet er den gerade zu absolvierenden \emph{Task}. 
+Die Methode \texttt{getSensorData()} des Interfaces \textit{ISensorData} greift zur Emittlung der notwendigen Daten zum Einen auf das \textit{DrivingSystem} und zum Anderen auf das von der Hardware angebotenen Interface \textit{IBattery} zu.
+Der \emph{RobotController} kann Methoden aus den Interfaces \emph{IRepair} und \emph{IArrivalNotification} auf dem Server aufrufen. Zur Kapselung dieser RPC Aufrufe verfügt die \emph{RobotSoftware} daher über einen \emph{VirtualServer}.
