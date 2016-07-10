@@ -340,7 +340,7 @@
     ></g
     ><g font-size="11" transform="translate(207,173)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath33)" stroke="none"
-      >Check the Robots' availability</text
+      ></text
     ></g
     ><g stroke-linecap="butt" font-size="11" transform="translate(7,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath35)" x2="82" y1="50"
@@ -428,7 +428,7 @@
     /></g
     ><g font-size="11" transform="translate(255,127)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath62)" stroke="none"
-      >[Task has to wait]</text
+      >[No Robot can accept the Task]</text
     ></g
     ><g font-size="11" transform="translate(254,273)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
