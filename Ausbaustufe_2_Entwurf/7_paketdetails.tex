@@ -127,7 +127,7 @@
 			\label{SequenzQueueAdd}
 			\end{figure}
 			
-			Die Methode \texttt{add} dient dazu, neue Task je nach Typ an die passende Stellen in der Warteliste einzufügen.
+			Die Methode \texttt{add} dient dazu neue Tasks, je nach Typ, an die passende Stelle in der Warteliste einzufügen.
 			
 			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
 			\begin{figure}[H]
@@ -137,7 +137,8 @@
 			\label{SequenzQueueAddTopOfType}
 			\end{figure}			
 			
-			Die Methode \texttt{addTopOfType}
+			Mit der Methode \texttt{addTopOfType} können \textit{Tasks} in die Queue hinzugefügt werden, die davor schon aktiv von einem \textit{Robot} bearbeitet wurden, dann aber durch einen Defekt dessen neu verteilt werden müssen. 
+			Die Besonderheit dieser \textit{Tasks} ist, dass sie abhängig von der Art des \textit{Tasks} (Taxi- oder Krankentransport) an die oberste Position in ihrer Kategorie hinzugefügt werden.
 				
 			\paragraph{Beschreibung der Methode \texttt{poll}}		
 			\begin{figure}[H]
@@ -147,7 +148,7 @@
 			\label{SequenzQueuePoll}
 			\end{figure}			
 			
-			Die Methode \texttt{poll}
+			Die Methode \texttt{poll} gibt den nächsten zu bearbeitenden Task zurück und entfernt diesen aus der Queue.
 				
 			\paragraph{Beschreibung der Methode \texttt{remove}}		
 			\begin{figure}[H]
@@ -157,7 +158,7 @@
 			\label{SequenzQueueRemove}
 			\end{figure}			
 			
-			Die Methode \texttt{remove}
+			Die Methode \texttt{remove} entfernt einen spezifischen Task aus der Queue.
 			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotManager}}
