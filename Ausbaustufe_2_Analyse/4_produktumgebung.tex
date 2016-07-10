@@ -2,7 +2,7 @@
 
   \subsection{Systemumgebung}
   Im nachfolgenden Abschnitt werden die bekannten Komponenten des Systems und die dazugehörigen Schnittstellen beschrieben.
-  Grundsätzlich besteht das System aus mindestens einer \emph{Robot Unit}, hierfür geeigneten \emph{Chargern} und einem zentralen \emph{Server}, über welchen das \emph{Hospital} und die \emph{Taxi Customer} mithilfe der \emph{TaxiApp} mit dem System interagieren können.
+  Grundsätzlich besteht das System aus mindestens einer \emph{RobotUnit}, hierfür geeigneten \emph{Chargern} und einem zentralen \emph{Server}, über welchen das \emph{Hospital} und die \emph{Taxi Customer} mithilfe der \emph{TaxiApp} mit dem System interagieren können.
 
   \subsubsection{Hardwareumgebung}
 
@@ -10,12 +10,12 @@
 
     Es existiert ein zentraler \emph{Server}, der über ausreichende Ressourcen verfügt.
     Dieser \emph{Server} besitzt einen zentralen Hauptprozessor, den \emph{ServerCore}, über den er auf alle weiteren Komponenten zugreifen kann.
-    Zu diesen Komponenten zählt der \emph{NetworkAccess}, über welchen der \emph{Server} auf das Funknetzwerk zugreifen kann.
-    Über dieses Funknetzwerk können alle \emph{Robot Units} erreicht werden, sodass Nachrichten an sie abgesetzt werden können und Nachrichten, die über das Funknetzwerk für den \emph{Server} übertragen wurden, empfangen werden können.
+    Zu diesen Komponenten zählt der \emph{WlanAdapter}, über welchen der \emph{Server} auf das Funknetzwerk zugreifen kann.
+    Über dieses Funknetzwerk können alle \emph{RobotUnits} erreicht werden, sodass Nachrichten an sie abgesetzt werden können und Nachrichten, die über das Funknetzwerk für den \emph{Server} übertragen wurden, empfangen werden können.
     Über eine weitere Komponente, den \emph{HospitalAdapter}, kann der \emph{Server} mit dem zentralen \emph{Hospital} kommunizieren.
-    Die Kommunikation mit den \emph{Taxi-Customers} wird ebenfalls über die gesonderte Komponente \emph{TaxiApp} mit ähnlicher Funktionalität realisiert.
+    Die Kommunikation mit den \emph{Taxi-Customers} wird ebenfalls über die gesonderte Komponente \emph{TaxiAppAdapter} mit ähnlicher Funktionalität realisiert.
 
-    \paragraph{Robot Unit}\label{robotunit}
+    \paragraph{RobotUnit}\label{robotunit}
 
     Das Transportvehikel \emph{RobotUnit} stellt die Kernkomponente der Hardwareumgebung dar.
     Über den zentralen Hauptprozessor \emph{RobotCore} kann auf alle weiteren Komponenten zugegriffen werden.
@@ -23,33 +23,33 @@
     Der Antrieb ermöglicht eine Fahrt in verschiedenen Geschwindigkeiten.
     Die \emph{RobotUnit} verfügt außerdem über die Komponente \emph{DistanceSensor} bestehend aus 9 Infarotdistanzsensoren, die an der kreisförmigen Außenwand des Vehikels im Abstand von jeweils 40 Grad angeordnet sind.
     Über sie ist die Feststellung der Entfernung des Vehikels von allen bewegten und unbewegten Objekten in der Umgebung möglich.
-    Bei einer Kollision der \emph{Robot Unit} mit einem anderen Objekt wird dieses Ereignis über die Sensorik der Kollisionserkennung \emph{Bumper} festgestellt, woraufhin der \emph{Robot} über den \emph{Server} die Reparatur durch einen externen Anbieter anfordert.
-    Über das GPS-Modul \emph{NorthStar} kann die aktuelle Lage und Ausrichtung der \emph{Robot Unit} ermittelt werden.
-    Zur Ermöglichung von Kommunikation besitzt die \emph{Robot Unit} einen \emph{WlanAdapter}, über welchen Nachrichten über ein zur Verfügung stehendendes Funknetzwerk gesendet und empfangen werden können.
-    Jede \emph{Robot Unit} verfügt über einen Akkumulator \emph{Battery}, der zur Energieversorgung dient.
-    Eine ausreichende Ladung des Akkumulators ist zum Betrieb der \emph{Robot Unit} unbedingt erforderlich.
+    Bei einer Kollision der \emph{RobotUnit} mit einem anderen Objekt wird dieses Ereignis über die Sensorik der Kollisionserkennung \emph{Bumper} festgestellt, woraufhin der \emph{Robot} über den \emph{Server} die Reparatur durch einen externen Anbieter anfordert.
+    Über das GPS-Modul \emph{NorthStar} kann die aktuelle Lage und Ausrichtung der \emph{RobotUnit} ermittelt werden.
+    Zur Ermöglichung von Kommunikation besitzt die \emph{RobotUnit} einen \emph{WlanAdapter}, über welchen Nachrichten über ein zur Verfügung stehendendes Funknetzwerk gesendet und empfangen werden können.
+    Jede \emph{RobotUnit} verfügt über einen Akkumulator \emph{Battery}, der zur Energieversorgung dient.
+    Eine ausreichende Ladung des Akkumulators ist zum Betrieb der \emph{RobotUnit} unbedingt erforderlich.
     Der Akkumulator kann über einen \emph{Charger} geladen werden.
 
     \paragraph{Charger}\label{charger}
 
-    Es existieren die Ladestationen \emph{Charger}, über die sich die \emph{Battery} der \emph{Robot Unit} vollständig laden lässt.
-    Eine Ladestation ist dabei genau einer \emph{Robot Unit} zugeordnet.
-    Zum Laden muss eine \emph{Robot Unit} seine Ladestation anfahren, worauf die Ladung sofort beginnt.
+    Es existieren die Ladestationen \emph{Charger}, über die sich die \emph{Battery} der \emph{RobotUnit} vollständig laden lässt.
+    Eine Ladestation ist dabei genau einer \emph{RobotUnit} zugeordnet.
+    Zum Laden muss eine \emph{RobotUnit} seine Ladestation anfahren, worauf die Ladung sofort beginnt.
     Jede Ladestation verfügt über eine feste Position.
 
     \paragraph{Hospital}\label{hospital}
 
     Es existiert außerdem ein zentrales Krankenhaus, das \emph{Hospital}.
-    Das \emph{Hospital} befindet sich an einer festen Position, die die \emph{Robot Units} anfahren können, um \emph{Patients} dem Personal zu übergeben.
+    Das \emph{Hospital} befindet sich an einer festen Position, die die \emph{RobotUnits} anfahren können, um \emph{Patients} dem Personal zu übergeben.
     Über die \emph{Hospital}-Komponente des Servers kann das \emph{Hospital} auf nicht näher spezifizierte Weise mit dem Server kommunizieren.
 
   \subsubsection{Softwareumgebung}
 
     \paragraph{Server}\label{server}
     		Auf dem \emph{Server} läuft, da nicht anders angegeben, ein Standard-Betriebssystem.
-    		Darauf läuft eine Laufzeitumgebung, die die benötigten Methoden zur Kommunikation mit den \emph{Robot Units} bereitstellt.
+    		Darauf läuft eine Laufzeitumgebung, die die benötigten Methoden zur Kommunikation mit den \emph{RobotUnits} bereitstellt.
     	\subparagraph{NetworkAccess}\label{networkaccess}
-    		Der \emph{NetworkAccess} ist die Schnittstelle des \emph{Servers}, mit der er die Verbindung zu den \emph{Robot Units} herstellt.
+    		Der \emph{NetworkAccess} ist die Schnittstelle des \emph{Servers}, mit der er die Verbindung zu den \emph{RobotUnits} herstellt.
         Hierüber werden Nachrichten ausgetauscht.
     		Dementsprechend stehen Methoden zum Senden einer Message, Registrieren eines IMessageHandlers, Auslesen von NetworkIDs usw. bereit.
     	\subparagraph{HospitalAdapter}\label{hospital}

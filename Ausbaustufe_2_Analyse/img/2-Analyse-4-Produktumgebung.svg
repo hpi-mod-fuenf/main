@@ -379,8 +379,8 @@
     ><g font-size="11" transform="translate(397,336)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="43" xml:space="preserve" y="15" clip-path="url(#clipPath36)" stroke="none"
       >&lt;&lt;device&gt;&gt;</text
-      ><text x="34" xml:space="preserve" y="29" clip-path="url(#clipPath36)" font-weight="bold" stroke="none"
-      >NetworkAccess</text
+      ><text x="41" xml:space="preserve" y="29" clip-path="url(#clipPath36)" font-weight="bold" stroke="none"
+      >WlanAdapter</text
     ></g
     ><g font-size="11" transform="translate(215,328)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" font-weight="bold" stroke-opacity="1"
     ><path d="M8 0 L162 0 L154 8 L0 8 Z" stroke="none" clip-path="url(#clipPath38)"
@@ -517,10 +517,10 @@
       /><rect fill="none" x="0" width="154" height="76" y="8" clip-path="url(#clipPath38)"
     /></g
     ><g font-size="11" transform="translate(33,336)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="43" xml:space="preserve" y="15" clip-path="url(#clipPath39)" stroke="none"
+    ><text x="42" xml:space="preserve" y="15" clip-path="url(#clipPath39)" stroke="none"
       >&lt;&lt;device&gt;&gt;</text
-      ><text x="54" xml:space="preserve" y="29" clip-path="url(#clipPath39)" font-weight="bold" stroke="none"
-      >TaxiApp</text
+      ><text x="31" xml:space="preserve" y="29" clip-path="url(#clipPath39)" font-weight="bold" stroke="none"
+      >TaxiAppAdapter</text
     ></g
     ><g font-size="11" transform="translate(66,268)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
     ><rect x="0" width="12" height="12" y="0" clip-path="url(#clipPath41)" stroke="none"
