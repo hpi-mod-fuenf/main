@@ -72,7 +72,7 @@
       ><path d="M0 0 L252 0 L252 619 L0 619 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath23"
-      ><path d="M245 19 L245 33 L79 33 L79 19 ZM0 0 L0 619 L252 619 L252 465 L162 465 L162 451 L252 451 L252 235 L207 235 L207 221 L252 221 L252 0 Z"
+      ><path d="M245 19 L245 33 L79 33 L79 19 ZM249 452 L249 472 L167 472 L167 452 ZM0 0 L0 619 L252 619 L252 235 L207 235 L207 221 L252 221 L252 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
       ><path d="M0 0 L346 0 L346 223 L0 223 L0 0 Z"
@@ -138,7 +138,7 @@
       ><path d="M0 0 L204 0 L204 221 L0 221 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath45"
-      ><path d="M100 154 L100 168 L7 168 L7 154 ZM0 0 L0 221 L204 221 L204 151 L149 151 L149 137 L204 137 L204 0 Z"
+      ><path d="M94 155 L94 175 L12 175 L12 155 ZM0 0 L0 221 L204 221 L204 151 L149 151 L149 137 L204 137 L204 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath46"
       ><path d="M0 0 L337 0 L337 241 L0 241 L0 0 Z"
@@ -150,7 +150,7 @@
       ><path d="M0 0 L569 0 L569 536 L0 536 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath49"
-      ><path d="M270 65 L270 85 L92 85 L92 65 ZM181 193 L181 207 L140 207 L140 193 ZM86 227 L86 241 L41 241 L41 227 ZM415 440 L415 454 L138 454 L138 440 ZM0 0 L0 25 L79 25 L79 39 L0 39 L0 457 L89 457 L89 471 L0 471 L0 536 L569 536 L569 0 Z"
+      ><path d="M270 65 L270 85 L92 85 L92 65 ZM181 193 L181 207 L140 207 L140 193 ZM86 227 L86 241 L41 241 L41 227 ZM415 440 L415 454 L138 454 L138 440 ZM83 458 L83 478 L1 478 L1 458 ZM0 0 L0 25 L79 25 L79 39 L0 39 L0 536 L569 536 L569 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath50"
       ><path d="M0 0 L204 0 L204 230 L0 230 L0 0 Z"
@@ -162,7 +162,7 @@
       ><path d="M0 0 L204 0 L204 253 L0 253 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath53"
-      ><path d="M100 113 L100 127 L7 127 L7 113 ZM0 0 L0 253 L204 253 L204 110 L149 110 L149 96 L204 96 L204 0 Z"
+      ><path d="M94 114 L94 134 L12 134 L12 114 ZM0 0 L0 253 L204 253 L204 110 L149 110 L149 96 L204 96 L204 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath54"
       ><path d="M0 0 L0 227 L204 227 L204 0 Z"
@@ -171,10 +171,10 @@
       ><path d="M0 0 L204 0 L204 248 L0 248 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath56"
-      ><path d="M96 9 L96 23 L3 23 L3 9 ZM0 0 L0 248 L204 248 L204 6 L145 6 L145 0 Z"
+      ><path d="M90 10 L90 30 L8 30 L8 10 ZM0 0 L0 248 L204 248 L204 6 L145 6 L145 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath57"
-      ><path d="M-93 -14 L186 -14 L186 28 L-93 28 L-93 -14 Z"
+      ><path d="M-82 -20 L164 -20 L164 40 L-82 40 L-82 -20 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath58"
       ><path d="M-277 -14 L554 -14 L554 28 L-277 28 L-277 -14 Z"
@@ -426,8 +426,8 @@
       /><line y2="132" fill="none" x1="100" clip-path="url(#clipPath56)" x2="106" y1="144"
       /><line y2="132" fill="none" x1="100" clip-path="url(#clipPath56)" x2="94" y1="144"
     /></g
-    ><g font-size="11" transform="translate(157,754)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath57)" stroke="none"
+    ><g font-size="11" transform="translate(162,755)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><text x="4" xml:space="preserve" y="14" clip-path="url(#clipPath57)" stroke="none"
       >[path is clear]</text
     ></g
     ><g font-size="11" transform="translate(299,737)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
