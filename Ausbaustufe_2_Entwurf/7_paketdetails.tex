@@ -166,7 +166,10 @@
 			Dazu fragt es die Sensorwerte der verschiedenen \emph{Robots} ab und wählt den am besten geeigneten aus.
 
 			\paragraph{Beschreibung der Methode \texttt{notifyRepairService}}
-
+			Wenn ein \textit{Robot} nach einem Zusammenstoß defekt ist, teilt er dies dem \textit{Server} unter Verwendung seiner Methode \texttt{requestRepair} mit.	Daraufhin erstellt der \textit{Server} einen neuen  \textit{Task}, der am Unfallort des \textit{Robots} beginnt. Der \textit{Customer}, der an Bord des verunglückten \textit{Robots} war, wird also nicht im Stich gelassen. Der neue \textit{Task} wird mit der Methode \texttt{addTopOfType} in die \textit{TaskPriorityQueue} eingefügt, um die Wartezeit dieses \textit{Customers} zu minimieren. Daraufhin benachrichtigt der \textit{Server} einen System-externen Servicedienst, und übergibt diesem die Position des Unfallorts. Nach unserer Annahme aus der Analyse wird der dort verunglückte \textit{Robot} dann nach einer endlichen Zeit wieder vom System benutzbar sein.
+			
+			
+			
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotUnit}}
 	Die Klasse \textit{VirtualRobotUnit} ist die Umsetzung der Remote-Procedure-Calls von der Seite des \textit{Servers}. Diese Klasse implementiert die Methoden der von uns in 3. beschriebenen Interfaces \textit{ITask} und \textit{ISensorData}. Da diese Klasse auch die Repräsentation des \textit{Robots} auf dem \textit{Server} ist, werden hier auch Zustand des zugehörigen \textit{Robots}, insbesondere aktuell auszuführenden \textit{Task}, gespeichert. Alle Methoden dieser Klasse werden im \textit{Server} aufgerufen und Verfassen zunächst eine \textit{Message}, welche dann über die \textit{IWlanAdapter}-Schnittstelle verschickt werden und daraufhin die zugehörigen Lokalen Methoden auf den \textit{Robots} aufgerufen werden.
 	
