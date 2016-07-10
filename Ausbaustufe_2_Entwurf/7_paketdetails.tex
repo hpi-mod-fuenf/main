@@ -34,8 +34,8 @@
 			\paragraph{Beschreibung der Methode \texttt{readSensors}}
 			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. 
 			Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
-			nach seiner Position und seinem Akkustand an und gibt diese Informationen zusammen mit einer Information über seinen aktuellen Zustand (also seinem aktuellen \textit{Task}) zurück an den \textit{Server}. 
-			Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über die im \texttt{Common}-Paket enthaltene Schnittstelle über den \textit{IWlanAdapter} mit der Methode \texttt{send} verschickt wird.
+			nach seiner Position und seinem Akkustand an und gibt diese Informationen zurück an den \textit{Server}. 
+			Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über den \textit{IWlanAdapter} verschickt wird.
 			
 			\paragraph{Beschreibung der Methode \texttt{setTask}}
 			Diese Methode wird aufgerufen, wenn der \textit{Robot} einen neuen Task erhält. Wenn der \textit{Robot} davor keinen \textit{Task} hatte, wird dieser einfach ausgeführt. Wenn der übergebene \textit{Task} \texttt{null} ist, nimmt der \textit{Robot} fahrt zur Ladestation auf. Wenn der \textit{Robot} gerade einen \textit{TaxiCustomer} an bord hat und in dieser Methode einen Krankenhaustransport als \textit{Task} erhält, wird der \textit{TaxiCustomer} abgeladen, und der Krankenhaustransport wird ausgeführt.
@@ -115,16 +115,40 @@
 
 	%7.2.1 TaskSystem
 	\subsubsection{Beschreibung der Klasse \textit{TaskPriorityQueue}}
-			\paragraph{Beschreibung der Methode \texttt{add}}		
-			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
-			\paragraph{Beschreibung der Methode \texttt{poll}}		
-			\paragraph{Beschreibung der Methode \texttt{remove}}		
-
 	
-			\paragraph{Beschreibung der Methode \texttt{assignTask}}
-			Die Methode \texttt{assignTask} führt die Zuordnung und Abspeicherung der \emph{Robots} und \emph{Tasks} bzw. \emph{Destinations} durch. 
-			Sie wird aufgerufen, wenn \texttt{chooseRobot} einen passenden \textit{Robot} gefunden hat, der einen \textit{Task} entgegennehmen kann. 
-			Die Methode \texttt{assignTask} schickt dann eine neue \textit{Message} über den \textit{IWlanAdapter} an den \textit{Robot}, welche den \textit{Task} enthält.
+	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Priority-Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTopOfType} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, Krankenhaustransporte so schnell es geht an \textit{Robots} zu verteilen, während gleichzeitig die Wartezeiten für mögliche Taxikunden fair gehandhabt werden.
+	
+			\paragraph{Beschreibung der Methode \texttt{add}}		
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/add}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{add}}
+			\label{SequenzQueueAdd}
+			\end{figure}
+			
+			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/addTopOfType}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{addTopOfType}}
+			\label{SequenzQueueAddTopOfType}
+			\end{figure}			
+				
+			\paragraph{Beschreibung der Methode \texttt{poll}}		
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-poll}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{poll}}
+			\label{SequenzQueuePoll}
+			\end{figure}			
+				
+			\paragraph{Beschreibung der Methode \texttt{remove}}		
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-remove}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{remove}}
+			\label{SequenzQueueRemove}
+			\end{figure}			
 			
 	%7.2.2 RobotControlSystem
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotManager}}
@@ -146,4 +170,4 @@
 			Diese Methode wird zum Beispiel dann aufgerufen, wenn der \textit{Server} die Nachricht erhalten hat, dass sich der \textit{Customer} nun an Bord des \textit{Robots} befindet. Daraufhin wird eine \textit{Message} an den zu diesem \textit{VirtualRobot} zugehörigen \textit{Robot} geschickt, der ihn wissen lässt, dass er die nächste \textit{Destination} in seinem aktuellen \textit{Task}			
 			
 			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
-			
+			Der \textit{Server} möchte im Rahmen von \texttt{Choose Robot} Informationen über den Akkustand und die Position von allen \textit{Robots} erhalten. Dazu wird auf jedem \textit{VirtualRobot} diese Methode aufgerufen, bei der über die \textit{IWlanAdapter}-Schnittstelle eine entsprechende \textit{Message} an den jeweils zugehörigen \textit{Robot} geschickt wird. Diese \textit{Robots} rufen dann die Methode \texttt{readSensors} auf.
