@@ -1,6 +1,6 @@
 \section{Interaktion der Komponenten}
 Auf Basis der Use Cases aus der Analyse wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. \\
-Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Robot} und dem \emph{Server}, sowie dessen Austausch mit dem \emph{Hospital} und der \emph{TaxiApp}. 
+Dabei liegt der Fokus vor allem auf der Interaktion zwischen den \emph{RobotUnits} und dem \emph{Server}, sowie dessen Austausch mit dem \emph{Hospital} und der \emph{TaxiApp}. 
 Die Abläufe innerhalb der Komponenten werden dann in Kapitel 8 näher spezifiziert. \\
 Zunächst soll der allgemeine Ablauf der Kommunikation spezifiziert werden, bevor auf die konkreten Use Cases eingangen wird.
 
@@ -37,7 +37,7 @@ Diese Information leitet der \emph{Server} an die \emph{TaxiApp} weiter. Wenn de
 \end{figure}
 
 \subsection*{Interaktion zwischen Hospital, Server und RobotUnit}
-Der Use Case \texttt{Receive Order} (Use Case 1.1) ermöglicht es nicht nur Taxikunden mit der \emph{TaxiApp} Aufträge an das System zu senden, sondern gibt auch dem \emph{Hospital} die Möglichkeit, Krankentransporte anzufordern. \\
+Der Use Case \texttt{Receive Order} (Use Case 1.1) ermöglicht es nicht nur \emph{Taxi-Customers} mit der \emph{TaxiApp} Aufträge an das System zu senden, sondern gibt auch dem \emph{Hospital} die Möglichkeit, Krankentransporte anzufordern. \\
 Generell werden Krankenentransporte priorisiert behandelt, sodass, falls keine \emph{RobotUnit} verfügbar ist, eine Taxifahrt unterbrochen wird. Daraus ergibt sich, dass der nachfolgende Prozess ohne eine Warteliste auskommt. \\
 Dieser Prozess der Interaktion des \emph{Hospitals}, des \emph{Servers} sowie der \emph{RobotUnits} ist in Abbildung \ref{SequenzDiagrammInteraktionHospital} dargestellt.
 Stellt das \emph{Hospital} eine Anfrage, selektiert der \emph{Server} daraufhin eine geeigneten \emph{RobotUnit} und übermittelt ihr den \emph{Task}. \\
