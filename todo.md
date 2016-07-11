@@ -71,3 +71,5 @@
 - [ ] `TaskSystem` zu `TaskPriorityQueue`
 - [ ] `RobotControlSystem` zu `VirtualRobotManager`
 - [ ] `RobotUnit` verwenden, nicht `Robot`
+- [ ] Warteliste in 2. "Das System arbeitet mit einer Warteliste."
+- [ ] Paketnamen "Robot" in 6. inkonsistent zu 7.
