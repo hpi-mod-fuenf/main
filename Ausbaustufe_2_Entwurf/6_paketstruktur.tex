@@ -4,7 +4,7 @@ Dieser Abschnitt beschreibt die strukturelle Gliederung des Projektes in einem P
 Die Pakete \textit{RobotSoftware} und \textit{Server} werden getrennt betrachtet, da es eine physikalische Trennung zwischen den Geräten gibt, auf denen die jeweiligen Pakete vorhanden sein müssen.
 
 Im \textit{Common}-Paket sind alle Klassen enthalten, die sowohl vom \textit{Robot}- als auch vom \textit{Server}-Paket genutzt werden. 
-So sind die Datentypen \textit{Position} und \textit{Task} enthalten. 
+So sind die Datentypen \textit{Destination}, \textit{Task} und \emph{SensorData} enthalten. 
 Eine Möglichkeit zur Unterscheidung von \textit{Tasks} ist wichtig, da zwischen vom \textit{Server} zugeteilten \textit{Tasks}, insbesondere Taxi- und Krankenhaustransporten, und vom \textit{Robot} selbst zugeteilten Ladestationen als Ziel unterschieden werden muss. 
 
 Das Paket \textit{Robot} enthält das Paket \textit{HardwareInterfaces}, welches die Möglichkeiten schafft, die Hardwareschnittstellen des \textit{Robots} direkt anzusprechen. 
