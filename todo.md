@@ -45,13 +45,13 @@
 
 ## nachträgliche Änderungen Analyse:
 
-- [ ] "Obstacle" soll laut Max/ Hänsel nicht modelliert werden
-- [ ] Datentypen (Position, Destination) ebenso nicht
-- [ ] Use-Case-Namen vielleicht irgendwo erklären
+- [x] "Obstacle" soll laut Max/ Hänsel nicht modelliert werden
+- [x] Datentypen (Position, Destination) ebenso nicht
+- [x] Use-Case-Namen vielleicht irgendwo erklären
 - [ ] "Robot" und "RobotUnit" konsistenter
 - [x] Annahme "Es gibt mind. einen Roboter"
-- [ ] "Figure 2: Illustration von 1: Choose Robot durch Aktivitätendiagramm" Swimlane mit Plural "Robots" bezeichnen, da dort nicht nur ein Robot angefragt wird
-- [ ] Typo im ersten Teil @bakoe 
+- [x] "Figure 2: Illustration von 1: Choose Robot durch Aktivitätendiagramm" Swimlane mit Plural "Robots" bezeichnen, da dort nicht nur ein Robot angefragt wird
+- [x] Typo im ersten Teil @bakoe 
 - [x] Annahme "Es kann mehr Krankentransporte als Roboter geben"
 
 ## Verbesserungen nach dem Review übernehmen
