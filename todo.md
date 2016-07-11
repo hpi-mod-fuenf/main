@@ -1,7 +1,7 @@
 # Entwurf:
 
 - [X] Aktualisierte Sequenz-Diagramme (2.) und aktualisiertes ITask als SVG exportieren
-- [ ] 8.: Diagramme an veränderte Use Cases anpassen
+- [X] 8.: Diagramme an veränderte Use Cases anpassen
 - [x] OCL shit
 - [x] "Select best match"-Aktivitätsdiagramm einfügen @Baschdl 
 - [x] "Enters" einfügen
@@ -10,7 +10,7 @@
 - [ ] Erklärung Netzwerkkomponenten/ Kommunikation (Remote Procedure Calls) ("NetworkAccess implementiert IWlanAdapter und MessageHandler")
 - [x] Diagramm zu Queue
 - [x] "VirtualRobots" auf dem Server verwenden, Methoden können nicht direkt auf der "RobotUnit" aufgerufen werden
-- [ ] Methoden der Interfaces irgendwo verwenden
+- [X] Methoden der Interfaces irgendwo verwenden
 - [x] Sequenzdiagramme für IWlanAdapter und MessageHandler modellieren (RPC)
 - [x] Benötigen wir wirklich die taskDistribution?
 - [x] evt. kollidiert das "Select Best Match"-Sequenzdiagramm und die Modellierung bei den Paketdetails
