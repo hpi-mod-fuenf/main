@@ -9,8 +9,8 @@
 
 %7.1 Paket Robot
 \subsection{Paket \textit{RobotUnit}}
-	Im Folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{RobotUnit} 
-	und ihre zugehörigen wichtigen Methoden, sowie ihre Interaktion untereinander. 
+	Im Folgenden beschreiben wir die elementaren Klassen des Pakets \textit{RobotSoftware} 
+	und ihre zugehörigen wichtigsten Methoden, sowie ihre Interaktion untereinander. 
 
 
 	%7.1.1 RobotController
@@ -23,12 +23,9 @@
 %		\end{figure}
 		
 		%#destination : Destination
-		Die Klasse \textit{RobotController} ist die Hauptklasse der \textit{RobotUnit}, 
-		da sie den aktuellen Zustand der \textit{RobotUnit} enthält.
-		So hat diese Klasse die Möglichkeit, maximal einen \textit{Task} zu speichern. 
-		Dieser \textit{Task} kann ein vom \textit{Server} zugeteiltes Ziel sein, 
-		der dem \textit{Robot} zugehörige \textit{Charger}, oder gerade kein Ziel, 
-		also \texttt{null} sein. 
+		Die Klasse \textit{RobotController} ist die Hauptklasse der \textit{RobotSoftware}, 
+		da sie den aktuellen Zustand der \textit{RobotUnit} kapselt.
+		Sie verwaltet alle internen Vorgänge der \emph{RobotUnit} und speichert den gerade verfolgten \textit{Task}. Dabei gibt es drei mögliche Zustände: 1. Die \emph{RobotUnit} verfolgt eine vom \emph{Server} auferlegte \emph{Task}. 2. Die \emph{RobotUnit} hat sich selbstständig den \emph{Task} gegeben, einen \emph{Charger} aufzusuchen. 3. Es gibt derzeit keinen \emph{Task}.
 
 			%7.1.1.1 #collectSensorData():void
 			\paragraph{Beschreibung der Methode \texttt{readSensors}}
