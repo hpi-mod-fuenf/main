@@ -49,10 +49,10 @@
 - [ ] Datentypen (Position, Destination) ebenso nicht
 - [ ] Use-Case-Namen vielleicht irgendwo erklären
 - [ ] "Robot" und "RobotUnit" konsistenter
-- [ ] Annahme "Es gibt mind. einen Roboter"
+- [x] Annahme "Es gibt mind. einen Roboter"
 - [ ] "Figure 2: Illustration von 1: Choose Robot durch Aktivitätendiagramm" Swimlane mit Plural "Robots" bezeichnen, da dort nicht nur ein Robot angefragt wird
 - [ ] Typo im ersten Teil @bakoe 
-- [ ] Annahme "Es kann mehr Krankentransporte als Roboter geben"
+- [x] Annahme "Es kann mehr Krankentransporte als Roboter geben"
 
 ## Verbesserungen nach dem Review übernehmen
 - [x] Abstrakte Architektur anpassen @dschwenkert 
