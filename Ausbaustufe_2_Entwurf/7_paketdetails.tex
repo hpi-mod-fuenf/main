@@ -86,7 +86,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/1-Entwurf-7-driveAroundObstacle}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
 			\label{SequenzDriveAroundObstacle}
 			\end{figure}
 
@@ -97,7 +97,7 @@
 			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen 
 			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für den \textit{Robot} ist.
 			
-			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Aktivitätsdiagramm. 
+			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Sequenzdiagramm. 
 			Dabei ist \texttt{min\_dist} eine vorher festgelegte Konstante, welche die Mindestdistanz, die der \textit{Robot} halten muss, wenn er an einem \textit{Obstacle} vorbeifährt, speichert.
 	
 \pagebreak
@@ -115,36 +115,36 @@
 
 
 	%7.2.1 TaskSystem
-	\subsubsection{Beschreibung der Klasse \textit{TaskPriorityQueue}}
+	\subsubsection{Beschreibung der Klasse \textit{TaskQueue}}
 	
-	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Priority-Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTopOfType} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, Krankenhaustransporte so schnell es geht an die \textit{Robots} zu verteilen, während gleichzeitig die Wartezeiten für mögliche Taxikunden fair gehandhabt werden.
+	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTop} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, die Wartezeiten für mögliche Taxikunden fair zu handhaben und die Verteilung an die \textit{Robots} vorzunehmen.
 	
 			\paragraph{Beschreibung der Methode \texttt{add}}		
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/add}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{add}}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{add}}
 			\label{SequenzQueueAdd}
 			\end{figure}
 			
-			Die Methode \texttt{add} dient dazu neue Tasks, je nach Typ, an die passende Stelle in der Warteliste einzufügen.
+			Die Methode \texttt{add} dient dazu neue Tasks in die Warteliste einzufügen.
 			
-			\paragraph{Beschreibung der Methode \texttt{addTopOfType}}		
+			\paragraph{Beschreibung der Methode \texttt{addTop}}		
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.95\textwidth]{img/addTopOfType}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{addTopOfType}}
-			\label{SequenzQueueAddTopOfType}
+			\includegraphics[width=0.95\textwidth]{img/addTop}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{addTop}}
+			\label{SequenzQueueAddTop}
 			\end{figure}			
 			
-			Mit der Methode \texttt{addTopOfType} können \textit{Tasks} in die Queue hinzugefügt werden, die davor schon aktiv von einem \textit{Robot} bearbeitet wurden, dann aber durch einen Defekt dessen neu verteilt werden müssen. 
-			Die Besonderheit dieser \textit{Tasks} ist, dass sie abhängig von der Art des \textit{Tasks} (Taxi- oder Krankentransport) an die oberste Position in ihrer Kategorie hinzugefügt werden.
+			Mit der Methode \texttt{addTop} können \textit{Tasks} in die Queue hinzugefügt werden, die davor schon aktiv von einem \textit{Robot} bearbeitet wurden, dann aber durch einen Defekt dessen neu verteilt werden müssen. 
+			Die Besonderheit dieser \textit{Tasks} ist, dass sie an den Anfang der Queue hinzugefügt werden müssen.
 				
 			\paragraph{Beschreibung der Methode \texttt{poll}}		
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-poll}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{poll}}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{poll}}
 			\label{SequenzQueuePoll}
 			\end{figure}			
 			
@@ -154,7 +154,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-remove}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{remove}}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{remove}}
 			\label{SequenzQueueRemove}
 			\end{figure}			
 			
@@ -166,7 +166,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/HandleArrival}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
+			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
 			\label{SequenzQueuePoll}
 			\end{figure}	
 			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine \textit{Message} von einem \textit{Robot} erhält, welche von ihm über das von uns definierte Interface \textit{IArrivalNotification} gesandt wurde. Da der \textit{Server} eingespeichert hat, welchen \textit{Task} der \textit{Robot} gerade ausführt, müssen keine Parameter übergeben werden, sondern der \textit{Server} kann einfach nachschauen, welcher Typ von \textit{Destination} gerade erreicht wurde. Je nach Typ wird dann eine Benachrichtigung an die zugehörigen \textit{Customers} gesendet. Bei einem Taxiauftrag wird keine Nachricht an den Taxikunden geschickt, wenn dieser sein Ziel erreicht. Laut Aufgabenstellung ist eine Taxifahrt mit erreichen der \textit{Destination} des Taxikunden sofort beendet, ohne dass weitere Benachrichtigungen an den Taxikunden geschickt werden müssen.

@@ -55,9 +55,9 @@
     ><rect x="0" y="0" clip-path="url(#clipPath2)" fill="none" width="115" rx="15" ry="15" height="40"
     /></g
     ><g font-size="11" transform="translate(79,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="14" xml:space="preserve" y="17" clip-path="url(#clipPath3)" stroke="none"
+    ><text x="15" xml:space="preserve" y="17" clip-path="url(#clipPath3)" stroke="none"
       >Get first task of</text
-      ><text x="37" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
+      ><text x="38" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
       >tasklist</text
     ></g
     ><g font-size="11" transform="translate(237,2)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -67,9 +67,9 @@
     ><rect x="0" y="0" clip-path="url(#clipPath2)" fill="none" width="115" rx="15" ry="15" height="40"
     /></g
     ><g font-size="11" transform="translate(237,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="14" xml:space="preserve" y="17" clip-path="url(#clipPath3)" stroke="none"
+    ><text x="16" xml:space="preserve" y="17" clip-path="url(#clipPath3)" stroke="none"
       >Delete the task</text
-      ><text x="22" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
+      ><text x="23" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
       >from tasklist</text
     ></g
     ><g font-size="11" transform="translate(396,2)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -79,7 +79,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath2)" fill="none" width="115" rx="15" ry="15" height="40"
     /></g
     ><g font-size="11" transform="translate(396,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="14" xml:space="preserve" y="24" clip-path="url(#clipPath3)" stroke="none"
+    ><text x="16" xml:space="preserve" y="24" clip-path="url(#clipPath3)" stroke="none"
       >Return the task</text
     ></g
     ><g font-size="11" transform="translate(561,12)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
