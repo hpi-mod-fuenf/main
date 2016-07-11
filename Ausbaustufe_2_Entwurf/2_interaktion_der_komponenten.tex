@@ -1,8 +1,17 @@
 \section{Interaktion der Komponenten}
-Auf Basis der Use Cases aus der Analyse wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. 
-Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Robot} und dem \emph{Server}, wie dessen Austausch mit dem \emph{Hospital} und der \emph{TaxiApp}. 
+Auf Basis der Use Cases aus der Analyse wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. \\
+Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Robot} und dem \emph{Server}, sowie dessen Austausch mit dem \emph{Hospital} und der \emph{TaxiApp}. 
 Die Abläufe innerhalb der Komponenten werden dann in Kapitel 8 näher spezifiziert. \\
 
+\subsection*{Kommunikation zwischen Server und RobotUnit}
+Zur bidirektionalen Kommunikation zwischen \emph{Server} und \emph{RobotUnit} werden \emph{Remote Procedure Calls} (RPC) eingesetzt. Damit ist der \emph{Server} (respektive \emph{RobotUnit}) in der Lage auf der jeweils anderen Komponente Methoden aufzurufen und deren Rückgabewert zu verwenden. \\ \\
+Der Ablauf ist in Abbildung \ref{SequenzDiagrammRPC} dargestellt. \\ Möchte der \emph{Invoker} einen RPC ausführen, wird aus dem gewünschten Methodenaufruf durch Serialisierung des Methodennames und der Parameter eine \texttt{callMessage} erzeugt, die dem \emph{Processor} übermittelt wird. Nach Deserialisierung findet der lokale Methodenaufruf statt (\texttt{5: callLocalProcedure}). Der Rückgabewert wird dem InvokerNetworkAccess serialisiert übermittelt, dort deserialisiert und der aufrufenden Methode als Rückgabewert mitgeteilt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-Communication_RPC}
+	\caption{Sequenzdiagramm für einen abstrakten \emph{Remote Procedure Call (RPC)}}
+	\label{SequenzDiagrammRPC}
+\end{figure}
 
 \subsection*{Interaktion zwischen TaxiApp, Server und RobotUnit}
 
@@ -31,13 +40,4 @@ Solange der Taxikunde noch nicht in das Taxi gestiegen ist, kann er mit \texttt{
 	\label{SequenzDiagrammInteraktionHospital}
 \end{figure}
 
-
-\subsection*{Kommunikation zwischen Server und RobotUnit}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-Communication_RPC}
-	\caption{Sequenzdiagramm für einen abstrakten \emph{Remote Procedure Call (RPC)}}
-	\label{SequenzDiagrammRPC}
-\end{figure}
 
