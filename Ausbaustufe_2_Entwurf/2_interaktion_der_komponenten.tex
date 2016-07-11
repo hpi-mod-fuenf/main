@@ -9,7 +9,7 @@ Zur bidirektionalen Kommunikation zwischen \emph{Server} und \emph{RobotUnit} we
 Der Ablauf ist in Abbildung \ref{SequenzDiagrammRPC} dargestellt. \\ Möchte der \emph{Invoker} einen RPC ausführen, wird aus dem gewünschten Methodenaufruf durch Serialisierung des Methodennames und der Parameter eine \texttt{callMessage} erzeugt, die dem \emph{Processor} übermittelt wird. Nach Deserialisierung findet der lokale Methodenaufruf statt (\texttt{5: callLocalProcedure}). Der Rückgabewert wird dem InvokerNetworkAccess serialisiert übermittelt, dort deserialisiert und der aufrufenden Methode als Rückgabewert mitgeteilt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-Communication_RPC}
+	\includegraphics[width=1\textwidth]{img/2-Entwurf-Communication_RPC}
 	\caption{Sequenzdiagramm für einen abstrakten \emph{Remote Procedure Call (RPC)}}
 	\label{SequenzDiagrammRPC}
 \end{figure}
@@ -28,7 +28,7 @@ Diese Information leitet der \emph{Server} an die \emph{TaxiApp} weiter. Wenn de
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveOrder-Taxi}
+	\includegraphics[width=1\textwidth]{img/2-Entwurf-ReceiveOrder-Taxi}
 	\caption{\emph{ReceiveOrder}-Sequenzdiagramm, falls ein Kunde ein Taxi anfragt}
 	\label{SequenzDiagrammInteraktionTaxi}
 \end{figure}
