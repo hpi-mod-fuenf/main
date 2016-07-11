@@ -39,6 +39,7 @@
 - [ ] Beschreibungen zu aktualisierten Sequenzdiagrammen in 2. Interaktion der Komponenten aktualisieren (Wichtig: "Unser sendQueueIndex() ruft bei Taxi-Aufträgen intern die gegebene reportNumberInList()-Methode auf")
 - [ ] Möglichkeit für "cancel order" einbauen
 - [ ] Methoden des AppContainers etc. einbauen
+- [ ] Im Text daruf hinweisen: Es gibt höchstens so viele Krankenhaustransporte wie Robots, inbesondere: Krankenhaustransporte werden immer sofort ausgeführt und können nicht in die Warteliste
 
 
 ## nachträgliche Änderungen Analyse:
