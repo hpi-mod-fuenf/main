@@ -40,6 +40,7 @@
 - [ ] Möglichkeit für "cancel order" einbauen
 - [ ] Methoden des AppContainers etc. einbauen
 - [ ] Im Text daruf hinweisen: Es gibt höchstens so viele Krankenhaustransporte wie Robots, inbesondere: Krankenhaustransporte werden immer sofort ausgeführt und können nicht in die Warteliste
+- [ ] Aktivitätsdiagramme "driveToDestination", Abfrage mit dem Obstacle ergibt noch nicht all zu viel Sinn @josauder
 
 
 ## nachträgliche Änderungen Analyse:
