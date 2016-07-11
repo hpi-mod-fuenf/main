@@ -6,13 +6,13 @@ Die Abläufe innerhalb der Komponenten werden dann in Kapitel 8 näher spezifizi
 
 \subsection*{Interaktion bei Ausführung von \emph{Receive Order \& Cancel Order}}
 
-Elementar ist in diesem Fall der Use Case "ReceiveOrder" (Use Case 1.1), der es Usern ermöglicht Anfragen oder Notrufe abzusetzen, um ein Taxi oder einen Krankentransporter anzufordern. 
-Das System arbeitet mit einer Warteliste. 
-Krankentransporte werden in jedem Fall priorisiert und es wird schnellstmöglich der nächste Robot zur Verfügung gestellt. 
-Im Falle des ersten Sequenzdiagramms ist dies mit der Verwendung der TaxiApp dargestellt, die wiederum den Task mit den Destinations an den Server weitergibt. 
+Elementar ist in diesem Fall der Use Case \texttt{Receive Order} (Use Case 1.1), der es Usern ermöglicht Anfragen oder Notrufe abzusetzen, um ein Taxi oder einen Krankentransporter anzufordern. 
+Das System arbeitet mit einer Warteliste für Aufträge von Taxikunden. \\
+Krankentransporte werden bei der Vergabe von Aufträgen stets priorisiert und es wird ggf. ein laufender \emph{Task} eines Taxikunden unterbrochen, um einen Robot bereitzustellen. \\
+Im Falle des ersten Sequenzdiagramms ist dies mit der Verwendung der \emph{TaxiApp} dargestellt, die wiederum die \emph{Order} mit den Destinations an den Server weitergibt.
 Danach wird vom Server überprüft, ob überhaupt Taxis verfügbar sind.
-Falls keins mehr verfügbar ist, wird die Anzahl der Kunden in der Wartschlange an die App und somit an den User zurückgegeben. 
-Mit "Cancel Order" (Use Case 1.2) können sich User dabei aus der Warteliste streichen lassen, solange sie noch nicht in das Taxi eingestiegen sind. \\
+Falls keins mehr verfügbar ist, wird die Anzahl der Kunden in der Wartschlange an die App und somit an den User zurückgegeben. \\
+Solange der Taxikunde noch nicht in das Taxi gestiegen ist, kann er mit \texttt{Cancel Order} (Use Case 1.2) seine Bestellung aus dem System (der Warteschlange löschen). \\
 
 \begin{figure}[H]
 	\centering
@@ -32,8 +32,8 @@ Mit "Cancel Order" (Use Case 1.2) können sich User dabei aus der Warteliste str
 
 \subsection*{Interaktion bei Ausführung von \emph{Receive Boarding Confirmation \& Receive Arrival Notification}}
 
-Alle Prozesse laufen wie ersichtlich über den Server, der wiederum die RobotUnit fernsteuert. 
-So wird für "Receive Boarding Confirmation" (Use Case 1.3) erst vom Hospital oder der TaxiApp an den Server zurückgemeldet, dass sich der Patient oder der Customer an Bord befindet, bevor die Fahrt aufgenommen werden kann. 
+Alle Prozesse laufen wie ersichtlich über den Server, der wiederum die \emph{RobotUnit} fernsteuert. 
+So wird für \texttt{Receive Boarding Confirmation} (Use Case 1.3) erst vom Hospital oder der TaxiApp an den Server zurückgemeldet, dass sich der Patient oder der Customer an Bord befindet, bevor die Fahrt aufgenommen werden kann. 
 In gleicher Weise wird dem Server mit "Receive Arrival Notification" (Use Case 1.5) zurückgemeldet, dass der Robot wieder für weitere Einsätze verfügbar ist, sobald der Customer den Robot verlassen hat.  \\
 
 \begin{figure}[H]
