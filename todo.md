@@ -5,7 +5,7 @@
 - [x] OCL shit
 - [x] "Select best match"-Aktivitätsdiagramm einfügen @Baschdl 
 - [x] "Enters" einfügen
-- [x] Aktivitätsdiagramm driveAroundObstacle @josauder 
+- [ ] Aktivitätsdiagramm driveAroundObstacle Prioritäten-Ausweichen @josauder 
 - [ ] Bildunterschriften @bakoe @Fluepke 
 - [ ] Erklärung Netzwerkkomponenten/ Kommunikation (Remote Procedure Calls) ("NetworkAccess implementiert IWlanAdapter und MessageHandler")
 - [x] Diagramm zu Queue
