@@ -87,7 +87,7 @@
       ><path d="M0 0 L620 0 L620 701 L0 701 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath28"
-      ><path d="M506 79 L506 92 L244 92 L244 79 ZM513 266 L513 291 L245 291 L245 266 ZM324 421 L324 434 L283 434 L283 421 ZM257 455 L257 469 L212 469 L212 455 ZM596 639 L596 652 L319 652 L319 639 ZM260 685 L260 699 L167 699 L167 685 ZM0 0 L0 701 L620 701 L620 287 L578 287 L578 274 L620 274 L620 95 L565 95 L565 82 L620 82 L620 0 Z"
+      ><path d="M506 79 L506 92 L244 92 L244 79 ZM513 266 L513 291 L245 291 L245 266 ZM324 421 L324 434 L283 434 L283 421 ZM257 455 L257 469 L212 469 L212 455 ZM596 639 L596 652 L319 652 L319 639 ZM0 0 L0 701 L166 701 L166 684 L248 684 L248 701 L620 701 L620 287 L578 287 L578 274 L620 274 L620 95 L565 95 L565 82 L620 82 L620 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath29"
       ><path d="M0 0 L782 0 L782 636 L0 636 L0 0 Z"
@@ -150,7 +150,7 @@
       ><path d="M0 0 L205 0 L205 222 L0 222 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath49"
-      ><path d="M100 155 L100 169 L7 169 L7 155 ZM0 0 L0 222 L205 222 L205 122 L159 122 L159 109 L205 109 L205 0 Z"
+      ><path d="M88 154 L88 174 L6 174 L6 154 ZM0 0 L0 222 L205 222 L205 122 L159 122 L159 109 L205 109 L205 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath50"
       ><path d="M0 0 L204 0 L204 230 L0 230 L0 0 Z"
@@ -162,7 +162,7 @@
       ><path d="M0 0 L574 0 L574 490 L0 490 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath53"
-      ><path d="M151 147 L151 160 L110 160 L110 147 ZM84 181 L84 195 L39 195 L39 181 ZM423 365 L423 378 L146 378 L146 365 ZM0 0 L0 411 L87 411 L87 425 L0 425 L0 490 L574 490 L574 0 L571 0 L571 13 L405 13 L405 0 L340 0 L340 17 L72 17 L72 0 Z"
+      ><path d="M151 147 L151 160 L110 160 L110 147 ZM84 181 L84 195 L39 195 L39 181 ZM423 365 L423 378 L146 378 L146 365 ZM0 0 L0 410 L75 410 L75 430 L0 430 L0 490 L574 490 L574 0 L571 0 L571 13 L405 13 L405 0 L340 0 L340 17 L72 17 L72 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath54"
       ><path d="M97 17 L97 31 L52 31 L52 17 ZM0 0 L0 230 L204 230 L204 214 L159 214 L159 201 L204 201 L204 0 Z"
@@ -171,7 +171,7 @@
       ><path d="M0 0 L204 0 L204 252 L0 252 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath56"
-      ><path d="M100 113 L100 127 L7 127 L7 113 ZM0 0 L0 252 L204 252 L204 80 L159 80 L159 67 L204 67 L204 0 Z"
+      ><path d="M87 113 L87 133 L5 133 L5 113 ZM0 0 L0 252 L204 252 L204 81 L158 81 L158 68 L204 68 L204 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath57"
       ><path d="M0 0 L204 0 L204 228 L0 228 L0 0 Z"
@@ -183,10 +183,10 @@
       ><path d="M0 0 L204 0 L204 249 L0 249 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath60"
-      ><path d="M96 10 L96 24 L3 24 L3 10 ZM0 0 L0 249 L204 249 L204 0 Z"
+      ><path d="M84 9 L84 29 L2 29 L2 9 ZM0 0 L0 249 L204 249 L204 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath61"
-      ><path d="M-93 -14 L186 -14 L186 28 L-93 28 L-93 -14 Z"
+      ><path d="M-82 -20 L164 -20 L164 40 L-82 40 L-82 -20 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath62"
       ><path d="M-277 -13 L554 -13 L554 26 L-277 26 L-277 -13 Z"
@@ -229,7 +229,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath2)" fill="none" width="213" rx="15" ry="15" height="54"
     /></g
     ><g font-size="11" transform="translate(326,46)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="6" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
+    ><text x="10" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
       >Drive cautiously for a short distance</text
     ></g
     ><g font-size="11" transform="translate(141,470)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -239,7 +239,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath4)" fill="none" width="280" rx="15" ry="15" height="40"
     /></g
     ><g font-size="11" transform="translate(141,470)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="4" xml:space="preserve" y="24" clip-path="url(#clipPath5)" stroke="none"
+    ><text x="9" xml:space="preserve" y="24" clip-path="url(#clipPath5)" stroke="none"
       >Check if Robot faces parallel to Obstacle's edges</text
     ></g
     ><g font-size="11" transform="translate(56,602)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -249,7 +249,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath6)" fill="none" width="213" rx="15" ry="15" height="52"
     /></g
     ><g font-size="11" transform="translate(56,602)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="6" xml:space="preserve" y="30" clip-path="url(#clipPath7)" stroke="none"
+    ><text x="10" xml:space="preserve" y="30" clip-path="url(#clipPath7)" stroke="none"
       >Drive cautiously for a short distance</text
     ></g
     ><g font-size="11" transform="translate(56,681)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -259,9 +259,9 @@
     ><rect x="0" y="0" clip-path="url(#clipPath8)" fill="none" width="213" rx="15" ry="15" height="65"
     /></g
     ><g font-size="11" transform="translate(56,681)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="29" xml:space="preserve" y="29" clip-path="url(#clipPath9)" stroke="none"
+    ><text x="31" xml:space="preserve" y="29" clip-path="url(#clipPath9)" stroke="none"
       >Check if path in direction of</text
-      ><text x="52" xml:space="preserve" y="43" clip-path="url(#clipPath9)" stroke="none"
+      ><text x="55" xml:space="preserve" y="43" clip-path="url(#clipPath9)" stroke="none"
       >Destination is clear</text
     ></g
     ><g font-size="11" transform="translate(148,756)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -277,7 +277,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath2)" fill="none" width="213" rx="15" ry="15" height="54"
     /></g
     ><g font-size="11" transform="translate(56,837)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="16" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
+    ><text x="18" xml:space="preserve" y="31" clip-path="url(#clipPath3)" stroke="none"
       >Jump back to driveToDestination</text
     ></g
     ><g font-size="11" transform="translate(237,536)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -307,7 +307,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath15)" fill="none" width="213" rx="15" ry="15" height="46"
     /></g
     ><g font-size="11" transform="translate(326,125)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="24" xml:space="preserve" y="27" clip-path="url(#clipPath16)" stroke="none"
+    ><text x="28" xml:space="preserve" y="27" clip-path="url(#clipPath16)" stroke="none"
       >Measure distance to Obstacle</text
     ></g
     ><g font-size="11" transform="translate(148,536)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -323,7 +323,7 @@
     ><rect x="0" y="0" clip-path="url(#clipPath18)" fill="none" width="213" rx="15" ry="15" height="40"
     /></g
     ><g font-size="11" transform="translate(331,305)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="11" xml:space="preserve" y="24" clip-path="url(#clipPath19)" stroke="none"
+    ><text x="14" xml:space="preserve" y="24" clip-path="url(#clipPath19)" stroke="none"
       >Check if Obstacle is another Robot</text
     ></g
     ><g font-size="11" transform="translate(423,391)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -339,9 +339,9 @@
     ><rect x="0" y="0" clip-path="url(#clipPath20)" fill="none" width="213" rx="15" ry="15" height="44"
     /></g
     ><g font-size="11" transform="translate(742,387)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="7" xml:space="preserve" y="19" clip-path="url(#clipPath21)" stroke="none"
+    ><text x="9" xml:space="preserve" y="19" clip-path="url(#clipPath21)" stroke="none"
       >Avoid Collision by swerving to right,</text
-      ><text x="19" xml:space="preserve" y="33" clip-path="url(#clipPath21)" stroke="none"
+      ><text x="21" xml:space="preserve" y="33" clip-path="url(#clipPath21)" stroke="none"
       >letting other Robot pass on Left</text
     ></g
     ><g font-size="11" transform="translate(416,196)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
@@ -444,7 +444,7 @@
       /><line y2="114" fill="none" x1="100" clip-path="url(#clipPath54)" x2="106" y1="126"
       /><line y2="114" fill="none" x1="100" clip-path="url(#clipPath54)" x2="94" y1="126"
     /></g
-    ><g stroke-linecap="butt" font-size="11" transform="translate(62,688)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
+    ><g stroke-linecap="butt" font-size="11" transform="translate(63,687)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="148" fill="none" x1="100" clip-path="url(#clipPath56)" x2="100" y1="100"
       /><line y2="136" fill="none" x1="100" clip-path="url(#clipPath56)" x2="106" y1="148"
       /><line y2="136" fill="none" x1="100" clip-path="url(#clipPath56)" x2="94" y1="148"
@@ -459,44 +459,44 @@
       /><line y2="133" fill="none" x1="100" clip-path="url(#clipPath60)" x2="106" y1="145"
       /><line y2="133" fill="none" x1="100" clip-path="url(#clipPath60)" x2="94" y1="145"
     /></g
-    ><g font-size="11" transform="translate(69,801)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath61)" stroke="none"
+    ><g font-size="11" transform="translate(68,800)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><text x="4" xml:space="preserve" y="14" clip-path="url(#clipPath61)" stroke="none"
       >[path is clear]</text
     ></g
     ><g font-size="11" transform="translate(221,755)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="4" xml:space="preserve" y="11" clip-path="url(#clipPath62)" stroke="none"
+    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath62)" stroke="none"
       >[obstacle is still between Robot and destination]</text
     ></g
     ><g font-size="11" transform="translate(185,537)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
+    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
       >[no]</text
     ></g
     ><g font-size="11" transform="translate(114,571)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="8" xml:space="preserve" y="11" clip-path="url(#clipPath64)" stroke="none"
+    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath64)" stroke="none"
       >[yes]</text
     ></g
     ><g font-size="11" transform="translate(572,303)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="7" xml:space="preserve" y="11" clip-path="url(#clipPath65)" stroke="none"
+    ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath65)" stroke="none"
       >[distance &lt;= min_dist]</text
     ></g
     ><g font-size="11" transform="translate(791,305)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="7" xml:space="preserve" y="11" clip-path="url(#clipPath66)" stroke="none"
+    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath66)" stroke="none"
       >[distance &gt; min_dist]</text
     ></g
     ><g font-size="11" transform="translate(147,382)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="46" xml:space="preserve" y="16" clip-path="url(#clipPath67)" stroke="none"
+    ><text x="50" xml:space="preserve" y="16" clip-path="url(#clipPath67)" stroke="none"
       >[Obstacle is not another Robot]</text
     ></g
     ><g font-size="11" transform="translate(480,390)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="7" xml:space="preserve" y="11" clip-path="url(#clipPath68)" stroke="none"
+    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath68)" stroke="none"
       >[Obstacle is another Robot]</text
     ></g
     ><g font-size="11" transform="translate(146,195)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath69)" stroke="none"
+    ><text x="16" xml:space="preserve" y="11" clip-path="url(#clipPath69)" stroke="none"
       >[distance &gt; previously_measured_distance]</text
     ></g
     ><g font-size="11" transform="translate(467,198)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath70)" stroke="none"
+    ><text x="16" xml:space="preserve" y="11" clip-path="url(#clipPath70)" stroke="none"
       >[distance &lt;= previously_measured_distance]</text
     ></g
     ><g fill="rgb(120,120,120)" text-rendering="geometricPrecision" fill-opacity="1" font-size="8" stroke-opacity="1" stroke="rgb(120,120,120)"
