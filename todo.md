@@ -6,7 +6,7 @@
 - [x] "Select best match"-Aktivitätsdiagramm einfügen @Baschdl 
 - [x] "Enters" einfügen
 - [ ] Aktivitätsdiagramm driveAroundObstacle Prioritäten-Ausweichen @josauder 
-- [ ] Bildunterschriften @bakoe @Fluepke 
+- [x] Bildunterschriften @bakoe @Fluepke 
 - [ ] Erklärung Netzwerkkomponenten/ Kommunikation (Remote Procedure Calls) ("NetworkAccess implementiert IWlanAdapter und MessageHandler")
 - [x] Diagramm zu Queue
 - [x] "VirtualRobots" auf dem Server verwenden, Methoden können nicht direkt auf der "RobotUnit" aufgerufen werden
