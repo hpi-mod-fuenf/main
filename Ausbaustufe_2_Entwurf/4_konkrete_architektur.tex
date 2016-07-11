@@ -1,14 +1,15 @@
 %4
 \section{Konkrete Architektur}
 
-Abbildung \ref{KomponentendiagrammKonkret} zeigt die Komponenten \emph{ServerSoftware} und \emph{RobotSoftware} sowie deren Zusammenhang in einem Komponentendiagramm. \\ Die Kommunikation der Komponenten findet abstrahiert über \emph{Remote Procedure Calls} (RPC) statt, sodass der \emph{Server} auf der \emph{RobotUnit} die in den Schnittstellen \emph{ISensorData} und \emph{ITask} definierten Methoden wie lokale Aufrufe ausführen kann. Umgekehrt kann die \emph{RobotUnit} über die Schnittstellen \emph{IRepair} und \emph{IArrivalNotification} Methoden auf dem \emph{Server} aufrufen.
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{img/2-Entwurf-4-KonkreteArchitektur}
+\includegraphics[height=1\linewidth, angle=90]{img/2-Entwurf-4-KonkreteArchitektur}
 \caption{Komponentendiagramm mit den Komponentenschnittstellen}
 \label{KomponentendiagrammKonkret}
 \end{figure}
+
+
+Abbildung \ref{KomponentendiagrammKonkret} zeigt die Komponenten \emph{ServerSoftware} und \emph{RobotSoftware} sowie deren Zusammenhang in einem Komponentendiagramm. \\ Die Kommunikation der Komponenten findet abstrahiert über \emph{Remote Procedure Calls} (RPC) statt, sodass der \emph{Server} auf der \emph{RobotUnit} die in den Schnittstellen \emph{ISensorData} und \emph{ITask} definierten Methoden wie lokale Aufrufe ausführen kann. Umgekehrt kann die \emph{RobotUnit} über die Schnittstellen \emph{IRepair} und \emph{IArrivalNotification} Methoden auf dem \emph{Server} aufrufen.
 
 %4.1 Server Software
 \subsection{\textit{ServerSoftware}}

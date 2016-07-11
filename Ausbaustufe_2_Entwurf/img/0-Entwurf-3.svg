@@ -42,7 +42,10 @@
       ><path d="M0 0 L204 0 L204 266 L0 266 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
-      ><path d="M-63 -20 L126 -20 L126 40 L-63 40 L-63 -20 Z"
+      ><path d="M-66 -23 L132 -23 L132 46 L-66 46 L-66 -23 Z"
+      /></clipPath
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
+      ><path d="M-71 -26 L127 -26 L127 43 L-71 43 L-71 -26 Z"
       /></clipPath
     ></defs
     ><g fill="white" text-rendering="geometricPrecision" fill-opacity="1" stroke-opacity="1" stroke="white"
@@ -120,9 +123,10 @@
     ><g stroke-linecap="butt" font-size="11" transform="translate(2,-58)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="162" fill="none" x1="100" clip-path="url(#clipPath12)" x2="100" y1="100"
     /></g
-    ><g font-size="11" transform="translate(102,62)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="5" xml:space="preserve" y="14" clip-path="url(#clipPath13)" stroke="none"
-      >chainOf ▼</text
+    ><g font-size="11" transform="translate(109,65)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><path d="M8 13 L3 0 L13 0 Z" stroke="none" clip-path="url(#clipPath14)"
+      /><text x="23" xml:space="preserve" y="15" clip-path="url(#clipPath13)" transform="translate(-5,-3)" stroke="none"
+      >chainOf</text
     ></g
     ><g fill="rgb(120,120,120)" text-rendering="geometricPrecision" fill-opacity="1" font-size="8" stroke-opacity="1" stroke="rgb(120,120,120)"
     ><text x="0" xml:space="preserve" y="10" stroke="none"
