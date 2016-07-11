@@ -19,8 +19,8 @@ Wenn ein Roboter bei einem Patienten oder einem Kunden angekommen ist, müssen P
 
 An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 \begin{enumerate}
-	\item Wir starten das System mit voll geladenen Akkus für jeden Roboter
-	\item Es existiert genau ein Krankenhaus
+	\item Wir starten das System mit voll geladenen Akkus für jeden Roboter.
+	\item Es existiert genau ein Krankenhaus und mindestens ein Roboter.
 	\item Die Kommunikation funktioniert zuverlässig, insbesondere kommen alle gesendeten \textit{Messages} auch bei dem Empfänger ungeschädigt an. Dazu nehmen wir auch an, dass die Latenz vernachlässigbar klein ist.
 	\item Zur Vereinfachung des Fahrverhalten muss jedes Zielobjekt physisch erreichbar sein. Ziele sind dementsprechend keine Hindernisse, das Gleiche gilt für Ladestationen, und sind prinzipiell mit einer Akkuladung erreichbar.
 	\item Der Batterieverbrauch bei Robotern ist in einem linearen Verhältnis zur zurückgelegten Strecke.
@@ -30,7 +30,8 @@ An die Punkte anknüpfend wird mit folgenden Annahmen gearbeitet:
 	\item Ein Patient ist immer von Helfenden umgeben, die ermöglichen, dass der Patient auf den Roboter geladen wird, und nach der Verladung diesbezüglich das Krankenhaus benachrichtigen.
 	\item Wenn ein Kunde ein Taxi bestellt und dieses ankommt, steigt dieser auch zeitnah ein und nimmt seine Fahrt wahr.
 	\item Der Taxikunde schließt nach Ankunft bei seinem Ziel die Taxifahrt ab. Er schickt über die TaxiApp also eine entsprechende Nachricht an das System.
-	\item Aufträge vom Krankenhaus kommen, wenn aktuell alle Roboter bereits mit Krankenhausaufträgen besetzt sind, zunächst auf die vom Server verwaltete Warteliste und erhalten die Wartelisteposition als Nachricht. Wenn das Krankenhaus diese Wartelisteposition nicht passt, kann der Auftrag analog zum Taxiauftrag zurückgezogen werden.
+	\item Das System startet in einem initialisierten Zustand und ist sofort für Anfragen bereit.
+	\item Es gibt maximal genau so viele Krankenhausaufträge wie Roboter in unserem System.
 
 \end{enumerate}
 
