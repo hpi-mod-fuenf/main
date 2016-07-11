@@ -11,7 +11,7 @@ Möchte der \emph{Invoker} einen RPC ausführen, wird aus dem gewünschten Metho
 Nach der Deserialisierung findet der lokale Methodenaufruf statt (\texttt{5: callLocalProcedure}). Der Rückgabewert wird dem InvokerNetworkAccess serialisiert übermittelt. Dies geschieht analog zur oben dargestellten Kommunikation, allerdings in die Rückrichtung. Der \emph{Invoker} deserialisiert die Antwort und teilt sie der aufrufenden Methode als Rückgabewert mit.
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=0.85\textwidth, angle=90]{img/2-Entwurf-Communication_RPC}
+	\includegraphics[height=0.75\textwidth, angle=90]{img/2-Entwurf-Communication_RPC}
 	\caption{Sequenzdiagramm für einen abstrakten \emph{Remote Procedure Call (RPC)}}
 	\label{SequenzDiagrammRPC}
 \end{figure}
