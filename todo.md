@@ -30,10 +30,10 @@
 - [x] Klassendiagramm layouten
 - [x] Fehlen unter "3.2 Interfaces" noch die Interfaces IRepair und ...? @Fluepke @jcremerius 
 - [x] "Interaktion bei Ausführung von Receive Order & Cancel Order" Enthält, dass die Warteliste beim Krankentransport nur von theoretischer Natur ist, aber das betrachte ich als falsch.
-- [ ] ChooseRobot überarbeiten (Server weiß jetzt, welche VirtualRobotUnit momentan welchen Task ausführt)
+- [x] ChooseRobot überarbeiten (Server weiß jetzt, welche VirtualRobotUnit momentan welchen Task ausführt)
 - [ ] Initialisierungssequenz (IMessageHandler, IBumperHandler, weitere?)
-- [ ] Aktivitätsdiagramm zur Queue aktualisieren: Fall hinzufügen, dass ein Robot gewählt wird, der bereits einen Taxi-Task auswählt. Dann muss ein neuer Task (aktualisierte Destinations!) erstellt werden und der Queue hinzugefügt werden. 
-- [ ] Beschreibung zu Figure 4 und 5
+- [x] Aktivitätsdiagramm zur Queue aktualisieren: Fall hinzufügen, dass ein Robot gewählt wird, der bereits einen Taxi-Task auswählt. Dann muss ein neuer Task (aktualisierte Destinations!) erstellt werden und der Queue hinzugefügt werden. 
+- [x] Beschreibung zu Figure 4 und 5
 - [x] Sequenzdiagramme Kapitel 2 überprüfen+korrigieren
 - [x] Datentyp von Task.type von `String` zu `enum` (hospital, taxi) ändern
 - [ ] Beschreibungen zu aktualisierten Sequenzdiagrammen in 2. Interaktion der Komponenten aktualisieren (Wichtig: "Unser sendQueueIndex() ruft bei Taxi-Aufträgen intern die gegebene reportNumberInList()-Methode auf")
