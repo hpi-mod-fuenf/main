@@ -82,7 +82,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/1-Entwurf-7-driveAroundObstacle}
-			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
 			\label{SequenzDriveAroundObstacle}
 			\end{figure}
 
@@ -119,7 +119,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/add}
-			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{add}}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{add}}
 			\label{SequenzQueueAdd}
 			\end{figure}
 			
@@ -140,7 +140,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-poll}
-			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{poll}}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{poll}}
 			\label{SequenzQueuePoll}
 			\end{figure}			
 			
@@ -150,7 +150,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-remove}
-			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{remove}}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{remove}}
 			\label{SequenzQueueRemove}
 			\end{figure}			
 			
@@ -162,7 +162,7 @@
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/HandleArrival}
-			\caption{Sequenzdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
 			\label{SequenzQueuePoll}
 			\end{figure}	
 			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine \textit{Message} von einem \textit{Robot} erhält, welche von ihm über das von uns definierte Interface \textit{IArrivalNotification} gesandt wurde. Da der \textit{Server} eingespeichert hat, welchen \textit{Task} der \textit{Robot} gerade ausführt, müssen keine Parameter übergeben werden, sondern der \textit{Server} kann einfach nachschauen, welcher Typ von \textit{Destination} gerade erreicht wurde. Je nach Typ wird dann eine Benachrichtigung an die zugehörigen \textit{Customers} gesendet. Bei einem Taxiauftrag wird keine Nachricht an den Taxikunden geschickt, wenn dieser sein Ziel erreicht. Laut Aufgabenstellung ist eine Taxifahrt mit erreichen der \textit{Destination} des Taxikunden sofort beendet, ohne dass weitere Benachrichtigungen an den Taxikunden geschickt werden müssen.
