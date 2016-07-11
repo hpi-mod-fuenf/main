@@ -27,13 +27,13 @@
       ><path d="M0 0 L480 0 L480 204 L0 204 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath8"
-      ><path d="M180 23 L180 37 L12 37 L12 23 ZM465 23 L465 37 L295 37 L295 23 ZM296 81 L296 95 L180 95 L180 81 ZM0 0 L0 204 L480 204 L480 0 Z"
+      ><path d="M180 23 L180 37 L12 37 L12 23 ZM465 23 L465 37 L295 37 L295 23 ZM289 81 L289 95 L187 95 L187 81 ZM0 0 L0 204 L480 204 L480 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M296 54 L296 68 L180 68 L180 54 ZM0 0 L0 204 L480 204 L480 0 L465 0 L465 10 L295 10 L295 0 L180 0 L180 10 L12 10 L12 0 Z"
+      ><path d="M289 54 L289 68 L187 68 L187 54 ZM0 0 L0 204 L480 204 L480 0 L465 0 L465 10 L295 10 L295 0 L180 0 L180 10 L12 10 L12 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-116 -14 L232 -14 L232 28 L-116 28 L-116 -14 Z"
+      ><path d="M-102 -14 L204 -14 L204 28 L-102 28 L-102 -14 Z"
       /></clipPath
     ></defs
     ><g fill="white" text-rendering="geometricPrecision" fill-opacity="1" stroke-opacity="1" stroke="white"
@@ -83,10 +83,10 @@
       /><line clip-path="url(#clipPath9)" fill="none" x1="100" x2="112" y1="100" y2="106" stroke-dasharray="none" stroke-miterlimit="10"
       /><line clip-path="url(#clipPath9)" fill="none" x1="100" x2="112" y1="100" y2="94" stroke-dasharray="none" stroke-miterlimit="10"
     /></g
-    ><g font-size="11" transform="translate(170,60)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="116" height="14" y="0" clip-path="url(#clipPath10)" stroke="none"
+    ><g font-size="11" transform="translate(177,60)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
+    ><rect x="0" width="102" height="14" y="0" clip-path="url(#clipPath10)" stroke="none"
       /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >1: requestRepair()</text
+      >requestRepair()</text
     ></g
     ><g fill="rgb(120,120,120)" text-rendering="geometricPrecision" fill-opacity="1" font-size="8" stroke-opacity="1" stroke="rgb(120,120,120)"
     ><text x="0" xml:space="preserve" y="10" stroke="none"
