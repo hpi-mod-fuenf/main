@@ -6,7 +6,9 @@ Zunächst soll der allgemeine Ablauf der Kommunikation spezifiziert werden, bevo
 
 \subsection*{Kommunikation zwischen Server und RobotUnit}
 Zur bidirektionalen Kommunikation zwischen \emph{Server} und \emph{RobotUnit} werden \emph{Remote Procedure Calls} (RPC) eingesetzt. Damit ist der \emph{Server} (respektive \emph{RobotUnit}) in der Lage auf der jeweils anderen Komponente Methoden aufzurufen und deren Rückgabewert zu verwenden. \\ \\
-Der Ablauf ist in Abbildung \ref{SequenzDiagrammRPC} dargestellt. \\ Möchte der \emph{Invoker} einen RPC ausführen, wird aus dem gewünschten Methodenaufruf durch Serialisierung des Methodennames und der Parameter eine \texttt{callMessage} erzeugt, die dem \emph{Processor} übermittelt wird. Nach Deserialisierung findet der lokale Methodenaufruf statt (\texttt{5: callLocalProcedure}). Der Rückgabewert wird dem InvokerNetworkAccess serialisiert übermittelt, dort deserialisiert und der aufrufenden Methode als Rückgabewert mitgeteilt.
+Der Ablauf ist in Abbildung \ref{SequenzDiagrammRPC} dargestellt. \\
+Möchte der \emph{Invoker} einen RPC ausführen, wird aus dem gewünschten Methodenaufruf durch Serialisierung des Methodennames und der Parameter eine \texttt{callMessage} erzeugt, die dem \emph{Processor} übermittelt wird. Zur Übermittlung (3. und 4.) wird die im Interface \emph{IWlanAdapter} definierte Methode \texttt{send(message)} aufgerufen. Auf \emph{Processor} Seite wird über \emph{IMessageHandler} die Methode \texttt{handleIncomingMessage(callmessage)} aufgerufen. \\
+Nach der Deserialisierung findet der lokale Methodenaufruf statt (\texttt{5: callLocalProcedure}). Der Rückgabewert wird dem InvokerNetworkAccess serialisiert übermittelt. Dies geschieht analog zur oben dargestellten Kommunikation, allerdings in die Rückrichtung. Der \emph{Invoker} deserialisiert die Antwort und teilt sie der aufrufenden Methode als Rückgabewert mit.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/2-Entwurf-Communication_RPC}
@@ -34,9 +36,9 @@ Diese Information leitet der \emph{Server} an die \emph{TaxiApp} weiter. Wenn de
 \end{figure}
 
 \subsection*{Interaktion zwischen Hospital, Server und RobotUnit}
-Der Use Case \texttt{Receive Order} (Use Case 1.1) ermöglicht es nicht nur Taxikunden mit \emph{TaxiApp} Aufträge an das System zu senden, sondern gibt auch dem \emph{Hospital} die Möglichkeit, Krankentransporte anzufordern. \\
+Der Use Case \texttt{Receive Order} (Use Case 1.1) ermöglicht es nicht nur Taxikunden mit der \emph{TaxiApp} Aufträge an das System zu senden, sondern gibt auch dem \emph{Hospital} die Möglichkeit, Krankentransporte anzufordern. \\
 Generell werden Krankenentransporte priorisiert behandelt, sodass, falls keine \emph{RobotUnit} verfügbar ist, eine Taxifahrt unterbrochen wird. Daraus ergibt sich, dass der nachfolgende Prozess ohne eine Warteliste auskommt. \\
-Die Interaktion zwischen dem \emph{Hospital}, dem \emph{Server} sowie den \emph{RobotUnits} ist in Abbildung \ref{SequenzDiagrammInteraktionHospital} dargestellt.
+Dieser Prozess der Interaktion des \emph{Hospitals}, des \emph{Servers} sowie der \emph{RobotUnits} ist in Abbildung \ref{SequenzDiagrammInteraktionHospital} dargestellt.
 Stellt das \emph{Hospital} eine Anfrage, selektiert der \emph{Server} daraufhin eine geeigneten \emph{RobotUnit} und übermittelt ihr den \emph{Task}. \\
 Nach der möglichst schnellen Ankunft informiert die \emph{RobotUnit} analog zum Ablauf einer Taxibestellung, den \emph{Server} über seine Ankunft am \emph{Patient}. Diese Information wird an das \emph{Hospital} weitergeleitet, damit dieses das Verladen des \emph{Patients} auf die \emph{RobotUnit} koordinieren kann. \\
 Befindet sich der \emph{Patient} an Bord, ruft das \emph{Hospital} den Use Case \texttt{Receive Boarding Confirmation} (Use Case 1.3) auf. Der \emph{Server} kann daraufhin der \emph{RobotUnit} den Befehl erteilen, seine Fahrt fortzusetzen. Um das Wohl des \emph{Patients} zu gewährleisten, fährt die \emph{RobotUnit} möglichst vorsichtig zum \emph{Hospital}. \\
