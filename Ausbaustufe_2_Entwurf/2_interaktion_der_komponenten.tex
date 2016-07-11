@@ -34,7 +34,9 @@ Diese Information leitet der \emph{Server} an die \emph{TaxiApp} weiter. Wenn de
 \end{figure}
 
 \subsection*{Interaktion zwischen Hospital, Server und RobotUnit}
-
+Der Use Case \texttt{Receive Order} (Use Case 1.1) ermöglicht es nicht nur Taxikunden mit \emph{TaxiApp} Aufträge an das System zu senden, sondern gibt auch dem \emph{Hospital} die Möglichkeit, Krankentransporte anzufordern. \\
+Generell werden Krankenentransporte priorisiert behandelt, sodass, falls keine \emph{RobotUnit} verfügbar ist, eine Taxifahrt unterbrochen wird. Daraus ergibt sich, dass der nachfolgende Prozess ohne eine Warteliste auskommt. \\
+Die Interaktion zwischen dem \emph{Hospital}, dem \emph{Server} sowie den \emph{RobotUnits} ist in Abbildung \ref{SequenzDiagrammInteraktionHospital} dargestellt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveOrder-Hosp}
