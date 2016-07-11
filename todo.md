@@ -55,14 +55,14 @@
 - [ ] Annahme "Es kann mehr Krankentransporte als Roboter geben"
 
 ## Verbesserungen nach dem Review übernehmen
-- [ ] Abstrakte Architektur anpassen @dschwenkert 
-- [ ] "Take Patient To Hospital"-Sequenzdiagramm: Referenz (?) und evt. gestrichelte Linie verwenden @jakobbraun @djdj10x10 
-- [ ] "Select Best Match"-Sequenzdiagramm alternatives vertauschen @jakobbraun @djdj10x10 
+- [x] Abstrakte Architektur anpassen @dschwenkert 
+- [x] "Take Patient To Hospital"-Sequenzdiagramm: Referenz (?) und evt. gestrichelte Linie verwenden @jakobbraun @djdj10x10 
+- [x] "Select Best Match"-Sequenzdiagramm alternatives vertauschen @jakobbraun @djdj10x10 
 - [x] Konkrete Architektur der RobotSoftware anpassen, richtiger Name @Fluepke @jcremerius 
 - [x] HardwareInterfaces aus Paketstruktur löschen @josauder @bakoe @baschdl
-- [ ] Kapitel 7: mehr Diagramme
-- [ ] komische Lebenslinien, auf Parallelität/ Deadlocks achten
-- [ ] "Interaktion bei Ausführung von Use Case 4 – Charging" steht irgendwas mit Kommunikation von RobotUnit und ChargingStation
+- [x] Kapitel 7: mehr Diagramme
+- [x] komische Lebenslinien, auf Parallelität/ Deadlocks achten
+- [x] "Interaktion bei Ausführung von Use Case 4 – Charging" steht irgendwas mit Kommunikation von RobotUnit und ChargingStation
 - [x] Kapitel 9: Interface "IWlanAdapter" @jonashering 
 
 # Proofread
