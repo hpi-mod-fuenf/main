@@ -29,22 +29,22 @@
 
 			%7.1.1.1 #collectSensorData():void
 			\paragraph{Beschreibung der Methode \texttt{readSensors}}
-			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Sensordaten zu schicken. 
-			Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
+			Der Server kann eine \textit{RobotUnit} dazu auffordern, ihm seine Sensordaten zu schicken. 
+			Die \textit{RobotUnit} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
 			nach seiner Position und seinem Akkustand an und gibt diese Informationen zurück an den \textit{Server}. 
 			Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über den \textit{IWlanAdapter} verschickt wird.
 			
 			\paragraph{Beschreibung der Methode \texttt{setTask}}
-			Diese Methode wird aufgerufen, wenn der \textit{Robot} einen neuen Task erhält. Wenn der \textit{Robot} davor keinen \textit{Task} hatte, wird dieser einfach ausgeführt. Wenn der übergebene \textit{Task} \texttt{null} ist, nimmt der \textit{Robot} fahrt zur Ladestation auf. Wenn der \textit{Robot} gerade einen \textit{TaxiCustomer} an bord hat und in dieser Methode einen Krankenhaustransport als \textit{Task} erhält, wird der \textit{TaxiCustomer} abgeladen, und der Krankenhaustransport wird ausgeführt.
+			Diese Methode wird aufgerufen, wenn die \textit{RobotUnit} einen neuen Task erhält. Wenn der \textit{Robot} davor keinen \textit{Task} hatte, wird dieser einfach ausgeführt. Wenn der übergebene \textit{Task} \texttt{null} ist, nimmt die \textit{RobotUnit} fahrt zur Ladestation auf. Wenn die \textit{RobotUnit} gerade einen \textit{TaxiCustomer} an Bord hat und in dieser Methode einen Krankenhaustransport als \textit{Task} erhält, wird der \textit{TaxiCustomer} abgeladen, und der Krankenhaustransport wird ausgeführt.
 			
 	\subsubsection{Beschreibung der Klasse \textit{VirtualServer}}
-	Die Klasse \textit{VirtualServer} ist die Klasse, welche die Remote-Procedure-Calls von der Seite des \textit{Robots} implementiert. \textit{VirtualServer} implementiert unsere in 3. definierten Interfaces \textit{IRepair} und \textit{IArrivalNotification}. Alle Methoden in dieser Klasse verfassen natürlich eine \textit{Message} und nutzen dann die \textit{IWlanAdapter}-Schnittstelle, um diese an den \textit{Server} zu schicken.
+	Die Klasse \textit{VirtualServer} ist die Klasse, welche die Remote-Procedure-Calls von der Seite der \textit{RobotUnit} implementiert. \textit{VirtualServer} implementiert unsere in Kapitel 3. definierten Interfaces \textit{IRepair} und \textit{IArrivalNotification}. Alle Methoden in dieser Klasse verfassen natürlich eine \textit{Message} und nutzen dann die \textit{IWlanAdapter}-Schnittstelle, um diese an den \textit{Server} zu schicken.
 	
 			\paragraph{Beschreibung der Methode \texttt{informAboutArrival}}
-			Diese Methode wird immer dann aufgerufen, wenn der \textit{Robot} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat.  Da der \textit{Server} weiß, welcher \textit{Task} von welchem \textit{Robot} ausgeführt wird, muss \texttt{informAboutArrival} keine Parameter übergeben.
+			Diese Methode wird immer dann aufgerufen, wenn die \textit{RobotUnit} die nächste \textit{Position} von seinem aktuellen \textit{Task} erreicht hat.  Da der \textit{Server} weiß, welcher \textit{Task} von welcher \textit{RobotUnit} ausgeführt wird, muss \texttt{informAboutArrival} keine Parameter übergeben.
 	
 			\paragraph{Beschreibung der Methode \texttt{requestRepair}}
-			Diese Methode wird dann von einen \textit{Robot} aufgerufen, wenn er nach einem Unfall kaputt ist. Der \textit{Robot} verfasst dafür eine \textit{Message} an den \textit{Server}, woraufhin auf dem \textit{Server} der \textit{Task}, den der kaputte \textit{Robot} gerade ausführen sollte, neu verteilt. In seiner Prioritätsstufe ist dieser \textit{Task} dann an erster Stelle, und wird nicht wieder hinten angestellt. Zusätzlich wird auf dem \textit{Server} dann die Methode \texttt{notifyRepairService} aufgerufen.		
+			Diese Methode wird dann von einer \textit{RobotUnit} aufgerufen, wenn er nach einem Unfall kaputt ist. Die \textit{RobotUnit} verfasst dafür eine \textit{Message} an den \textit{Server}, woraufhin auf dem \textit{Server} der \textit{Task}, den die kaputte \textit{RobotUnit} gerade ausführen sollte, neu verteilt wird. Dieser \textit{Task} ist dann an erster Stelle, und wird nicht wieder hinten angestellt. Zusätzlich wird auf dem \textit{Server} dann die Methode \texttt{notifyRepairService} aufgerufen.		
 			
 	%7.1.2 DrivingSystem
 	\subsubsection{Beschreibung der Klasse \textit{DrivingSystem}}
@@ -56,9 +56,9 @@
 %		\end{figure}
 		
 		%#currentSpeed:float
-		Diese Klasse beschreibt den aktuellen Zustand des Fahrsystems des \textit{Robots}. 
+		Diese Klasse beschreibt den aktuellen Zustand des Fahrsystems der \textit{RobotUnit}. 
 		Es sind Informationen über die aktuelle Geschwindigkeit enthalten und die Methode, 
-		die gerade ausgeführt wird, gibt Auskunft über die aktuelle Beschäftigung des \textit{Robots}.
+		die gerade ausgeführt wird, gibt Auskunft über die aktuelle Beschäftigung der \textit{RobotUnit}.
 
 			%7.1.2.1 	#driveToDestination(destination: Destination, arrivalHandler: ArrivalHandler): void
 			\paragraph{Beschreibung der Methode \texttt{driveToDestination}}
@@ -69,8 +69,8 @@
 			\label{AktivitaetDriveToDestination}
 			\end{figure}
 
-			Wenn diese Methode aufgerufen wird, macht der \textit{Robot} sich auf den Weg zur 
-			übergebenen \textit{Destination}. Wenn der \textit{Robot} an dieser \textit{Destination} 
+			Wenn diese Methode aufgerufen wird, macht die \textit{RobotUnit} sich auf den Weg zur 
+			übergebenen \textit{Destination}. Wenn die \textit{RobotUnit} an dieser \textit{Destination} 
 			angekommen ist, wird die \texttt{arrive}-Methode des übergebenen \textit{ArrivalHandlers} ausgeführt. Wenn es sich bei der \textit{Destination} nicht um einen \textit{Charger} handelte, wird darin insbesondere über die von uns definierte Schnittstelle \textit{IArrivalNotifivation} der \textit{Server} über die Ankunft benachrichtigt. 
 			Wenn sich ein \textit{Obstacle} auf dem Weg befindet, wird die Methode \texttt{driveAroundObstacle} 
 			aufgerufen, bis das \textit{Obstacle} umfahren wurde.
@@ -83,18 +83,18 @@
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/1-Entwurf-7-driveAroundObstacle}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{driveAroundObstacle}}
-			\label{SequenzDriveAroundObstacle}
+			\label{AktivitätDriveAroundObstacle}
 			\end{figure}
 
 			Diese Methode wird von \texttt{driveToDestination} mit der Position eines \textit{Obstacles} aufgerufen, 
 			wenn ein \textit{Obstacle} zu umfahren ist. 
-			Im Spezialfall, dass es sich bei dem \textit{Obstacle} um einen anderen \textit{Robot} handelt, merken dies beide, wenn sie sich nähern und weichen beide nach rechts aus. 
-			Im Allgemeinen entscheidet sich der \emph{Robot} zunächst, ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
+			Im Spezialfall, dass es sich bei dem \textit{Obstacle} um eine andere \textit{RobotUnit} handelt, merken dies beide. Wenn die beiden \textit{RobotUnits} gerade \textit{Tasks} mit der gleichen Priorität ausführen, weichen beide leicht nach rechts aus, und fahren anschließend aneinander vorbei. So nehmen beide einen ungefähr gleichen Umweg in kauf. Wenn eine \textit{RobotUnit} höher priorisiert ist als die andere, so weicht die \textit{RobotUnit} mit der niedrigeren Priorität komplett aus. So werden Krankenhaustransporte nie durch andere \textit{RobotUnits} verzögert.
+			Im Allgemeinen entscheidet sich die \emph{RobotUnit} zunächst, ob er links oder rechts an dem \textit{Obstacle} vorbeifährt, 
 			und hält sich dann mithilfe seiner Sensoren immer auf einem bestimmten Abstand zum Hindernis, bis zwischen 
-			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für den \textit{Robot} ist.
+			\textit{Obstacle} und der Luftlinie zur \textit{Destination} genug Platz für die \textit{RobotUnit} ist.
 			
 			Abbildung \ref{SequenzDriveAroundObstacle} zeigt ein entsprechendes Sequenzdiagramm. 
-			Dabei ist \texttt{min\_dist} eine vorher festgelegte Konstante, welche die Mindestdistanz, die der \textit{Robot} halten muss, wenn er an einem \textit{Obstacle} vorbeifährt, speichert.
+			Dabei ist \texttt{min\_dist} eine vorher festgelegte Konstante, welche die Mindestdistanz, die die \textit{RobotUnit} halten muss, wenn sie an einem \textit{Obstacle} vorbeifährt, speichert.
 	
 \pagebreak
 	
@@ -113,12 +113,12 @@
 	%7.2.1 TaskSystem
 	\subsubsection{Beschreibung der Klasse \textit{TaskQueue}}
 	
-	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTop} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, die Wartezeiten für mögliche Taxikunden fair zu handhaben und die Verteilung an die \textit{Robots} vorzunehmen.
+	Diese Klasse ist für die Verwaltung von \textit{Tasks} auf dem \textit{Server} zuständig. Prinzipiell ist hier eine Queue implementiert, welche aber noch über zusätzliche Funktionen, wie z.B \texttt{addTop} und \texttt{remove} verfügt. Ziel dieser Datenstruktur ist es, die Wartezeiten für mögliche Taxikunden fair zu handhaben und die Verteilung an die \textit{RobotUnits} vorzunehmen.
 	
 			\paragraph{Beschreibung der Methode \texttt{add}}		
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.85\textwidth]{img/add}
+			\includegraphics[width=0.95\textwidth]{img/add}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{add}}
 			\label{SequenzQueueAdd}
 			\end{figure}
@@ -133,13 +133,13 @@
 %			\label{SequenzQueueAddTop}
 %			\end{figure}			
 			
-			Mit der Methode \texttt{addTop} können \textit{Tasks} in die Queue hinzugefügt werden, die davor schon aktiv von einem \textit{Robot} bearbeitet wurden, dann aber durch einen Defekt dessen neu verteilt werden müssen. 
+			Mit der Methode \texttt{addTop} können \textit{Tasks} in die Queue hinzugefügt werden, die davor schon aktiv von einer \textit{RobotUnit} bearbeitet wurden, dann aber durch einen Defekt dessen neu verteilt werden müssen. 
 			Die Besonderheit dieser \textit{Tasks} ist, dass sie an den Anfang der Queue hinzugefügt werden müssen.
 				
 			\paragraph{Beschreibung der Methode \texttt{poll}}		
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\textwidth]{img/2-Entwurf-poll}
+			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-poll}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{poll}}
 			\label{SequenzQueuePoll}
 			\end{figure}			
@@ -149,7 +149,7 @@
 			\paragraph{Beschreibung der Methode \texttt{remove}}		
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.85\textwidth]{img/2-Entwurf-remove}
+			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-remove}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{remove}}
 			\label{SequenzQueueRemove}
 			\end{figure}			
@@ -161,47 +161,49 @@
 			\paragraph{Beschreibung der Methode \texttt{handleArrival}}
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\textwidth]{img/HandleArrival}
+			\includegraphics[width=0.95\textwidth]{img/HandleArrival}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{handleArrival}}
 			\label{SequenzQueuePoll}
 			\end{figure}	
-			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine \textit{Message} von einem \textit{Robot} erhält, welche von ihm über das von uns definierte Interface \textit{IArrivalNotification} gesandt wurde. Da der \textit{Server} eingespeichert hat, welchen \textit{Task} der \textit{Robot} gerade ausführt, müssen keine Parameter übergeben werden, sondern der \textit{Server} kann einfach nachschauen, welcher Typ von \textit{Destination} gerade erreicht wurde. Je nach Typ wird dann eine Benachrichtigung an die zugehörigen \textit{Customers} gesendet. Bei einem Taxiauftrag wird keine Nachricht an den Taxikunden geschickt, wenn dieser sein Ziel erreicht. Laut Aufgabenstellung ist eine Taxifahrt mit erreichen der \textit{Destination} des Taxikunden sofort beendet, ohne dass weitere Benachrichtigungen an den Taxikunden geschickt werden müssen.
+			Diese Methode wird immer dann aufgerufen, wenn der \textit{Server} eine \textit{Message} von einer \textit{RobotUnit} erhält, welche von ihm über das von uns definierte Interface \textit{IArrivalNotification} gesandt wurde. Da der \textit{Server} eingespeichert hat, welchen \textit{Task} die \textit{RobotUnit} gerade ausführt, müssen keine Parameter übergeben werden, sondern der \textit{Server} kann einfach nachschauen, welcher Typ von \textit{Destination} gerade erreicht wurde. Je nach Typ wird dann eine Benachrichtigung an die zugehörigen \textit{Customers} gesendet. Bei einem Taxiauftrag wird keine Nachricht an den Taxikunden geschickt, wenn dieser sein Ziel erreicht. Laut Aufgabenstellung ist eine Taxifahrt mit Erreichen der \textit{Destination} des Taxikunden sofort beendet, ohne dass weitere Benachrichtigungen an den Taxikunden geschickt werden müssen.
 			
 			
 			%7.2.1.1	~chooseRobot(destination: Destination): void
-			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
-			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. 
-			Dazu fragt es die Sensorwerte derjenigen \textit{Robots} ab, die gerade nicht mit einem Krankenhausauftrag beschäftigt sind. Diese habe nämlich höchste Priorität und können sowieso keinen anderen \textit{Task} erhalten. Danach wird die private Methode \texttt{selectBestMatch} mit der Liste der erhaltenen Sensordaten ausgeführt, welche den am besten passendsten \textit{Robot} für den aktuellen \textit{Task} berechnet.
-				
-			\begin{figure}[H]
+			\paragraph{Beschreibung der Methode \texttt{chooseRobotUnit}}
+						\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\textwidth]{img/2-Entwurf-7-Choose_Robot}
-			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{chooseRobot}}
+			\includegraphics[width=0.95\textwidth]{img/2-Analyse-7-Choose_Robot}
+			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{chooseRobotUnit}}
 			\label{ChooseRobotActivity}
 			\end{figure}			
+			
+			Die Methode \texttt{chooseRobotUnit} wählt für den aktuell eingegangenen \emph{Task} eine \emph{RobotUnit} aus. 
+			Dazu fragt es die Sensorwerte derjenigen \textit{RobotUnits} ab, die gerade nicht mit einem Krankenhausauftrag beschäftigt sind. Diese haben nämlich höchste Priorität und können sowieso keinen anderen \textit{Task} erhalten. Danach wird die private Methode \texttt{selectBestMatch} mit der Liste der erhaltenen Sensordaten ausgeführt, welche den am besten passendsten \textit{Robot} für den aktuellen \textit{Task} berechnet.
+				
+
 			
 			\paragraph{Beschreibung der Methode \texttt{selectBestMatch}}
 			\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\textwidth]{img/2-Entwurf-SelectBestMatch}
+			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-SelectBestMatch}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Aktivität \texttt{selectBestMatch}}
 			\label{SelectBestMatchActivity}
 			\end{figure}
-			Diese private Methode ist eine Untermethode von \texttt{chooseRobot}. Dabei werden die erhaltenen Sensordaten der erhaltenen \textit{Robots} nach dem zu vergebenen \textit{Tasks} ausgewertet. Die wichtigste Bedingung ist, dass der Akku der zugehörigen \textit{Robots} ausreicht, um die gesamte Distanz zu schaffen. Die nächste Auswahlkriterium ist, dass die \textit{Robots} aktuell unbeschäftigt sind. Schließlich wird danach ausgewählt, wie lange die \textit{Robots} brauchen, um die erste \textit{Destination} dieses \textit{Tasks} zu erreichen.
+			Diese private Methode ist eine Untermethode von \texttt{chooseRobotUnit}. Dabei werden die erhaltenen Sensordaten der \textit{RobotUnits} nach dem zu vergebenen \textit{Task} ausgewertet. Die wichtigste Bedingung ist, dass der Akku der zugehörigen \textit{RobotUnits} ausreicht, um die gesamte Distanz zu schaffen. Das nächste Auswahlkriterium ist, dass die \textit{RobotUnitss} aktuell unbeschäftigt sind. Schließlich wird danach ausgewählt, wie lange die \textit{RobotUnitss} brauchen würden, um die erste \textit{Destination} dieses \textit{Tasks} zu erreichen.
 
 			\paragraph{Beschreibung der Methode \texttt{notifyRepairService}}
-			Wenn ein \textit{Robot} nach einem Zusammenstoß defekt ist, teilt er dies dem \textit{Server} unter Verwendung seiner Methode \texttt{requestRepair} mit.	Daraufhin erstellt der \textit{Server} einen neuen  \textit{Task}, der am Unfallort des \textit{Robots} beginnt. Der \textit{Customer}, der an Bord des verunglückten \textit{Robots} war, wird also nicht im Stich gelassen. Der neue \textit{Task} wird mit der Methode \texttt{addTopOfType} in die \textit{TaskQueue} eingefügt, um die Wartezeit dieses \textit{Customers} zu minimieren. Daraufhin benachrichtigt der \textit{Server} einen System-externen Servicedienst, und übergibt diesem die Position des Unfallorts. Nach unserer Annahme aus der Analyse wird der dort verunglückte \textit{Robot} dann nach einer endlichen Zeit wieder vom System benutzbar sein.
+			Wenn eine \textit{RobotUnit} nach einem Zusammenstoß defekt ist, teilt sie dies dem \textit{Server} unter Verwendung seiner Methode \texttt{requestRepair} mit.	Daraufhin erstellt der \textit{Server} einen neuen  \textit{Task}, der am Unfallort der \textit{RobotUnits} beginnt. Der \textit{Customer}, der an Bord der verunglückten \textit{RobotUnits} war, wird also nicht im Stich gelassen. Der neue \textit{Task} wird mit der Methode \texttt{addTopOfType} in die \textit{TaskQueue} eingefügt, um die Wartezeit dieses \textit{Customers} zu minimieren. Daraufhin benachrichtigt der \textit{Server} einen System-externen Servicedienst, und übergibt diesem die Position des Unfallorts. Nach unserer Annahme aus der Analyse wird die dort verunglückte \textit{RobotUnit} dann nach einer endlichen Zeit wieder vom System benutzbar sein.
 			
 			
 			
 	\subsubsection{Beschreibung der Klasse \textit{VirtualRobotUnit}}
-	Die Klasse \textit{VirtualRobotUnit} ist die Umsetzung der Remote-Procedure-Calls von der Seite des \textit{Servers}. Diese Klasse implementiert die Methoden der von uns in 3. beschriebenen Interfaces \textit{ITask} und \textit{ISensorData}. Da diese Klasse auch die Repräsentation des \textit{Robots} auf dem \textit{Server} ist, werden hier auch Zustand des zugehörigen \textit{Robots}, insbesondere aktuell auszuführenden \textit{Task}, gespeichert. Alle Methoden dieser Klasse werden im \textit{Server} aufgerufen und Verfassen zunächst eine \textit{Message}, welche dann über die \textit{IWlanAdapter}-Schnittstelle verschickt werden und daraufhin die zugehörigen Lokalen Methoden auf den \textit{Robots} aufgerufen werden.
+	Die Klasse \textit{VirtualRobotUnit} ist die Umsetzung der Remote-Procedure-Calls von der Seite des \textit{Servers}. Diese Klasse implementiert die Methoden der von uns in 3. beschriebenen Interfaces \textit{ITask} und \textit{ISensorData}. Da diese Klasse auch die Repräsentation der \textit{RobotUnit} auf dem \textit{Server} ist, werden hier auch Zustand der zugehörigen \textit{RobotUnit}, insbesondere aktuell auszuführenden \textit{Task}, gespeichert. Alle Methoden dieser Klasse werden im \textit{Server} aufgerufen und Verfassen zunächst eine \textit{Message}, welche dann über die \textit{IWlanAdapter}-Schnittstelle verschickt werden und daraufhin die zugehörigen Lokalen Methoden auf den \textit{RobotUnits} aufgerufen werden.
 	
 			\paragraph{Beschreibung der Methode \texttt{assignTask}}
-			Mit dieser Methode teilt der \textit{Server} einem \textit{VirtualRobot} einen neuen \textit{Task} zu, der dann von dem zugehörigen \textit{Robot} ausgeführt wird. Auf dem zugehörigen \textit{Robot} wird dafür die Methode \texttt{setTask} aufgerufen.
+			Mit dieser Methode teilt der \textit{Server} einem \textit{VirtualRobot} einen neuen \textit{Task} zu, der dann von der zugehörigen \textit{RobotUnit} ausgeführt wird. Auf dem zugehörigen \textit{Robot} wird dafür die Methode \texttt{setTask} aufgerufen.
 			
 			\paragraph{Beschreibung der Methode \texttt{continueTask}}
-			Diese Methode wird zum Beispiel dann aufgerufen, wenn der \textit{Server} die Nachricht erhalten hat, dass sich der \textit{Customer} nun an Bord des \textit{Robots} befindet. Daraufhin wird eine \textit{Message} an den zu diesem \textit{VirtualRobot} zugehörigen \textit{Robot} geschickt, der ihn wissen lässt, dass er die nächste \textit{Destination} in seinem aktuellen \textit{Task}			
+			Diese Methode wird zum Beispiel dann aufgerufen, wenn der \textit{Server} die Nachricht erhalten hat, dass sich der \textit{Customer} nun an Bord der \textit{RobotUnits} befindet. Daraufhin wird eine \textit{Message} an den zu dieser \textit{VirtualRobotUnit} zugehörigen \textit{RobotUnit} geschickt, der sie wissen lässt, dass er die nächste \textit{Destination} in seinem aktuellen \textit{Task}			
 			
 			\paragraph{Beschreibung der Methode \texttt{getSensorData}}
-			Der \textit{Server} möchte im Rahmen von \texttt{Choose Robot} Informationen über den Akkustand und die Position von allen \textit{Robots} erhalten. Dazu wird auf jedem \textit{VirtualRobot} diese Methode aufgerufen, bei der über die \textit{IWlanAdapter}-Schnittstelle eine entsprechende \textit{Message} an den jeweils zugehörigen \textit{Robot} geschickt wird. Diese \textit{Robots} rufen dann die Methode \texttt{readSensors} auf.
+			Der \textit{Server} möchte im Rahmen von \texttt{chooseRobotUnit} Informationen über den Akkustand und die Position von allen \textit{RobotUnits} erhalten. Dazu wird auf jeder \textit{VirtualRobotUnit} diese Methode aufgerufen, bei der über die \textit{IWlanAdapter}-Schnittstelle eine entsprechende \textit{Message} an den jeweils zugehörigen \textit{Robot} geschickt wird. Diese \textit{RobotUnits} rufen dann die Methode \texttt{readSensors} auf.
