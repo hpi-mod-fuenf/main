@@ -1,15 +1,16 @@
 \section{Interaktion der Komponenten}
 Auf Basis der Use Cases aus der Analyse wird in diesem Kapitel die Interaktion der einzelnen Komponenten aus Kapitel 1 betrachtet. 
-Dabei liegt der Fokus vor allem auf der Interaktion zwischen der RobotUnit und dem Server, wie dessen Austausch mit dem Hospital und der Taxiapp. 
+Dabei liegt der Fokus vor allem auf der Interaktion zwischen dem \emph{Robot} und dem \emph{Server}, wie dessen Austausch mit dem \emph{Hospital} und der \emph{TaxiApp}. 
 Die Abläufe innerhalb der Komponenten werden dann in Kapitel 8 näher spezifiziert. \\
 
 
-\subsection*{Interaktion bei Ausführung von \emph{Receive Order \& Cancel Order}}
+\subsection*{Interaktion zwischen TaxiApp, Server und RobotUnit}
 
-Elementar ist in diesem Fall der Use Case \texttt{Receive Order} (Use Case 1.1), der es Usern ermöglicht Anfragen oder Notrufe abzusetzen, um ein Taxi oder einen Krankentransporter anzufordern. 
+Elementar ist in diesem Fall der Use Case \texttt{Receive Order} (Use Case 1.1), der es Usern ermöglicht, Anfragen oder Notrufe abzusetzen, um ein Taxi oder einen Krankentransporter anzufordern. 
 Das System arbeitet mit einer Warteliste für Aufträge von Taxikunden. \\
 Krankentransporte werden bei der Vergabe von Aufträgen stets priorisiert und es wird ggf. ein laufender \emph{Task} eines Taxikunden unterbrochen, um einen Robot bereitzustellen. \\
-Im Falle des ersten Sequenzdiagramms ist dies mit der Verwendung der \emph{TaxiApp} dargestellt, die wiederum die \emph{Order} mit den Destinations an den Server weitergibt.
+
+Im Falle des Sequenzdiagramms aus Abbildung \ref{SequenzDiagrammInteraktionTaxi} ist dies mit der Verwendung der \emph{TaxiApp} dargestellt, die wiederum die \emph{Order} mit den Destinations an den Server weitergibt.
 Danach wird vom Server überprüft, ob überhaupt Taxis verfügbar sind.
 Falls keins mehr verfügbar ist, wird die Anzahl der Kunden in der Wartschlange an die App und somit an den User zurückgegeben. \\
 Solange der Taxikunde noch nicht in das Taxi gestiegen ist, kann er mit \texttt{Cancel Order} (Use Case 1.2) seine Bestellung aus dem System (der Warteschlange löschen). \\
@@ -18,48 +19,15 @@ Solange der Taxikunde noch nicht in das Taxi gestiegen ist, kann er mit \texttt{
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveOrder-Taxi}
 	\caption{\emph{ReceiveOrder}-Sequenzdiagramm, falls ein Kunde ein Taxi anfragt}
-	\label{SequenzDiagrammInteraktion}
+	\label{SequenzDiagrammInteraktionTaxi}
 \end{figure}
+
+\subsection*{Interaktion zwischen Hospital, Server und RobotUnit}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveOrder-Hosp}
 	\caption{\emph{RecieveOrder}-Sequenzdiagramm, falls das Hospital einen neuen Patienten meldet}
-	\label{SequenzDiagrammInteraktion}
+	\label{SequenzDiagrammInteraktionHospital}
 \end{figure}
-
-
-
-\subsection*{Interaktion bei Ausführung von \emph{Receive Boarding Confirmation \& Receive Arrival Notification}}
-
-Alle Prozesse laufen wie ersichtlich über den Server, der wiederum die \emph{RobotUnit} fernsteuert. 
-So wird für \texttt{Receive Boarding Confirmation} (Use Case 1.3) erst vom Hospital oder der TaxiApp an den Server zurückgemeldet, dass sich der Patient oder der Customer an Bord befindet, bevor die Fahrt aufgenommen werden kann. 
-In gleicher Weise wird dem Server mit "Receive Arrival Notification" (Use Case 1.5) zurückgemeldet, dass der Robot wieder für weitere Einsätze verfügbar ist, sobald der Customer den Robot verlassen hat.  \\
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveBoardingConfirmation-taxi}
-	\caption{\emph{ReceiveBoardingConfirmation-taxi}-Sequenzdiagramm}
-	\label{SequenzDiagrammInteraktion}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-ReceiveUnloadConfirmation-hospital}
-	\caption{\emph{ReceiveUnloadConfirmation-hospital}-Sequenzdiagramm}
-	\label{SequenzDiagrammInteraktion}
-\end{figure}
-
-
-\subsection*{Interaktion bei Ausführung von \emph{Use Cases Perfom Task \& Continue Task}}
-Konkret wird der RobotUnit dabei über die Use Cases "Perfom Task" (Use Case 2.2) und "Continue Task" (Use Case 2.3) ein Task zugewiesen, der solange ausgeführt wird, bis der Task abgebrochen wird oder das Ziel erfolgreich erreicht wurde und dies an den Server zurückgemeldet werden kann. \\
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{img/2-Entwurf-PerformTask}
-	\caption{\emph{Perform Task}-Sequenzdiagramm}
-	\label{SequenzDiagrammInteraktion}
-\end{figure}
-
-Die weiteren Use Cases sind diesen untergeordnet; enthalten entweder nur einseitige Server/RobotUnit Kommunikation, wie zum Beispiel bei "Request Repair" (Use Case 1.6) oder haben ihren Fokus vor allem auf den Wechselwirkungen innerhalb der RobotUnit (Siehe dazu Kapitel 8). \\
 
