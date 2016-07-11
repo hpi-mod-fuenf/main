@@ -128,8 +128,8 @@
     ><rect x="0" y="0" clip-path="url(#clipPath8)" fill="none" width="168" rx="15" ry="15" height="42"
     /></g
     ><g font-size="11" transform="translate(475,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="13" xml:space="preserve" y="25" clip-path="url(#clipPath9)" stroke="none"
-      >Add task to priority queue</text
+    ><text x="35" xml:space="preserve" y="25" clip-path="url(#clipPath9)" stroke="none"
+      >Add task to queue</text
     ></g
     ><g font-size="11" transform="translate(328,60)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
     ><path d="M14.5 7.5 L26 20 L14.5 32.5 L3 20 Z" stroke="none" clip-path="url(#clipPath10)"

@@ -171,21 +171,23 @@
 			%7.2.1.1	~chooseRobot(destination: Destination): void
 			\paragraph{Beschreibung der Methode \texttt{chooseRobot}}
 			Die Methode \texttt{chooseRobot} wählt für den aktuell eingegangenen \emph{Task} einen \emph{Robot} aus. 
-			Dazu fragt es die Sensorwerte der verschiedenen \emph{Robots} ab und wählt den am besten geeigneten aus.
+			Dazu fragt es die Sensorwerte derjenigen \textit{Robots} ab, die gerade nicht mit einem Krankenhausauftrag beschäftigt sind. Diese habe nämlich höchste Priorität und können sowieso keinen anderen \textit{Task} erhalten. Danach wird die private Methode \texttt{selectBestMatch} mit der Liste der erhaltenen Sensordaten ausgeführt, welche den am besten passendsten \textit{Robot} für den aktuellen \textit{Task} berechnet.
 				
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/1-Analyse-3-Choose_Robot}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Methode \texttt{chooseRobot}}
-			\label{SequenzQueueRemove}
+			\label{ChooseRobotActivity}
 			\end{figure}			
-				
+			
+			\paragraph{Beschreibung der Methode \texttt{selectBestMatch}}
 			\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{img/2-Entwurf-SelectBestMatch}
 			\caption{Aktivitätsdiagramm zur Beschreibung der Aktivität \texttt{selectBestMatch}}
-			\label{SequenzQueueRemove}
+			\label{SelectBestMatchActivity}
 			\end{figure}
+			Diese private Methode ist eine Untermethode von \texttt{chooseRobot}. Dabei werden die erhaltenen Sensordaten der erhaltenen \textit{Robots} nach dem zu vergebenen \textit{Tasks} ausgewertet. Die wichtigste Bedingung ist, dass der Akku der zugehörigen \textit{Robots} ausreicht, um die gesamte Distanz zu schaffen. Die nächste Auswahlkriterium ist, dass die \textit{Robots} aktuell unbeschäftigt sind. Schließlich wird danach ausgewählt, wie lange die \textit{Robots} brauchen, um die erste \textit{Destination} dieses \textit{Tasks} zu erreichen.
 
 			\paragraph{Beschreibung der Methode \texttt{notifyRepairService}}
 			Wenn ein \textit{Robot} nach einem Zusammenstoß defekt ist, teilt er dies dem \textit{Server} unter Verwendung seiner Methode \texttt{requestRepair} mit.	Daraufhin erstellt der \textit{Server} einen neuen  \textit{Task}, der am Unfallort des \textit{Robots} beginnt. Der \textit{Customer}, der an Bord des verunglückten \textit{Robots} war, wird also nicht im Stich gelassen. Der neue \textit{Task} wird mit der Methode \texttt{addTopOfType} in die \textit{TaskPriorityQueue} eingefügt, um die Wartezeit dieses \textit{Customers} zu minimieren. Daraufhin benachrichtigt der \textit{Server} einen System-externen Servicedienst, und übergibt diesem die Position des Unfallorts. Nach unserer Annahme aus der Analyse wird der dort verunglückte \textit{Robot} dann nach einer endlichen Zeit wieder vom System benutzbar sein.

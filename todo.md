@@ -1,6 +1,6 @@
 # Entwurf:
 
-- [ ] Aktualisierte Sequenz-Diagramme (2.) und aktualisiertes ITask als SVG exportieren
+- [X] Aktualisierte Sequenz-Diagramme (2.) und aktualisiertes ITask als SVG exportieren
 - [ ] 8.: Diagramme an veränderte Use Cases anpassen
 - [x] OCL shit
 - [x] "Select best match"-Aktivitätsdiagramm einfügen @Baschdl 
@@ -37,8 +37,8 @@
 - [x] Sequenzdiagramme Kapitel 2 überprüfen+korrigieren
 - [x] Datentyp von Task.type von `String` zu `enum` (hospital, taxi) ändern
 - [ ] Beschreibungen zu aktualisierten Sequenzdiagrammen in 2. Interaktion der Komponenten aktualisieren (Wichtig: "Unser sendQueueIndex() ruft bei Taxi-Aufträgen intern die gegebene reportNumberInList()-Methode auf")
-- [ ] Möglichkeit für "cancel order" einbauen
-- [ ] Methoden des AppContainers etc. einbauen
+- [X] Möglichkeit für "cancel order" einbauen
+- [X] Methoden des AppContainers etc. einbauen
 - [ ] Im Text daruf hinweisen: Es gibt höchstens so viele Krankenhaustransporte wie Robots, inbesondere: Krankenhaustransporte werden immer sofort ausgeführt und können nicht in die Warteliste
 - [ ] Aktivitätsdiagramme "driveToDestination", Abfrage mit dem Obstacle ergibt noch nicht all zu viel Sinn @josauder
 
