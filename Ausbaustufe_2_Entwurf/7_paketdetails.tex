@@ -9,8 +9,8 @@
 \pagebreak
 
 %7.1 Paket Robot
-\subsection{Paket \textit{Robot}}
-	Im Folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{Robot} 
+\subsection{Paket \textit{RobotUnit}}
+	Im Folgenden beschreiben wir die wichtigen Klassen des Pakets \textit{RobotUnit} 
 	und ihre zugehörigen wichtigen Methoden, sowie ihre Interaktion untereinander. 
 
 
@@ -24,8 +24,8 @@
 %		\end{figure}
 		
 		%#destination : Destination
-		Die Klasse \textit{RobotController} ist die Hauptklasse des \textit{Robots}, 
-		da sie den aktuellen Zustand des \textit{Robots} enthält.
+		Die Klasse \textit{RobotController} ist die Hauptklasse der \textit{RobotUnit}, 
+		da sie den aktuellen Zustand der \textit{RobotUnit} enthält.
 		So hat diese Klasse die Möglichkeit, maximal einen \textit{Task} zu speichern. 
 		Dieser \textit{Task} kann ein vom \textit{Server} zugeteiltes Ziel sein, 
 		der dem \textit{Robot} zugehörige \textit{Charger}, oder gerade kein Ziel, 
@@ -33,7 +33,7 @@
 
 			%7.1.1.1 #collectSensorData():void
 			\paragraph{Beschreibung der Methode \texttt{readSensors}}
-			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Soensordaten zu schicken. 
+			Der Server kann einen \textit{Robot} dazu auffordern, ihm seine Sensordaten zu schicken. 
 			Der \textit{Robot} fragt dann seine Hardwareschnittstelle mittels der Methode \texttt{readSensors} 
 			nach seiner Position und seinem Akkustand an und gibt diese Informationen zurück an den \textit{Server}. 
 			Dazu wird natürlich zunächst eine \textit{Message} verfasst, welche dann über den \textit{IWlanAdapter} verschickt wird.
