@@ -37,6 +37,18 @@
 			\paragraph{Beschreibung der Methode \texttt{setTask}}
 			Diese Methode wird aufgerufen, wenn die \textit{RobotUnit} einen neuen Task erhält. Wenn der \textit{Robot} davor keinen \textit{Task} hatte, wird dieser einfach ausgeführt. Wenn der übergebene \textit{Task} \texttt{null} ist, nimmt die \textit{RobotUnit} fahrt zur Ladestation auf. Wenn die \textit{RobotUnit} gerade einen \textit{TaxiCustomer} an Bord hat und in dieser Methode einen Krankenhaustransport als \textit{Task} erhält, wird der \textit{TaxiCustomer} abgeladen, und der Krankenhaustransport wird ausgeführt.
 			
+			\paragraph{Beschreibung der Methode \texttt{calculateObstaclePosition}}
+			Sobald die geringste Distanz eines der IR-Sensoren eines Roboters die Minimaldistanz \texttt{MIN\_IR\_DISTANCE} unterschreitet, soll mittels \texttt{driveAroundObstacle} das erkannte \emph{Obstacle} umfahren werden. Um für die \texttt{driveAroundObstacle}-Methode eine Position angeben zu können, muss jedoch zunächst die Position des \emph{Obstacles} errechnet werden.
+			
+			Dazu wird in der Methode \texttt{calculateObstaclePosition} mittels folgender mathematischer Berechnungen die Position des \emph{Obstacles} errchnet:
+			
+			\begin{align*}
+				x &= \texttt{currentPosition.x} + cos(\texttt{positionDegree()}) \cdot \texttt{distance()} \\
+				y &= \texttt{currentPosition.y} + sin(\texttt{positionDegree()}) \cdot \texttt{distance()}
+			\end{align*}
+			
+			Wurde die Position des \emph{Obstacles} berechnet, wird sie von der Methode \texttt{calculateObstaclePosition} zurückgegeben.
+			
 	\subsubsection{Beschreibung der Klasse \textit{VirtualServer}}
 	Die Klasse \textit{VirtualServer} ist die Klasse, welche die Remote-Procedure-Calls von der Seite der \textit{RobotUnit} implementiert. \textit{VirtualServer} implementiert unsere in Kapitel 3. definierten Interfaces \textit{IRepair} und \textit{IArrivalNotification}. Alle Methoden in dieser Klasse verfassen natürlich eine \textit{Message} und nutzen dann die \textit{IWlanAdapter}-Schnittstelle, um diese an den \textit{Server} zu schicken.
 	
