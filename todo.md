@@ -37,6 +37,8 @@
 - [x] Sequenzdiagramme Kapitel 2 überprüfen+korrigieren
 - [x] Datentyp von Task.type von `String` zu `enum` (hospital, taxi) ändern
 - [ ] Beschreibungen zu aktualisierten Sequenzdiagrammen in 2. Interaktion der Komponenten aktualisieren (Wichtig: "Unser sendQueueIndex() ruft bei Taxi-Aufträgen intern die gegebene reportNumberInList()-Methode auf")
+- [ ] Möglichkeit für "cancel order" einbauen
+- [ ] Methoden des AppContainers etc. einbauen
 
 
 ## nachträgliche Änderungen Analyse:
