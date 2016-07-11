@@ -99,7 +99,7 @@
       ><path d="M-7 -7 L486 -7 L486 106 L-7 106 L-7 -7 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath32"
-      ><path d="M188 22 L188 36 L38 36 L38 22 ZM-7 -7 L-7 106 L486 106 L486 -7 Z"
+      ><path d="M-7 -7 L-7 106 L486 106 L486 -7 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath33"
       ><path d="M-7 -7 L486 -7 L486 89 L-7 89 L-7 -7 Z"
@@ -171,7 +171,7 @@
       ><path d="M291 79 L291 93 L146 93 L146 79 ZM294 118 L294 138 L154 138 L154 118 ZM0 0 L0 204 L409 204 L409 189 L449 189 L449 158 L418 158 L418 138 L449 138 L449 21 L388 21 L388 1 L449 1 L449 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath56"
-      ><path d="M144 24 L144 38 L48 38 L48 24 ZM384 24 L384 38 L314 38 L314 24 ZM326 67 L326 87 L125 87 L125 67 ZM0 0 L0 204 L449 204 L449 129 L387 129 L387 108 L449 108 L449 0 Z"
+      ><path d="M144 24 L144 38 L48 38 L48 24 ZM384 24 L384 38 L314 38 L314 24 ZM326 67 L326 87 L125 87 L125 67 ZM0 0 L0 204 L449 204 L449 128 L387 128 L387 108 L449 108 L449 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath57"
       ><path d="M336 63 L336 83 L116 83 L116 63 ZM0 0 L0 204 L449 204 L449 0 Z"
@@ -189,16 +189,16 @@
       ><path d="M0 0 L231 0 L231 224 L0 224 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath62"
-      ><path d="M132 14 L132 28 L62 28 L62 14 ZM0 0 L0 57 L74 57 L74 77 L0 77 L0 224 L231 224 L231 119 L135 119 L135 98 L231 98 L231 0 Z"
+      ><path d="M132 14 L132 28 L62 28 L62 14 ZM0 0 L0 57 L74 57 L74 77 L0 77 L0 224 L231 224 L231 118 L135 118 L135 98 L231 98 L231 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath63"
-      ><path d="M144 35 L144 49 L48 49 L48 35 ZM384 35 L384 49 L314 49 L314 35 ZM326 78 L326 98 L125 98 L125 78 ZM0 0 L0 204 L449 204 L449 140 L387 140 L387 119 L449 119 L449 0 Z"
+      ><path d="M144 35 L144 49 L48 49 L48 35 ZM384 35 L384 49 L314 49 L314 35 ZM326 78 L326 98 L125 98 L125 78 ZM0 0 L0 204 L449 204 L449 139 L387 139 L387 119 L449 119 L449 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath64"
       ><path d="M-201 -20 L402 -20 L402 40 L-201 40 L-201 -20 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath65"
-      ><path d="M-128 -21 L256 -21 L256 42 L-128 42 L-128 -21 Z"
+      ><path d="M-171 -20 L342 -20 L342 40 L-171 40 L-171 -20 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath66"
       ><path d="M-140 -20 L280 -20 L280 40 L-140 40 L-140 -20 Z"
@@ -351,20 +351,20 @@
       /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"
       >[cancel()]</text
     ></g
-    ><g stroke-linecap="butt" font-size="11" transform="translate(19,533)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" font-weight="bold" stroke-opacity="1" stroke-miterlimit="0"
+    ><g stroke-linecap="butt" font-size="11" transform="translate(19,534)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" font-weight="bold" stroke-opacity="1" stroke-miterlimit="0"
     ><rect fill="none" x="0" width="475" height="95" y="0" clip-path="url(#clipPath32)"
     /></g
-    ><g font-size="11" transform="translate(19,533)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" font-weight="bold" stroke-opacity="1"
+    ><g font-size="11" transform="translate(19,534)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" font-weight="bold" stroke-opacity="1"
     ><path d="M28 0 L28 8 L22 16 L0 16 L0 0 Z" stroke="none" clip-path="url(#clipPath32)"
     /></g
-    ><g stroke-linecap="butt" font-size="11" transform="translate(19,533)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" font-weight="bold" stroke-opacity="1" stroke-miterlimit="0"
+    ><g stroke-linecap="butt" font-size="11" transform="translate(19,534)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke-linejoin="round" stroke="black" font-weight="bold" stroke-opacity="1" stroke-miterlimit="0"
     ><path fill="none" d="M28 0 L28 8 L22 16 L0 16 L0 0 Z" clip-path="url(#clipPath32)"
     /></g
-    ><g font-size="11" transform="translate(19,533)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" font-weight="bold" stroke-opacity="1"
+    ><g font-size="11" transform="translate(19,534)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" font-family="sans-serif" stroke="black" font-weight="bold" stroke-opacity="1"
     ><text x="5" xml:space="preserve" y="11" clip-path="url(#clipPath16)" stroke="none"
       >opt</text
     ></g
-    ><g font-size="11" transform="translate(47,555)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
+    ><g font-size="11" transform="translate(47,556)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
     ><rect x="10" width="150" height="16" y="-1" clip-path="url(#clipPath18)" stroke="none"
       /><text fill="black" x="11" xml:space="preserve" y="11" clip-path="url(#clipPath18)" stroke="none"
       >[Task was added to queue  ]</text
@@ -501,9 +501,9 @@
       >1: orderTaxi(source, destination)</text
     ></g
     ><g font-size="11" transform="translate(358,86)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="128" height="21" y="0" clip-path="url(#clipPath65)" stroke="none"
-      /><text fill="black" x="7" xml:space="preserve" y="14" clip-path="url(#clipPath65)" stroke="none"
-      >2: chooseRobot(task)</text
+    ><rect x="0" width="171" height="20" y="0" clip-path="url(#clipPath65)" stroke="none"
+      /><text fill="black" x="17" xml:space="preserve" y="14" clip-path="url(#clipPath65)" stroke="none"
+      >2: chooseRobotUnit(task)</text
     ></g
     ><g font-size="11" transform="translate(125,691)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" font-family="sans-serif" stroke="white" stroke-opacity="1"
     ><rect x="0" width="140" height="20" y="0" clip-path="url(#clipPath66)" stroke="none"
