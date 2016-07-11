@@ -7,7 +7,7 @@
 - [x] "Enters" einfügen
 - [ ] Aktivitätsdiagramm driveAroundObstacle Prioritäten-Ausweichen @josauder 
 - [x] Bildunterschriften @bakoe @Fluepke 
-- [ ] Erklärung Netzwerkkomponenten/ Kommunikation (Remote Procedure Calls) ("NetworkAccess implementiert IWlanAdapter und MessageHandler")
+- [x] Erklärung Netzwerkkomponenten/ Kommunikation (Remote Procedure Calls) ("NetworkAccess implementiert IWlanAdapter und MessageHandler")
 - [x] Diagramm zu Queue
 - [x] "VirtualRobots" auf dem Server verwenden, Methoden können nicht direkt auf der "RobotUnit" aufgerufen werden
 - [X] Methoden der Interfaces irgendwo verwenden
@@ -31,7 +31,7 @@
 - [x] Fehlen unter "3.2 Interfaces" noch die Interfaces IRepair und ...? @Fluepke @jcremerius 
 - [x] "Interaktion bei Ausführung von Receive Order & Cancel Order" Enthält, dass die Warteliste beim Krankentransport nur von theoretischer Natur ist, aber das betrachte ich als falsch.
 - [x] ChooseRobot überarbeiten (Server weiß jetzt, welche VirtualRobotUnit momentan welchen Task ausführt)
-- [ ] Initialisierungssequenz (IMessageHandler, IBumperHandler, weitere?)
+- [x] Initialisierungssequenz (IMessageHandler, IBumperHandler, weitere?)
 - [x] Aktivitätsdiagramm zur Queue aktualisieren: Fall hinzufügen, dass ein Robot gewählt wird, der bereits einen Taxi-Task auswählt. Dann muss ein neuer Task (aktualisierte Destinations!) erstellt werden und der Queue hinzugefügt werden. 
 - [x] Beschreibung zu Figure 4 und 5
 - [x] Sequenzdiagramme Kapitel 2 überprüfen+korrigieren
@@ -39,8 +39,8 @@
 - [ ] Beschreibungen zu aktualisierten Sequenzdiagrammen in 2. Interaktion der Komponenten aktualisieren (Wichtig: "Unser sendQueueIndex() ruft bei Taxi-Aufträgen intern die gegebene reportNumberInList()-Methode auf")
 - [X] Möglichkeit für "cancel order" einbauen
 - [X] Methoden des AppContainers etc. einbauen
-- [ ] Im Text daruf hinweisen: Es gibt höchstens so viele Krankenhaustransporte wie Robots, inbesondere: Krankenhaustransporte werden immer sofort ausgeführt und können nicht in die Warteliste
-- [ ] Aktivitätsdiagramme "driveToDestination", Abfrage mit dem Obstacle ergibt noch nicht all zu viel Sinn @josauder
+- [x] Im Text daruf hinweisen: Es gibt höchstens so viele Krankenhaustransporte wie Robots, inbesondere: Krankenhaustransporte werden immer sofort ausgeführt und können nicht in die Warteliste
+- [x] Aktivitätsdiagramme "driveToDestination", Abfrage mit dem Obstacle ergibt noch nicht all zu viel Sinn @josauder
 
 
 ## nachträgliche Änderungen Analyse:
