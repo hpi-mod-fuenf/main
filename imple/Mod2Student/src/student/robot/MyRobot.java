@@ -2,6 +2,7 @@ package student.robot;
 
 import mod.robot.Robot;
 import student.Simulation;
+import student.common.DemoMessage;
 
 public class MyRobot extends Robot
 {
@@ -18,8 +19,7 @@ public class MyRobot extends Robot
 		while(!Thread.currentThread().isInterrupted() && connected())
 		{
 			processEvents();
-	
-			//TODO: Add own implementation
+			network.send(new DemoMessage("hallo",network.getServerID()));
 			
 			Simulation.pause(50);
 		}
