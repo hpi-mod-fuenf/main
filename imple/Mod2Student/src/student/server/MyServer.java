@@ -1,5 +1,6 @@
 package student.server;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
@@ -28,24 +29,32 @@ public class MyServer extends Server implements IHospitalInputHandler, IMessageH
 		super(hospital, apps);
 		hospital.setInputHandler(this);
 		tasks = new PriorityQueue<Task>(10, new TaskComparator());
+		robs = new HashMap<Integer, VirtualRobot>();
+		network.registerMessageHandler(this);
+		System.out.println(network.getMyID());
 	}
 
 	@Override
 	public void run()
 	{
 		System.out.format("Server: Starting...");
-		network.registerMessageHandler(this);
+		
 		
 		while(!Thread.currentThread().isInterrupted())
 		{
 			processEvents();
+			
+			int[] other = network.getNetworkIDs();
+			DemoMessage msg = new DemoMessage("hallo I am your server" ,1);
+			//msg.setSenderID(network.getMyID());
+			network.send(msg);
 			
 			VirtualRobot freeRob;
 			while(tasks.size() > 0){
 				freeRob = findFreeRob();
 				if(freeRob == null)
 					break;
-				//freeRob
+				freeRob.assignTask(tasks.poll());
 			}
 			
 			Simulation.pause(50);
@@ -90,7 +99,7 @@ public class MyServer extends Server implements IHospitalInputHandler, IMessageH
 			DemoMessage demo = (DemoMessage) message;
 			System.out.println(demo.str);
 			if(!robs.containsKey(message.getSenderID())){
-				robs.put(message.getSenderID(), new VirtualRobot(message.getSenderID()));
+				robs.put(message.getSenderID(), new VirtualRobot(message.getSenderID(),network));
 			}
 		}
 		else if(robs.containsKey(message.getSenderID())){

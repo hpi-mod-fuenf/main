@@ -1,5 +1,7 @@
 package student.robot;
 
+import java.io.Console;
+
 import mod.network.IMessage;
 import mod.network.IMessageHandler;
 import mod.robot.Robot;
@@ -11,9 +13,12 @@ import student.common.Task;
 
 public class MyRobot extends Robot implements IMessageHandler, ArrivalHandler
 {
+	public static final int SERVER_ID = 3;
+	
 	public MyRobot(String ip)
-	{
+	{	
 		super(ip);
+		network.registerMessageHandler(this);
 	}
 
 	private Task currentTask = null;
@@ -24,15 +29,18 @@ public class MyRobot extends Robot implements IMessageHandler, ArrivalHandler
 	{
 		System.out.printf("Robot %s: Starting...\n", address());
 		
+		//register at server
+		DemoMessage msg = new DemoMessage("hallo I am " + network.getMyID() ,SERVER_ID);
+		msg.setSenderID(network.getMyID());
+		network.send(msg);
+		
+		
 		while(!Thread.currentThread().isInterrupted() && connected())
 		{
 			processEvents();
-			network.send(new DemoMessage("hallo",network.getServerID()));
-			
+			System.out.println(network.getMyID());
 			Simulation.pause(50);
 		}
-		
-		network.registerMessageHandler(this);
 		
 		System.out.printf("Robot %s: Terminating...\n", address());
 	}
@@ -52,8 +60,7 @@ public class MyRobot extends Robot implements IMessageHandler, ArrivalHandler
 	
 	@Override
 	public void handleIncommingMessage(IMessage message) {
-		System.out.println("client got msg");
-		
+		System.out.println("robot got msg");
 		if(message.getClass() == Task.class){
 			currentTask = (Task) message;
 			taskPtr = 0;

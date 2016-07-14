@@ -3,7 +3,7 @@ package student.server;
 import student.common.Task;
 import mod.network.IMessage;
 import mod.network.IMessageHandler;
-import mod.robot.NetworkAccess;
+import mod.server.NetworkAccess;
 
 public class VirtualRobot implements IMessageHandler{
 	private NetworkAccess network;
@@ -26,6 +26,7 @@ public class VirtualRobot implements IMessageHandler{
 	
 	public void assignTask(Task t){
 		state = RobotState.Busy;
+		t.setSenderID(network.getMyID());
 		t.setReceiverID(id);
 		network.send(t);
 	}

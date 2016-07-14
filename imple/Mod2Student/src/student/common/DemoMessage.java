@@ -1,6 +1,5 @@
 package student.common;
 
-import robotino.INetwork;
 import mod.network.IMessage;
 
 public class DemoMessage implements IMessage{
