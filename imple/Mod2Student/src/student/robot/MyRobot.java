@@ -40,6 +40,7 @@ public class MyRobot extends Robot implements IMessageHandler, ArrivalHandler
 		DemoMessage msg = new DemoMessage("hallo I am " + network.getMyID(),network.getMyID());
 		msg.setSenderID(network.getMyID());
 		network.send(msg);
+		drive.driveToPosition(new Position(0, 0), 0.5f, this);
 		
 		
 		while(!Thread.currentThread().isInterrupted() && connected())
