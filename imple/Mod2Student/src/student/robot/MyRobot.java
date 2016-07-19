@@ -26,7 +26,7 @@ public class MyRobot extends Robot
 		super(ip);
 
 		//DEMO: Wir versuchen hier einfach mal mit allen robotern zu (0,0) zu fahren
-		drive.driveToPosition(new Position(0, 0), 1, new ArrivalHandler() {
+		drive.driveToPosition(new Position(1, 1), 0.5f, new ArrivalHandler() {
 			
 			@Override
 			public void arrived() {
