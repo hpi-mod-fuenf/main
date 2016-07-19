@@ -25,13 +25,12 @@ public class MyRobot extends Robot
 	{	
 		super(ip);
 
-		//DEMO:
+		//DEMO: Wir versuchen hier einfach mal mit allen robotern zu (0,0) zu fahren
 		drive.driveToPosition(new Position(0, 0), 1, new ArrivalHandler() {
 			
 			@Override
 			public void arrived() {
-				
-				
+				System.out.println("wann sind wir endlich daha? - Jetzt!");
 			}
 		});
 	}
@@ -47,6 +46,13 @@ public class MyRobot extends Robot
 		while(!Thread.currentThread().isInterrupted() && connected())
 		{
 			processEvents();
+			
+			//hier können wir regelmäßig dinge ausführen
+			
+			//sinnvoll wäre also regelmäßig die sensoren zu checken , 
+			//wenn ein hinderniss kommt daas zu umfahren und dann wieder 
+			// das ursprüngliche Ziel anzusteuern.
+			
 			Simulation.pause(50);
 		}
 		
