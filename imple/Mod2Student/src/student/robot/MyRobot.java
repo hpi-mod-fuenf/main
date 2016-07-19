@@ -18,6 +18,30 @@ import student.common.Task;
 
 import java.util.concurrent.TimeUnit ;
 
+/*
+ * 
+ * # A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x551d3460, pid=2388, tid=0x00000a34
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_92-b14) (build 1.8.0_92-b14)
+# Java VM: Java HotSpot(TM) Client VM (25.92-b14 mixed mode windows-x86 )
+# Problematic frame:
+# C  [RobotinoExtension.dll+0x13460]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# An error report file with more information is saved as:
+# C:\Users\Dominik\Documents\GitHub\main\imple\Mod2Student\hs_err_pid2388.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+ */
+
+
 public class MyRobot extends Robot
 {
 
@@ -95,7 +119,7 @@ public class MyRobot extends Robot
 			   distances[7].distance() < s ||
 			   distances[8].distance() < s) {
 			while(distances[2].distance() > distances[1].distance()) {
-				drive.drive(0f, 0f, 5f);		//Bin mir nicht sicher, ob die drive Methode so richtig verwendet wird, er soll sich 5 grad nach rechts drehen
+				drive.drive(0f, 0f, 0.5f);		//Bin mir nicht sicher, ob die drive Methode so richtig verwendet wird, er soll sich 5 grad nach rechts drehen
 				distances = distanceSensor.getIRDistances();
 			}
 			while (distances[0].distance() < s ||
@@ -103,7 +127,7 @@ public class MyRobot extends Robot
 				   distances[2].distance() < s ||
 				   distances[7].distance() < s ||
 				   distances[8].distance() < s) {
-				drive.drive(0f, 0f, 5f);		//Bin mir nicht sicher, ob die drive Methode so richtig verwendet wird, er soll sich 5 grad nach rechts drehen
+				drive.drive(0f, 0f, 0.5f);		//Bin mir nicht sicher, ob die drive Methode so richtig verwendet wird, er soll sich 5 grad nach rechts drehen
 				distances = distanceSensor.getIRDistances();
 			}
 			float d = 0;						//speichert gefahrene Distanz
