@@ -69,25 +69,39 @@ public class MyRobot extends Robot implements IMessageHandler, ArrivalHandler
 		}
 	}
 	
-	private void driveAroundObstacle() throws InterruptedException{
-		/*IRSensorDistance nearestDistance = distanceSensor.getNearestIRDistance();
-		while (nearestDistance.distance() < 1 && (nearestDistance.positionDegree() <= 90 || nearestDistance.positionDegree() >= 270)) {
-			//drehe nach rechts
-			TimeUnit.SECONDS.sleep(1);
-			nearestDistance = distanceSensor.getNearestIRDistance();
-		}
-		while () {
-			
-		}*/
+	private void driveAroundObstacle() {
+		float s = 0.5f;				//Sicherheitsabstand
 		IRSensorDistance[] distances = distanceSensor.getIRDistances();
-		int x = 0;
-		int y = 0;
-		for (int i = 0; i < 9; i++) {					//gewichteten Vektor berechnen (richtig?)
-			x += distances[i].distance() * Math.cos(Math.toRadians((double)(i*40)));
-			y += distances[i].distance() * Math.sin(Math.toRadians((double)(i*40)));
+		while (distances[0].distance() < s ||
+			   distances[1].distance() < s ||
+			   distances[2].distance() < s ||
+			   distances[7].distance() < s ||
+			   distances[8].distance() < s) {
+			while(distances[2].distance() > distances[1].distance()) {
+				drive.drive(0f, 0f, 5f);		//Bin mir nicht sicher, ob die drive Methode so richtig verwendet wird, er soll sich 5 grad nach rechts drehen
+				distances = distanceSensor.getIRDistances();
+			}
+			while (distances[0].distance() < s ||
+				   distances[1].distance() < s ||
+				   distances[2].distance() < s ||
+				   distances[7].distance() < s ||
+				   distances[8].distance() < s) {
+				drive.drive(0f, 0f, 5f);		//Bin mir nicht sicher, ob die drive Methode so richtig verwendet wird, er soll sich 5 grad nach rechts drehen
+				distances = distanceSensor.getIRDistances();
+			}
+			float d = 0;						//speichert gefahrene Distanz
+			while ((distances[0].distance() < s ||
+					distances[1].distance() < s ||
+					distances[2].distance() < s ||
+					distances[7].distance() < s ||
+					distances[8].distance() < s) &&
+				   d < 1.5f) {
+				drive.drive(0.1f, 0f, 0f);
+				//Wie stoppe ich hier nach 1 Sekunde, d.h. 10cm wieder?
+				distances = distanceSensor.getIRDistances();
+				d += 0.1f;
+			}
 		}
-		double turn = 1*x/(Math.sqrt((double)(x*x+y*y)));	//Winkel zwischen ursprungsvektor und gewichtetem berechnen (richtig?)
-		turn = Math.acos(turn) * (180/Math.PI);
 	}
 	
 	@Override
