@@ -20,13 +20,17 @@ import java.util.concurrent.TimeUnit ;
 
 public class MyRobot extends Robot
 {
+
+	public Position goal = new Position(1, 1);		//Hier muss immer das aktuelle Ziel rein gespeichert werden
+	public boolean driving = true;					//Muss auf true gesetzt werden, wenn driveToPosition(...) aufgerufen wird
+	public float s = 0.5f;							//Sicherheitsabstand
 	
 	public MyRobot(String ip)
 	{	
 		super(ip);
 
 		//DEMO: Wir versuchen hier einfach mal mit allen robotern zu (0,0) zu fahren
-		drive.driveToPosition(new Position(1, 1), 0.5f, new ArrivalHandler() {
+		drive.driveToPosition(goal, 0.5f, new ArrivalHandler() {
 			
 			@Override
 			public void arrived() {
@@ -53,6 +57,29 @@ public class MyRobot extends Robot
 			//wenn ein hinderniss kommt daas zu umfahren und dann wieder 
 			// das ursprüngliche Ziel anzusteuern.
 			
+			IRSensorDistance[] sensorResults = distanceSensor.getIRDistances();
+			while (sensorResults[0].distance() < s ||
+				   sensorResults[1].distance() < s ||
+				   sensorResults[2].distance() < s ||
+				   sensorResults[7].distance() < s ||
+				   sensorResults[8].distance() < s)
+			{
+				drive.drive(0, 0, 0);
+				driving = false;
+				driveAroundObstacle();
+			}
+			if (!driving)
+			{
+				driving = true;
+				drive.driveToPosition(goal, 0.5f, new ArrivalHandler() {
+			
+				@Override
+				public void arrived() {
+					System.out.println("wann sind wir endlich daha? - Jetzt!");
+				}
+			});
+			}
+			
 			Simulation.pause(50);
 		}
 		
@@ -61,7 +88,6 @@ public class MyRobot extends Robot
 
 	
 	private void driveAroundObstacle() {
-		float s = 0.5f;				//Sicherheitsabstand
 		IRSensorDistance[] distances = distanceSensor.getIRDistances();
 		while (distances[0].distance() < s ||
 			   distances[1].distance() < s ||
